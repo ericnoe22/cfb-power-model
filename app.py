@@ -31,26 +31,57 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+# ── Inject fonts via link tags (more reliable than @import on Streamlit Cloud) ──
+st.markdown("""
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+""", unsafe_allow_html=True)
+
 # ── Global styles ───────────────────────────────────────────────────────────
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
-/* ── Sidebar toggle button ── */
+/* ── Sidebar toggle button — hide raw icon text, show CSS arrow ── */
 [data-testid="collapsedControl"] {
     background: #162030 !important;
     border: 1px solid #1e3050 !important;
     border-radius: 0 8px 8px 0 !important;
     color: #00b074 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    min-height: 48px !important;
 }
 [data-testid="collapsedControl"]:hover {
     background: #1e3050 !important;
     border-color: #00b074 !important;
 }
+/* Hide the raw material icon text */
 [data-testid="collapsedControl"] span {
-    font-family: 'Material Symbols Rounded' !important;
+    font-family: 'Material Symbols Rounded', sans-serif !important;
+    font-size: 20px !important;
     color: #00b074 !important;
+    /* Fallback: if font doesn't load, hide text and show CSS arrow */
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+/* CSS arrow fallback when font fails */
+[data-testid="collapsedControl"] span::before {
+    content: "›" !important;
+    font-family: sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #00b074 !important;
+    display: block !important;
+}
+/* Hide the actual icon text (shows as fallback char above instead) */
+[data-testid="collapsedControl"] span {
+    font-size: 0 !important;
+    width: 22px !important;
+    height: 22px !important;
 }
 
 html, body, [class*="st-"] {
