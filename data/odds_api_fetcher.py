@@ -15,7 +15,7 @@ import pandas as pd
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from config import ODDS_API_KEY
-from data.team_names import normalize
+from data.owls_fetcher import _clean_team_name as _normalize_team
 
 BASE_URL    = "https://api.the-odds-api.com/v4"
 BOOK_PRIO   = ["draftkings", "fanduel", "betmgm", "caesars", "pinnacle"]
@@ -33,20 +33,6 @@ def _get(path, params=None):
     except Exception as e:
         print(f"  ⚠️  Odds API {path} failed: {e}")
     return None
-
-
-def _normalize_team(raw: str) -> str:
-    """Strip mascot from 'School Mascot' format and normalize."""
-    # Simple approach: remove last word(s) if they look like a mascot.
-    # Falls back to normalize() which handles known CFBD variants.
-    parts = raw.strip().split()
-    # Try progressively shorter names until normalize returns something clean
-    for n in range(len(parts) - 1, 0, -1):
-        candidate = " ".join(parts[:n])
-        normed = normalize(candidate)
-        if normed != candidate.lower():   # normalize changed it — good match
-            return normed
-    return normalize(raw)
 
 
 def fetch_ncaaf_championship_odds() -> pd.DataFrame:
