@@ -31,16 +31,17 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ── Inject fonts + JS icon fix ──────────────────────────────────────────────
+# ── Inject fonts ────────────────────────────────────────────────────────────
 st.markdown("""
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+""", unsafe_allow_html=True)
 
+# ── JS icon fix via components.html (actually executes — markdown strips scripts) ──
+import streamlit.components.v1 as _components
+_components.html("""
 <script>
-// Replace raw Material Symbols text with clean CSS arrows
-// Runs on load and watches for Streamlit DOM updates
 const ICON_MAP = {
     'keyboard_double_arrow_right': '›',
     'keyboard_double_arrow_left':  '‹',
@@ -51,25 +52,27 @@ const ICON_MAP = {
 };
 
 function fixIcons() {
-    document.querySelectorAll('span').forEach(span => {
-        const txt = span.textContent.trim();
-        if (ICON_MAP[txt]) {
-            span.textContent = ICON_MAP[txt];
-            span.style.fontFamily = 'sans-serif';
-            span.style.fontSize = txt.startsWith('keyboard') ? '20px' : '16px';
-            span.style.fontWeight = '700';
-            span.style.color = txt.startsWith('keyboard') ? '#00b074' : '#7a95b5';
-            span.style.lineHeight = '1';
-        }
-    });
+    try {
+        var doc = window.parent.document;
+        doc.querySelectorAll('span').forEach(function(span) {
+            var txt = span.textContent.trim();
+            if (ICON_MAP[txt]) {
+                span.textContent = ICON_MAP[txt];
+                span.style.fontFamily = 'sans-serif';
+                span.style.fontSize = txt.startsWith('keyboard') ? '20px' : '16px';
+                span.style.fontWeight = '700';
+                span.style.color = txt.startsWith('keyboard') ? '#00b074' : '#7a95b5';
+                span.style.lineHeight = '1';
+            }
+        });
+    } catch(e) {}
 }
 
-// Run immediately and on every DOM change
 fixIcons();
-const observer = new MutationObserver(fixIcons);
-observer.observe(document.body, { childList: true, subtree: true });
+var observer = new MutationObserver(fixIcons);
+observer.observe(window.parent.document.body, { childList: true, subtree: true });
 </script>
-""", unsafe_allow_html=True)
+""", height=0)
 
 # ── Global styles ───────────────────────────────────────────────────────────
 st.markdown("""
