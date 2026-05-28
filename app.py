@@ -118,9 +118,23 @@ st.markdown("""
 }
 
 
-/* ── Hide expander icon — label text is sufficient ── */
+/* ── Expander icon — show clean + / − instead of raw material icon text ── */
 [data-testid="stExpander"] summary span {
-    display: none !important;
+    font-size: 0 !important;
+    width: 16px !important;
+    display: inline-block !important;
+}
+[data-testid="stExpander"] summary span::before {
+    content: "＋" !important;
+    font-size: 14px !important;
+    font-family: sans-serif !important;
+    font-weight: 700 !important;
+    color: #00b074 !important;
+}
+[data-testid="stExpander"][open] summary span::before,
+details[open] summary span::before {
+    content: "−" !important;
+    color: #00b074 !important;
 }
 
 html, body, [class*="st-"] {
