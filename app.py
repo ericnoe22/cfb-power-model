@@ -84,6 +84,27 @@ st.markdown("""
     height: 22px !important;
 }
 
+/* ── Expander toggle icon — same fix ── */
+[data-testid="stExpander"] summary span[data-testid="stExpanderToggleIcon"],
+[data-testid="stExpander"] summary svg ~ span,
+details summary span {
+    font-family: 'Material Symbols Rounded', sans-serif !important;
+    font-size: 0 !important;
+    width: 20px !important;
+    height: 20px !important;
+    overflow: hidden !important;
+    display: inline-block !important;
+}
+[data-testid="stExpander"] summary span[data-testid="stExpanderToggleIcon"]::before,
+details summary span::before {
+    content: "›" !important;
+    font-family: sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #7a95b5 !important;
+    display: block !important;
+}
+
 html, body, [class*="st-"] {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
