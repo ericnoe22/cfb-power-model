@@ -832,13 +832,46 @@ with st.sidebar:
     st.title("🏈 CFB Power Model")
     st.caption(f"Season: {CURRENT_SEASON}")
 
-    page = st.radio("Navigate", [
+    # ── Admin unlock ──────────────────────────────────────────────────────
+    import hashlib
+    _ADMIN_HASH = "a42979990988b809ae42b234cfe7805bc57fd5c8eefc2d03fb0293ebc0c789cb"
+    if "admin_unlocked" not in st.session_state:
+        st.session_state["admin_unlocked"] = False
+
+    _public_pages = [
         "📊 Power Rankings",
         "🏆 Season Projections",
         "🎰 Title Odds",
         "🎯 Betting Edges",
         "📅 Schedule & Predictions",
-    ])
+    ]
+    _admin_pages = [
+        "📈 Model Performance",
+        "🔧 Update Data",
+    ]
+
+    if st.session_state["admin_unlocked"]:
+        nav_pages = _public_pages + _admin_pages
+    else:
+        nav_pages = _public_pages
+
+    page = st.radio("Navigate", nav_pages)
+
+    # Lock icon at the bottom of sidebar
+    st.sidebar.divider()
+    if st.session_state["admin_unlocked"]:
+        if st.sidebar.button("🔓 Lock Admin"):
+            st.session_state["admin_unlocked"] = False
+            st.rerun()
+    else:
+        with st.sidebar.expander("🔐 Admin"):
+            _pw = st.text_input("Password", type="password", key="admin_pw")
+            if st.button("Unlock", key="admin_unlock_btn"):
+                if hashlib.sha256(_pw.encode()).hexdigest() == _ADMIN_HASH:
+                    st.session_state["admin_unlocked"] = True
+                    st.rerun()
+                else:
+                    st.error("Incorrect password")
 
     ratings_df = load_ratings()
     schedule_df = load_schedule()
