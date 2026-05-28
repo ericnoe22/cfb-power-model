@@ -1283,22 +1283,6 @@ elif page == "🏆 Season Projections":
     view_df.index.name = "rank"
     view_df = view_df.reset_index()
 
-    # ── Summary metrics ───────────────────────────────────────────────────
-    st.divider()
-    m1, m2, m3, m4 = st.columns(4)
-    m1.metric("Teams projected", len(view_df))
-    m2.metric("Avg projected wins", f"{view_df['projected_wins'].mean():.1f}")
-    top_team = view_df.iloc[0]["team"] if not view_df.empty else "—"
-    top_wins = view_df.iloc[0]["projected_wins"] if not view_df.empty else 0
-    m3.metric("Projected #1", f"{top_team} ({top_wins}w)")
-    if has_vegas and "model_vs_vegas" in view_df.columns:
-        best_val = view_df.dropna(subset=["model_vs_vegas"])
-        if not best_val.empty:
-            best_over = best_val.loc[best_val["model_vs_vegas"].idxmax()]
-            m4.metric("Biggest model over", f"{best_over['team']} +{best_over['model_vs_vegas']:.1f}w")
-    else:
-        m4.metric("Vegas totals", "Not yet posted")
-
     st.divider()
 
     # ── Table ─────────────────────────────────────────────────────────────
