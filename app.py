@@ -838,8 +838,6 @@ with st.sidebar:
         "🎰 Title Odds",
         "🎯 Betting Edges",
         "📅 Schedule & Predictions",
-        "📈 Model Performance",
-        "🔧 Update Data",
     ])
 
     ratings_df = load_ratings()
