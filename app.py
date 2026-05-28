@@ -35,6 +35,23 @@ st.set_page_config(
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* ── Sidebar toggle button ── */
+[data-testid="collapsedControl"] {
+    background: #162030 !important;
+    border: 1px solid #1e3050 !important;
+    border-radius: 0 8px 8px 0 !important;
+    color: #00b074 !important;
+}
+[data-testid="collapsedControl"]:hover {
+    background: #1e3050 !important;
+    border-color: #00b074 !important;
+}
+[data-testid="collapsedControl"] span {
+    font-family: 'Material Symbols Rounded' !important;
+    color: #00b074 !important;
+}
 
 html, body, [class*="st-"] {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
