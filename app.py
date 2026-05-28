@@ -1031,7 +1031,8 @@ if page == "📊 Power Rankings":
         ranked_df.index.name = "rank"
         ranked_df = ranked_df.reset_index()
 
-    display_cols = {
+    # ── Default columns (public-facing) ──────────────────────────────────
+    default_cols = {
         "rank": "Rank",
         "team": "Team",
         "conference": "Conference",
@@ -1039,35 +1040,50 @@ if page == "📊 Power Rankings":
         "sp_plus": "SP+",
         "fpi": "FPI",
         "elo": "Elo",
+    }
+    # ── Advanced columns (hidden by default) ─────────────────────────────
+    advanced_cols = {
         "offense_overall": "Off EPA",
         "defense_overall": "Def EPA",
         "epa_net": "Net EPA",
         "returning_prod": "Ret. Prod.",
         "talent": "Talent",
     }
-    available = {k: v for k, v in display_cols.items() if k in ranked_df.columns}
-    show_df = ranked_df[list(available.keys())].rename(columns=available).copy()
 
-    # Round numerics
-    for col in show_df.columns:
-        if show_df[col].dtype == float:
-            show_df[col] = show_df[col].round(1)
+    def _make_table(col_map):
+        avail = {k: v for k, v in col_map.items() if k in ranked_df.columns}
+        df = ranked_df[list(avail.keys())].rename(columns=avail).copy()
+        for col in df.columns:
+            if df[col].dtype == float:
+                df[col] = df[col].round(1)
+        return df
 
-    # Color the composite column
+    show_df = _make_table(default_cols)
+
+    composite_config = {}
+    if "⭐ Composite" in show_df.columns:
+        composite_config["⭐ Composite"] = st.column_config.ProgressColumn(
+            "⭐ Composite",
+            min_value=float(show_df["⭐ Composite"].min()),
+            max_value=float(show_df["⭐ Composite"].max()),
+            format="%.1f",
+        )
+
     st.dataframe(
         show_df,
         use_container_width=True,
         height=700,
         hide_index=True,
-        column_config={
-            "⭐ Composite": st.column_config.ProgressColumn(
-                "⭐ Composite",
-                min_value=float(show_df["⭐ Composite"].min()) if "⭐ Composite" in show_df.columns else -30,
-                max_value=float(show_df["⭐ Composite"].max()) if "⭐ Composite" in show_df.columns else 30,
-                format="%.1f",
-            )
-        }
+        column_config=composite_config,
     )
+
+    # Advanced metrics expander
+    adv_available = {k: v for k, v in advanced_cols.items() if k in ranked_df.columns}
+    if adv_available:
+        with st.expander("Advanced Metrics", expanded=False):
+            adv_cols = {**{"rank": "Rank", "team": "Team"}, **advanced_cols}
+            adv_df = _make_table({k: v for k, v in adv_cols.items() if k in ranked_df.columns})
+            st.dataframe(adv_df, use_container_width=True, height=500, hide_index=True)
 
     st.divider()
     # Top 25 bar chart
