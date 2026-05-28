@@ -45,8 +45,6 @@ _components.html("""
 const ICON_MAP = {
     'keyboard_double_arrow_right': '›',
     'keyboard_double_arrow_left':  '‹',
-    'expand_more':  '▾',
-    'expand_less':  '▴',
     'chevron_right': '›',
     'chevron_left':  '‹',
 };
@@ -119,6 +117,11 @@ st.markdown("""
     height: 22px !important;
 }
 
+
+/* ── Hide expander icon — label text is sufficient ── */
+[data-testid="stExpander"] summary span {
+    display: none !important;
+}
 
 html, body, [class*="st-"] {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
