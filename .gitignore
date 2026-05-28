@@ -8,7 +8,13 @@ __pycache__/
 *.pyo
 
 # Cache (runtime-generated, not part of source)
-cache/
+# Keep the directory itself + key preseason data files needed on Streamlit Cloud
+cache/*
+!cache/.gitkeep
+!cache/sp_plus_2026.csv
+!cache/sp_plus_2026_spring.csv
+!cache/fpi_2026.csv
+!cache/elo_current.csv
 
 # Streamlit: keep config.toml (theme), exclude secrets
 .streamlit/secrets.toml
