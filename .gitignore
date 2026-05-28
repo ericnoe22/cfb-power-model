@@ -1,0 +1,35 @@
+# Secrets / environment
+.env
+.env.local
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Cache (runtime-generated, not part of source)
+cache/
+
+# Streamlit: keep config.toml (theme), exclude secrets
+.streamlit/secrets.toml
+
+# Large raw data / one-off analysis files
+2024_box_scores.json
+elo_2024.csv
+lines_2024*.csv
+lines_2025_fbs_only.csv
+games_with_*.csv
+ats_trends_2024.csv
+ncf_betting_trends_2024.xlsx
+CFB lines*.csv
+clean_week1_ou.csv
+cleaned_week1_spreads.csv
+outputs/
+logs/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
