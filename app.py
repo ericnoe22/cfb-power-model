@@ -838,6 +838,7 @@ with st.sidebar:
     page = st.radio("Navigate", [
         "📊 Power Rankings",
         "🏆 Season Projections",
+        "🎰 Title Odds",
         "🎯 Betting Edges",
         "📅 Schedule & Predictions",
         "📈 Model Performance",
@@ -1417,6 +1418,114 @@ elif page == "🏆 Season Projections":
         file_name=f"cfb_season_projections_{CURRENT_SEASON}.csv",
         mime="text/csv",
     )
+
+
+# ── Page: Title Odds ──────────────────────────────────────────────────────
+
+elif page == "🎰 Title Odds":
+    st.title("National Championship Odds")
+    st.caption("Odds to win the CFB National Championship — sorted by favorite. Updates live as books move lines.")
+
+    col_refresh, col_status = st.columns([1, 4])
+    if col_refresh.button("🔄 Refresh Odds"):
+        st.cache_data.clear()
+        st.rerun()
+
+    with st.spinner("Fetching latest odds..."):
+        champ_df = load_championship_odds()
+
+    if champ_df.empty:
+        col_status.warning("Championship odds unavailable — check back closer to the season.")
+        st.stop()
+
+    from data.odds_api_fetcher import fmt_american_odds
+
+    col_status.success(f"✅ {len(champ_df)} teams listed")
+
+    # ── Add implied probability (no-vig) ─────────────────────────────────
+    def _american_to_prob(odds):
+        try:
+            v = float(odds)
+            if v < 0:
+                return abs(v) / (abs(v) + 100)
+            else:
+                return 100 / (v + 100)
+        except (TypeError, ValueError):
+            return None
+
+    champ_df = champ_df.copy()
+    champ_df["impl_prob"] = champ_df["best_odds"].apply(_american_to_prob)
+
+    # ── Summary metrics ───────────────────────────────────────────────────
+    st.divider()
+    top3 = champ_df.head(3)
+    m_cols = st.columns(3)
+    for i, (_, row) in enumerate(top3.iterrows()):
+        prob = row["impl_prob"]
+        prob_str = f"{prob*100:.1f}%" if prob else "—"
+        m_cols[i].metric(
+            f"#{i+1} Favorite",
+            row["team"],
+            f"{fmt_american_odds(row['best_odds'])}  ·  {prob_str} implied"
+        )
+
+    st.divider()
+
+    # ── Full odds table ───────────────────────────────────────────────────
+    display_df = champ_df.copy()
+    display_df.insert(0, "Rank", range(1, len(display_df) + 1))
+    display_df["Implied %"] = display_df["impl_prob"].apply(
+        lambda v: f"{v*100:.1f}%" if v else "—"
+    )
+    for col in ["best_odds", "dk_odds", "fd_odds", "betmgm_odds", "caesars_odds"]:
+        if col in display_df.columns:
+            display_df[col] = display_df[col].apply(fmt_american_odds)
+
+    display_df = display_df.rename(columns={
+        "team":         "Team",
+        "best_odds":    "Best Odds",
+        "best_book":    "Best Book",
+        "dk_odds":      "DraftKings",
+        "fd_odds":      "FanDuel",
+        "betmgm_odds":  "BetMGM",
+        "caesars_odds": "Caesars",
+    })
+
+    show_cols = ["Rank", "Team", "Best Odds", "Implied %", "DraftKings", "FanDuel", "BetMGM", "Caesars", "Best Book"]
+    show_cols = [c for c in show_cols if c in display_df.columns]
+
+    st.dataframe(display_df[show_cols], use_container_width=True, hide_index=True)
+
+    # ── Bar chart — implied probability top 20 ────────────────────────────
+    st.divider()
+    chart_df = champ_df.head(20).copy()
+    chart_df["Team"] = chart_df["team"]
+    chart_df["Implied Win %"] = (chart_df["impl_prob"] * 100).round(1)
+    chart_df = chart_df.sort_values("Implied Win %", ascending=True)
+
+    fig = px.bar(
+        chart_df,
+        x="Implied Win %",
+        y="Team",
+        orientation="h",
+        color="Implied Win %",
+        color_continuous_scale="RdYlGn",
+        title="Top 20 — Market-Implied Championship Win Probability",
+        labels={"Implied Win %": "Implied Win %"},
+        text="Implied Win %",
+    )
+    fig.update_traces(texttemplate="%{text:.1f}%", textposition="outside")
+    fig.update_layout(
+        showlegend=False,
+        height=600,
+        plot_bgcolor="#0f1923",
+        paper_bgcolor="#0f1923",
+        font_color="#e2e8f0",
+        xaxis=dict(gridcolor="#1e3050"),
+        yaxis=dict(gridcolor="#1e3050"),
+        coloraxis_showscale=False,
+    )
+    st.plotly_chart(fig, use_container_width=True)
 
 
 # ── Page: Betting Edges ────────────────────────────────────────────────────
