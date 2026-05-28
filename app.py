@@ -1099,6 +1099,13 @@ elif page == "🏆 Season Projections":
         st.warning("Could not generate projections.")
         st.stop()
 
+    # Remove FCS teams — they appear as opponents in the schedule but aren't
+    # FBS programs we want to project
+    proj_df = proj_df[
+        (proj_df["conference"] != "FCS") &
+        (~proj_df["team"].str.contains(r"\(FCS\)", na=False))
+    ].copy()
+
     # Try to load Vegas win totals
     vegas_totals = load_win_totals()
     has_vegas = not vegas_totals.empty and "wins_line" in vegas_totals.columns
@@ -1341,6 +1348,10 @@ elif page == "🎯 Betting Edges":
         with st.spinner("Loading projections..."):
             _proj = load_season_projections(schedule_df, ratings_df)
         if not _proj.empty:
+            _proj = _proj[
+                (_proj["conference"] != "FCS") &
+                (~_proj["team"].str.contains(r"\(FCS\)", na=False))
+            ]
             _top = _proj.head(15)[["team", "conference", "projected_wins",
                                    "floor_wins", "ceiling_wins"]].copy()
             _top.columns = ["Team", "Conference", "Proj W", "Floor", "Ceiling"]
