@@ -15,10 +15,29 @@ import pandas as pd
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from config import ODDS_API_KEY
-from data.owls_fetcher import _clean_team_name as _normalize_team
+from data.owls_fetcher import _clean_team_name as _clean
 
 BASE_URL    = "https://api.the-odds-api.com/v4"
 BOOK_PRIO   = ["draftkings", "fanduel", "betmgm", "caesars", "pinnacle"]
+
+# Pre-normalization overrides for names that are ambiguous after mascot stripping.
+# Applied BEFORE _clean so the right school name survives.
+_PRE_OVERRIDES = {
+    "Miami Hurricanes":      "Miami",
+    "Miami (FL)":            "Miami",
+    "Miami Florida":         "Miami",
+    "Miami Ohio":            "Miami (OH)",
+    "Miami (Ohio)":          "Miami (OH)",
+    "Miami (OH) RedHawks":   "Miami (OH)",
+    "Miami RedHawks":        "Miami (OH)",
+    "Miami Red Hawks":       "Miami (OH)",
+}
+
+def _normalize_team(name: str) -> str:
+    """Normalize an Odds API team name to our canonical CFBD name."""
+    if name in _PRE_OVERRIDES:
+        return _PRE_OVERRIDES[name]
+    return _clean(name)
 
 
 def _get(path, params=None):
