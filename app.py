@@ -2614,7 +2614,7 @@ elif page == "⚔️ Head-to-Head":
       <div style="font-weight:800;font-size:1.1rem;color:#fff">{team_b}</div>
     </div>
     """
-    st.markdown(team_header + rows_html, unsafe_allow_html=True)
+    st.html(team_header + rows_html)
 
     # ── Radar chart ───────────────────────────────────────────────────────
     try:
