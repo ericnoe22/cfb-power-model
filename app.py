@@ -956,6 +956,130 @@ spread_thresh = EDGE_THRESHOLD_SPREAD
 total_thresh  = EDGE_THRESHOLD_TOTAL
 
 
+# ── Board view renderer ────────────────────────────────────────────────────
+
+def render_board_view(sched_df):
+    """Render a compact sportsbook-style board sorted by kickoff time."""
+    import pytz
+    from datetime import datetime
+
+    def _parse_time(raw):
+        try:
+            dt = pd.to_datetime(raw, utc=True).tz_convert("US/Eastern")
+            tbd = False
+        except Exception:
+            return None, True
+        return dt, False
+
+    def _fmt_time(dt):
+        if dt is None:
+            return "TBD"
+        day = dt.strftime("%a")
+        t = dt.strftime("%-I:%M %p").replace(" AM", "am").replace(" PM", "pm")
+        return f"{day} {t} ET"
+
+    def _fmt_spread(v, home, away):
+        try:
+            v = float(v)
+            if v == 0: return "PK"
+            fav = home if v < 0 else away
+            return f"{fav} -{abs(v):.1f}"
+        except (TypeError, ValueError):
+            return "—"
+
+    def _fmt_total(v):
+        try: return f"{float(v):.1f}"
+        except (TypeError, ValueError): return "—"
+
+    def _fmt_ml(v):
+        try:
+            v = float(v)
+            return f"+{int(v)}" if v > 0 else str(int(v))
+        except (TypeError, ValueError): return "—"
+
+    # Sort by kickoff time
+    df = sched_df.copy()
+    if "startDate" in df.columns:
+        df["_sort_dt"] = pd.to_datetime(df["startDate"], utc=True, errors="coerce")
+        df = df.sort_values("_sort_dt", na_position="last")
+
+    rows_html = ""
+    prev_time_str = None
+
+    for _, row in df.iterrows():
+        home = str(row.get("homeTeam", "")).replace(" (FCS)", "")
+        away = str(row.get("awayTeam", "")).replace(" (FCS)", "")
+        neutral = str(row.get("neutralSite", "")).lower() in ("true", "1", "yes")
+        home_pts = row.get("homePoints")
+        away_pts = row.get("awayPoints")
+        completed = str(row.get("completed", "")).lower() in ("true", "1", "yes")
+
+        dt, tbd = _parse_time(row.get("startDate"))
+        time_str = _fmt_time(dt)
+
+        # Time group divider
+        if time_str != prev_time_str:
+            rows_html += f'<div style="padding:6px 12px;background:#0d1626;color:#7a95b5;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;border-top:1px solid #1a2744;margin-top:4px">{time_str}</div>'
+            prev_time_str = time_str
+
+        m_spread = _fmt_spread(row.get("predicted_spread"), home, away)
+        v_spread = _fmt_spread(row.get("vegas_spread"),     home, away)
+        m_total  = _fmt_total(row.get("predicted_total"))
+        v_total  = _fmt_total(row.get("vegas_total"))
+        home_ml  = _fmt_ml(row.get("home_ml"))
+        away_ml  = _fmt_ml(row.get("away_ml"))
+        bet      = str(row.get("bet", "") or "")
+
+        # Edge badge
+        edge_badge = ""
+        if bet:
+            edge_badge = f'<span style="background:#00b074;color:#000;font-size:0.65rem;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:6px">EDGE</span>'
+
+        # Score or spread display
+        if completed and home_pts is not None and away_pts is not None:
+            try:
+                score_away = f'<span style="font-weight:700;color:#fff">{int(away_pts)}</span>'
+                score_home = f'<span style="font-weight:700;color:#fff">{int(home_pts)}</span>'
+            except Exception:
+                score_away = score_home = ""
+        else:
+            score_away = score_home = ""
+
+        neutral_tag = ' <span style="color:#7a95b5;font-size:0.7rem">N</span>' if neutral else ""
+
+        # Two-line matchup row: away on top, home on bottom
+        rows_html += f'''
+<div style="display:grid;grid-template-columns:1fr auto auto auto;align-items:center;
+            padding:8px 12px;border-bottom:1px solid #1a2744;gap:8px;">
+  <div>
+    <div style="color:#ccc;font-size:0.9rem;padding-bottom:4px">{away} {score_away}{edge_badge}</div>
+    <div style="color:#ccc;font-size:0.9rem">{home}{neutral_tag} {score_home}</div>
+  </div>
+  <div style="text-align:center;min-width:90px">
+    <div style="color:#7a95b5;font-size:0.65rem;font-weight:600;margin-bottom:2px">MODEL</div>
+    <div style="color:#fff;font-size:0.8rem;white-space:nowrap">{m_spread}</div>
+    <div style="color:#7a95b5;font-size:0.75rem">O/U {m_total}</div>
+  </div>
+  <div style="text-align:center;min-width:90px">
+    <div style="color:#7a95b5;font-size:0.65rem;font-weight:600;margin-bottom:2px">VEGAS</div>
+    <div style="color:#fff;font-size:0.8rem;white-space:nowrap">{v_spread}</div>
+    <div style="color:#7a95b5;font-size:0.75rem">O/U {v_total}</div>
+  </div>
+  <div style="text-align:center;min-width:70px">
+    <div style="color:#7a95b5;font-size:0.65rem;font-weight:600;margin-bottom:2px">ML</div>
+    <div style="color:#aaa;font-size:0.75rem">{away_ml}</div>
+    <div style="color:#aaa;font-size:0.75rem">{home_ml}</div>
+  </div>
+</div>'''
+
+    if not rows_html:
+        st.info("No games to display.")
+        return
+
+    board_html = f'<div style="background:#0a1628;border-radius:8px;border:1px solid #1a2744;overflow:hidden">{rows_html}</div>'
+    st.html(board_html)
+
+
 # ── Matchup card renderer ──────────────────────────────────────────────────
 
 def render_matchup_card(row, idx, ratings_df):
@@ -2196,9 +2320,18 @@ elif page == "📅 Schedule & Predictions":
 
     week_sched = week_sched.reset_index(drop=True)
 
-    # Render sportsbook-style matchup cards
-    for idx, row in week_sched.iterrows():
-        render_matchup_card(row.to_dict(), idx, ratings_df)
+    # ── View toggle ────────────────────────────────────────────────────────
+    _v_col, _ = st.columns([2, 5])
+    with _v_col:
+        view_mode = st.segmented_control(
+            "View", ["Board", "Cards"], default="Board", key="sched_view_mode"
+        )
+
+    if view_mode == "Board":
+        render_board_view(week_sched)
+    else:
+        for idx, row in week_sched.iterrows():
+            render_matchup_card(row.to_dict(), idx, ratings_df)
 
     # Download
     st.download_button(
