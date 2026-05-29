@@ -913,11 +913,11 @@ with st.sidebar:
 
     _public_pages = [
         "📊 Power Rankings",
+        "📅 Schedule & Predictions",
         "🏆 Season Projections",
         "🎰 Title Odds",
         "⚔️ Head-to-Head",
         "🎯 Betting Edges",
-        "📅 Schedule & Predictions",
     ]
     _admin_pages = [
         "📈 Model Performance",
