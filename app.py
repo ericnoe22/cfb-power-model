@@ -2463,30 +2463,33 @@ elif page == "⚔️ Head-to-Head":
     # Sorted team list for dropdowns
     all_teams = sorted(ratings_df["team"].dropna().unique().tolist())
 
-    # Swap button state
-    if "h2h_swapped" not in st.session_state:
-        st.session_state["h2h_swapped"] = False
+    # Use separate (non-widget) state keys to track selections so swap works
+    if "h2h_home" not in st.session_state:
+        st.session_state["h2h_home"] = "Ohio State" if "Ohio State" in all_teams else all_teams[0]
+    if "h2h_away" not in st.session_state:
+        st.session_state["h2h_away"] = "Georgia" if "Georgia" in all_teams else (all_teams[1] if len(all_teams) > 1 else all_teams[0])
 
     col_a, col_vs, col_b = st.columns([5, 1, 5])
     with col_a:
-        default_a = all_teams.index("Ohio State") if "Ohio State" in all_teams else 0
-        team_a = st.selectbox("🏠 Home Team", all_teams, index=default_a, key="h2h_team_a")
+        home_idx = all_teams.index(st.session_state["h2h_home"]) if st.session_state["h2h_home"] in all_teams else 0
+        team_a = st.selectbox("🏠 Home Team", all_teams, index=home_idx)
     with col_vs:
         st.markdown("<div style='text-align:center;padding-top:2rem;font-size:1.4rem;font-weight:800;color:#00b074'>@</div>", unsafe_allow_html=True)
     with col_b:
-        default_b = all_teams.index("Georgia") if "Georgia" in all_teams else (1 if len(all_teams) > 1 else 0)
-        team_b = st.selectbox("✈️ Away Team", all_teams, index=default_b, key="h2h_team_b")
+        away_idx = all_teams.index(st.session_state["h2h_away"]) if st.session_state["h2h_away"] in all_teams else (1 if len(all_teams) > 1 else 0)
+        team_b = st.selectbox("✈️ Away Team", all_teams, index=away_idx)
+
+    # Keep state vars in sync with current widget values
+    st.session_state["h2h_home"] = team_a
+    st.session_state["h2h_away"] = team_b
 
     col_neutral, col_swap = st.columns([3, 1])
     with col_neutral:
         neutral = st.checkbox("Neutral site (no home field advantage)", value=False)
     with col_swap:
         if st.button("⇄ Swap Home/Away", use_container_width=True):
-            # Swap the two selectbox values via session state
-            prev_a = st.session_state.get("h2h_team_a", team_a)
-            prev_b = st.session_state.get("h2h_team_b", team_b)
-            st.session_state["h2h_team_a"] = prev_b
-            st.session_state["h2h_team_b"] = prev_a
+            st.session_state["h2h_home"] = team_b
+            st.session_state["h2h_away"] = team_a
             st.rerun()
 
     if team_a == team_b:
