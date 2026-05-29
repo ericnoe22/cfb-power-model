@@ -915,6 +915,7 @@ with st.sidebar:
         "📊 Power Rankings",
         "🏆 Season Projections",
         "🎰 Title Odds",
+        "⚔️ Head-to-Head",
         "🎯 Betting Edges",
         "📅 Schedule & Predictions",
     ]
@@ -2445,3 +2446,248 @@ Once you upgrade:
 
 The model will automatically use opponent-adjusted metrics when available.
     """)
+
+# ── Page: Head-to-Head ────────────────────────────────────────────────────
+elif page == "⚔️ Head-to-Head":
+    from model.game_predictor import predict_spread, predict_total
+
+    st.title("Head-to-Head Comparison")
+    st.caption("Pick any two teams to see a full side-by-side breakdown and model prediction.")
+
+    ratings_df = load_ratings()
+
+    if ratings_df.empty:
+        st.warning("Ratings data not available. Please run an update first.")
+        st.stop()
+
+    # Sorted team list for dropdowns
+    all_teams = sorted(ratings_df["team"].dropna().unique().tolist())
+
+    col_a, col_vs, col_b = st.columns([5, 1, 5])
+    with col_a:
+        default_a = all_teams.index("Ohio State") if "Ohio State" in all_teams else 0
+        team_a = st.selectbox("Team A", all_teams, index=default_a, key="h2h_team_a")
+    with col_vs:
+        st.markdown("<div style='text-align:center;padding-top:2rem;font-size:1.4rem;font-weight:800;color:#00b074'>VS</div>", unsafe_allow_html=True)
+    with col_b:
+        default_b = all_teams.index("Georgia") if "Georgia" in all_teams else (1 if len(all_teams) > 1 else 0)
+        team_b = st.selectbox("Team B", all_teams, index=default_b, key="h2h_team_b")
+
+    neutral = st.checkbox("Neutral site (no home field advantage)", value=False)
+
+    if team_a == team_b:
+        st.warning("Please select two different teams.")
+        st.stop()
+
+    def _get(team, col):
+        r = ratings_df[ratings_df["team"] == team]
+        if r.empty or col not in r.columns:
+            return None
+        v = r[col].values[0]
+        return None if pd.isna(v) else float(v)
+
+    # Pull all metrics for both teams
+    metrics = {
+        "composite":       ("⭐ Composite",    True),
+        "sp_plus":         ("SP+",             True),
+        "fpi":             ("FPI",             True),
+        "elo":             ("Elo",             True),
+        "offense.rating":  ("SP+ Offense",     True),
+        "defense.rating":  ("SP+ Defense",     False),   # lower = better defense
+        "returning_prod":  ("Returning Prod.", True),
+        "talent":          ("Talent",          True),
+    }
+
+    a_vals = {k: _get(team_a, k) for k in metrics}
+    b_vals = {k: _get(team_b, k) for k in metrics}
+
+    # ── Prediction banner ─────────────────────────────────────────────────
+    h_comp = a_vals["composite"]
+    b_comp = b_vals["composite"]
+    h_off  = a_vals["offense.rating"]
+    b_off  = b_vals["offense.rating"]
+    h_def  = a_vals["defense.rating"]
+    b_def  = b_vals["defense.rating"]
+
+    if h_comp is not None and b_comp is not None:
+        # Team A treated as home unless neutral
+        spread = predict_spread(h_comp, b_comp, neutral=neutral)
+        total  = predict_total(h_comp, b_comp,
+                               home_off_rating=h_off, away_off_rating=b_off,
+                               home_def_rating=h_def, away_def_rating=b_def)
+
+        # Win probability from spread using logistic approximation
+        import math
+        win_prob_a = 1 / (1 + math.exp(spread * 0.15))   # spread < 0 means A favored
+        win_prob_b = 1 - win_prob_a
+
+        if spread < 0:
+            fav, dog = team_a, team_b
+            fav_spread = spread
+        elif spread > 0:
+            fav, dog = team_b, team_a
+            fav_spread = -spread
+        else:
+            fav, dog = None, None
+            fav_spread = 0
+
+        st.markdown("---")
+        p1, p2, p3, p4 = st.columns(4)
+        with p1:
+            st.metric("Model Spread", f"{fav} {fav_spread:.1f}" if fav else "Pick'em")
+        with p2:
+            st.metric("Model Total", f"{total:.1f}")
+        with p3:
+            st.metric(f"{team_a} Win Prob", f"{win_prob_a*100:.0f}%")
+        with p4:
+            st.metric(f"{team_b} Win Prob", f"{win_prob_b*100:.0f}%")
+
+        if not neutral:
+            st.caption(f"Spread assumes {team_a} is at home. Check 'Neutral site' to remove home field advantage.")
+        st.markdown("---")
+
+    # ── Side-by-side metric comparison ───────────────────────────────────
+    st.subheader("Metric Breakdown")
+
+    # Build comparison rows
+    rows_html = ""
+    for col_key, (label, higher_better) in metrics.items():
+        a_v = a_vals[col_key]
+        b_v = b_vals[col_key]
+
+        if a_v is None and b_v is None:
+            continue
+
+        a_str = f"{a_v:.1f}" if a_v is not None else "—"
+        b_str = f"{b_v:.1f}" if b_v is not None else "—"
+
+        # Determine advantage
+        if a_v is not None and b_v is not None:
+            a_wins = (a_v > b_v) if higher_better else (a_v < b_v)
+            a_color = "#00b074" if a_wins else ("#e05" if a_v != b_v else "#888")
+            b_color = "#00b074" if not a_wins else ("#e05" if a_v != b_v else "#888")
+            a_bold  = "font-weight:700" if a_wins else ""
+            b_bold  = "font-weight:700" if not a_wins else ""
+
+            # Bar widths — normalize within this row
+            span = abs(a_v - b_v)
+            base = max(abs(a_v), abs(b_v), 0.1)
+            pct  = min(span / base * 40, 40)   # max 40% extra bar for winner
+
+            if higher_better:
+                a_bar_w = 50 + (pct if a_wins else 0)
+                b_bar_w = 50 + (pct if not a_wins else 0)
+            else:
+                a_bar_w = 50 + (pct if a_wins else 0)
+                b_bar_w = 50 + (pct if not a_wins else 0)
+        else:
+            a_color = b_color = "#888"
+            a_bold = b_bold = ""
+            a_bar_w = b_bar_w = 50
+
+        rows_html += f"""
+        <div style="display:grid;grid-template-columns:1fr 120px 1fr;align-items:center;
+                    margin-bottom:10px;gap:8px;">
+          <div style="text-align:right;">
+            <div style="background:#1a2744;border-radius:4px;height:28px;
+                        width:{a_bar_w:.0f}%;margin-left:auto;display:flex;
+                        align-items:center;justify-content:flex-end;padding-right:8px;">
+              <span style="color:{a_color};{a_bold};font-size:0.95rem">{a_str}</span>
+            </div>
+          </div>
+          <div style="text-align:center;font-size:0.8rem;color:#7a95b5;
+                      font-weight:600;white-space:nowrap">{label}</div>
+          <div>
+            <div style="background:#1a2744;border-radius:4px;height:28px;
+                        width:{b_bar_w:.0f}%;display:flex;
+                        align-items:center;padding-left:8px;">
+              <span style="color:{b_color};{b_bold};font-size:0.95rem">{b_str}</span>
+            </div>
+          </div>
+        </div>
+        """
+
+    team_header = f"""
+    <div style="display:grid;grid-template-columns:1fr 120px 1fr;gap:8px;margin-bottom:16px;">
+      <div style="text-align:right;font-weight:800;font-size:1.1rem;color:#fff">{team_a}</div>
+      <div></div>
+      <div style="font-weight:800;font-size:1.1rem;color:#fff">{team_b}</div>
+    </div>
+    """
+    st.markdown(team_header + rows_html, unsafe_allow_html=True)
+
+    # ── Radar chart ───────────────────────────────────────────────────────
+    try:
+        import plotly.graph_objects as go
+
+        radar_metrics = {
+            "composite":      ("Composite",   True),
+            "sp_plus":        ("SP+",         True),
+            "fpi":            ("FPI",         True),
+            "elo":            ("Elo",         True),
+            "offense.rating": ("Offense",     True),
+            "defense.rating": ("Defense",     False),
+        }
+
+        # Normalize each metric 0-100 across all teams for radar
+        categories = []
+        a_radar = []
+        b_radar = []
+
+        for col_key, (label, higher_better) in radar_metrics.items():
+            if col_key not in ratings_df.columns:
+                continue
+            series = ratings_df[col_key].dropna()
+            if series.empty:
+                continue
+            lo, hi = series.min(), series.max()
+            span = hi - lo if hi != lo else 1
+
+            def _norm_val(v, lo=lo, hi=hi, span=span, higher_better=higher_better):
+                if v is None:
+                    return 50
+                pct = (v - lo) / span * 100
+                return pct if higher_better else (100 - pct)
+
+            a_n = _norm_val(a_vals.get(col_key))
+            b_n = _norm_val(b_vals.get(col_key))
+            categories.append(label)
+            a_radar.append(a_n)
+            b_radar.append(b_n)
+
+        if len(categories) >= 3:
+            fig = go.Figure()
+            fig.add_trace(go.Scatterpolar(
+                r=a_radar + [a_radar[0]],
+                theta=categories + [categories[0]],
+                fill="toself",
+                name=team_a,
+                line_color="#00b074",
+                fillcolor="rgba(0,176,116,0.15)",
+            ))
+            fig.add_trace(go.Scatterpolar(
+                r=b_radar + [b_radar[0]],
+                theta=categories + [categories[0]],
+                fill="toself",
+                name=team_b,
+                line_color="#4e9af1",
+                fillcolor="rgba(78,154,241,0.15)",
+            ))
+            fig.update_layout(
+                polar=dict(
+                    bgcolor="#0f1b35",
+                    radialaxis=dict(visible=True, range=[0, 100],
+                                   gridcolor="#1a2744", tickfont=dict(color="#7a95b5")),
+                    angularaxis=dict(gridcolor="#1a2744", tickfont=dict(color="#ccc")),
+                ),
+                showlegend=True,
+                legend=dict(font=dict(color="#ccc")),
+                paper_bgcolor="#0a1628",
+                plot_bgcolor="#0a1628",
+                margin=dict(t=40, b=20, l=40, r=40),
+                height=420,
+            )
+            st.subheader("Radar Chart")
+            st.plotly_chart(fig, use_container_width=True)
+    except Exception:
+        pass  # radar is optional eye candy
