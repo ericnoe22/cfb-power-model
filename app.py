@@ -1225,8 +1225,8 @@ if page == "📊 Power Rankings":
     default_cols = {
         "rank": "Rank",
         "team": "Team",
-        "conference": "Conference",
         "composite": "⭐ Composite",
+        "conference": "Conference",
         "sp_plus": "SP+",
         "fpi": "FPI",
         "elo": "Elo",
