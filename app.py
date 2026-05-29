@@ -443,6 +443,79 @@ div[data-baseweb="dialog"],
     color: #4d6a8a;
     margin-left: auto;
 }
+
+/* ── Mobile responsive ── */
+@media (max-width: 768px) {
+    /* Reduce page padding so tables use full width */
+    .main .block-container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        padding-top: 1rem !important;
+    }
+
+    /* Tables: horizontally scrollable, don't shrink text to nothing */
+    [data-testid="stDataFrame"] {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    [data-testid="stDataFrame"] td,
+    [data-testid="stDataFrame"] th {
+        font-size: 0.75rem !important;
+        white-space: nowrap !important;
+    }
+
+    /* Stack metric cards vertically */
+    [data-testid="stHorizontalBlock"] {
+        flex-wrap: wrap !important;
+    }
+    [data-testid="stHorizontalBlock"] > div {
+        min-width: 45% !important;
+        flex: 1 1 45% !important;
+    }
+
+    /* Bigger tap targets for buttons */
+    .stButton > button {
+        min-height: 44px !important;
+        font-size: 0.95rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+
+    /* Pills: wrap onto multiple lines */
+    [data-testid="stPills"] {
+        flex-wrap: wrap !important;
+        gap: 4px !important;
+    }
+    [data-testid="stPills"] button {
+        font-size: 0.78rem !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Matchup card lines — stack to 2 columns on small screens */
+    .mc-lines {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Headings slightly smaller */
+    h1 { font-size: 1.6rem !important; }
+    h2 { font-size: 1.3rem !important; }
+    h3 { font-size: 1.1rem !important; }
+
+    /* Hide sidebar by default hint — already handled by Streamlit */
+    [data-testid="collapsedControl"] {
+        top: 0.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Very small phones — single column metrics */
+    [data-testid="stHorizontalBlock"] > div {
+        min-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    /* Matchup card teams — slightly smaller */
+    .mc-team-name { font-size: 0.9rem !important; }
+}
 </style>
 """, unsafe_allow_html=True)
 
