@@ -19,6 +19,10 @@ cache/*
 # Streamlit: keep config.toml (theme), exclude secrets
 .streamlit/secrets.toml
 
+# Outputs — keep backtest CSVs, ignore calibration/ratings exports
+outputs/*
+!outputs/backtest_*.csv
+
 # Large raw data / one-off analysis files
 2024_box_scores.json
 elo_2024.csv
@@ -30,7 +34,6 @@ ncf_betting_trends_2024.xlsx
 CFB lines*.csv
 clean_week1_ou.csv
 cleaned_week1_spreads.csv
-outputs/
 logs/
 
 # macOS

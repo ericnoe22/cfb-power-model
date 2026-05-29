@@ -1,0 +1,674 @@
+week,homeTeam,awayTeam,home_score,away_score,model_spread,vegas_spread,edge_spread,model_total,vegas_total,edge_total,actual_margin,actual_total,confidence,grade,bet_spread,bet_total,won_spread,won_total
+15,Western Michigan,Miami (OH),23,13,-4.1,-2.5,-1.6,32.6,44.5,-11.9,10.0,36.0,1.0,A+,,Under,,True
+15,Jacksonville State,Kennesaw State,15,19,5.4,3.0,2.4,61.8,62.5,-0.7,-4.0,34.0,1.0,,,,,
+15,Texas Tech,BYU,34,7,-10.0,-12.5,2.5,49.9,50.5,-0.6,27.0,41.0,1.0,,,,,
+15,Ohio State,Indiana,10,13,-0.3,-3.5,3.2,41.6,45.5,-3.9,-3.0,23.0,1.0,C,Away,Under,True,True
+15,Boise State,UNLV,38,21,-4.0,-6.0,2.0,63.4,59.5,3.9,17.0,59.0,1.0,C,,Over,,False
+15,Virginia,Duke,20,27,-4.8,-3.5,-1.3,56.5,58.5,-2.0,-7.0,47.0,1.0,,,,,
+14,Arizona State,Arizona,7,23,1.5,1.5,0.0,49.1,48.5,0.6,-16.0,30.0,1.0,,,,,
+15,Alabama,Georgia,7,28,2.5,1.5,1.0,45.7,48.5,-2.8,-21.0,35.0,1.0,,,,,
+16,Navy,Army,17,16,-6.0,-6.5,0.5,55.9,37.5,18.4,1.0,33.0,1.0,A+,,Over,,False
+14,Tulsa,UAB,24,31,-8.3,-9.5,1.2,65.7,56.5,9.2,-7.0,55.0,1.0,A+,,Over,,False
+15,Tulane,North Texas,34,21,1.5,1.5,0.0,77.3,66.5,10.8,13.0,55.0,1.0,A+,,Over,,False
+14,Oklahoma State,Iowa State,13,20,18.9,14.0,4.9,40.0,46.5,-6.5,-7.0,33.0,1.0,A,Away,Under,False,True
+14,Purdue,Indiana,3,56,29.1,28.5,0.6,48.1,53.5,-5.4,-53.0,59.0,1.0,B,,Under,,False
+14,Old Dominion,Georgia State,27,10,-30.4,-28.5,-1.9,60.6,58.5,2.1,17.0,37.0,1.0,,,,,
+15,James Madison,Troy,31,14,-18.4,-24.5,6.1,54.5,47.5,7.0,17.0,45.0,1.0,A,Away,Over,True,False
+5,Arkansas,Notre Dame,13,56,15.8,5.5,10.3,69.1,64.5,4.6,-43.0,69.0,1.0,A+,Away,Over,True,True
+4,Nebraska,Michigan,27,30,5.2,1.5,3.7,45.0,47.5,-2.5,-3.0,57.0,1.0,C,Away,,True,
+4,Washington State,Washington,24,59,7.4,21.0,-13.6,40.5,51.5,-11.0,-35.0,83.0,1.0,A+,Home,Under,False,False
+5,Washington,Ohio State,6,24,10.3,9.5,0.8,40.7,52.5,-11.8,-18.0,30.0,1.0,A+,,Under,,True
+5,Ole Miss,LSU,24,19,-12.7,-2.5,-10.2,46.2,57.5,-11.3,5.0,43.0,1.0,A+,Home,Under,True,True
+1,Kansas,Fresno State,31,7,-4.1,-14.0,9.9,49.1,51.5,-2.4,24.0,38.0,1.0,A+,Away,,False,
+1,Western Kentucky,Sam Houston,41,24,-26.5,-9.5,-17.0,60.1,60.5,-0.4,17.0,65.0,1.0,A+,Home,,True,
+1,South Florida,Boise State,34,7,-8.9,8.5,-17.4,62.8,63.5,-0.7,27.0,41.0,1.0,A+,Home,,True,
+1,Rutgers,Ohio,34,31,-10.1,-11.5,1.4,56.3,46.5,9.8,3.0,65.0,1.0,A+,,Over,,True
+1,UCF,Jacksonville State,17,10,-8.7,-16.5,7.8,52.4,53.5,-1.1,7.0,27.0,1.0,A,Away,,True,
+1,NC State,East Carolina,24,17,-1.7,-12.5,10.8,59.1,58.5,0.6,7.0,41.0,1.0,A+,Away,,True,
+1,Akron,Wyoming,0,10,2.0,8.5,-6.5,32.1,49.5,-17.4,-10.0,10.0,1.0,A+,Home,Under,False,True
+1,Minnesota,Buffalo,23,10,-17.5,-16.5,-1.0,35.8,45.5,-9.7,13.0,33.0,1.0,A+,,Under,,True
+1,Wisconsin,Miami (OH),17,0,-6.2,-17.5,11.3,27.4,40.5,-13.1,17.0,17.0,1.0,A+,Away,Under,True,True
+1,Cincinnati,Nebraska,17,20,-0.8,6.5,-7.3,53.7,52.5,1.2,-3.0,37.0,1.0,A,Home,,True,
+1,Michigan State,Western Michigan,23,6,-3.6,-18.5,14.9,44.4,49.5,-5.1,17.0,29.0,1.0,A+,Away,Under,True,True
+1,Wake Forest,Kennesaw State,10,9,-12.4,-17.5,5.1,49.7,51.5,-1.8,1.0,19.0,1.0,B,Away,,True,
+1,Colorado,Georgia Tech,20,27,9.3,4.0,5.3,55.1,55.5,-0.4,-7.0,47.0,1.0,B,Away,,True,
+1,Baylor,Auburn,24,38,5.5,1.5,4.0,57.4,57.5,-0.1,-14.0,62.0,1.0,C,Away,,True,
+1,Sam Houston,UNLV,21,38,23.1,13.5,9.6,66.3,58.5,7.8,-17.0,59.0,1.0,A+,Away,Over,True,True
+1,San José State,Central Michigan,14,16,4.0,-11.5,15.5,44.9,50.5,-5.6,-2.0,30.0,1.0,A+,Away,Under,True,True
+1,Purdue,Ball State,31,0,-23.7,-16.5,-7.2,45.2,50.5,-5.3,31.0,31.0,1.0,A,Home,Under,True,True
+1,Maryland,Florida Atlantic,39,7,-7.4,-16.5,9.1,60.6,57.5,3.1,32.0,46.0,1.0,A+,Away,Over,False,False
+1,Southern Miss,Mississippi State,17,34,5.0,11.5,-6.5,66.0,59.5,6.5,-17.0,51.0,1.0,A,Home,Over,False,False
+1,Tulane,Northwestern,23,3,-3.4,-6.5,3.1,50.0,47.5,2.5,20.0,26.0,1.0,C,Away,,False,
+1,Kentucky,Toledo,24,16,-1.4,-10.0,8.6,39.1,48.5,-9.4,8.0,40.0,1.0,A+,Away,Under,True,True
+1,Indiana,Old Dominion,27,14,-27.5,-23.5,-4.0,51.6,54.5,-2.9,13.0,41.0,1.0,C,Home,,False,
+1,Florida State,Alabama,31,17,6.8,13.5,-6.7,44.4,50.5,-6.1,14.0,48.0,1.0,A,Home,Under,True,True
+1,Georgia,Marshall,45,7,-32.5,-39.5,7.0,61.8,55.5,6.3,38.0,52.0,1.0,A,Away,Over,True,False
+1,Penn State,Nevada,46,11,-32.3,-45.5,13.2,42.4,58.5,-16.1,35.0,57.0,1.0,A+,Away,Under,True,True
+1,Virginia,Coastal Carolina,48,7,-24.3,-12.5,-11.8,52.9,57.5,-4.6,41.0,55.0,1.0,A+,Home,Under,True,True
+1,Texas A&M,UTSA,42,24,-18.2,-21.5,3.3,63.3,56.5,6.8,18.0,66.0,1.0,A,Away,Over,True,True
+1,Clemson,LSU,10,17,-1.5,-3.5,2.0,33.9,57.5,-23.6,-7.0,27.0,1.0,A+,,Under,,True
+1,Michigan,New Mexico,34,17,-13.1,-36.5,23.4,45.0,52.5,-7.5,17.0,51.0,1.0,A+,Away,Under,True,True
+1,USC,Missouri State,73,13,-28.9,-34.5,5.6,65.9,59.5,6.4,60.0,86.0,0.75,B,Away,Over,False,True
+1,Utah State,UTEP,28,16,-19.6,-3.5,-16.1,62.8,59.5,3.3,12.0,44.0,1.0,A+,Home,Over,True,False
+1,Ole Miss,Georgia State,63,7,-46.2,-38.5,-7.7,64.0,62.5,1.5,56.0,70.0,1.0,A,Home,,True,
+1,Louisiana,Rice,12,14,-11.6,-14.5,2.9,56.5,49.5,7.0,-2.0,26.0,1.0,A,,Over,,False
+1,Texas State,Eastern Michigan,52,27,-16.4,-14.0,-2.4,70.3,58.5,11.8,25.0,79.0,1.0,A+,,Over,,True
+1,Fresno State,Georgia Southern,42,14,-13.8,-2.5,-11.3,55.7,54.5,1.2,28.0,56.0,1.0,A+,Home,,True,
+1,Oregon State,California,15,34,7.1,-3.0,10.1,46.9,51.5,-4.6,-19.0,49.0,1.0,A+,Away,Under,True,True
+1,Washington,Colorado State,38,21,-30.4,-20.5,-9.9,45.9,52.5,-6.6,17.0,59.0,1.0,A+,Home,Under,False,False
+1,UCLA,Utah,10,43,21.3,6.5,14.8,54.9,50.5,4.4,-33.0,53.0,1.0,A+,Away,Over,True,True
+1,Miami,Notre Dame,27,24,1.1,2.5,-1.4,50.4,53.5,-3.1,3.0,51.0,1.0,C,,Under,,True
+1,North Carolina,TCU,14,48,15.6,3.0,12.6,44.6,59.5,-14.9,-34.0,62.0,1.0,A+,Away,Under,True,False
+2,Iowa State,Iowa,16,13,5.0,-1.5,6.5,39.5,,,3.0,29.0,1.0,A,Away,,False,
+2,Missouri,Kansas,42,31,-11.2,-7.0,-4.2,51.6,,,11.0,73.0,1.0,C,Home,,True,
+2,Oklahoma,Michigan,24,13,-5.3,-3.0,-2.3,36.5,47.5,-11.0,11.0,37.0,1.0,A+,,Under,,True
+1,South Carolina,Virginia Tech,24,11,-14.4,-8.5,-5.9,42.6,48.5,-5.9,13.0,35.0,1.0,B,Home,Under,True,True
+1,Tennessee,Syracuse,45,26,-26.5,-13.5,-13.0,62.1,53.5,8.6,19.0,71.0,1.0,A+,Home,Over,True,True
+4,Oregon,Oregon State,41,7,-38.6,-33.5,-5.1,45.6,58.5,-12.9,34.0,48.0,1.0,A+,Home,Under,True,True
+6,Florida,Texas,29,21,8.4,4.5,3.9,43.5,42.5,1.0,8.0,50.0,1.0,C,Away,,False,
+4,Utah,Texas Tech,10,34,0.5,-3.5,4.0,54.4,58.5,-4.1,-24.0,44.0,1.0,C,Away,Under,True,True
+4,Indiana,Illinois,63,10,-21.8,-7.0,-14.8,51.3,51.5,-0.2,53.0,73.0,1.0,A+,Home,,True,
+7,Utah,Arizona State,42,10,-16.2,-9.5,-6.7,53.8,44.5,9.3,32.0,52.0,1.0,A+,Home,Over,True,True
+6,Florida State,Miami,22,28,10.5,3.5,7.0,44.6,54.5,-9.9,-6.0,50.0,1.0,A+,Away,Under,True,True
+8,Notre Dame,USC,34,24,-10.1,-10.5,0.4,61.8,60.5,1.3,10.0,58.0,1.0,,,,,
+8,Miami,Louisville,21,24,-12.1,-10.5,-1.6,45.5,49.5,-4.0,-3.0,45.0,1.0,C,,Under,,True
+5,Georgia,Alabama,21,24,-7.5,-2.5,-5.0,45.7,53.5,-7.8,-3.0,45.0,1.0,A,Home,Under,False,True
+7,Texas,Oklahoma,23,6,-3.7,-2.5,-1.2,39.4,44.5,-5.1,17.0,29.0,1.0,B,,Under,,True
+12,Louisville,Clemson,19,20,-4.0,-1.5,-2.5,43.4,50.5,-7.1,-1.0,39.0,1.0,A,,Under,,True
+9,South Carolina,Alabama,22,29,6.5,11.5,-5.0,38.7,47.5,-8.8,-7.0,51.0,1.0,A+,Home,Under,True,False
+6,Notre Dame,Boise State,28,7,-22.8,-21.5,-1.3,56.1,63.5,-7.4,21.0,35.0,1.0,A,,Under,,True
+6,North Carolina,Clemson,10,38,16.3,15.5,0.8,34.2,47.5,-13.3,-28.0,48.0,1.0,A+,,Under,,False
+12,Georgia,Texas,35,10,-7.0,-3.5,-3.5,48.2,50.5,-2.3,25.0,45.0,1.0,C,Home,,True,
+7,Oregon,Indiana,20,30,3.7,-7.0,10.7,48.5,51.5,-3.0,-10.0,50.0,1.0,A+,Away,,True,
+8,Georgia,Ole Miss,43,35,-3.6,-7.5,3.9,56.1,56.5,-0.4,8.0,78.0,1.0,C,Away,,False,
+9,Kansas,Kansas State,17,42,0.7,-3.5,4.2,61.3,55.5,5.8,-25.0,59.0,1.0,B,Away,Over,True,True
+8,Arizona State,Texas Tech,26,22,14.1,7.5,6.6,48.2,52.5,-4.3,4.0,48.0,1.0,A,Away,Under,False,True
+10,Florida,Georgia,20,24,12.9,7.0,5.9,44.5,50.5,-6.0,-4.0,44.0,1.0,A,Away,Under,False,True
+9,Michigan State,Michigan,20,31,11.9,13.5,-1.6,48.8,47.5,1.3,-11.0,51.0,1.0,,,,,
+10,Ohio State,Penn State,38,14,-13.5,-17.5,4.0,44.8,45.5,-0.7,24.0,52.0,1.0,C,Away,,False,
+9,LSU,Texas A&M,25,49,5.3,1.5,3.8,41.9,50.5,-8.6,-24.0,74.0,1.0,A+,Away,Under,True,False
+11,Clemson,Florida State,24,10,-4.5,-1.5,-3.0,42.5,56.5,-14.0,14.0,34.0,1.0,A+,,Under,,True
+10,SMU,Miami,26,20,5.4,8.5,-3.1,47.8,50.5,-2.7,6.0,46.0,1.0,C,Home,,True,
+12,Alabama,Oklahoma,21,23,-3.2,-6.5,3.3,36.9,45.5,-8.6,-2.0,44.0,1.0,A+,Away,Under,True,True
+14,Texas,Texas A&M,27,17,-1.5,2.5,-4.0,50.8,54.5,-3.7,10.0,44.0,1.0,C,Home,Under,True,True
+13,Colorado,Arizona State,17,42,7.1,7.0,0.1,48.7,47.5,1.2,-25.0,59.0,1.0,,,,,
+13,Oregon,USC,42,27,-9.7,-10.5,0.8,57.7,59.5,-1.8,15.0,69.0,1.0,,,,,
+13,Florida,Tennessee,11,31,5.5,3.5,2.0,57.4,57.5,-0.1,-20.0,42.0,1.0,,,,,
+14,Tulane,Charlotte,27,0,-33.4,-30.5,-2.9,59.9,51.5,8.4,27.0,27.0,1.0,A+,,Over,,False
+4,Miami,Florida,26,7,-16.7,-8.5,-8.2,41.2,51.5,-10.3,19.0,33.0,1.0,A+,Home,Under,True,True
+8,Michigan,Washington,24,7,-0.9,-4.0,3.1,43.3,50.5,-7.2,17.0,31.0,1.0,A,Away,Under,False,True
+3,LSU,Florida,20,10,-8.8,-4.5,-4.3,34.6,47.5,-12.9,10.0,30.0,1.0,A+,Home,Under,True,True
+1,Kansas State,Iowa State,21,24,-1.1,-3.5,2.4,49.5,49.5,0.0,-3.0,45.0,1.0,,,,,
+1,Ohio State,Texas,14,7,-13.0,-3.0,-10.0,41.7,47.5,-5.8,7.0,21.0,1.0,A+,Home,Under,True,True
+3,Tennessee,Georgia,41,44,5.9,3.5,2.4,62.1,50.5,11.6,-3.0,85.0,1.0,A+,,Over,,True
+3,Georgia Tech,Clemson,24,21,-1.7,3.0,-4.7,49.4,51.5,-2.1,3.0,45.0,1.0,B,Home,,True,
+13,Utah,Kansas State,51,47,-14.3,-17.5,3.2,59.1,52.5,6.6,4.0,98.0,1.0,A,Away,Over,True,True
+11,Alabama,LSU,20,9,-8.8,-10.0,1.2,35.8,49.5,-13.7,11.0,29.0,1.0,A+,,Under,,True
+11,Penn State,Indiana,24,27,10.7,14.5,-3.8,50.2,49.5,0.7,-3.0,51.0,1.0,C,Home,,True,
+3,West Virginia,Pittsburgh,31,24,13.6,7.0,6.6,53.5,55.5,-2.0,7.0,55.0,1.0,A,Away,,False,
+14,Oklahoma,LSU,17,13,-8.1,-11.5,3.4,30.5,36.5,-6.0,4.0,30.0,1.0,A,Away,Under,True,True
+14,Sam Houston,Florida International,16,56,16.3,10.5,5.8,64.6,50.5,14.1,-40.0,72.0,1.0,A+,Away,Over,True,True
+14,Auburn,Alabama,20,27,3.6,7.0,-3.4,39.6,48.5,-8.9,-7.0,47.0,1.0,A+,Home,Under,,True
+10,Kansas State,Texas Tech,20,43,12.3,7.5,4.8,53.5,51.5,2.0,-23.0,63.0,1.0,B,Away,,True,
+3,Notre Dame,Texas A&M,40,41,-6.7,-6.5,-0.2,56.3,49.5,6.8,-1.0,81.0,1.0,A,,Over,,True
+14,Michigan State,Maryland,38,28,-1.9,-4.0,2.1,50.0,49.5,0.5,10.0,66.0,1.0,,,,,
+14,Stanford,Notre Dame,20,49,32.3,32.5,-0.2,48.9,49.5,-0.6,-29.0,69.0,1.0,,,,,
+14,Washington,Oregon,14,26,6.4,6.5,-0.1,47.6,51.5,-3.9,-12.0,40.0,1.0,C,,Under,,True
+14,Illinois,Northwestern,20,13,-9.1,-7.0,-2.1,45.0,44.5,0.5,7.0,33.0,1.0,,,,,
+14,Texas State,South Alabama,49,26,-13.2,-9.5,-3.7,78.2,62.5,15.7,23.0,75.0,1.0,A+,Home,Over,True,True
+14,Nebraska,Iowa,16,40,8.4,5.5,2.9,43.4,38.5,4.9,-24.0,56.0,1.0,B,,Over,,True
+14,Georgia Tech,Georgia,9,16,11.4,16.5,-5.1,54.8,60.5,-5.7,-7.0,25.0,1.0,B,Home,Under,True,True
+9,Utah,Colorado,53,7,-25.7,-14.0,-11.7,54.9,49.5,5.4,46.0,60.0,1.0,A+,Home,Over,True,True
+14,Southern Miss,Troy,18,28,-3.4,-7.0,3.6,58.0,50.5,7.5,-10.0,46.0,1.0,A,Away,Over,True,False
+8,Alabama,Tennessee,37,20,-4.9,-8.5,3.6,58.6,61.5,-2.9,17.0,57.0,1.0,C,Away,,False,
+14,Kansas State,Colorado,24,14,-14.0,-16.5,2.5,54.0,49.5,4.5,10.0,38.0,1.0,B,,Over,,False
+13,UCLA,Washington,14,48,16.9,10.5,6.4,47.5,51.5,-4.0,-34.0,62.0,1.0,A,Away,Under,True,False
+13,Oklahoma,Missouri,17,6,-5.5,-4.5,-1.0,35.2,42.5,-7.3,11.0,23.0,1.0,A,,Under,,True
+13,North Carolina,Duke,25,32,13.0,7.0,6.0,51.8,50.5,1.3,-7.0,57.0,1.0,A,Away,,,
+8,Iowa,Penn State,25,24,-2.2,-3.0,0.8,45.8,41.5,4.3,1.0,49.0,1.0,C,,Over,,True
+14,Memphis,Navy,17,28,-4.8,-4.0,-0.8,69.7,57.5,12.2,-11.0,45.0,1.0,A+,,Over,,False
+14,Colorado State,Air Force,21,42,5.1,2.5,2.6,56.1,47.5,8.6,-21.0,63.0,1.0,A+,,Over,,True
+14,Kansas,Utah,21,31,12.4,10.0,2.4,62.2,60.5,1.7,-10.0,52.0,1.0,,,,,
+14,Miami (OH),Ball State,45,24,-21.4,-16.5,-4.9,36.9,40.5,-3.6,21.0,69.0,1.0,B,Home,Under,True,False
+14,UTSA,Army,24,27,-5.5,-8.5,3.0,57.7,50.5,7.2,-3.0,51.0,1.0,A,,Over,,True
+7,Auburn,Georgia,10,20,8.6,4.5,4.1,43.1,46.5,-3.4,-10.0,30.0,1.0,C,Away,Under,True,True
+14,Utah State,Boise State,24,25,0.2,1.5,-1.3,60.5,54.5,6.0,-1.0,49.0,1.0,A,,Over,,False
+14,Delaware,UTEP,61,31,-7.9,-4.5,-3.4,64.5,55.5,9.0,30.0,92.0,0.75,A,Home,Over,True,True
+7,Illinois,Ohio State,16,34,14.6,14.5,0.1,45.9,51.5,-5.6,-18.0,50.0,1.0,B,,Under,,True
+14,Virginia,Virginia Tech,27,7,-15.0,-8.5,-6.5,44.7,52.5,-7.8,20.0,34.0,1.0,A,Home,Under,True,True
+14,South Florida,Rice,52,3,-31.1,-28.5,-2.6,60.2,57.5,2.7,49.0,55.0,1.0,,,,,
+14,NC State,North Carolina,42,19,-16.6,-7.0,-9.6,44.7,48.5,-3.8,23.0,61.0,1.0,A+,Home,Under,True,False
+14,Marshall,Georgia Southern,19,24,-2.8,-10.5,7.7,76.0,62.5,13.5,-5.0,43.0,1.0,A+,Away,Over,True,False
+14,Syracuse,Boston College,12,34,1.4,3.0,-1.6,53.8,53.5,0.3,-22.0,46.0,1.0,,,,,
+5,Penn State,Oregon,24,30,4.5,-3.5,8.0,51.7,53.5,-1.8,-6.0,54.0,1.0,A+,Away,,True,
+14,Rutgers,Penn State,36,40,12.8,14.0,-1.2,61.8,55.5,6.3,-4.0,76.0,1.0,A,,Over,,True
+14,Pittsburgh,Miami,7,38,10.7,6.5,4.2,49.2,48.5,0.7,-31.0,45.0,1.0,C,Away,,True,
+14,Florida Atlantic,East Carolina,3,42,12.8,7.0,5.8,68.1,66.5,1.6,-39.0,45.0,1.0,B,Away,,True,
+14,South Carolina,Clemson,14,28,-0.8,-2.5,1.7,36.8,45.5,-8.7,-14.0,42.0,1.0,A+,,Under,,True
+14,Florida,Florida State,40,21,-1.4,1.5,-2.9,43.2,49.5,-6.3,19.0,61.0,1.0,A,,Under,,False
+14,West Virginia,Texas Tech,0,49,28.4,24.5,3.9,50.0,53.5,-3.5,-49.0,49.0,1.0,C,Away,Under,True,True
+6,Alabama,Vanderbilt,30,14,-2.4,-13.5,11.1,55.2,57.5,-2.3,16.0,44.0,1.0,A+,Away,,False,
+14,New Mexico,San Diego State,23,17,-2.6,1.5,-4.1,41.1,41.5,-0.4,6.0,40.0,1.0,C,Home,,True,
+14,USC,UCLA,29,10,-23.6,-21.5,-2.1,57.6,58.5,-0.9,19.0,39.0,1.0,,,,,
+14,Mississippi State,Ole Miss,19,38,14.9,7.5,7.4,64.9,62.5,2.4,-19.0,57.0,1.0,A,Away,,True,
+14,BYU,UCF,41,21,-21.8,-17.5,-4.3,45.5,46.5,-1.0,20.0,62.0,1.0,C,Home,,True,
+14,New Mexico State,Middle Tennessee,24,31,-3.2,-3.0,-0.2,57.6,52.5,5.1,-7.0,55.0,1.0,B,,Over,,True
+14,Eastern Michigan,Western Michigan,21,31,8.4,10.0,-1.6,42.6,49.5,-6.9,-10.0,52.0,1.0,A,,Under,,False
+14,Missouri State,Louisiana Tech,30,42,3.6,-2.5,6.1,58.6,45.5,13.1,-12.0,72.0,0.75,A+,Away,Over,True,True
+14,Tennessee,Vanderbilt,24,45,0.0,-2.5,2.5,71.6,66.5,5.1,-21.0,69.0,1.0,B,,Over,,True
+14,Michigan,Ohio State,9,27,12.0,9.5,2.5,38.8,42.5,-3.7,-18.0,36.0,1.0,C,,Under,,True
+14,Louisville,Kentucky,41,0,-10.0,1.5,-11.5,46.2,45.5,0.7,41.0,41.0,1.0,A+,Home,,True,
+14,Duke,Wake Forest,49,32,-1.5,-2.5,1.0,57.1,53.5,3.6,17.0,81.0,1.0,C,,Over,,True
+14,Liberty,Kennesaw State,42,48,3.4,2.5,0.9,59.6,55.5,4.1,-6.0,90.0,1.0,C,,Over,,True
+14,Baylor,Houston,24,31,3.8,-2.5,6.3,66.2,56.5,9.7,-7.0,55.0,1.0,A+,Away,Over,True,False
+14,Central Michigan,Toledo,3,21,7.9,11.5,-3.6,33.2,46.5,-13.3,-18.0,24.0,1.0,A+,Home,Under,False,True
+14,Arkansas,Missouri,17,31,4.7,4.5,0.2,59.4,54.5,4.9,-14.0,48.0,1.0,B,,Over,,False
+14,North Texas,Temple,52,25,-14.5,-20.5,6.0,77.6,65.5,12.1,27.0,77.0,1.0,A+,Away,Over,False,True
+3,Houston,Colorado,36,20,-18.1,-4.0,-14.1,52.2,45.5,6.7,16.0,56.0,1.0,A+,Home,Over,True,True
+3,Arizona,Kansas State,23,17,-6.0,1.5,-7.5,54.4,55.5,-1.1,6.0,40.0,1.0,A,Home,,True,
+3,Wake Forest,NC State,24,34,-5.3,7.5,-12.8,50.0,52.5,-2.5,-10.0,58.0,1.0,A+,Home,,False,
+3,UCLA,New Mexico,10,35,8.0,-15.5,23.5,49.2,52.5,-3.3,-25.0,45.0,1.0,A+,Away,Under,True,True
+14,TCU,Cincinnati,45,23,-7.4,-3.0,-4.4,59.0,58.5,0.5,22.0,68.0,1.0,C,Home,,True,
+3,Northwestern,Oregon,14,34,17.1,25.5,-8.4,42.2,50.5,-8.3,-20.0,48.0,1.0,A+,Home,Under,True,True
+3,Tulane,Duke,34,27,-2.5,-1.5,-1.0,69.6,52.5,17.1,7.0,61.0,1.0,A+,,Over,,True
+3,Temple,Oklahoma,3,42,17.8,23.5,-5.7,48.9,50.5,-1.6,-39.0,45.0,1.0,B,Home,,False,
+3,Troy,Memphis,7,28,9.1,4.5,4.6,60.8,51.5,9.3,-21.0,35.0,1.0,A+,Away,Over,True,False
+3,Alabama,Wisconsin,38,14,-20.8,-17.5,-3.3,32.2,45.5,-13.3,24.0,52.0,1.0,A+,Home,Under,True,False
+3,Texas Tech,Oregon State,45,14,-42.2,-24.5,-17.7,45.0,61.5,-16.5,31.0,59.0,1.0,A+,Home,Under,True,True
+3,North Texas,Washington State,59,10,-9.6,-6.5,-3.1,62.4,57.5,4.9,49.0,69.0,1.0,B,Home,Over,True,True
+3,Virginia Tech,Old Dominion,26,45,11.5,-5.5,17.0,53.1,50.5,2.6,-19.0,71.0,1.0,A+,Away,,True,
+3,Purdue,USC,17,33,17.4,20.5,-3.1,57.3,59.5,-2.2,-16.0,50.0,1.0,C,Home,,True,
+3,South Carolina,Vanderbilt,7,31,9.7,-3.0,12.7,51.7,48.5,3.2,-24.0,38.0,1.0,A+,Away,Over,True,False
+3,Wyoming,Utah,6,31,28.3,24.5,3.8,42.8,47.5,-4.7,-25.0,37.0,1.0,B,Away,Under,True,True
+3,Tulsa,Navy,23,42,11.4,14.0,-2.6,61.9,52.5,9.4,-19.0,65.0,1.0,A+,,Over,,True
+3,Miami,South Florida,49,12,-11.7,-17.5,5.8,57.1,56.5,0.6,37.0,61.0,1.0,B,Away,,False,
+3,Kent State,Buffalo,28,31,5.1,23.5,-18.4,43.1,48.5,-5.4,-3.0,59.0,1.0,A+,Home,Under,True,False
+3,Michigan,Central Michigan,63,3,-21.1,-27.5,6.4,36.8,42.5,-5.7,60.0,66.0,1.0,A,Away,Under,False,False
+3,Delaware,UConn,44,41,11.7,8.5,3.2,68.5,52.5,16.0,3.0,85.0,0.75,A+,Away,Over,False,True
+14,Minnesota,Wisconsin,17,7,-4.4,2.5,-6.9,28.5,38.5,-10.0,10.0,24.0,1.0,A+,Home,Under,True,True
+14,Coastal Carolina,James Madison,10,59,21.6,24.5,-2.9,62.3,54.5,7.8,-49.0,69.0,1.0,A,,Over,,True
+3,Auburn,South Alabama,31,15,-24.4,-26.5,2.1,52.7,56.5,-3.8,16.0,46.0,1.0,C,,Under,,True
+3,Missouri State,SMU,10,28,20.0,29.5,-9.5,59.7,60.5,-0.8,-18.0,38.0,0.75,A,Home,,True,
+3,Arkansas State,Iowa State,16,24,15.3,21.0,-5.7,51.1,55.5,-4.4,-8.0,40.0,1.0,B,Home,Under,True,True
+3,Louisiana Tech,New Mexico State,49,14,-15.8,-10.0,-5.8,52.8,42.5,10.3,35.0,63.0,1.0,A+,Home,Over,True,True
+3,Missouri,Louisiana,52,10,-25.1,-27.5,2.4,51.5,47.5,4.0,42.0,62.0,1.0,C,,Over,,True
+14,Washington State,Oregon State,32,8,-19.8,-14.0,-5.8,38.5,42.5,-4.0,24.0,40.0,1.0,B,Home,Under,True,True
+3,Kentucky,Eastern Michigan,48,23,-18.1,-26.5,8.4,48.3,49.5,-1.2,25.0,71.0,1.0,A+,Away,,True,
+3,Ole Miss,Arkansas,41,35,-20.4,-3.5,-16.9,71.5,60.5,11.0,6.0,76.0,1.0,A+,Home,Over,True,True
+14,California,SMU,38,35,12.8,13.5,-0.7,52.8,53.5,-0.7,3.0,73.0,1.0,,,,,
+3,California,Minnesota,27,14,2.1,3.0,-0.9,43.7,41.5,2.2,13.0,41.0,1.0,,,,,
+14,San José State,Fresno State,14,41,12.7,3.0,9.7,45.7,45.5,0.2,-27.0,55.0,1.0,A+,Away,,True,
+14,Nevada,UNLV,17,42,8.9,7.5,1.4,52.1,52.5,-0.4,-25.0,59.0,1.0,,,,,
+14,Northern Illinois,Kent State,31,35,-3.8,-4.5,0.7,37.6,44.5,-6.9,-4.0,66.0,1.0,A,,Under,,False
+3,Texas,UTEP,27,10,-35.0,-39.5,4.5,52.9,52.5,0.4,17.0,37.0,1.0,B,Away,,True,
+3,Utah State,Air Force,49,30,-4.9,4.0,-8.9,66.3,51.5,14.8,19.0,79.0,1.0,A+,Home,Over,True,True
+3,Nevada,Middle Tennessee,13,14,-5.1,-9.5,4.4,45.9,49.5,-3.6,-1.0,27.0,1.0,C,Away,Under,True,True
+3,Bowling Green,Liberty,23,13,3.3,6.0,-2.7,47.2,51.5,-4.3,10.0,36.0,1.0,C,,Under,,True
+3,Florida International,Florida Atlantic,38,28,0.3,-2.5,2.8,73.4,56.5,16.9,10.0,66.0,1.0,A+,,Over,,True
+3,Ohio State,Ohio,37,9,-36.8,-28.5,-8.3,39.3,49.5,-10.2,28.0,46.0,1.0,A+,Home,Under,False,True
+3,Georgia Southern,Jacksonville State,41,34,-1.8,-3.0,1.2,71.2,58.5,12.7,7.0,75.0,1.0,A+,,Over,,True
+3,Illinois,Western Michigan,38,0,-16.2,-27.5,11.3,44.1,50.5,-6.4,38.0,38.0,1.0,A+,Away,Under,False,True
+3,Arizona State,Texas State,34,15,-4.3,-18.5,14.2,67.8,61.5,6.3,19.0,49.0,1.0,A+,Away,Over,False,False
+3,Stanford,Boston College,30,20,3.4,14.0,-10.6,49.0,44.5,4.5,10.0,50.0,1.0,A+,Home,Over,True,True
+3,Coastal Carolina,East Carolina,0,38,20.9,7.0,13.9,62.6,57.5,5.1,-38.0,38.0,1.0,A+,Away,Over,True,False
+3,UAB,Akron,31,28,-1.0,-12.5,11.5,57.4,58.5,-1.1,3.0,59.0,1.0,A+,Away,,True,
+14,Buffalo,Ohio,26,31,4.5,7.0,-2.5,39.6,44.5,-4.9,-5.0,57.0,1.0,B,,Under,,False
+4,Rutgers,Iowa,28,38,12.5,2.5,10.0,54.2,46.5,7.7,-10.0,66.0,1.0,A+,Away,Over,True,True
+4,TCU,SMU,35,24,1.4,-6.5,7.9,56.1,63.5,-7.4,11.0,59.0,1.0,A,Away,Under,False,True
+14,Jacksonville State,Western Kentucky,37,34,5.0,1.5,3.5,62.6,56.5,6.1,3.0,71.0,1.0,A,Away,Over,False,True
+4,Baylor,Arizona State,24,27,0.5,-3.0,3.5,62.7,60.5,2.2,-3.0,51.0,1.0,C,Away,,True,
+4,Wisconsin,Maryland,10,27,-3.0,-10.5,7.5,33.0,44.5,-11.5,-17.0,37.0,1.0,A+,Away,Under,True,True
+4,Oklahoma,Auburn,24,17,-7.9,-6.5,-1.4,34.3,47.5,-13.2,7.0,41.0,1.0,A+,,Under,,True
+4,USC,Michigan State,45,31,-20.3,-18.5,-1.8,60.8,55.5,5.3,14.0,76.0,1.0,B,,Over,,True
+4,Notre Dame,Purdue,56,30,-28.3,-24.5,-3.8,53.7,51.5,2.2,26.0,86.0,1.0,C,Home,,True,
+4,Missouri,South Carolina,29,20,-7.7,-10.0,2.3,37.0,48.5,-11.5,9.0,49.0,1.0,A+,,Under,,False
+5,Virginia,Florida State,46,38,-3.5,7.0,-10.5,43.0,59.5,-16.5,8.0,84.0,1.0,A+,Home,Under,True,False
+5,Oregon State,Houston,24,27,18.7,11.5,7.2,47.9,48.5,-0.6,-3.0,51.0,1.0,A,Away,,False,
+7,Notre Dame,NC State,36,7,-21.9,-23.5,1.6,58.8,59.5,-0.7,29.0,43.0,1.0,,,,,
+8,James Madison,Old Dominion,63,27,-8.3,-3.0,-5.3,57.2,47.5,9.7,36.0,90.0,1.0,A+,Home,Over,True,True
+7,Middle Tennessee,Missouri State,20,22,3.8,3.0,0.8,63.4,51.5,11.9,-2.0,42.0,0.75,A+,,Over,,False
+7,North Texas,South Florida,36,63,-1.2,-2.5,1.3,80.3,68.5,11.8,-27.0,99.0,1.0,A+,,Over,,True
+7,Washington,Rutgers,38,19,-16.0,-9.5,-6.5,57.7,62.5,-4.8,19.0,57.0,1.0,A,Home,Under,True,True
+5,Arizona State,TCU,27,24,0.6,-3.0,3.6,53.4,54.5,-1.1,3.0,51.0,1.0,C,Away,,,
+7,Tulane,East Carolina,26,19,2.3,-7.0,9.3,62.2,53.5,8.7,7.0,45.0,1.0,A+,Away,Over,,False
+6,Georgia,Kentucky,35,14,-20.7,-19.5,-1.2,46.6,48.5,-1.9,21.0,49.0,1.0,,,,,
+6,Michigan,Wisconsin,24,10,-15.9,-17.5,1.6,31.8,42.5,-10.7,14.0,34.0,1.0,A+,,Under,,True
+8,Utah State,San José State,30,25,-16.0,-3.0,-13.0,62.3,63.5,-1.2,5.0,55.0,1.0,A+,Home,,True,
+8,Vanderbilt,LSU,31,24,-8.9,-1.5,-7.4,48.8,48.5,0.3,7.0,55.0,1.0,A,Home,,True,
+5,Kansas State,UCF,34,20,-14.5,-6.0,-8.5,49.1,48.5,0.6,14.0,54.0,1.0,A+,Home,,True,
+6,Ohio State,Minnesota,42,3,-28.5,-23.5,-5.0,35.5,42.5,-7.0,39.0,45.0,1.0,A,Home,Under,True,False
+8,Boise State,UNLV,56,31,-8.0,-12.5,4.5,63.4,60.5,2.9,25.0,87.0,1.0,B,Away,,False,
+7,Wisconsin,Iowa,0,37,14.0,5.5,8.5,30.2,37.5,-7.3,-37.0,37.0,1.0,A+,Away,Under,True,True
+7,Missouri,Alabama,24,27,1.3,3.0,-1.7,40.5,50.5,-10.0,-3.0,51.0,1.0,A+,,Under,,False
+5,Iowa State,Arizona,39,14,-1.8,-4.0,2.2,45.7,48.5,-2.8,25.0,53.0,1.0,,,,,
+5,East Carolina,Army,28,6,-12.7,-3.5,-9.2,51.0,52.5,-1.5,22.0,34.0,1.0,A+,Home,,True,
+7,Tennessee,Arkansas,34,31,-11.0,-10.0,-1.0,77.5,68.5,9.0,3.0,65.0,1.0,A+,,Over,,False
+6,TCU,Colorado,35,21,-15.2,-13.5,-1.7,54.5,57.5,-3.0,14.0,56.0,1.0,C,,,,
+7,Colorado State,Fresno State,49,21,13.3,5.5,7.8,40.2,47.5,-7.3,28.0,70.0,1.0,A,Away,Under,False,False
+8,Miami (OH),Eastern Michigan,44,30,-11.8,-12.5,0.7,42.6,47.5,-4.9,14.0,74.0,1.0,B,,Under,,False
+8,Auburn,Missouri,17,23,-0.1,1.5,-1.6,37.9,43.5,-5.6,-6.0,40.0,1.0,B,,Under,,True
+5,Mississippi State,Tennessee,34,41,8.6,7.5,1.1,70.9,63.5,7.4,-7.0,75.0,1.0,A,,Over,,True
+6,Texas A&M,Mississippi State,31,9,-17.5,-17.5,0.0,60.6,57.5,3.1,22.0,40.0,1.0,C,,Over,,False
+5,James Madison,Georgia Southern,35,10,-21.8,-14.5,-7.3,67.9,54.5,13.4,25.0,45.0,1.0,A+,Home,Over,True,False
+7,UTEP,Liberty,8,19,4.8,1.5,3.3,59.5,46.5,13.0,-11.0,27.0,1.0,A+,Away,Over,True,False
+6,Houston,Texas Tech,11,35,10.8,13.5,-2.7,51.7,51.5,0.2,-24.0,46.0,1.0,,,,,
+7,Texas A&M,Florida,34,17,-14.5,-7.0,-7.5,47.1,47.5,-0.4,17.0,51.0,1.0,A,Home,,True,
+8,BYU,Utah,24,21,2.0,4.0,-2.0,55.5,49.5,6.0,3.0,45.0,1.0,A,,Over,,False
+5,Iowa,Indiana,15,20,11.1,9.5,1.6,42.6,47.5,-4.9,-5.0,35.0,1.0,B,,Under,,True
+7,Kennesaw State,Louisiana Tech,35,7,-3.5,4.5,-8.0,54.8,46.5,8.3,28.0,42.0,1.0,A+,Home,Over,True,False
+7,Cincinnati,UCF,20,11,-10.8,-10.0,-0.8,49.4,55.5,-6.1,9.0,31.0,1.0,A,,Under,,True
+5,West Virginia,Utah,14,48,25.4,13.5,11.9,55.6,46.5,9.1,-34.0,62.0,1.0,A+,Away,Over,True,True
+6,Maryland,Washington,20,24,13.0,5.5,7.5,44.5,52.5,-8.0,-4.0,44.0,1.0,A+,Away,Under,False,True
+7,LSU,South Carolina,20,10,-5.2,-8.5,3.3,32.3,44.5,-12.2,10.0,30.0,1.0,A+,Away,Under,False,True
+8,UCF,West Virginia,45,13,-6.6,-6.5,-0.1,45.6,46.5,-0.9,32.0,58.0,1.0,,,,,
+5,Illinois,USC,34,32,3.4,6.5,-3.1,60.5,62.5,-2.0,2.0,66.0,1.0,C,Home,,True,
+5,Ohio,Bowling Green,35,20,-11.2,-7.5,-3.7,38.2,49.5,-11.3,15.0,55.0,1.0,A+,Home,Under,True,False
+7,Sam Houston,Jacksonville State,27,29,14.0,7.0,7.0,62.3,53.5,8.8,-2.0,56.0,1.0,A+,Away,Over,False,True
+7,Georgia Southern,Southern Miss,35,38,1.8,3.0,-1.2,71.4,59.5,11.9,-3.0,73.0,1.0,A+,,Over,,True
+7,James Madison,Louisiana,24,14,-22.5,-18.5,-4.0,61.2,44.5,16.7,10.0,38.0,1.0,A+,Home,Over,False,False
+8,Ohio,Northern Illinois,48,21,-10.0,-10.5,0.5,34.1,41.5,-7.4,27.0,69.0,1.0,A,,Under,,False
+8,Boston College,UConn,23,38,3.6,2.5,1.1,62.5,58.5,4.0,-15.0,61.0,1.0,C,,Over,,True
+7,Army,Charlotte,24,7,-28.0,-17.5,-10.5,48.7,45.5,3.2,17.0,31.0,1.0,A+,Home,Over,False,False
+5,Texas A&M,Auburn,16,10,-10.1,-6.5,-3.6,45.7,51.5,-5.8,6.0,26.0,1.0,B,Home,Under,False,True
+5,Old Dominion,Liberty,21,7,-16.1,-14.5,-1.6,58.3,53.5,4.8,14.0,28.0,1.0,B,,Over,,False
+5,Toledo,Akron,45,3,-22.1,-21.5,-0.6,36.4,50.5,-14.1,42.0,48.0,1.0,A+,,Under,,True
+8,South Carolina,Oklahoma,7,26,5.8,4.5,1.3,33.4,42.5,-9.1,-19.0,33.0,1.0,A+,,Under,,True
+8,Toledo,Kent State,45,10,-22.1,-25.5,3.4,41.8,48.5,-6.7,35.0,55.0,1.0,A,Away,Under,False,False
+7,Marshall,Old Dominion,48,24,10.7,14.5,-3.8,65.3,57.5,7.8,24.0,72.0,1.0,A,Home,Over,True,True
+7,Maryland,Nebraska,31,34,3.6,7.0,-3.4,46.2,47.5,-1.3,-3.0,65.0,1.0,C,Home,,True,
+8,Arkansas,Texas A&M,42,45,10.0,7.5,2.5,67.2,57.5,9.7,-3.0,87.0,1.0,A+,,Over,,True
+8,Georgia Southern,Georgia State,41,24,-16.9,-6.5,-10.4,71.3,58.5,12.8,17.0,65.0,1.0,A+,Home,Over,True,True
+7,Florida State,Pittsburgh,31,34,-2.7,-10.5,7.8,51.2,56.5,-5.3,-3.0,65.0,1.0,A,Away,Under,True,False
+7,Temple,Navy,31,32,3.7,10.0,-6.3,67.4,52.5,14.9,-1.0,63.0,1.0,A+,Home,Over,True,True
+5,Florida Atlantic,Memphis,26,55,8.4,14.0,-5.6,74.1,62.5,11.6,-29.0,81.0,1.0,A+,Home,Over,False,True
+8,Charlotte,Temple,14,49,20.3,10.0,10.3,60.2,47.5,12.7,-35.0,63.0,1.0,A+,Away,Over,True,True
+7,Florida Atlantic,UAB,53,33,-11.1,-4.5,-6.6,76.8,66.5,10.3,20.0,86.0,1.0,A+,Home,Over,True,True
+5,Boston College,California,24,28,0.6,-6.0,6.6,55.5,54.5,1.0,-4.0,52.0,1.0,A,Away,,True,
+8,Florida,Mississippi State,23,21,-5.6,-9.5,3.9,53.3,50.5,2.8,2.0,44.0,1.0,C,Away,,True,
+5,Northern Illinois,San Diego State,3,6,13.8,1.5,12.3,29.7,41.5,-11.8,-3.0,9.0,1.0,A+,Away,Under,True,True
+8,Marshall,Texas State,40,37,6.5,3.0,3.5,81.2,65.5,15.7,3.0,77.0,1.0,A+,Away,Over,False,True
+5,Minnesota,Rutgers,31,28,-2.8,-3.5,0.7,52.5,51.5,1.0,3.0,59.0,1.0,,,,,
+8,Indiana,Michigan State,38,13,-33.7,-26.5,-7.2,51.6,49.5,2.1,25.0,51.0,1.0,A,Home,,False,
+7,Penn State,Northwestern,21,22,-15.2,-20.5,5.3,43.9,46.5,-2.6,-1.0,43.0,1.0,B,Away,,True,
+8,Rutgers,Oregon,10,56,19.9,17.5,2.4,60.1,62.5,-2.4,-46.0,66.0,1.0,,,,,
+8,Liberty,New Mexico State,30,27,-9.3,-10.5,1.2,57.6,48.5,9.1,3.0,57.0,1.0,A+,,Over,,True
+8,Bowling Green,Central Michigan,6,27,6.5,-3.0,9.5,33.1,43.5,-10.4,-21.0,33.0,1.0,A+,Away,Under,True,True
+5,Wake Forest,Georgia Tech,29,30,-1.8,13.5,-15.3,50.5,53.5,-3.0,-1.0,59.0,1.0,A+,Home,,True,
+8,Ball State,Akron,42,28,5.3,2.5,2.8,39.9,44.5,-4.6,14.0,70.0,1.0,B,,Under,,False
+5,Buffalo,UConn,17,20,11.1,3.0,8.1,51.7,51.5,0.2,-3.0,37.0,1.0,A+,Away,,,
+7,Georgia Tech,Virginia Tech,35,20,-14.5,-14.0,-0.5,55.2,55.5,-0.3,15.0,55.0,1.0,,,,,
+7,Michigan State,UCLA,13,38,-5.8,-7.0,1.2,53.0,51.5,1.5,-25.0,51.0,1.0,,,,,
+8,Northwestern,Purdue,19,0,-8.2,-3.0,-5.2,41.8,47.5,-5.7,19.0,19.0,1.0,B,Home,Under,True,True
+8,Syracuse,Pittsburgh,13,30,14.5,9.5,5.0,52.5,54.5,-2.0,-17.0,43.0,1.0,B,Away,,True,
+5,Syracuse,Duke,3,38,13.3,4.0,9.3,61.4,59.5,1.9,-35.0,41.0,1.0,A+,Away,,True,
+5,Pittsburgh,Louisville,27,34,1.2,3.0,-1.8,52.1,53.5,-1.4,-7.0,61.0,1.0,,,,,
+7,Bowling Green,Toledo,28,23,17.0,10.5,6.5,34.1,45.5,-11.4,5.0,51.0,1.0,A+,Away,Under,False,False
+8,South Alabama,Arkansas State,14,15,-1.2,-8.5,7.3,64.9,57.5,7.4,-1.0,29.0,1.0,A,Away,Over,True,False
+5,NC State,Virginia Tech,21,23,-11.3,-10.0,-1.3,54.7,57.5,-2.8,-2.0,44.0,1.0,,,,,
+8,Houston,Arizona,31,28,-1.8,1.5,-3.3,52.6,47.5,5.1,3.0,59.0,1.0,B,Home,Over,True,True
+7,Akron,Miami (OH),7,20,8.7,11.5,-2.8,35.6,47.5,-11.9,-13.0,27.0,1.0,A+,,Under,,True
+5,Vanderbilt,Utah State,55,35,-18.2,-23.5,5.3,67.6,57.5,10.1,20.0,90.0,1.0,A+,Away,Over,True,True
+8,Jacksonville State,Delaware,38,25,-2.4,3.0,-5.4,67.6,55.5,12.1,13.0,63.0,0.75,A+,Home,Over,True,True
+8,Sam Houston,UTEP,17,35,8.7,3.5,5.2,59.2,46.5,12.7,-18.0,52.0,1.0,A+,Away,Over,True,True
+8,East Carolina,Tulsa,41,27,-20.6,-16.5,-4.1,57.0,54.5,2.5,14.0,68.0,1.0,C,Home,,False,
+8,TCU,Baylor,42,36,-8.6,-3.5,-5.1,68.5,66.5,2.0,6.0,78.0,1.0,B,Home,,True,
+7,Texas Tech,Kansas,42,17,-20.4,-13.5,-6.9,56.6,58.5,-1.9,25.0,59.0,1.0,A,Home,,True,
+8,Minnesota,Nebraska,24,6,1.3,7.0,-5.7,41.7,47.5,-5.8,18.0,30.0,1.0,B,Home,Under,True,True
+8,North Texas,UTSA,55,17,-8.9,-4.0,-4.9,80.6,64.5,16.1,38.0,72.0,1.0,A+,Home,Over,True,True
+7,Eastern Michigan,Northern Illinois,16,10,-3.1,1.5,-4.6,39.2,48.5,-9.3,6.0,26.0,1.0,A+,Home,Under,True,True
+8,Louisiana,Southern Miss,10,22,2.5,4.5,-2.0,64.7,54.5,10.2,-12.0,32.0,1.0,A+,,Over,,False
+8,California,North Carolina,21,18,-9.2,-7.5,-1.7,41.3,45.5,-4.2,3.0,39.0,1.0,C,,Under,,True
+7,Ole Miss,Washington State,24,21,-18.2,-33.5,15.3,49.4,58.5,-9.1,3.0,45.0,1.0,A+,Away,Under,True,True
+8,Tulane,Army,24,17,-7.9,-10.0,2.1,54.4,44.5,9.9,7.0,41.0,1.0,A+,,Over,,False
+5,Central Michigan,Eastern Michigan,24,13,-9.8,-3.0,-6.8,42.4,55.5,-13.1,11.0,37.0,1.0,A+,Home,Under,True,True
+8,Wisconsin,Ohio State,0,34,25.4,24.5,0.9,29.2,41.5,-12.3,-34.0,34.0,1.0,A+,,Under,,True
+8,Western Kentucky,Florida International,6,25,-7.8,-10.0,2.2,64.9,55.5,9.4,-19.0,31.0,1.0,A+,,Over,,False
+7,Colorado,Iowa State,24,17,10.4,3.0,7.4,45.3,52.5,-7.2,7.0,41.0,1.0,A,Away,Under,False,True
+5,Northwestern,UCLA,17,14,-11.1,-6.0,-5.1,42.1,45.5,-3.4,3.0,31.0,1.0,B,Home,Under,False,True
+5,Kansas,Cincinnati,34,37,-3.1,-5.5,2.4,61.6,55.5,6.1,-3.0,71.0,1.0,A,,Over,,True
+7,Western Michigan,Ball State,42,0,-23.1,-9.5,-13.6,36.9,43.5,-6.6,42.0,42.0,1.0,A+,Home,Under,True,True
+8,UAB,Memphis,31,24,17.0,23.5,-6.5,73.5,59.5,14.0,7.0,55.0,1.0,A+,Home,Over,True,False
+5,Navy,Rice,21,13,-24.0,-14.0,-10.0,58.7,45.5,13.2,8.0,34.0,1.0,A+,Home,Over,False,False
+8,Oklahoma State,Cincinnati,17,49,13.7,23.5,-9.8,49.0,57.5,-8.5,-32.0,66.0,1.0,A+,Home,Under,False,False
+7,Arizona,BYU,27,33,2.6,2.5,0.1,50.8,46.5,4.3,-6.0,60.0,1.0,C,,Over,,True
+7,Boise State,New Mexico,41,25,-3.7,-14.5,10.8,51.3,58.5,-7.2,16.0,66.0,1.0,A+,Away,Under,False,False
+5,New Mexico,New Mexico State,38,20,-20.6,-16.5,-4.1,51.7,53.5,-1.8,18.0,58.0,1.0,C,Home,,True,
+8,Air Force,Wyoming,24,21,-7.6,-4.0,-3.6,45.6,56.5,-10.9,3.0,45.0,1.0,A+,Home,Under,False,True
+5,Southern Miss,Jacksonville State,42,25,-8.9,-4.5,-4.4,65.0,55.5,9.5,17.0,67.0,1.0,A+,Home,Over,True,True
+8,Virginia,Washington State,22,20,-5.9,-16.5,10.6,37.6,56.5,-18.9,2.0,42.0,1.0,A+,Away,Under,True,True
+7,SMU,Stanford,34,10,-25.8,-19.5,-6.3,46.3,55.5,-9.2,24.0,44.0,1.0,A+,Home,Under,True,True
+7,Texas State,Troy,41,48,-8.4,-7.5,-0.9,69.4,53.5,15.9,-7.0,89.0,1.0,A+,,Over,,True
+8,Kentucky,Texas,13,16,11.3,12.5,-1.2,45.6,45.5,0.1,-3.0,29.0,1.0,,,,,
+5,Tulsa,Tulane,14,31,10.9,14.5,-3.6,60.4,52.5,7.9,-17.0,45.0,1.0,A,Home,Over,False,False
+7,Oklahoma State,Houston,17,39,18.9,14.5,4.4,46.9,47.5,-0.6,-22.0,56.0,1.0,C,Away,,True,
+8,Stanford,Florida State,20,13,15.7,17.5,-1.8,43.1,55.5,-12.4,7.0,33.0,1.0,A+,,Under,,True
+8,New Mexico,Nevada,24,22,-18.2,-14.0,-4.2,40.0,49.5,-9.5,2.0,46.0,1.0,A+,Home,Under,False,True
+5,South Carolina,Kentucky,35,13,-6.8,-5.5,-1.3,39.6,46.5,-6.9,22.0,48.0,1.0,A,,Under,,False
+5,North Texas,South Alabama,36,22,-21.4,-13.5,-7.9,78.7,63.5,15.2,14.0,58.0,1.0,A+,Home,Over,True,False
+7,Oregon State,Wake Forest,14,39,17.0,1.5,15.5,40.9,47.5,-6.6,-25.0,53.0,1.0,A+,Away,Under,True,False
+7,UNLV,Air Force,51,48,-6.4,-7.0,0.6,69.2,65.5,3.7,3.0,99.0,1.0,C,,Over,,True
+5,Oklahoma State,Baylor,27,45,12.6,21.0,-8.4,58.5,58.5,0.0,-18.0,72.0,1.0,A+,Home,,True,
+8,South Florida,Florida Atlantic,48,13,-18.3,-20.5,2.2,74.5,72.5,2.0,35.0,61.0,1.0,,,,,
+8,Clemson,SMU,24,35,0.6,-3.5,4.1,45.7,49.5,-3.8,-11.0,59.0,1.0,C,Away,Under,True,False
+7,Kansas State,TCU,41,28,-1.3,3.0,-4.3,58.7,54.5,4.2,13.0,69.0,1.0,C,Home,Over,True,True
+5,Louisiana,Marshall,54,51,-1.5,2.5,-4.0,69.3,47.5,21.8,3.0,105.0,1.0,A+,Home,Over,True,True
+7,UTSA,Rice,61,13,-23.4,-8.5,-14.9,60.5,48.5,12.0,48.0,74.0,1.0,A+,Home,Over,True,True
+5,UTEP,Louisiana Tech,11,30,9.7,3.5,6.2,54.7,48.5,6.2,-19.0,41.0,1.0,A,Away,Over,True,False
+7,Wyoming,San José State,35,28,-4.4,1.5,-5.9,41.6,50.5,-8.9,7.0,63.0,1.0,A+,Home,Under,True,False
+5,Missouri State,Western Kentucky,22,27,4.1,3.5,0.6,63.4,59.5,3.9,-5.0,49.0,0.75,,,Over,,False
+5,Kennesaw State,Middle Tennessee,24,16,-15.9,-7.0,-8.9,59.6,54.5,5.1,8.0,40.0,1.0,A+,Home,Over,True,False
+7,Minnesota,Purdue,27,20,-5.9,-7.5,1.6,42.0,49.5,-7.5,7.0,47.0,1.0,A,,Under,,True
+7,Nevada,San Diego State,10,44,13.1,6.5,6.6,32.5,42.5,-10.0,-34.0,54.0,1.0,A+,Away,Under,True,False
+9,North Carolina,Virginia,16,17,15.3,11.5,3.8,34.7,50.5,-15.8,-1.0,33.0,1.0,A+,Away,Under,False,True
+5,Colorado,BYU,21,24,16.2,6.5,9.7,50.4,48.5,1.9,-3.0,45.0,1.0,A+,Away,,False,
+8,Duke,Georgia Tech,18,27,-0.8,-3.5,2.7,67.0,60.5,6.5,-9.0,45.0,1.0,A,,Over,,False
+8,UCLA,Maryland,20,17,1.4,-4.0,5.4,46.8,52.5,-5.7,3.0,37.0,1.0,B,Away,Under,True,True
+9,New Mexico State,Missouri State,17,24,3.1,2.5,0.6,60.6,51.5,9.1,-7.0,41.0,0.75,A,,Over,,False
+9,Indiana,UCLA,56,6,-37.0,-26.5,-10.5,48.4,53.5,-5.1,50.0,62.0,1.0,A+,Home,Under,True,False
+10,Maryland,Indiana,10,55,28.1,21.0,7.1,45.4,50.5,-5.1,-45.0,65.0,1.0,A,Away,Under,True,False
+9,Georgia Tech,Syracuse,41,16,-20.0,-17.5,-2.5,54.8,52.5,2.3,25.0,57.0,1.0,,,,,
+7,Boston College,Clemson,10,41,12.7,14.0,-1.3,48.4,54.5,-6.1,-31.0,51.0,1.0,A,,Under,,True
+10,Texas,Vanderbilt,34,31,-2.9,-3.5,0.6,57.7,48.5,9.2,3.0,65.0,1.0,A+,,Over,,True
+10,Air Force,Army,17,20,2.5,1.5,1.0,54.4,48.5,5.9,-3.0,37.0,1.0,B,,Over,,False
+10,Tennessee,Oklahoma,27,33,-0.8,-3.0,2.2,53.3,55.5,-2.2,-6.0,60.0,1.0,,,,,
+10,NC State,Georgia Tech,48,36,0.6,4.5,-3.9,59.9,58.5,1.4,12.0,84.0,1.0,C,Home,,True,
+5,Colorado State,Washington State,3,20,15.5,-4.5,20.0,41.2,48.5,-7.3,-17.0,23.0,1.0,A+,Away,Under,True,True
+10,Kennesaw State,UTEP,33,20,-15.7,-12.5,-3.2,58.7,52.5,6.2,13.0,53.0,1.0,A,Home,Over,True,True
+11,Memphis,Tulane,32,38,-2.9,-3.0,0.1,68.2,53.5,14.7,-6.0,70.0,1.0,A+,,Over,,True
+9,Oklahoma,Ole Miss,26,34,2.1,-5.5,7.6,47.3,52.5,-5.2,-8.0,60.0,1.0,A,Away,Under,True,False
+9,Vanderbilt,Missouri,17,10,-6.3,-3.0,-3.3,53.5,52.5,1.0,7.0,27.0,1.0,C,Home,,True,
+9,Mississippi State,Texas,38,45,11.5,8.5,3.0,57.0,48.5,8.5,-7.0,83.0,1.0,A+,,Over,,True
+9,Memphis,South Florida,34,31,2.4,3.5,-1.1,71.2,58.5,12.7,3.0,65.0,1.0,A+,,Over,,True
+9,Washington,Illinois,42,25,-6.7,-3.5,-3.2,50.4,54.5,-4.1,17.0,67.0,1.0,C,Home,Under,True,False
+9,Delaware,Middle Tennessee,31,28,-8.0,-8.5,0.5,65.4,55.5,9.9,3.0,59.0,0.75,A,,Over,,True
+9,Purdue,Rutgers,24,27,0.5,-2.5,3.0,59.7,60.5,-0.8,-3.0,51.0,1.0,C,,,,
+11,Delaware,Louisiana Tech,25,24,4.3,5.5,-1.2,60.6,56.5,4.1,1.0,49.0,0.75,C,,Over,,False
+5,Stanford,San José State,30,29,-4.2,-3.0,-1.2,48.6,49.5,-0.9,1.0,59.0,1.0,,,,,
+10,Syracuse,North Carolina,10,27,-2.2,-1.5,-0.7,39.6,45.5,-5.9,-17.0,37.0,1.0,B,,Under,,True
+12,Pittsburgh,Notre Dame,15,37,14.3,12.5,1.8,57.0,55.5,1.5,-22.0,52.0,1.0,,,,,
+12,Duke,Virginia,17,34,-0.2,-5.5,5.3,56.5,59.5,-3.0,-17.0,51.0,1.0,B,Away,,True,
+12,Baylor,Utah,28,55,14.1,9.5,4.6,68.9,60.5,8.4,-27.0,83.0,1.0,A+,Away,Over,True,True
+12,Oregon,Minnesota,42,13,-24.5,-26.5,2.0,42.4,46.5,-4.1,29.0,55.0,1.0,C,,Under,,False
+12,UNLV,Utah State,29,26,0.2,-4.5,4.7,69.9,68.5,1.4,3.0,55.0,1.0,B,Away,,True,
+10,Utah,Cincinnati,45,14,-18.0,-11.5,-6.5,59.4,57.5,1.9,31.0,59.0,1.0,A,Home,,True,
+11,Mississippi State,Georgia,21,41,16.0,9.5,6.5,58.0,56.5,1.5,-20.0,62.0,1.0,A,Away,,True,
+12,Miami (OH),Toledo,3,24,6.0,5.5,0.5,33.4,44.5,-11.1,-21.0,27.0,1.0,A+,,Under,,True
+12,Tulsa,Oregon State,31,14,-6.4,-1.5,-4.9,48.2,50.5,-2.3,17.0,45.0,1.0,B,Home,,True,
+12,Western Michigan,Ohio,17,13,-6.4,-1.5,-4.9,37.5,47.5,-10.0,4.0,30.0,1.0,A+,Home,Under,True,True
+7,USC,Michigan,31,13,-5.8,-3.0,-2.8,53.4,58.5,-5.1,18.0,44.0,1.0,B,,Under,,True
+9,Iowa State,BYU,27,41,3.4,-2.5,5.9,45.9,48.5,-2.6,-14.0,68.0,1.0,B,Away,,True,
+10,North Texas,Navy,31,17,-8.4,-6.5,-1.9,78.8,68.5,10.3,14.0,48.0,1.0,A+,,Over,,False
+10,Texas State,James Madison,20,52,7.5,7.0,0.5,73.1,55.5,17.6,-32.0,72.0,1.0,A+,,Over,,True
+12,Ole Miss,Florida,34,24,-16.8,-10.5,-6.3,51.4,53.5,-2.1,10.0,58.0,1.0,A,Home,,False,
+12,Navy,South Florida,41,38,4.6,9.5,-4.9,70.1,62.5,7.6,3.0,79.0,1.0,A,Home,Over,True,True
+12,Central Michigan,Buffalo,38,19,-9.9,-2.5,-7.4,34.5,44.5,-10.0,19.0,57.0,1.0,A+,Home,Under,True,False
+12,Indiana,Wisconsin,31,7,-32.6,-28.5,-4.1,34.6,43.5,-8.9,24.0,38.0,1.0,A+,Home,Under,False,True
+12,Miami,NC State,41,7,-18.3,-16.5,-1.8,51.0,54.5,-3.5,34.0,48.0,1.0,C,,Under,,True
+12,Oklahoma State,Kansas State,6,14,17.5,19.5,-2.0,48.7,50.5,-1.8,-8.0,20.0,1.0,,,,,
+12,Akron,Kent State,35,42,-2.5,-7.5,5.0,44.0,49.5,-5.5,-7.0,77.0,1.0,B,Away,Under,True,False
+12,Old Dominion,Troy,33,0,-12.6,-9.5,-3.1,53.5,53.5,0.0,33.0,33.0,1.0,C,Home,,True,
+9,Cincinnati,Baylor,41,20,-3.6,-3.5,-0.1,68.3,68.5,-0.2,21.0,61.0,1.0,,,,,
+11,TCU,Iowa State,17,20,-2.3,-7.5,5.2,50.0,58.5,-8.5,-3.0,37.0,1.0,A+,Away,Under,True,True
+10,Nebraska,USC,17,21,8.6,4.5,4.1,57.0,59.5,-2.5,-4.0,38.0,1.0,C,Away,,False,
+10,UTSA,Tulane,48,26,-0.1,6.0,-6.1,68.9,54.5,14.4,22.0,74.0,1.0,A+,Home,Over,True,True
+12,Northwestern,Michigan,22,24,6.7,10.0,-3.3,37.9,41.5,-3.6,-2.0,46.0,1.0,C,Home,Under,True,False
+10,Rice,Memphis,14,38,21.2,14.0,7.2,59.8,48.5,11.3,-24.0,52.0,1.0,A+,Away,Over,True,True
+4,Oklahoma State,Tulsa,12,19,1.6,-10.0,11.6,47.2,54.5,-7.3,-7.0,31.0,1.0,A+,Away,Under,True,True
+9,Georgia State,South Alabama,31,38,10.5,6.0,4.5,66.7,53.5,13.2,-7.0,69.0,1.0,A+,Away,Over,True,True
+9,Wake Forest,SMU,13,12,2.9,5.5,-2.6,46.8,52.5,-5.7,1.0,25.0,1.0,B,,Under,,True
+12,Texas Tech,UCF,48,9,-29.3,-24.5,-4.8,44.4,48.5,-4.1,39.0,57.0,1.0,B,Home,Under,True,False
+12,Illinois,Maryland,24,6,-13.8,-16.5,2.7,49.7,51.5,-1.8,18.0,30.0,1.0,,,,,
+12,Texas A&M,South Carolina,31,30,-13.0,-16.5,3.5,44.8,49.5,-4.7,1.0,61.0,1.0,B,Away,Under,True,False
+12,USC,Iowa,26,21,-2.7,-6.5,3.8,51.8,48.5,3.3,5.0,47.0,1.0,C,Away,Over,True,False
+11,Missouri,Texas A&M,17,38,2.8,7.0,-4.2,46.6,48.5,-1.9,-21.0,55.0,1.0,C,Home,,False,
+12,BYU,TCU,44,13,-8.5,-3.0,-5.5,55.1,51.5,3.6,31.0,57.0,1.0,B,Home,Over,True,True
+12,Ohio State,UCLA,48,10,-34.7,-33.5,-1.2,43.0,46.5,-3.5,38.0,58.0,1.0,C,,Under,,False
+12,Cincinnati,Arizona,24,30,3.3,-5.5,8.8,54.7,56.5,-1.8,-6.0,54.0,1.0,A+,Away,,True,
+12,Washington,Purdue,49,13,-19.0,-14.5,-4.5,47.2,51.5,-4.3,36.0,62.0,1.0,B,Home,Under,True,False
+9,Virginia Tech,California,42,34,-1.1,-6.0,4.9,51.3,50.5,0.8,8.0,76.0,1.0,B,Away,,False,
+11,Texas Tech,BYU,29,7,-10.0,-13.5,3.5,49.9,50.5,-0.6,22.0,36.0,1.0,C,Away,,False,
+11,Vanderbilt,Auburn,45,38,-8.7,-6.0,-2.7,52.6,46.5,6.1,7.0,83.0,1.0,A,,Over,,True
+11,Iowa,Oregon,16,18,4.9,4.5,0.4,44.1,41.5,2.6,-2.0,34.0,1.0,,,,,
+12,UAB,North Texas,24,53,20.6,17.5,3.1,82.6,68.5,14.1,-29.0,77.0,1.0,A+,Away,Over,True,True
+12,Wake Forest,North Carolina,28,12,-19.0,-3.5,-15.5,35.3,37.5,-2.2,16.0,40.0,1.0,A+,Home,,True,
+4,Charlotte,Rice,17,28,5.1,1.5,3.6,51.5,42.5,9.0,-11.0,45.0,1.0,A+,Away,Over,True,True
+10,South Alabama,Louisiana,22,31,-1.7,-3.5,1.8,66.3,52.5,13.8,-9.0,53.0,1.0,A+,,Over,,True
+11,Notre Dame,Navy,49,10,-23.6,-30.5,6.9,63.4,54.5,8.9,39.0,59.0,1.0,A+,Away,Over,False,True
+12,Florida State,Virginia Tech,34,14,-14.1,-14.5,0.4,48.3,55.5,-7.2,20.0,48.0,1.0,A,,Under,,True
+11,UCLA,Nebraska,21,28,7.5,-1.5,9.0,49.2,45.5,3.7,-7.0,49.0,1.0,A+,Away,Over,True,True
+10,Temple,East Carolina,14,45,10.4,5.5,4.9,62.5,58.5,4.0,-31.0,59.0,1.0,B,Away,Over,True,True
+12,Missouri,Mississippi State,49,27,-12.3,-7.5,-4.8,52.8,50.5,2.3,22.0,76.0,1.0,B,Home,,True,
+9,Arkansas,Auburn,24,33,2.3,-2.5,4.8,58.5,56.5,2.0,-9.0,57.0,1.0,B,Away,,True,
+10,Bowling Green,Buffalo,3,28,-0.8,-2.5,1.7,35.4,44.5,-9.1,-25.0,31.0,1.0,A+,,Under,,True
+4,Miami (OH),UNLV,38,41,-0.2,2.5,-2.7,52.7,49.5,3.2,-3.0,79.0,1.0,C,,Over,,True
+12,Georgia Southern,Coastal Carolina,45,40,-7.3,-3.0,-4.3,72.0,59.5,12.5,5.0,85.0,1.0,A+,Home,Over,True,True
+10,Boston College,Notre Dame,10,25,27.4,31.5,-4.1,58.3,55.5,2.8,-15.0,35.0,1.0,C,Home,,True,
+4,Army,North Texas,38,45,6.9,2.5,4.4,66.1,50.5,15.6,-7.0,83.0,1.0,A+,Away,Over,True,True
+12,UConn,Air Force,26,16,-8.3,-7.5,-0.8,66.1,64.5,1.6,10.0,42.0,1.0,,,,,
+9,Pittsburgh,NC State,53,34,-5.1,-4.5,-0.6,57.6,52.5,5.1,19.0,87.0,1.0,B,,Over,,True
+12,Charlotte,UTSA,7,28,26.0,16.5,9.5,63.2,57.5,5.7,-21.0,35.0,1.0,A+,Away,Over,True,False
+10,Florida State,Wake Forest,42,7,-2.8,-12.5,9.7,43.6,50.5,-6.9,35.0,49.0,1.0,A+,Away,Under,False,True
+4,Eastern Michigan,Louisiana,34,31,1.4,2.5,-1.1,58.4,51.5,6.9,3.0,65.0,1.0,A,,Over,,True
+10,Virginia Tech,Louisville,16,28,12.6,10.5,2.1,49.2,52.5,-3.3,-12.0,44.0,1.0,C,,Under,,True
+4,UCF,North Carolina,34,9,-7.4,-7.0,-0.4,35.0,46.5,-11.5,25.0,43.0,1.0,A+,,Under,,True
+9,Buffalo,Akron,16,24,-4.3,-10.0,5.7,37.7,48.5,-10.8,-8.0,40.0,1.0,A+,Away,Under,True,True
+12,Georgia State,Marshall,18,30,12.3,9.5,2.8,69.7,59.5,10.2,-12.0,48.0,1.0,A+,,Over,,False
+6,Nebraska,Michigan State,38,27,-9.2,-12.5,3.3,52.4,48.5,3.9,11.0,65.0,1.0,C,Away,Over,True,True
+6,California,Duke,21,45,6.3,3.5,2.8,63.1,54.5,8.6,-24.0,66.0,1.0,A+,,Over,,True
+10,Michigan,Purdue,21,16,-17.4,-21.0,3.6,45.3,48.5,-3.2,5.0,37.0,1.0,C,Away,Under,True,True
+4,Georgia Tech,Temple,45,24,-13.5,-24.5,11.0,63.3,52.5,10.8,21.0,69.0,1.0,A+,Away,Over,True,True
+9,West Virginia,TCU,17,23,14.9,16.5,-1.6,55.2,55.5,-0.3,-6.0,40.0,1.0,,,,,
+10,Illinois,Rutgers,35,13,-11.7,-13.5,1.8,62.9,63.5,-0.6,22.0,48.0,1.0,,,,,
+4,Louisville,Bowling Green,40,17,-28.4,-26.5,-1.9,41.2,50.5,-9.3,23.0,57.0,1.0,A+,,Under,,False
+12,East Carolina,Memphis,31,27,-6.9,-3.0,-3.9,64.8,56.5,8.3,4.0,58.0,1.0,A+,Home,Over,True,True
+6,Louisville,Virginia,27,30,-5.0,-6.5,1.5,43.9,59.5,-15.6,-3.0,57.0,1.0,A+,,Under,,True
+12,Boston College,Georgia Tech,34,36,11.1,16.5,-5.4,59.4,61.5,-2.1,-2.0,70.0,1.0,B,Home,,True,
+4,East Carolina,BYU,13,34,2.5,6.5,-4.0,54.9,49.5,5.4,-21.0,47.0,1.0,B,Home,Over,False,False
+12,Ball State,Eastern Michigan,9,24,7.2,2.5,4.7,46.9,48.5,-1.6,-15.0,33.0,1.0,B,Away,,True,
+10,Minnesota,Michigan State,23,20,-5.4,-4.5,-0.9,45.5,44.5,1.0,3.0,43.0,1.0,,,,,
+9,Rice,UConn,37,34,16.2,10.5,5.7,57.7,48.5,9.2,3.0,71.0,1.0,A+,Away,Over,False,True
+6,Cincinnati,Iowa State,38,30,2.6,-1.5,4.1,49.8,55.5,-5.7,8.0,68.0,1.0,B,Away,Under,False,False
+12,Michigan State,Penn State,10,28,15.4,7.0,8.4,54.8,48.5,6.3,-18.0,38.0,1.0,A+,Away,Over,True,False
+4,Clemson,Syracuse,21,34,-21.6,-17.5,-4.1,43.8,53.5,-9.7,-13.0,55.0,1.0,A+,Home,Under,False,False
+10,Western Michigan,Central Michigan,24,21,-6.1,-6.0,-0.1,32.4,43.5,-11.1,3.0,45.0,1.0,A+,,Under,,False
+6,Navy,Air Force,34,31,-11.0,-13.5,2.5,67.1,50.5,16.6,3.0,65.0,1.0,A+,,Over,,True
+10,Iowa State,Arizona State,19,24,-5.8,-7.5,1.7,44.2,48.5,-4.3,-5.0,43.0,1.0,C,,Under,,True
+4,Buffalo,Troy,17,21,5.5,-5.5,11.0,43.8,43.5,0.3,-4.0,38.0,1.0,A+,Away,,True,
+4,Florida State,Kent State,66,10,-25.0,-44.5,19.5,48.0,56.5,-8.5,56.0,76.0,1.0,A+,Away,Under,False,False
+10,UConn,UAB,38,19,-17.0,-10.0,-7.0,71.4,61.5,9.9,19.0,57.0,1.0,A+,Home,Over,True,False
+10,Baylor,UCF,30,3,-9.6,-3.0,-6.6,58.9,58.5,0.4,27.0,33.0,1.0,A,Home,,True,
+4,Western Michigan,Toledo,14,13,4.3,13.5,-9.2,33.4,48.5,-15.1,1.0,27.0,1.0,A+,Home,Under,True,True
+9,Louisville,Boston College,38,24,-19.2,-25.5,6.3,53.4,54.5,-1.1,14.0,62.0,1.0,A,Away,,True,
+4,Duke,NC State,45,33,-3.9,-3.0,-0.9,66.5,57.5,9.0,12.0,78.0,1.0,A+,,Over,,True
+6,South Florida,Charlotte,54,26,-38.7,-27.5,-11.2,62.9,54.5,8.4,28.0,80.0,1.0,A+,Home,Over,True,True
+10,Oregon State,Washington State,10,7,14.8,3.5,11.3,38.5,47.5,-9.0,3.0,17.0,1.0,A+,Away,Under,False,True
+9,Miami,Stanford,42,7,-33.7,-28.5,-5.2,41.1,45.5,-4.4,35.0,49.0,1.0,B,Home,Under,True,False
+9,Nebraska,Northwestern,28,21,-4.0,-7.0,3.0,41.5,44.5,-3.0,7.0,49.0,1.0,C,,,,
+12,Southern Miss,Texas State,14,41,2.5,-3.0,5.5,76.6,65.5,11.1,-27.0,55.0,1.0,A+,Away,Over,True,False
+4,Tennessee,UAB,56,24,-31.0,-39.5,8.5,75.6,69.5,6.1,32.0,80.0,1.0,A+,Away,Over,True,True
+9,Kent State,Bowling Green,24,21,-2.4,7.5,-9.9,41.7,47.5,-5.8,3.0,45.0,1.0,A+,Home,Under,True,True
+6,BYU,West Virginia,38,24,-25.9,-19.5,-6.4,51.1,46.5,4.6,14.0,62.0,1.0,A,Home,Over,False,True
+12,Sam Houston,Delaware,26,23,14.1,11.5,2.6,65.1,56.5,8.6,3.0,49.0,0.75,A,,Over,,False
+10,Boise State,Fresno State,7,30,-3.6,-17.5,13.9,43.9,47.5,-3.6,-23.0,37.0,1.0,A+,Away,Under,True,True
+4,South Alabama,Coastal Carolina,20,38,-5.9,-14.5,8.6,67.4,51.5,15.9,-18.0,58.0,1.0,A+,Away,Over,True,True
+6,New Mexico State,Sam Houston,37,10,-14.2,2.5,-16.7,57.3,52.5,4.8,27.0,47.0,1.0,A+,Home,Over,True,False
+4,Colorado,Wyoming,37,20,-9.1,-12.5,3.4,37.7,45.5,-7.8,17.0,57.0,1.0,A,Away,Under,False,False
+4,Colorado State,UTSA,16,17,13.1,4.5,8.6,59.4,58.5,0.9,-1.0,33.0,1.0,A+,Away,,False,
+6,Pittsburgh,Boston College,48,7,-15.6,-7.0,-8.6,57.1,54.5,2.6,41.0,55.0,1.0,A+,Home,,True,
+10,Houston,West Virginia,35,45,-20.1,-13.5,-6.6,52.9,48.5,4.4,-10.0,80.0,1.0,A,Home,Over,False,True
+9,Northern Illinois,Ball State,21,7,-11.6,-6.5,-5.1,33.5,41.5,-8.0,14.0,28.0,1.0,A+,Home,Under,True,True
+9,Miami (OH),Western Michigan,26,17,-0.9,-2.5,1.6,32.6,40.5,-7.9,9.0,43.0,1.0,A,,Under,,False
+4,Kansas,West Virginia,41,10,-15.5,-12.5,-3.0,57.8,54.5,3.3,31.0,51.0,1.0,C,,Over,,False
+10,California,Virginia,21,31,8.6,6.5,2.1,46.0,52.5,-6.5,-10.0,52.0,1.0,A,,Under,,True
+10,Troy,Arkansas State,10,23,-6.0,-7.5,1.5,56.1,52.5,3.6,-13.0,33.0,1.0,C,,Over,,False
+9,Eastern Michigan,Ohio,21,28,4.5,11.5,-7.0,47.5,60.5,-13.0,-7.0,49.0,1.0,A+,Home,Under,True,True
+12,LSU,Arkansas,23,22,-7.1,-4.0,-3.1,54.7,58.5,-3.8,1.0,45.0,1.0,C,Home,Under,False,True
+10,UNLV,New Mexico,35,40,1.7,-3.5,5.2,60.7,61.5,-0.8,-5.0,75.0,1.0,B,Away,,True,
+4,Ole Miss,Tulane,45,10,-18.2,-12.5,-5.7,64.3,61.5,2.8,35.0,55.0,1.0,B,Home,,True,
+10,Stanford,Pittsburgh,20,35,15.5,13.5,2.0,47.7,51.5,-3.8,-15.0,55.0,1.0,C,,Under,,False
+10,Auburn,Kentucky,3,10,-9.7,-11.5,1.8,40.5,44.5,-4.0,-7.0,13.0,1.0,C,,Under,,True
+9,Troy,Louisiana,35,23,-6.6,-7.0,0.4,57.5,47.5,10.0,12.0,58.0,1.0,A+,,Over,,True
+4,Memphis,Arkansas,32,31,-2.0,7.0,-9.0,75.4,59.5,15.9,1.0,63.0,1.0,A+,Home,Over,True,True
+6,Delaware,Western Kentucky,24,27,4.9,-2.5,7.4,65.4,62.5,2.9,-3.0,51.0,0.75,B,Away,,True,
+12,Tulane,Florida Atlantic,35,24,-13.1,-16.5,3.4,71.5,60.5,11.0,11.0,59.0,1.0,A+,Away,Over,True,False
+10,Liberty,Delaware,59,30,-4.4,-3.5,-0.9,65.4,52.5,12.9,29.0,89.0,0.75,A+,,Over,,True
+4,UConn,Ball State,31,25,-25.7,-21.0,-4.7,53.9,53.5,0.4,6.0,56.0,1.0,B,Home,,False,
+6,San José State,New Mexico,35,28,12.5,-1.5,14.0,53.1,58.5,-5.4,7.0,63.0,1.0,A+,Away,Under,False,False
+4,Mississippi State,Northern Illinois,38,10,-19.5,-23.5,4.0,46.3,48.5,-2.2,28.0,48.0,1.0,C,Away,,False,
+11,Ball State,Kent State,17,13,5.3,-3.0,8.3,45.3,48.5,-3.2,4.0,30.0,1.0,A+,Away,Under,False,True
+10,Ole Miss,South Carolina,30,14,-15.4,-12.5,-2.9,49.1,55.5,-6.4,16.0,44.0,1.0,A,,Under,,True
+9,New Mexico,Utah State,33,14,-4.0,-3.0,-1.0,57.8,61.5,-3.7,19.0,47.0,1.0,C,,Under,,True
+4,Virginia,Stanford,48,20,-21.6,-16.5,-5.1,39.5,48.5,-9.0,28.0,68.0,1.0,A+,Home,Under,True,False
+10,Western Kentucky,New Mexico State,35,16,-14.8,-7.5,-7.3,57.6,53.5,4.1,19.0,51.0,1.0,A,Home,Over,True,False
+11,South Florida,UTSA,55,23,-10.2,-14.0,3.8,71.9,66.5,5.4,32.0,78.0,1.0,B,Away,Over,False,True
+12,Arizona State,West Virginia,25,23,-16.8,-10.0,-6.8,49.4,46.5,2.9,2.0,48.0,1.0,A,Home,,False,
+4,Liberty,James Madison,13,31,16.9,7.5,9.4,59.3,46.5,12.8,-18.0,44.0,1.0,A+,Away,Over,True,False
+6,San Diego State,Colorado State,45,24,-18.1,-4.5,-13.6,40.1,40.5,-0.4,21.0,69.0,1.0,A+,Home,,True,
+12,New Mexico,Colorado State,20,17,-18.2,-15.5,-2.7,47.6,53.5,-5.9,3.0,37.0,1.0,B,,Under,,True
+10,Kansas,Oklahoma State,38,21,-19.3,-24.5,5.2,51.8,54.5,-2.7,17.0,59.0,1.0,B,Away,,True,
+9,Fresno State,San Diego State,0,23,-2.7,3.0,-5.7,33.7,46.5,-12.8,-23.0,23.0,1.0,A+,Home,Under,False,True
+4,Florida International,Delaware,16,38,-4.6,-4.0,-0.6,69.9,54.5,15.4,-22.0,54.0,0.75,A+,,Over,,False
+12,Jacksonville State,Kennesaw State,35,26,5.4,3.5,1.9,61.8,56.5,5.3,9.0,61.0,1.0,B,,Over,,True
+11,Toledo,Northern Illinois,42,3,-20.8,-14.5,-6.3,30.0,42.5,-12.5,39.0,45.0,1.0,A+,Home,Under,True,False
+4,Kennesaw State,Arkansas State,28,21,-8.4,4.5,-12.9,60.1,57.5,2.6,7.0,49.0,1.0,A+,Home,,True,
+9,Oregon,Wisconsin,21,7,-26.4,-31.5,5.1,36.1,44.5,-8.4,14.0,28.0,1.0,A+,Away,Under,True,True
+12,Missouri State,UTEP,38,24,-8.7,-6.5,-2.2,62.5,47.5,15.0,14.0,62.0,0.75,A+,,Over,,True
+10,San Diego State,Wyoming,24,7,-15.6,-10.0,-5.6,29.6,42.5,-12.9,17.0,31.0,1.0,A+,Home,Under,True,True
+6,Old Dominion,Coastal Carolina,47,7,-20.8,-18.5,-2.3,61.3,53.5,7.8,40.0,54.0,1.0,A,,Over,,True
+11,USC,Northwestern,38,17,-15.0,-14.5,-0.5,49.9,54.5,-4.6,21.0,55.0,1.0,B,,Under,,False
+4,Western Kentucky,Nevada,31,16,-12.3,-8.5,-3.8,45.9,54.5,-8.6,15.0,47.0,1.0,A+,Home,Under,True,True
+11,Kentucky,Florida,38,7,0.3,4.5,-4.2,41.9,44.5,-2.6,31.0,45.0,1.0,C,Home,,True,
+4,Air Force,Boise State,37,49,6.8,10.5,-3.7,59.8,51.5,8.3,-12.0,86.0,1.0,A+,Home,Over,False,True
+9,Washington State,Toledo,28,7,-2.9,1.5,-4.4,35.0,44.5,-9.5,21.0,35.0,1.0,A+,Home,Under,True,True
+12,San Diego State,Boise State,17,7,-1.2,-1.5,0.3,43.8,41.5,2.3,10.0,24.0,1.0,,,,,
+12,Nevada,San José State,55,10,-1.9,10.0,-11.9,44.5,49.5,-5.0,45.0,65.0,1.0,A+,Home,Under,True,False
+6,Ball State,Ohio,20,14,14.2,14.0,0.2,41.8,52.5,-10.7,6.0,34.0,1.0,A+,,Under,,True
+10,Colorado,Arizona,17,52,11.1,4.0,7.1,50.2,52.5,-2.3,-35.0,69.0,1.0,A,Away,,True,
+12,Tennessee,New Mexico State,42,9,-32.3,-41.5,9.2,64.9,59.5,5.4,33.0,51.0,1.0,A+,Away,Over,True,False
+4,Vanderbilt,Georgia State,70,21,-42.3,-27.5,-14.8,66.6,53.5,13.1,49.0,91.0,1.0,A+,Home,Over,True,True
+9,Navy,Florida Atlantic,42,32,-11.2,-14.5,3.3,73.0,63.5,9.5,10.0,74.0,1.0,A+,Away,Over,True,True
+11,Purdue,Ohio State,10,34,26.8,29.5,-2.7,42.7,49.5,-6.8,-24.0,44.0,1.0,A,,Under,,True
+4,Louisiana Tech,Southern Miss,30,20,-3.0,-3.0,0.0,58.0,51.5,6.5,10.0,50.0,1.0,A,,Over,,False
+12,Western Kentucky,Middle Tennessee,42,26,-15.4,-13.5,-1.9,60.4,51.5,8.9,16.0,68.0,1.0,A+,,Over,,True
+9,Texas Tech,Oklahoma State,42,0,-37.2,-37.5,0.3,44.0,56.5,-12.5,42.0,42.0,1.0,A+,,Under,,True
+6,Akron,Central Michigan,28,22,6.7,7.0,-0.3,35.4,47.5,-12.1,6.0,50.0,1.0,A+,,Under,,False
+10,Arkansas,Mississippi State,35,38,-5.1,-5.5,0.4,73.4,66.5,6.9,-3.0,73.0,1.0,A,,Over,,True
+11,Ohio,Miami (OH),24,20,-0.2,-2.5,2.3,37.5,50.5,-13.0,4.0,44.0,1.0,A+,,Under,,True
+12,Fresno State,Wyoming,24,3,-15.8,-3.0,-12.8,29.7,40.5,-10.8,21.0,27.0,1.0,A+,Home,Under,True,True
+9,Arkansas State,Georgia Southern,34,24,-2.4,1.5,-3.9,69.5,59.5,10.0,10.0,58.0,1.0,A+,Home,Over,True,False
+10,Coastal Carolina,Marshall,44,27,2.6,7.0,-4.4,70.4,55.5,14.9,17.0,71.0,1.0,A+,Home,Over,True,True
+6,Buffalo,Eastern Michigan,31,30,-2.4,-9.5,7.1,44.7,53.5,-8.8,1.0,61.0,1.0,A+,Away,Under,True,False
+4,Middle Tennessee,Marshall,28,42,5.4,2.5,2.9,67.4,46.5,20.9,-14.0,70.0,1.0,A+,,Over,,True
+12,Florida International,Liberty,34,27,-2.8,2.5,-5.3,64.9,51.5,13.4,7.0,61.0,1.0,A+,Home,Over,True,True
+4,Texas,Sam Houston,55,0,-46.9,-39.5,-7.4,53.5,51.5,2.0,55.0,55.0,1.0,A,Home,,True,
+6,Virginia Tech,Wake Forest,23,30,8.8,-4.5,13.3,45.3,51.5,-6.2,-7.0,53.0,1.0,A+,Away,Under,True,False
+9,Wyoming,Colorado State,28,0,-5.0,-5.5,0.5,36.1,46.5,-10.4,28.0,28.0,1.0,A+,,Under,,True
+12,Washington State,Louisiana Tech,28,3,-11.2,-10.0,-1.2,43.3,43.5,-0.2,25.0,31.0,1.0,,,,,
+10,Middle Tennessee,Jacksonville State,21,24,2.9,4.0,-1.1,62.6,53.5,9.1,-3.0,45.0,1.0,A+,,Over,,False
+10,Clemson,Duke,45,46,-5.8,-4.0,-1.8,56.0,54.5,1.5,-1.0,91.0,1.0,,,,,
+6,Troy,South Alabama,31,24,-7.3,2.5,-9.8,59.6,46.5,13.1,7.0,55.0,1.0,A+,Home,Over,True,True
+9,Iowa,Minnesota,41,3,-17.1,-7.5,-9.6,36.5,39.5,-3.0,38.0,44.0,1.0,A+,Home,,True,
+4,San Diego State,California,34,0,-7.8,14.0,-21.8,43.1,47.5,-4.4,34.0,34.0,1.0,A+,Home,Under,True,True
+6,Georgia State,James Madison,7,14,31.2,19.5,11.7,61.6,52.5,9.1,-7.0,21.0,1.0,A+,Away,Over,False,False
+11,UCF,Houston,27,30,11.0,-1.5,12.5,47.3,47.5,-0.2,-3.0,57.0,1.0,A+,Away,,True,
+6,Memphis,Tulsa,45,7,-16.2,-21.0,4.8,63.0,54.5,8.5,38.0,52.0,1.0,A+,Away,Over,False,False
+6,Purdue,Illinois,27,43,9.8,7.0,2.8,52.4,54.5,-2.1,-16.0,70.0,1.0,,,,,
+11,Boston College,SMU,13,45,15.9,10.5,5.4,55.7,54.5,1.2,-32.0,58.0,1.0,B,Away,,True,
+10,Missouri State,Florida International,28,21,-1.1,-3.0,1.9,67.9,49.5,18.4,7.0,49.0,0.75,A+,,Over,,False
+10,Louisiana Tech,Sam Houston,55,14,-26.0,-16.5,-9.5,55.3,47.5,7.8,41.0,69.0,1.0,A+,Home,Over,True,True
+9,Nevada,Boise State,3,24,14.4,21.0,-6.6,42.7,50.5,-7.8,-21.0,27.0,1.0,A,Home,Under,,True
+11,West Virginia,Colorado,29,22,2.2,-6.5,8.7,50.5,51.5,-1.0,7.0,51.0,1.0,A+,Away,,False,
+11,Army,Temple,14,13,-5.2,-7.0,1.8,54.7,45.5,9.2,1.0,27.0,1.0,A+,,Over,,False
+6,Arizona,Oklahoma State,41,13,-24.6,-21.5,-3.1,44.9,56.5,-11.6,28.0,54.0,1.0,A+,Home,Under,True,True
+9,Tulsa,Temple,37,38,2.8,4.5,-1.7,60.7,52.5,8.2,-1.0,75.0,1.0,A+,,Over,,True
+6,Northern Illinois,Miami (OH),14,25,7.3,4.5,2.8,29.2,38.5,-9.3,-11.0,39.0,1.0,A+,,Under,,False
+6,Rice,Florida Atlantic,21,27,10.3,-4.5,14.8,63.1,54.5,8.6,-6.0,48.0,1.0,A+,Away,Over,True,False
+6,UCLA,Penn State,42,37,18.7,24.5,-5.8,51.6,48.5,3.1,5.0,79.0,1.0,B,Home,Over,True,True
+9,Charlotte,North Texas,20,54,32.4,25.5,6.9,71.6,60.5,11.1,-34.0,74.0,1.0,A+,Away,Over,True,True
+11,Florida Atlantic,Tulsa,40,21,-5.3,-4.5,-0.8,66.3,60.5,5.8,19.0,61.0,1.0,B,,Over,,True
+6,SMU,Syracuse,31,18,-24.7,-17.5,-7.2,51.1,56.5,-5.4,13.0,49.0,1.0,A,Home,Under,False,True
+11,East Carolina,Charlotte,48,22,-38.2,-27.5,-10.7,56.5,56.5,0.0,26.0,70.0,1.0,A+,Home,,False,
+9,Arizona State,Houston,16,24,0.8,-7.0,7.8,51.1,46.5,4.6,-8.0,40.0,1.0,A,Away,Over,True,False
+9,Kentucky,Tennessee,34,56,8.3,7.5,0.8,59.5,55.5,4.0,-22.0,90.0,1.0,C,,Over,,True
+6,Baylor,Kansas State,35,34,2.4,-4.5,6.9,68.0,59.5,8.5,1.0,69.0,1.0,A+,Away,Over,True,True
+11,Miami,Syracuse,38,10,-32.7,-28.5,-4.2,45.9,46.5,-0.6,28.0,48.0,1.0,C,Home,,False,
+6,UAB,Army,13,31,11.2,6.5,4.7,59.7,55.5,4.2,-18.0,44.0,1.0,B,Away,Over,True,False
+9,Florida International,Kennesaw State,26,45,3.2,3.0,0.2,64.1,48.5,15.6,-19.0,71.0,1.0,A+,,Over,,True
+13,NC State,Florida State,21,11,0.2,7.0,-6.8,53.0,58.5,-5.5,10.0,32.0,1.0,A,Home,Under,True,True
+9,Louisiana Tech,Western Kentucky,27,28,-1.9,-5.5,3.6,55.6,49.5,6.1,-1.0,55.0,1.0,A,Away,Over,True,True
+6,Oklahoma,Kent State,44,0,-33.6,-46.5,12.9,40.5,53.5,-13.0,44.0,44.0,1.0,A+,Away,Under,True,True
+6,UConn,Florida International,51,10,-11.3,-7.0,-4.3,68.0,52.5,15.5,41.0,61.0,1.0,A+,Home,Over,True,True
+13,Iowa,Michigan State,20,17,-20.1,-17.5,-2.6,47.2,42.5,4.7,3.0,37.0,1.0,B,,Over,,False
+13,Wake Forest,Delaware,52,14,-20.3,-17.5,-2.8,55.5,49.5,6.0,38.0,66.0,0.75,B,,Over,,True
+13,Houston,TCU,14,17,-2.7,1.5,-4.2,56.9,56.5,0.4,-3.0,31.0,1.0,C,Home,,False,
+6,Wyoming,UNLV,17,31,6.4,4.5,1.9,49.2,50.5,-1.3,-14.0,48.0,1.0,,,,,
+6,Arkansas State,Texas State,31,30,6.9,14.0,-7.1,74.7,63.5,11.2,1.0,61.0,1.0,A+,Home,Over,True,False
+11,Marshall,James Madison,23,35,16.5,13.5,3.0,66.3,53.5,12.8,-12.0,58.0,1.0,A+,,Over,,True
+11,Coastal Carolina,Georgia State,40,27,-12.1,-7.0,-5.1,65.7,56.5,9.2,13.0,67.0,1.0,A+,Home,Over,True,True
+6,Fresno State,Nevada,20,17,-18.3,-12.5,-5.8,32.6,45.5,-12.9,3.0,37.0,1.0,A+,Home,Under,False,True
+13,UCF,Oklahoma State,17,14,-10.5,-13.5,3.0,39.6,47.5,-7.9,3.0,31.0,1.0,A,,Under,,True
+13,Notre Dame,Syracuse,70,7,-36.3,-36.5,0.2,53.7,51.5,2.2,63.0,77.0,1.0,,,,,
+13,Maryland,Michigan,20,45,11.4,14.0,-2.6,42.6,46.5,-3.9,-25.0,65.0,1.0,C,,Under,,False
+13,Army,Tulsa,25,26,-10.4,-10.0,-0.4,49.2,43.5,5.7,-1.0,51.0,1.0,B,,Over,,True
+13,Georgia Tech,Pittsburgh,28,42,-3.1,-2.5,-0.6,58.1,61.5,-3.4,-14.0,70.0,1.0,C,,Under,,False
+13,Penn State,Nebraska,37,10,-13.7,-7.0,-6.7,51.0,45.5,5.5,27.0,47.0,1.0,A,Home,Over,True,True
+6,Temple,UTSA,27,21,3.2,6.5,-3.3,69.2,58.5,10.7,6.0,48.0,1.0,A+,Home,Over,True,False
+6,UCF,Kansas,20,27,6.3,4.0,2.3,52.2,53.5,-1.3,-7.0,47.0,1.0,,,,,
+13,Toledo,Ball State,38,9,-29.9,-29.5,-0.4,37.7,45.5,-7.8,29.0,47.0,1.0,A,,Under,,False
+13,Florida Atlantic,UConn,45,48,3.4,6.0,-2.6,72.0,63.5,8.5,-3.0,93.0,1.0,A+,,Over,,True
+13,Georgia,Charlotte,35,3,-50.2,-42.5,-7.7,51.7,53.5,-1.8,32.0,38.0,1.0,A,Home,,False,
+13,Temple,Tulane,13,37,5.6,7.5,-1.9,65.9,54.5,11.4,-24.0,50.0,1.0,A+,,Over,,False
+13,Stanford,California,31,10,5.5,4.5,1.0,46.1,47.5,-1.4,21.0,41.0,1.0,,,,,
+11,Louisville,California,26,29,-16.2,-18.5,2.3,50.5,48.5,2.0,-3.0,55.0,1.0,,,,,
+13,Northwestern,Minnesota,38,35,-4.8,-4.0,-0.8,34.6,40.5,-5.9,3.0,73.0,1.0,B,,Under,,False
+13,Vanderbilt,Kentucky,45,17,-15.9,-7.0,-8.9,56.1,53.5,2.6,28.0,62.0,1.0,A+,Home,,True,
+11,North Carolina,Stanford,20,15,-3.8,-8.5,4.7,34.8,41.5,-6.7,5.0,35.0,1.0,A,Away,Under,True,True
+13,Northern Illinois,Western Michigan,19,35,9.0,7.0,2.0,29.2,39.5,-10.3,-16.0,54.0,1.0,A+,,Under,,False
+13,Bowling Green,Akron,16,19,-2.7,-2.5,-0.2,36.3,47.5,-11.2,-3.0,35.0,1.0,A+,,Under,,True
+13,South Carolina,Coastal Carolina,51,7,-23.6,-23.5,-0.1,50.8,49.5,1.3,44.0,58.0,1.0,,,,,
+13,Ohio State,Rutgers,42,9,-28.8,-28.5,-0.3,53.2,54.5,-1.3,33.0,51.0,1.0,,,,,
+13,Arkansas State,Louisiana,30,34,-3.1,-2.5,-0.6,62.8,54.5,8.3,-4.0,64.0,1.0,A+,,Over,,True
+13,Kennesaw State,Missouri State,41,34,-9.6,-6.5,-3.1,62.6,54.5,8.1,7.0,75.0,0.75,A,Home,Over,True,True
+11,Liberty,Missouri State,17,21,-3.6,-7.5,3.9,63.4,51.5,11.9,-4.0,38.0,0.75,A+,Away,Over,True,False
+13,Kent State,Central Michigan,16,28,6.7,7.5,-0.8,40.8,50.5,-9.7,-12.0,44.0,1.0,A+,,Under,,True
+13,Buffalo,Miami (OH),20,37,6.8,2.5,4.3,34.7,38.5,-3.8,-17.0,57.0,1.0,C,Away,Under,True,False
+13,Virginia Tech,Miami,17,34,22.1,17.5,4.6,46.3,49.5,-3.2,-17.0,51.0,1.0,B,Away,Under,False,False
+13,Georgia Southern,Old Dominion,10,45,11.0,10.0,1.0,66.9,61.5,5.4,-35.0,55.0,1.0,B,,Over,,False
+11,Eastern Michigan,Bowling Green,27,21,-4.2,-3.0,-1.2,43.3,49.5,-6.2,6.0,48.0,1.0,A,,Under,,True
+13,Arizona,Baylor,41,17,-9.5,-6.5,-3.0,64.2,61.5,2.7,24.0,58.0,1.0,C,,,,
+13,UTSA,East Carolina,58,24,4.7,1.5,3.2,65.5,62.5,3.0,34.0,82.0,1.0,C,Away,,False,
+13,Wyoming,Nevada,7,13,-5.0,-6.0,1.0,28.5,39.5,-11.0,-6.0,20.0,1.0,A+,,Under,,True
+11,Virginia,Wake Forest,9,16,-3.8,-7.0,3.2,40.0,48.5,-8.5,-7.0,25.0,1.0,A+,Away,Under,True,True
+13,South Alabama,Southern Miss,42,35,3.3,2.5,0.8,66.8,53.5,13.3,7.0,77.0,1.0,A+,,Over,,True
+13,Cincinnati,BYU,14,26,8.5,2.5,6.0,54.9,56.5,-1.6,-12.0,40.0,1.0,A,Away,,True,
+13,San Diego State,San José State,25,3,-17.5,-10.0,-7.5,45.6,50.5,-4.9,22.0,28.0,1.0,A,Home,Under,True,True
+13,Louisiana Tech,Liberty,34,28,-7.5,1.5,-9.0,55.6,45.5,10.1,6.0,62.0,1.0,A+,Home,Over,True,True
+11,Rutgers,Maryland,35,20,-4.6,-1.5,-3.1,57.0,56.5,0.5,15.0,55.0,1.0,C,Home,,True,
+13,Middle Tennessee,Sam Houston,31,17,-13.6,-6.5,-7.1,60.1,53.5,6.6,14.0,48.0,1.0,A,Home,Over,True,False
+13,James Madison,Washington State,24,20,-8.2,-15.5,7.3,47.0,44.5,2.5,4.0,44.0,1.0,A,Away,,True,
+13,UAB,South Florida,18,48,21.9,21.5,0.4,73.9,68.5,5.4,-30.0,66.0,1.0,B,,Over,,False
+13,LSU,Western Kentucky,13,10,-16.1,-24.5,8.4,44.9,52.5,-7.6,3.0,23.0,1.0,A+,Away,Under,True,True
+11,Rice,UAB,24,17,1.7,1.5,0.2,62.5,51.5,11.0,7.0,41.0,1.0,A+,,Over,,False
+11,Louisiana,Texas State,42,39,7.4,3.5,3.9,76.1,62.5,13.6,3.0,81.0,1.0,A+,Away,Over,False,True
+13,Texas,Arkansas,52,37,-13.9,-8.5,-5.4,63.6,58.5,5.1,15.0,89.0,1.0,B,Home,Over,True,True
+13,Rice,North Texas,24,56,24.8,18.5,6.3,68.9,57.5,11.4,-32.0,80.0,1.0,A+,Away,Over,True,True
+13,UTEP,New Mexico State,31,34,-2.0,-4.0,2.0,56.7,44.5,12.2,-3.0,65.0,1.0,A+,,Over,,True
+11,Wisconsin,Washington,13,10,12.5,10.5,2.0,33.7,44.5,-10.8,3.0,23.0,1.0,A+,,Under,,True
+11,Arizona,Kansas,24,20,-7.8,-5.5,-2.3,57.5,56.5,1.0,4.0,44.0,1.0,,,,,
+11,Colorado State,UNLV,10,42,8.9,5.5,3.4,59.7,60.5,-0.8,-32.0,52.0,1.0,C,Away,,True,
+13,Iowa State,Kansas,38,14,-7.1,-3.0,-4.1,52.6,55.5,-2.9,24.0,52.0,1.0,C,Home,,True,
+11,Middle Tennessee,Florida International,30,56,5.2,-1.5,6.7,64.9,50.5,14.4,-26.0,86.0,1.0,A+,Away,Over,True,True
+13,SMU,Louisville,38,6,-4.1,-4.0,-0.1,50.7,49.5,1.2,32.0,44.0,1.0,,,,,
+11,UTEP,Jacksonville State,27,30,2.8,1.5,1.3,61.7,46.5,15.2,-3.0,57.0,1.0,A+,,Over,,True
+11,San José State,Air Force,16,26,4.4,-6.0,10.4,61.6,67.5,-5.9,-10.0,42.0,1.0,A+,Away,Under,True,True
+13,Wisconsin,Illinois,27,10,8.3,8.5,-0.2,38.9,42.5,-3.6,17.0,37.0,1.0,C,,Under,,True
+11,Arkansas State,Southern Miss,21,27,1.9,6.5,-4.6,63.3,54.5,8.8,-6.0,48.0,1.0,A+,Home,Over,True,False
+13,Air Force,New Mexico,3,20,5.6,3.5,2.1,57.1,52.5,4.6,-17.0,23.0,1.0,B,,Over,,False
+11,UConn,Duke,37,34,3.3,7.5,-4.2,70.1,63.5,6.6,3.0,71.0,1.0,A,Home,Over,True,True
+13,Fresno State,Utah State,17,28,-4.1,-1.5,-2.6,50.4,50.5,-0.1,-11.0,45.0,1.0,,,,,
+11,Utah State,Nevada,51,14,-16.7,-10.0,-6.7,49.2,52.5,-3.3,37.0,65.0,1.0,A,Home,Under,True,False
+13,Florida International,Jacksonville State,27,21,-4.7,-2.5,-2.2,67.1,55.5,11.6,6.0,48.0,1.0,A+,,Over,,False
+11,New Mexico State,Kennesaw State,21,24,10.2,11.5,-1.3,56.8,52.5,4.3,-3.0,45.0,1.0,C,,Over,,False
+13,Troy,Georgia State,31,19,-20.3,-9.5,-10.8,57.9,50.5,7.4,12.0,50.0,1.0,A+,Home,Over,True,False
+11,Oregon State,Sam Houston,17,21,-17.4,-21.0,3.6,50.5,52.5,-2.0,-4.0,38.0,1.0,C,Away,,True,
+13,Boise State,Colorado State,49,21,-19.4,-17.5,-1.9,50.3,45.5,4.8,28.0,70.0,1.0,B,,Over,,True

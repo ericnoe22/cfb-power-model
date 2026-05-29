@@ -2151,21 +2151,18 @@ elif page == "📈 Model Performance":
     if col_run.button("▶ Run Backtest"):
         with st.spinner(f"Running {bt_year} backtest — this takes ~30 seconds..."):
             try:
-                import subprocess, sys as _sys
-                result = subprocess.run(
-                    [_sys.executable, "backtest.py", f"--year={bt_year}", "--save"],
-                    capture_output=True, text=True, cwd=os.path.dirname(__file__)
-                )
-                if result.returncode == 0:
-                    st.rerun()
-                else:
-                    col_status.error("Backtest failed.")
-                    if result.stderr:
-                        st.text(result.stderr[-3000:])
-                    elif result.stdout:
-                        st.text(result.stdout[-3000:])
+                import importlib.util, sys as _sys
+                _bt_path = os.path.join(os.path.dirname(__file__), "backtest.py")
+                _spec = importlib.util.spec_from_file_location("backtest", _bt_path)
+                _bt = importlib.util.module_from_spec(_spec)
+                _spec.loader.exec_module(_bt)
+                _bt.run_backtest(year=bt_year, save=True)
+                st.cache_data.clear()
+                st.rerun()
             except Exception as e:
-                col_status.error(f"Error: {e}")
+                col_status.error(f"Backtest failed: {e}")
+                import traceback
+                st.text(traceback.format_exc())
 
     if bt_df.empty:
         st.info(f"No backtest results for {bt_year} yet. Click **▶ Run Backtest** above.")
