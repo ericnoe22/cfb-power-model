@@ -1391,8 +1391,8 @@ elif page == "🏆 Season Projections":
     col_rename = {
         "rank":             "Rank",
         "team":             "Team",
-        "conference":       "Conference",
         "projected_wins":   "Proj W",
+        "conference":       "Conference",
         "projected_losses": "Proj L",
         "win_pct":          "Win %",
         "floor_wins":       "Floor",
