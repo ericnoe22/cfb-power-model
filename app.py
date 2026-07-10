@@ -721,7 +721,21 @@ def load_season_projections(schedule_df, ratings_df):
 
 @st.cache_data(ttl=3600)
 def load_win_totals():
-    """Try to fetch Vegas season win total lines from Owls Insight."""
+    """
+    Load Vegas season win totals.
+    Priority: manual CSV → Owls Insight API → empty.
+
+    Manual import: drop cache/win_totals_{year}_manual.csv with columns:
+        team, wins_line, over_odds, under_odds
+    """
+    manual_path = os.path.join(os.path.dirname(__file__), f"cache/win_totals_{CURRENT_SEASON}_manual.csv")
+    if os.path.exists(manual_path):
+        try:
+            df = pd.read_csv(manual_path)
+            if "team" in df.columns and "wins_line" in df.columns:
+                return df
+        except Exception:
+            pass
     try:
         from data.owls_fetcher import fetch_ncaaf_win_totals
         return fetch_ncaaf_win_totals()
@@ -1082,7 +1096,7 @@ def render_board_view(sched_df):
 
 # ── Matchup card renderer ──────────────────────────────────────────────────
 
-def render_matchup_card(row, idx, ratings_df):
+def render_matchup_card(row, idx, ratings_df, synopsis=None):
     """Render a sportsbook-style matchup card using native Streamlit components."""
     home = str(row.get("homeTeam", ""))
     away = str(row.get("awayTeam", ""))
@@ -1183,6 +1197,15 @@ def render_matchup_card(row, idx, ratings_df):
         if home_pts and pd.notna(home_pts) and away_pts and pd.notna(away_pts):
             st.caption(f"Final: {away} {int(away_pts)} – {int(home_pts)} {home}")
 
+        # AI synopsis
+        if synopsis and not synopsis.startswith("Preview unavailable"):
+            sentences = synopsis.split(". ")
+            teaser = sentences[0] + ("." if not sentences[0].endswith(".") else "")
+            st.markdown(f"*{teaser}*")
+            if len(sentences) > 1:
+                with st.expander("Full preview"):
+                    st.markdown(synopsis)
+
 
 # ── Matchup detail dialog ──────────────────────────────────────────────────
 
@@ -1199,7 +1222,9 @@ def show_matchup_detail(row, ratings_df):
     def _get_rating(team, col):
         if ratings_df.empty:
             return None
-        r = ratings_df[ratings_df["team"] == team]
+        from data.team_names import normalize as _norm
+        team_norm = _norm(team)
+        r = ratings_df[ratings_df["team"] == team_norm]
         if r.empty or col not in r.columns:
             return None
         v = r[col].values[0]
@@ -1207,6 +1232,8 @@ def show_matchup_detail(row, ratings_df):
 
     h_comp = _get_rating(home, "composite") or row.get("home_composite")
     a_comp = _get_rating(away, "composite") or row.get("away_composite")
+    h_fpi  = _get_rating(home, "fpi")
+    a_fpi  = _get_rating(away, "fpi")
     h_off  = _get_rating(home, "offense.rating")
     a_off  = _get_rating(away, "offense.rating")
     h_def  = _get_rating(home, "defense.rating")
@@ -1252,11 +1279,13 @@ def show_matchup_detail(row, ratings_df):
     with c1:
         st.markdown(f"**{away}**")
         if a_comp is not None: st.metric("Composite", f"{float(a_comp):+.1f}")
+        if a_fpi  is not None: st.metric("FPI", f"{a_fpi:+.1f}")
         if a_off  is not None: st.metric("SP+ Offense", f"{a_off:.1f}")
         if a_def  is not None: st.metric("SP+ Defense", f"{a_def:.1f}")
     with c2:
         st.markdown(f"**{home}**")
         if h_comp is not None: st.metric("Composite", f"{float(h_comp):+.1f}")
+        if h_fpi  is not None: st.metric("FPI", f"{h_fpi:+.1f}")
         if h_off  is not None: st.metric("SP+ Offense", f"{h_off:.1f}")
         if h_def  is not None: st.metric("SP+ Defense", f"{h_def:.1f}")
 
@@ -1464,6 +1493,13 @@ elif page == "🏆 Season Projections":
             on="team", how="left"
         )
         proj_df["model_vs_vegas"] = (proj_df["projected_wins"] - proj_df["wins_line"]).round(1)
+    else:
+        st.info(
+            f"**Win totals not yet available from sportsbooks.** "
+            f"Once posted, drop a CSV at `cache/win_totals_{CURRENT_SEASON}_manual.csv` "
+            f"with columns: `team, wins_line, over_odds, under_odds` and reload.",
+            icon="ℹ️",
+        )
 
     # Load championship odds
     champ_df = load_championship_odds()
@@ -1598,19 +1634,25 @@ elif page == "🏆 Season Projections":
         st.subheader("🏆 National Championship Odds")
         st.caption("Best available odds across DraftKings, FanDuel, BetMGM, Caesars")
 
-        champ_display = champ_df.copy()
+        # Merge in projected wins so we can compare model ranking vs market odds
+        proj_slim = proj_df[["team", "projected_wins", "floor_wins", "ceiling_wins"]].copy()
+        champ_display = champ_df.merge(proj_slim, on="team", how="left")
+
         for col in ["best_odds", "dk_odds", "fd_odds", "betmgm_odds", "caesars_odds"]:
             if col in champ_display.columns:
                 champ_display[col] = champ_display[col].apply(fmt_american_odds)
 
         champ_display = champ_display.rename(columns={
-            "team":         "Team",
-            "best_odds":    "Best Odds",
-            "best_book":    "Best Book",
-            "dk_odds":      "DraftKings",
-            "fd_odds":      "FanDuel",
-            "betmgm_odds":  "BetMGM",
-            "caesars_odds": "Caesars",
+            "team":            "Team",
+            "projected_wins":  "Proj W",
+            "floor_wins":      "Floor",
+            "ceiling_wins":    "Ceiling",
+            "best_odds":       "Best Odds",
+            "best_book":       "Best Book",
+            "dk_odds":         "DraftKings",
+            "fd_odds":         "FanDuel",
+            "betmgm_odds":     "BetMGM",
+            "caesars_odds":    "Caesars",
         })
 
         # Filter to conference selection if active
@@ -2330,8 +2372,30 @@ elif page == "📅 Schedule & Predictions":
     if view_mode == "Board":
         render_board_view(week_sched)
     else:
+        from model.synopsis_generator import generate_synopses_batch, _game_key
+        sched_synopses = {}
+        if page_week != "All" and os.getenv("ANTHROPIC_API_KEY"):
+            games_for_syn = [
+                {
+                    "homeTeam": str(r.get("homeTeam", "")).replace(" (FCS)", ""),
+                    "awayTeam": str(r.get("awayTeam", "")).replace(" (FCS)", ""),
+                    "neutral": str(r.get("neutralSite", "")).lower() in ("true", "1", "yes"),
+                    "predicted_spread": r.get("predicted_spread"),
+                    "vegas_spread": r.get("vegas_spread"),
+                    "predicted_total": r.get("predicted_total"),
+                    "vegas_total": r.get("vegas_total"),
+                    "week": int(page_week),
+                }
+                for _, r in week_sched.iterrows()
+            ]
+            with st.spinner("Generating AI game previews..."):
+                sched_synopses = generate_synopses_batch(games_for_syn, week=int(page_week))
+
         for idx, row in week_sched.iterrows():
-            render_matchup_card(row.to_dict(), idx, ratings_df)
+            home_clean = str(row.get("homeTeam", "")).replace(" (FCS)", "")
+            away_clean = str(row.get("awayTeam", "")).replace(" (FCS)", "")
+            syn_key = _game_key(home_clean, away_clean)
+            render_matchup_card(row.to_dict(), idx, ratings_df, synopsis=sched_synopses.get(syn_key))
 
     # Download
     st.download_button(
@@ -2550,11 +2614,12 @@ Use the button below to force-reload data from your local CSV files.
     st.divider()
     st.subheader("Data Status")
     files = {
-        "Power Ratings (2025)": PREBUILT_RATINGS_PATH,
-        "Schedule (2025)":      SCHEDULE_PATH,
-        "Elo CSV":              os.path.join(os.path.dirname(__file__), "cache", "elo_current.csv"),
-        "SP+ (2025)":           os.path.join(os.path.dirname(__file__), "cache", "sp_plus_2025.json"),
-        "Performance Log":      os.path.join(os.path.dirname(__file__), "outputs", "performance_log.csv"),
+        f"Power Ratings ({CURRENT_SEASON})": PREBUILT_RATINGS_PATH,
+        f"Schedule ({CURRENT_SEASON})":      SCHEDULE_PATH,
+        "Elo CSV":                           os.path.join(os.path.dirname(__file__), "cache", "elo_current.csv"),
+        f"SP+ ({CURRENT_SEASON})":           os.path.join(os.path.dirname(__file__), "cache", f"sp_plus_{CURRENT_SEASON}.csv"),
+        f"FPI ({CURRENT_SEASON})":           os.path.join(os.path.dirname(__file__), "cache", f"fpi_{CURRENT_SEASON}.csv"),
+        "Performance Log":                   os.path.join(os.path.dirname(__file__), "outputs", "performance_log.csv"),
     }
     for label, path in files.items():
         exists = os.path.exists(path)

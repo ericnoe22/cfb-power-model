@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "..", "cache")
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-haiku-4-5-20251001"
 
 
 def _cache_path(week):
@@ -175,6 +175,7 @@ def generate_synopses_batch(games, week=None, force=False):
 
     cache = _load_cache(week)
     results = {}
+    client = anthropic.Anthropic(api_key=api_key)
 
     for game in games:
         home = game.get("home_team", game.get("homeTeam", ""))
@@ -186,7 +187,6 @@ def generate_synopses_batch(games, week=None, force=False):
             continue
 
         try:
-            client = anthropic.Anthropic(api_key=api_key)
             prompt = _build_prompt(game)
 
             with client.messages.stream(

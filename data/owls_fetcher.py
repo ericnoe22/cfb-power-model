@@ -36,7 +36,7 @@ MASCOT_STRIP = [
     "Horned Frogs", "Fighting Irish", "Fighting Illini", "Mountain Hawks",
     "Red Wolves", "Sun Devils", "Mean Green", "Green Wave", "Hilltoppers",
     # Single-word mascots
-    "Volunteers", "Bulldogs", "Wildcats", "Tigers", "Rebels", "Gators",
+    "Volunteers", "Bulldogs", "Wildcats", "Tigers", "Rebels", "Gators", "Commodores",
     "Seminoles", "Hurricanes", "Buckeyes", "Wolverines", "Spartans", "Hawkeyes",
     "Badgers", "Cornhuskers", "Sooners", "Cowboys", "Longhorns", "Aggies",
     "Razorbacks", "Gamecocks", "Cavaliers", "Hokies", "Mustangs", "Bears",
@@ -62,12 +62,14 @@ def _clean_team_name(raw_name):
     Falls back to normalize() which handles known CFBD variants.
     """
     name = raw_name.strip()
-    # Strip venue notes like "(Neutral Venue)"
-    if "(" in name:
-        name = name[:name.index("(")].strip()
-    # Try stripping known mascots (longest match first to avoid partial strips)
+    # Strip trailing venue notes like "(Neutral Venue)" but NOT state disambiguators
+    # like "(OH)" or "(FL)" — those are part of the canonical team name.
+    import re
+    name = re.sub(r'\s*\(Neutral[^)]*\)\s*$', '', name).strip()
+    # Try stripping known mascots (longest match first, case-insensitive)
+    name_lower = name.lower()
     for mascot in sorted(MASCOT_STRIP, key=len, reverse=True):
-        if name.endswith(mascot):
+        if name_lower.endswith(mascot.lower()):
             cleaned = name[: -len(mascot)].strip()
             if cleaned:
                 return normalize(cleaned)
@@ -232,7 +234,15 @@ def fetch_ncaaf_lines(force_refresh=False):
             df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce")
 
     if not consensus_df.empty:
-        consensus_df = consensus_df.sort_values("commence_dt").reset_index(drop=True)
+        consensus_df = (
+            consensus_df
+            .sort_values(["homeTeam", "awayTeam", "books_available", "spread"],
+                         ascending=[True, True, False, True],
+                         na_position="last")
+            .drop_duplicates(subset=["homeTeam", "awayTeam"], keep="first")
+            .sort_values("commence_dt")
+            .reset_index(drop=True)
+        )
 
     return consensus_df, multibook_df
 

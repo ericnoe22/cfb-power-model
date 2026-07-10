@@ -54,6 +54,8 @@ def project_season_wins(schedule_df: pd.DataFrame, predictions_df: pd.DataFrame)
 
         try:
             spread_val = float(spread)
+            if spread_val != spread_val:  # NaN check
+                spread_val = 0.0
         except (TypeError, ValueError):
             spread_val = 0.0
 
@@ -71,8 +73,12 @@ def project_season_wins(schedule_df: pd.DataFrame, predictions_df: pd.DataFrame)
 
         # Simple floor/ceiling: ±1 std dev of a Bernoulli sum
         std = float(np.sqrt(sum(p * (1 - p) for p in probs)))
-        floor_wins   = max(0, round(proj_wins - std))
-        ceiling_wins = min(n, round(proj_wins + std))
+        if proj_wins != proj_wins or std != std:  # NaN guard
+            floor_wins   = 0
+            ceiling_wins = n
+        else:
+            floor_wins   = max(0, round(proj_wins - std))
+            ceiling_wins = min(n, round(proj_wins + std))
 
         rows.append({
             "team":            team,

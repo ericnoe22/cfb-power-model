@@ -10,10 +10,21 @@ Add new entries here whenever a mismatch appears.
 # Only add entries where a real mismatch exists — don't map names that already match.
 TEAM_NAME_MAP = {
     # CFBD schedule uses these; SP+ article uses the right-hand side
-    "App State":        "Appalachian State",
-    "Hawai'i":          "Hawaii",
-    "Massachusetts":    "UMass",
-    "UL Monroe":        "Louisiana-Monroe",
+    "App State":              "Appalachian State",
+    "Hawai'i":                "Hawai'i",       # identity — keep apostrophe form canonical
+    "Massachusetts":          "UMass",
+    "UL Monroe":              "Louisiana-Monroe",
+    # Owls Insight / plain-ASCII variants → canonical accented/apostrophe forms
+    "Hawaii":                 "Hawai'i",
+    "San Jose State":         "San José State",
+    # Owls Insight sometimes includes mascot in team name
+    "Vanderbilt Commodores":      "Vanderbilt",
+    "Mississippi State Bulldogs": "Mississippi State",
+    "Louisiana State":            "LSU",
+    # State disambiguator variants (after mascot strip)
+    "Miami (OH)":                 "Miami (OH)",   # keep as-is, distinct from Miami (FL)
+    "FIU":                        "Florida International",
+    "UTSA":                       "UT San Antonio",
 }
 
 # Reverse map: CFBD name → canonical display name (for readability)
