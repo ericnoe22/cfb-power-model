@@ -14,6 +14,7 @@ cache/*
 !cache/sp_plus_2026.csv
 !cache/sp_plus_2026_spring.csv
 !cache/fpi_2026.csv
+!cache/fpi_projections_2026.csv
 !cache/elo_current.csv
 
 # Streamlit: keep config.toml (theme), exclude secrets

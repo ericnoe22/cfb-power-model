@@ -765,6 +765,18 @@ def load_situational_tendencies():
     return matchup_ou, team_ou, team_ats
 
 
+@st.cache_data(ttl=86400)
+def load_fpi_projections():
+    """Load ESPN FPI preseason projections (proj wins, conf %, playoff %, NC %)."""
+    path = os.path.join(os.path.dirname(__file__), f"cache/fpi_projections_{CURRENT_SEASON}.csv")
+    if not os.path.exists(path):
+        return pd.DataFrame()
+    try:
+        return pd.read_csv(path)
+    except Exception:
+        return pd.DataFrame()
+
+
 def _roi(wins, losses):
     total = wins + losses
     if total == 0:
@@ -1501,6 +1513,12 @@ elif page == "🏆 Season Projections":
             icon="ℹ️",
         )
 
+    # Merge ESPN FPI projected wins
+    fpi_proj = load_fpi_projections()
+    has_fpi_proj = not fpi_proj.empty and "fpi_proj_wins" in fpi_proj.columns
+    if has_fpi_proj:
+        proj_df = proj_df.merge(fpi_proj[["team", "fpi_proj_wins"]], on="team", how="left")
+
     # Load championship odds
     champ_df = load_championship_odds()
     has_champ = not champ_df.empty and "best_odds" in champ_df.columns
@@ -1552,6 +1570,7 @@ elif page == "🏆 Season Projections":
         "rank":             "Rank",
         "team":             "Team",
         "projected_wins":   "Proj W",
+        "fpi_proj_wins":    "ESPN FPI",
         "conference":       "Conference",
         "projected_losses": "Proj L",
         "win_pct":          "Win %",
@@ -1686,8 +1705,28 @@ elif page == "🎰 Title Odds":
     with st.spinner("Fetching latest odds..."):
         champ_df = load_championship_odds()
 
-    if champ_df.empty:
+    fpi_proj = load_fpi_projections()
+    has_fpi_proj = not fpi_proj.empty
+
+    if champ_df.empty and not has_fpi_proj:
         col_status.warning("Championship odds unavailable — check back closer to the season.")
+        st.stop()
+
+    # If no market odds yet, show ESPN FPI projections as a stand-in
+    if champ_df.empty and has_fpi_proj:
+        col_status.info("Market odds not yet posted — showing ESPN FPI preseason projections.")
+        st.subheader("ESPN FPI Preseason Projections")
+        fpi_display = fpi_proj.copy().sort_values("fpi_playoff_pct", ascending=False).reset_index(drop=True)
+        fpi_display.insert(0, "Rank", fpi_display.index + 1)
+        fpi_display = fpi_display.rename(columns={
+            "team":             "Team",
+            "fpi_proj_wins":    "Proj W",
+            "fpi_win_conf_pct": "Win Conf %",
+            "fpi_playoff_pct":  "Playoff %",
+            "fpi_make_nc_pct":  "Make NC %",
+            "fpi_win_nc_pct":   "Win NC %",
+        })
+        st.dataframe(fpi_display, use_container_width=True, hide_index=True)
         st.stop()
 
     from data.odds_api_fetcher import fmt_american_odds
@@ -1725,6 +1764,11 @@ elif page == "🎰 Title Odds":
 
     # ── Full odds table ───────────────────────────────────────────────────
     display_df = champ_df.copy()
+    if has_fpi_proj:
+        display_df = display_df.merge(
+            fpi_proj[["team", "fpi_proj_wins", "fpi_playoff_pct", "fpi_win_nc_pct"]],
+            on="team", how="left"
+        )
     display_df.insert(0, "Rank", range(1, len(display_df) + 1))
     display_df["Implied %"] = display_df["impl_prob"].apply(
         lambda v: f"{v*100:.1f}%" if v else "—"
@@ -1734,16 +1778,19 @@ elif page == "🎰 Title Odds":
             display_df[col] = display_df[col].apply(fmt_american_odds)
 
     display_df = display_df.rename(columns={
-        "team":         "Team",
-        "best_odds":    "Best Odds",
-        "best_book":    "Best Book",
-        "dk_odds":      "DraftKings",
-        "fd_odds":      "FanDuel",
-        "betmgm_odds":  "BetMGM",
-        "caesars_odds": "Caesars",
+        "team":              "Team",
+        "best_odds":         "Best Odds",
+        "best_book":         "Best Book",
+        "dk_odds":           "DraftKings",
+        "fd_odds":           "FanDuel",
+        "betmgm_odds":       "BetMGM",
+        "caesars_odds":      "Caesars",
+        "fpi_proj_wins":     "ESPN Proj W",
+        "fpi_playoff_pct":   "ESPN PO%",
+        "fpi_win_nc_pct":    "ESPN NC%",
     })
 
-    show_cols = ["Rank", "Team", "Best Odds", "Implied %", "DraftKings", "FanDuel", "BetMGM", "Caesars", "Best Book"]
+    show_cols = ["Rank", "Team", "Best Odds", "Implied %", "ESPN Proj W", "ESPN PO%", "ESPN NC%", "DraftKings", "FanDuel", "BetMGM", "Caesars", "Best Book"]
     show_cols = [c for c in show_cols if c in display_df.columns]
 
     st.dataframe(display_df[show_cols], use_container_width=True, hide_index=True)
