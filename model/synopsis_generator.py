@@ -12,13 +12,27 @@ called once per batch — not on every page load.
 
 import os
 import json
+import sys
 import anthropic
 from dotenv import load_dotenv
 
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 load_dotenv()
 
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "..", "cache")
 MODEL = "claude-haiku-4-5-20251001"
+
+_TEAM_PROFILES = None
+
+def _get_team_profiles():
+    global _TEAM_PROFILES
+    if _TEAM_PROFILES is None:
+        try:
+            from data.team_profile_builder import load_team_profiles
+            _TEAM_PROFILES = load_team_profiles()
+        except Exception:
+            _TEAM_PROFILES = {}
+    return _TEAM_PROFILES
 
 
 def _cache_path(week):
@@ -100,6 +114,17 @@ def _build_prompt(game):
     if fcs_note:
         lines.append(f"Note: {fcs_note}")
 
+    # Inject team profiles (2025 stats, coach, returners) if available
+    profiles = _get_team_profiles()
+    if profiles:
+        from data.team_profile_builder import format_profile_for_prompt
+        home_ctx = format_profile_for_prompt(home, profiles)
+        away_ctx = format_profile_for_prompt(away, profiles)
+        if home_ctx:
+            lines.append(f"{home} context (2025 season): {home_ctx}")
+        if away_ctx:
+            lines.append(f"{away} context (2025 season): {away_ctx}")
+
     data_block = "\n".join(lines)
 
     return f"""You are a college football analyst writing a sharp, concise game preview for a betting-focused audience.
@@ -108,12 +133,13 @@ Here is the data for this matchup:
 {data_block}
 
 Write a 3-4 sentence preview that covers:
-1. The key matchup dynamic — which team has the edge and why (use the ratings to support it)
+1. The key matchup dynamic — which team has the edge and why (use the ratings and player context)
 2. What the model thinks vs. Vegas — does it agree, disagree, and on which side
-3. One specific angle a bettor should watch (e.g., home field, defensive mismatch, high/low scoring lean)
+3. One specific angle a bettor should watch (e.g., a key player matchup, defensive mismatch, high/low scoring lean)
 
+Note: player stats are from the 2025 season. Some players may have transferred or departed for the NFL Draft.
 Be direct and analytical. No filler phrases like "In a highly anticipated matchup..." or "Both teams will look to...".
-Write as if you're a sharp analyst, not a hype piece. Keep it under 100 words."""
+Write as if you're a sharp analyst, not a hype piece. Keep it under 120 words."""
 
 
 def generate_synopsis(game, week=None, force=False):

@@ -1,0 +1,4138 @@
+{
+  "Air Force": {
+    "head_coach": "Troy Calhoun",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Liam Szarka",
+      "pass_yds": 1294,
+      "pass_td": 9,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Liam Szarka",
+      "rush_yds": 922,
+      "rush_td": 13
+    },
+    "top_wr": {
+      "name": "Cade Harris",
+      "rec_yds": 584,
+      "rec_td": 2,
+      "rec": 35
+    },
+    "top_defender": {
+      "name": "Isaac Hubert",
+      "sacks": 5.0,
+      "tfl": 11.0
+    },
+    "returning_prod_pct": 63.0,
+    "talent_score": NaN,
+    "user_notes": ""
+  },
+  "Akron": {
+    "head_coach": "Joe Moorhead",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Ben Finley",
+      "pass_yds": 2475,
+      "pass_td": 19,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Jordan Gant",
+      "rush_yds": 1032,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Marcel Williams",
+      "rec_yds": 641,
+      "rec_td": 2,
+      "rec": 45
+    },
+    "top_defender": {
+      "name": "Julien Laventure",
+      "sacks": 4.0,
+      "tfl": 10.5
+    },
+    "returning_prod_pct": 37.1,
+    "talent_score": 537.2,
+    "user_notes": ""
+  },
+  "Alabama": {
+    "head_coach": "Kalen DeBoer",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Ty Simpson",
+      "pass_yds": 3268,
+      "pass_td": 26,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Jamarion Miller",
+      "rush_yds": 493,
+      "rush_td": 3
+    },
+    "top_wr": {
+      "name": "Germie Bernard",
+      "rec_yds": 762,
+      "rec_td": 7,
+      "rec": 57
+    },
+    "top_defender": {
+      "name": "Yhonzae Pierre",
+      "sacks": 6.0,
+      "tfl": 11.5
+    },
+    "returning_prod_pct": 43.3,
+    "talent_score": 993.5,
+    "user_notes": ""
+  },
+  "App State": {
+    "head_coach": "Dowell Loggains",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "AJ Swann",
+      "pass_yds": 1494,
+      "pass_td": 10,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Rashod Dubinion",
+      "rush_yds": 868,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Jaden Barnes",
+      "rec_yds": 608,
+      "rec_td": 7,
+      "rec": 55
+    },
+    "top_defender": {
+      "name": "Kevin Abrams-Verwayne",
+      "sacks": 5.0,
+      "tfl": 6.5
+    },
+    "returning_prod_pct": 14.1,
+    "talent_score": 611.3,
+    "user_notes": ""
+  },
+  "Arizona": {
+    "head_coach": "Brent Brennan",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Noah Fifita",
+      "pass_yds": 2963,
+      "pass_td": 26,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Ismail Mahdi",
+      "rush_yds": 785,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Kris Hutson",
+      "rec_yds": 740,
+      "rec_td": 4,
+      "rec": 57
+    },
+    "top_defender": {
+      "name": "Chase Kennedy",
+      "sacks": 4.0,
+      "tfl": 8.0
+    },
+    "returning_prod_pct": 56.1,
+    "talent_score": 651.6,
+    "user_notes": ""
+  },
+  "Arizona State": {
+    "head_coach": "Kenny Dillingham",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Sam Leavitt",
+      "pass_yds": 1628,
+      "pass_td": 10,
+      "pass_int": 3
+    },
+    "top_rb": {
+      "name": "Raleek Brown",
+      "rush_yds": 1141,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Jordyn Tyson",
+      "rec_yds": 711,
+      "rec_td": 8,
+      "rec": 61
+    },
+    "top_defender": {
+      "name": "Keyshaun Elliott",
+      "sacks": 7.0,
+      "tfl": 14.0
+    },
+    "returning_prod_pct": 69.5,
+    "talent_score": 738.5,
+    "user_notes": ""
+  },
+  "Arkansas": {
+    "head_coach": "Ryan Silverfield",
+    "coaching_change": true,
+    "coaching_note": "Silverfield (Memphis) lateral move up \u2014 solid but unproven at P4 level",
+    "top_qb": {
+      "name": "Taylen Green",
+      "pass_yds": 2714,
+      "pass_td": 19,
+      "pass_int": 11
+    },
+    "top_rb": {
+      "name": "Michael Washington",
+      "rush_yds": 1068,
+      "rush_td": 8
+    },
+    "top_wr": {
+      "name": "O'Mega Blake",
+      "rec_yds": 760,
+      "rec_td": 5,
+      "rec": 57
+    },
+    "top_defender": {
+      "name": "Quincy Rhodes Jr.",
+      "sacks": 8.0,
+      "tfl": 15.5
+    },
+    "returning_prod_pct": 36.1,
+    "talent_score": 772.6,
+    "user_notes": ""
+  },
+  "Arkansas State": {
+    "head_coach": "Butch Jones",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Jaylen Raynor",
+      "pass_yds": 3076,
+      "pass_td": 16,
+      "pass_int": 11
+    },
+    "top_rb": {
+      "name": "Devin Spencer",
+      "rush_yds": 523,
+      "rush_td": 2
+    },
+    "top_wr": {
+      "name": "Corey Rucker",
+      "rec_yds": 863,
+      "rec_td": 3,
+      "rec": 67
+    },
+    "top_defender": {
+      "name": "Ethan Hassler",
+      "sacks": 6.5,
+      "tfl": 10.5
+    },
+    "returning_prod_pct": 58.6,
+    "talent_score": 591.3,
+    "user_notes": ""
+  },
+  "Army": {
+    "head_coach": "Jeff Monken",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Cale Hellums",
+      "pass_yds": 586,
+      "pass_td": 3,
+      "pass_int": 3
+    },
+    "top_rb": {
+      "name": "Cale Hellums",
+      "rush_yds": 1170,
+      "rush_td": 16
+    },
+    "top_wr": {
+      "name": "Bradyn Anderson",
+      "rec_yds": 381,
+      "rec_td": 2,
+      "rec": 14
+    },
+    "top_defender": {
+      "name": "Eric Ford",
+      "sacks": 4.5,
+      "tfl": 7.0
+    },
+    "returning_prod_pct": 25.2,
+    "talent_score": 23.7,
+    "user_notes": ""
+  },
+  "Auburn": {
+    "head_coach": "Alex Golesh",
+    "coaching_change": true,
+    "coaching_note": "Golesh was excellent at South Florida \u2014 upgrade from Freeze",
+    "top_qb": {
+      "name": "Jackson Arnold",
+      "pass_yds": 1309,
+      "pass_td": 6,
+      "pass_int": 2
+    },
+    "top_rb": {
+      "name": "Jeremiah Cobb",
+      "rush_yds": 969,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Cam Coleman",
+      "rec_yds": 725,
+      "rec_td": 5,
+      "rec": 57
+    },
+    "top_defender": {
+      "name": "Xavier Atkins",
+      "sacks": 9.0,
+      "tfl": 17.0
+    },
+    "returning_prod_pct": 21.8,
+    "talent_score": 891.8,
+    "user_notes": ""
+  },
+  "BYU": {
+    "head_coach": "Kalani Sitake",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Bear Bachmeier",
+      "pass_yds": 2708,
+      "pass_td": 14,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "LJ Martin",
+      "rush_yds": 1305,
+      "rush_td": 12
+    },
+    "top_wr": {
+      "name": "Parker Kingston",
+      "rec_yds": 848,
+      "rec_td": 5,
+      "rec": 61
+    },
+    "top_defender": {
+      "name": "Jack Kelly",
+      "sacks": 10.0,
+      "tfl": 13.5
+    },
+    "returning_prod_pct": 87.1,
+    "talent_score": 649.4,
+    "user_notes": ""
+  },
+  "Ball State": {
+    "head_coach": "Mike Uremovich",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Kiael Kelly",
+      "pass_yds": 1560,
+      "pass_td": 10,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Kiael Kelly",
+      "rush_yds": 608,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Qian Magwood",
+      "rec_yds": 320,
+      "rec_td": 1,
+      "rec": 19
+    },
+    "top_defender": {
+      "name": "Nathan Voorhis",
+      "sacks": 10.0,
+      "tfl": 15.5
+    },
+    "returning_prod_pct": 7.7,
+    "talent_score": 495.4,
+    "user_notes": ""
+  },
+  "Baylor": {
+    "head_coach": "Dave Aranda",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Sawyer Robertson",
+      "pass_yds": 3681,
+      "pass_td": 31,
+      "pass_int": 12
+    },
+    "top_rb": {
+      "name": "Bryson Washington",
+      "rush_yds": 788,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Josh Cameron",
+      "rec_yds": 872,
+      "rec_td": 9,
+      "rec": 69
+    },
+    "top_defender": {
+      "name": "Emar'Rion Winston",
+      "sacks": 4.0,
+      "tfl": 6.0
+    },
+    "returning_prod_pct": 82.5,
+    "talent_score": 726.3,
+    "user_notes": ""
+  },
+  "Boise State": {
+    "head_coach": "Spencer Danielson",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Maddux Madsen",
+      "pass_yds": 2282,
+      "pass_td": 18,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Dylan Riley",
+      "rush_yds": 1091,
+      "rush_td": 10
+    },
+    "top_wr": {
+      "name": "Latrell Caples",
+      "rec_yds": 546,
+      "rec_td": 3,
+      "rec": 46
+    },
+    "top_defender": {
+      "name": "Braxton Fely",
+      "sacks": 5.5,
+      "tfl": 6.5
+    },
+    "returning_prod_pct": 57.9,
+    "talent_score": 610.6,
+    "user_notes": ""
+  },
+  "Boston College": {
+    "head_coach": "Bill O'Brien",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Dylan Lonergan",
+      "pass_yds": 2025,
+      "pass_td": 12,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Turbo Richard",
+      "rush_yds": 749,
+      "rush_td": 9
+    },
+    "top_wr": {
+      "name": "Lewis Bond",
+      "rec_yds": 1010,
+      "rec_td": 1,
+      "rec": 89
+    },
+    "top_defender": {
+      "name": "Sedarius McConnell",
+      "sacks": 2.5,
+      "tfl": 7.5
+    },
+    "returning_prod_pct": 62.0,
+    "talent_score": 650.1,
+    "user_notes": ""
+  },
+  "Bowling Green": {
+    "head_coach": "Eddie George",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Drew Pyne",
+      "pass_yds": 882,
+      "pass_td": 4,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Austyn Dendy",
+      "rush_yds": 493,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Jyrin Johnson",
+      "rec_yds": 466,
+      "rec_td": 2,
+      "rec": 37
+    },
+    "top_defender": {
+      "name": "Myles Bradley",
+      "sacks": 5.0,
+      "tfl": 5.5
+    },
+    "returning_prod_pct": 7.9,
+    "talent_score": 527.3,
+    "user_notes": ""
+  },
+  "Buffalo": {
+    "head_coach": "Pete Lembo",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Ta'Quan Roberson",
+      "pass_yds": 2520,
+      "pass_td": 17,
+      "pass_int": 12
+    },
+    "top_rb": {
+      "name": "Al-Jay Henderson",
+      "rush_yds": 755,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Nik McMillan",
+      "rec_yds": 975,
+      "rec_td": 3,
+      "rec": 61
+    },
+    "top_defender": {
+      "name": "Khalil Murdock",
+      "sacks": 5.0,
+      "tfl": 13.5
+    },
+    "returning_prod_pct": 65.9,
+    "talent_score": 513.3,
+    "user_notes": ""
+  },
+  "California": {
+    "head_coach": "Tosh Lupoi",
+    "coaching_change": true,
+    "coaching_note": "Longtime DC/assistant \u2014 no prior HC experience at any level",
+    "top_qb": {
+      "name": "Jaron-Keawe Sagapolutele",
+      "pass_yds": 3109,
+      "pass_td": 17,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Kendrick Raphael",
+      "rush_yds": 862,
+      "rush_td": 12
+    },
+    "top_wr": {
+      "name": "Jacob De Jesus",
+      "rec_yds": 884,
+      "rec_td": 5,
+      "rec": 98
+    },
+    "top_defender": {
+      "name": "T.J. Bush",
+      "sacks": 4.5,
+      "tfl": 9.0
+    },
+    "returning_prod_pct": 22.5,
+    "talent_score": 726.2,
+    "user_notes": ""
+  },
+  "Central Michigan": {
+    "head_coach": "Matt Drinkall",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Joey Labas",
+      "pass_yds": 1676,
+      "pass_td": 12,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Nahree Biggins",
+      "rush_yds": 540,
+      "rush_td": 2
+    },
+    "top_wr": {
+      "name": "Langston Lewis",
+      "rec_yds": 513,
+      "rec_td": 3,
+      "rec": 35
+    },
+    "top_defender": {
+      "name": "Michael Heldman",
+      "sacks": 11.5,
+      "tfl": 16.0
+    },
+    "returning_prod_pct": 10.3,
+    "talent_score": 481.2,
+    "user_notes": ""
+  },
+  "Charlotte": {
+    "head_coach": "Tim Albin",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Grayson Loftis",
+      "pass_yds": 1415,
+      "pass_td": 8,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Rod Gainey Jr.",
+      "rush_yds": 260,
+      "rush_td": 1
+    },
+    "top_wr": {
+      "name": "Javen Nicholas",
+      "rec_yds": 740,
+      "rec_td": 5,
+      "rec": 60
+    },
+    "top_defender": {
+      "name": "Reid Williford",
+      "sacks": 4.0,
+      "tfl": 6.0
+    },
+    "returning_prod_pct": 23.8,
+    "talent_score": 526.3,
+    "user_notes": ""
+  },
+  "Cincinnati": {
+    "head_coach": "Scott Satterfield",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Brendan Sorsby",
+      "pass_yds": 2786,
+      "pass_td": 26,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Tawee Walker",
+      "rush_yds": 709,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Cyrus Allen",
+      "rec_yds": 651,
+      "rec_td": 11,
+      "rec": 48
+    },
+    "top_defender": {
+      "name": "Jake Golday",
+      "sacks": 3.5,
+      "tfl": 4.0
+    },
+    "returning_prod_pct": 79.4,
+    "talent_score": 644.1,
+    "user_notes": ""
+  },
+  "Clemson": {
+    "head_coach": "Dabo Swinney",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Cade Klubnik",
+      "pass_yds": 2750,
+      "pass_td": 16,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Adam Randall",
+      "rush_yds": 779,
+      "rush_td": 9
+    },
+    "top_wr": {
+      "name": "T.J. Moore",
+      "rec_yds": 754,
+      "rec_td": 4,
+      "rec": 46
+    },
+    "top_defender": {
+      "name": "Will Heldt",
+      "sacks": 6.0,
+      "tfl": 14.0
+    },
+    "returning_prod_pct": 82.6,
+    "talent_score": 918.4,
+    "user_notes": ""
+  },
+  "Coastal Carolina": {
+    "head_coach": "Ryan Beard",
+    "coaching_change": true,
+    "coaching_note": "Beard won big at FCS Missouri State \u2014 step up but manageable",
+    "top_qb": {
+      "name": "Tad Hudson",
+      "pass_yds": 942,
+      "pass_td": 4,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Ja'Vin Simpkins",
+      "rush_yds": 567,
+      "rush_td": 2
+    },
+    "top_wr": {
+      "name": "Cameron Wright",
+      "rec_yds": 274,
+      "rec_td": 1,
+      "rec": 24
+    },
+    "top_defender": {
+      "name": "Ezekiel Durham-Campbell",
+      "sacks": 5.5,
+      "tfl": 7.5
+    },
+    "returning_prod_pct": 96.9,
+    "talent_score": 610.9,
+    "user_notes": ""
+  },
+  "Colorado": {
+    "head_coach": "Deion Sanders",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Kaidon Salter",
+      "pass_yds": 1414,
+      "pass_td": 10,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Micah Welch",
+      "rush_yds": 384,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Omarion Miller",
+      "rec_yds": 807,
+      "rec_td": 8,
+      "rec": 44
+    },
+    "top_defender": {
+      "name": "Arden Walker",
+      "sacks": 2.5,
+      "tfl": 4.5
+    },
+    "returning_prod_pct": 7.3,
+    "talent_score": 755.2,
+    "user_notes": ""
+  },
+  "Colorado State": {
+    "head_coach": "Jim Mora",
+    "coaching_change": true,
+    "coaching_note": "Mora is a proven veteran HC \u2014 significant upgrade from Norvell",
+    "top_qb": {
+      "name": "Jackson Brousseau",
+      "pass_yds": 1354,
+      "pass_td": 9,
+      "pass_int": 3
+    },
+    "top_rb": {
+      "name": "Jalen Dupree",
+      "rush_yds": 508,
+      "rush_td": 2
+    },
+    "top_wr": {
+      "name": "Rocky Beers",
+      "rec_yds": 388,
+      "rec_td": 7,
+      "rec": 31
+    },
+    "top_defender": {
+      "name": "Lemondre Joe",
+      "sacks": 3.5,
+      "tfl": 4.5
+    },
+    "returning_prod_pct": 50.4,
+    "talent_score": 583.7,
+    "user_notes": ""
+  },
+  "Delaware": {
+    "head_coach": "Ryan Carty",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Nick Minicucci",
+      "pass_yds": 3495,
+      "pass_td": 22,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Jo'Nathan Silver",
+      "rush_yds": 536,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Kyre Duplessis",
+      "rec_yds": 794,
+      "rec_td": 5,
+      "rec": 58
+    },
+    "top_defender": {
+      "name": "Keyshawn Hunter",
+      "sacks": 3.0,
+      "tfl": 6.0
+    },
+    "returning_prod_pct": NaN,
+    "talent_score": 242.8,
+    "user_notes": ""
+  },
+  "Duke": {
+    "head_coach": "Manny Diaz",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Darian Mensah",
+      "pass_yds": 3646,
+      "pass_td": 30,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Nate Sheppard",
+      "rush_yds": 962,
+      "rush_td": 10
+    },
+    "top_wr": {
+      "name": "Cooper Barkate",
+      "rec_yds": 1069,
+      "rec_td": 6,
+      "rec": 68
+    },
+    "top_defender": {
+      "name": "Vincent Anthony",
+      "sacks": 7.0,
+      "tfl": 13.0
+    },
+    "returning_prod_pct": 17.9,
+    "talent_score": 669.2,
+    "user_notes": ""
+  },
+  "East Carolina": {
+    "head_coach": "Blake Harrell",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Katin Houser",
+      "pass_yds": 3300,
+      "pass_td": 19,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "London Montgomery",
+      "rush_yds": 742,
+      "rush_td": 7
+    },
+    "top_wr": {
+      "name": "Anthony Smith",
+      "rec_yds": 897,
+      "rec_td": 5,
+      "rec": 60
+    },
+    "top_defender": {
+      "name": "Zion Wilson",
+      "sacks": 6.0,
+      "tfl": 10.0
+    },
+    "returning_prod_pct": 50.6,
+    "talent_score": 611.5,
+    "user_notes": ""
+  },
+  "Eastern Michigan": {
+    "head_coach": "Chris Creighton",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Noah Kim",
+      "pass_yds": 2817,
+      "pass_td": 18,
+      "pass_int": 11
+    },
+    "top_rb": {
+      "name": "Dontae McMillan",
+      "rush_yds": 1014,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Nick Devereaux",
+      "rec_yds": 510,
+      "rec_td": 7,
+      "rec": 34
+    },
+    "top_defender": {
+      "name": "Quincy Byas",
+      "sacks": 3.0,
+      "tfl": 5.5
+    },
+    "returning_prod_pct": 24.9,
+    "talent_score": 572.9,
+    "user_notes": ""
+  },
+  "Florida": {
+    "head_coach": "Jon Sumrall",
+    "coaching_change": true,
+    "coaching_note": "Sumrall won 11 at Tulane \u2014 massive upgrade over Napier's tenure",
+    "top_qb": {
+      "name": "D.J. Lagway",
+      "pass_yds": 2264,
+      "pass_td": 16,
+      "pass_int": 14
+    },
+    "top_rb": {
+      "name": "Jadan Baugh",
+      "rush_yds": 1170,
+      "rush_td": 8
+    },
+    "top_wr": {
+      "name": "Vernell Brown III",
+      "rec_yds": 524,
+      "rec_td": 0,
+      "rec": 40
+    },
+    "top_defender": {
+      "name": "Jayden Woods",
+      "sacks": 3.5,
+      "tfl": 5.0
+    },
+    "returning_prod_pct": 55.0,
+    "talent_score": 898.6,
+    "user_notes": ""
+  },
+  "Florida Atlantic": {
+    "head_coach": "Zach Kittley",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Caden Veltkamp",
+      "pass_yds": 3652,
+      "pass_td": 24,
+      "pass_int": 17
+    },
+    "top_rb": {
+      "name": "Gemari Sands",
+      "rush_yds": 465,
+      "rush_td": 0
+    },
+    "top_wr": {
+      "name": "Easton Messer",
+      "rec_yds": 1029,
+      "rec_td": 6,
+      "rec": 100
+    },
+    "top_defender": {
+      "name": "Deshaun Batiste",
+      "sacks": 4.0,
+      "tfl": 4.0
+    },
+    "returning_prod_pct": 20.8,
+    "talent_score": 605.2,
+    "user_notes": ""
+  },
+  "Florida International": {
+    "head_coach": "Willie Simmons",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Keyone Jenkins",
+      "pass_yds": 1693,
+      "pass_td": 9,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Kejon Owens",
+      "rush_yds": 1298,
+      "rush_td": 11
+    },
+    "top_wr": {
+      "name": "Alex Perry",
+      "rec_yds": 816,
+      "rec_td": 9,
+      "rec": 53
+    },
+    "top_defender": {
+      "name": "Kenton Simmons",
+      "sacks": 7.0,
+      "tfl": 9.0
+    },
+    "returning_prod_pct": 42.2,
+    "talent_score": 562.6,
+    "user_notes": ""
+  },
+  "Florida State": {
+    "head_coach": "Mike Norvell",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Thomas Castellanos",
+      "pass_yds": 2760,
+      "pass_td": 15,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Thomas Castellanos",
+      "rush_yds": 557,
+      "rush_td": 9
+    },
+    "top_wr": {
+      "name": "Duce Robinson",
+      "rec_yds": 1074,
+      "rec_td": 6,
+      "rec": 56
+    },
+    "top_defender": {
+      "name": "Mandrell Desir",
+      "sacks": 6.5,
+      "tfl": 7.5
+    },
+    "returning_prod_pct": 13.1,
+    "talent_score": 828.5,
+    "user_notes": ""
+  },
+  "Fresno State": {
+    "head_coach": "Matt Entz",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "E.J. Warner",
+      "pass_yds": 1811,
+      "pass_td": 12,
+      "pass_int": 11
+    },
+    "top_rb": {
+      "name": "Rayshon Luke",
+      "rush_yds": 685,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Josiah Freeman",
+      "rec_yds": 499,
+      "rec_td": 6,
+      "rec": 45
+    },
+    "top_defender": {
+      "name": "Finn Claypool",
+      "sacks": 6.5,
+      "tfl": 10.5
+    },
+    "returning_prod_pct": 17.2,
+    "talent_score": 586.8,
+    "user_notes": ""
+  },
+  "Georgia": {
+    "head_coach": "Kirby Smart",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Gunner Stockton",
+      "pass_yds": 2691,
+      "pass_td": 23,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Nate Frazier",
+      "rush_yds": 861,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Zachariah Branch",
+      "rec_yds": 744,
+      "rec_td": 5,
+      "rec": 73
+    },
+    "top_defender": {
+      "name": "Chris Cole",
+      "sacks": 4.5,
+      "tfl": 7.0
+    },
+    "returning_prod_pct": 37.4,
+    "talent_score": 1003.0,
+    "user_notes": ""
+  },
+  "Georgia Southern": {
+    "head_coach": "Clay Helton",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "JC French",
+      "pass_yds": 2753,
+      "pass_td": 19,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "OJ Arnold",
+      "rush_yds": 885,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Camden Brown",
+      "rec_yds": 1049,
+      "rec_td": 14,
+      "rec": 63
+    },
+    "top_defender": {
+      "name": "MJ Stroud",
+      "sacks": 6.5,
+      "tfl": 14.5
+    },
+    "returning_prod_pct": 92.2,
+    "talent_score": 574.5,
+    "user_notes": ""
+  },
+  "Georgia State": {
+    "head_coach": "Dell McGee",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Cameran Brown",
+      "pass_yds": 1259,
+      "pass_td": 13,
+      "pass_int": 1
+    },
+    "top_rb": {
+      "name": "Jordan Simmons",
+      "rush_yds": 543,
+      "rush_td": 2
+    },
+    "top_wr": {
+      "name": "Ted Hurst",
+      "rec_yds": 1004,
+      "rec_td": 6,
+      "rec": 71
+    },
+    "top_defender": {
+      "name": "Jartavius Flounoy",
+      "sacks": 3.0,
+      "tfl": 6.0
+    },
+    "returning_prod_pct": 68.5,
+    "talent_score": 612.0,
+    "user_notes": ""
+  },
+  "Georgia Tech": {
+    "head_coach": "Brent Key",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Haynes King",
+      "pass_yds": 2697,
+      "pass_td": 12,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Haynes King",
+      "rush_yds": 922,
+      "rush_td": 15
+    },
+    "top_wr": {
+      "name": "Eric Rivers",
+      "rec_yds": 569,
+      "rec_td": 1,
+      "rec": 43
+    },
+    "top_defender": {
+      "name": "Akelo Stone",
+      "sacks": 4.0,
+      "tfl": 5.0
+    },
+    "returning_prod_pct": 81.1,
+    "talent_score": 715.6,
+    "user_notes": ""
+  },
+  "Hawai'i": {
+    "head_coach": "Timmy Chang",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Micah Alejado",
+      "pass_yds": 2832,
+      "pass_td": 21,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Landon Sims",
+      "rush_yds": 523,
+      "rush_td": 3
+    },
+    "top_wr": {
+      "name": "Jackson Harris",
+      "rec_yds": 963,
+      "rec_td": 12,
+      "rec": 49
+    },
+    "top_defender": {
+      "name": "Jackie Johnson III",
+      "sacks": 6.5,
+      "tfl": 7.5
+    },
+    "returning_prod_pct": 45.9,
+    "talent_score": 481.2,
+    "user_notes": ""
+  },
+  "Houston": {
+    "head_coach": "Willie Fritz",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Conner Weigman",
+      "pass_yds": 2475,
+      "pass_td": 21,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Dean Connors",
+      "rush_yds": 851,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Amare Thomas",
+      "rec_yds": 906,
+      "rec_td": 10,
+      "rec": 59
+    },
+    "top_defender": {
+      "name": "Eddie Walls III",
+      "sacks": 5.5,
+      "tfl": 9.0
+    },
+    "returning_prod_pct": 105.2,
+    "talent_score": 656.7,
+    "user_notes": ""
+  },
+  "Illinois": {
+    "head_coach": "Bret Bielema",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Luke Altmyer",
+      "pass_yds": 2811,
+      "pass_td": 21,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Ca'Lil Valentine",
+      "rush_yds": 549,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Hank Beatty",
+      "rec_yds": 826,
+      "rec_td": 3,
+      "rec": 64
+    },
+    "top_defender": {
+      "name": "Gabe Jacas",
+      "sacks": 11.0,
+      "tfl": 13.5
+    },
+    "returning_prod_pct": 52.5,
+    "talent_score": 662.1,
+    "user_notes": ""
+  },
+  "Indiana": {
+    "head_coach": "Curt Cignetti",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Fernando Mendoza",
+      "pass_yds": 2980,
+      "pass_td": 33,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Roman Hemby",
+      "rush_yds": 918,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Omar Cooper Jr.",
+      "rec_yds": 828,
+      "rec_td": 11,
+      "rec": 59
+    },
+    "top_defender": {
+      "name": "Rolijah Hardy",
+      "sacks": 8.0,
+      "tfl": 13.0
+    },
+    "returning_prod_pct": 25.1,
+    "talent_score": 645.3,
+    "user_notes": ""
+  },
+  "Iowa": {
+    "head_coach": "Kirk Ferentz",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Mark Gronowski",
+      "pass_yds": 1529,
+      "pass_td": 8,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Kamari Moulton",
+      "rush_yds": 783,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "DJ Vonnahme",
+      "rec_yds": 288,
+      "rec_td": 2,
+      "rec": 22
+    },
+    "top_defender": {
+      "name": "Ethan Hurkett",
+      "sacks": 6.0,
+      "tfl": 8.5
+    },
+    "returning_prod_pct": 48.8,
+    "talent_score": 710.0,
+    "user_notes": ""
+  },
+  "Iowa State": {
+    "head_coach": "Jimmy Rogers",
+    "coaching_change": true,
+    "coaching_note": "Losing Campbell (elite program builder) is a significant hit",
+    "top_qb": {
+      "name": "Rocco Becht",
+      "pass_yds": 2565,
+      "pass_td": 16,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Carson Hansen",
+      "rush_yds": 950,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Brett Eskildsen",
+      "rec_yds": 526,
+      "rec_td": 5,
+      "rec": 30
+    },
+    "top_defender": {
+      "name": "Caleb Bacon",
+      "sacks": 3.0,
+      "tfl": 9.5
+    },
+    "returning_prod_pct": 58.4,
+    "talent_score": 648.9,
+    "user_notes": ""
+  },
+  "Jacksonville State": {
+    "head_coach": "Charles Kelly",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Caden Creel",
+      "pass_yds": 1341,
+      "pass_td": 8,
+      "pass_int": 4
+    },
+    "top_rb": {
+      "name": "Cam Cook",
+      "rush_yds": 1666,
+      "rush_td": 16
+    },
+    "top_wr": {
+      "name": "Deondre Johnson",
+      "rec_yds": 623,
+      "rec_td": 6,
+      "rec": 24
+    },
+    "top_defender": {
+      "name": "Emmanuel Oybadejo",
+      "sacks": 4.5,
+      "tfl": 6.5
+    },
+    "returning_prod_pct": 84.3,
+    "talent_score": 519.9,
+    "user_notes": ""
+  },
+  "James Madison": {
+    "head_coach": "Billy Napier",
+    "coaching_change": true,
+    "coaching_note": "Chesney went 12-2 \u2014 Napier was fired from Florida; JMU loses big",
+    "top_qb": {
+      "name": "Alonza Barnett",
+      "pass_yds": 2533,
+      "pass_td": 21,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Wayne Knight",
+      "rush_yds": 1263,
+      "rush_td": 9
+    },
+    "top_wr": {
+      "name": "Landon Ellis",
+      "rec_yds": 541,
+      "rec_td": 5,
+      "rec": 33
+    },
+    "top_defender": {
+      "name": "Sahir West",
+      "sacks": 6.5,
+      "tfl": 14.0
+    },
+    "returning_prod_pct": 78.4,
+    "talent_score": 459.5,
+    "user_notes": ""
+  },
+  "Kansas": {
+    "head_coach": "Lance Leipold",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Jalon Daniels",
+      "pass_yds": 2504,
+      "pass_td": 22,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Daniel Hishaw Jr.",
+      "rush_yds": 587,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Emmanuel Henderson Jr.",
+      "rec_yds": 766,
+      "rec_td": 5,
+      "rec": 45
+    },
+    "top_defender": {
+      "name": "Leroy Harris III",
+      "sacks": 4.5,
+      "tfl": 6.5
+    },
+    "returning_prod_pct": 41.0,
+    "talent_score": 705.3,
+    "user_notes": ""
+  },
+  "Kansas State": {
+    "head_coach": "Collin Klein",
+    "coaching_change": true,
+    "coaching_note": "Klein is beloved at KSU but first-time HC replacing proven Klieman",
+    "top_qb": {
+      "name": "Avery Johnson",
+      "pass_yds": 2380,
+      "pass_td": 18,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Joe Jackson",
+      "rush_yds": 911,
+      "rush_td": 8
+    },
+    "top_wr": {
+      "name": "Jayce Brown",
+      "rec_yds": 712,
+      "rec_td": 5,
+      "rec": 41
+    },
+    "top_defender": {
+      "name": "Cody Stufflebean",
+      "sacks": 4.5,
+      "tfl": 4.5
+    },
+    "returning_prod_pct": 69.0,
+    "talent_score": 705.9,
+    "user_notes": ""
+  },
+  "Kennesaw State": {
+    "head_coach": "Jerry Mack",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Amari Odom",
+      "pass_yds": 2385,
+      "pass_td": 18,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Coleman Bennett",
+      "rush_yds": 716,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Gabriel Benyard",
+      "rec_yds": 898,
+      "rec_td": 9,
+      "rec": 55
+    },
+    "top_defender": {
+      "name": "Elijah Hill",
+      "sacks": 9.0,
+      "tfl": 11.5
+    },
+    "returning_prod_pct": 45.8,
+    "talent_score": 338.9,
+    "user_notes": ""
+  },
+  "Kent State": {
+    "head_coach": "Mark Carney",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Dru Deshields",
+      "pass_yds": 2030,
+      "pass_td": 18,
+      "pass_int": 3
+    },
+    "top_rb": {
+      "name": "Gavin Garcia",
+      "rush_yds": 647,
+      "rush_td": 3
+    },
+    "top_wr": {
+      "name": "Cade Wolford",
+      "rec_yds": 509,
+      "rec_td": 7,
+      "rec": 19
+    },
+    "top_defender": {
+      "name": "Jamond Mathis",
+      "sacks": 6.0,
+      "tfl": 8.0
+    },
+    "returning_prod_pct": 11.3,
+    "talent_score": 456.2,
+    "user_notes": ""
+  },
+  "Kentucky": {
+    "head_coach": "Will Stein",
+    "coaching_change": true,
+    "coaching_note": "Stoops left program in rough shape (5-7) \u2014 floor is already priced in",
+    "top_qb": {
+      "name": "Cutter Boley",
+      "pass_yds": 2160,
+      "pass_td": 15,
+      "pass_int": 12
+    },
+    "top_rb": {
+      "name": "Seth McGowan",
+      "rush_yds": 725,
+      "rush_td": 12
+    },
+    "top_wr": {
+      "name": "Kendrick Law",
+      "rec_yds": 540,
+      "rec_td": 3,
+      "rec": 53
+    },
+    "top_defender": {
+      "name": "Mi'Quise Grace",
+      "sacks": 3.5,
+      "tfl": 7.0
+    },
+    "returning_prod_pct": 27.0,
+    "talent_score": 763.2,
+    "user_notes": ""
+  },
+  "LSU": {
+    "head_coach": "Lane Kiffin",
+    "coaching_change": true,
+    "coaching_note": "Kiffin is elite at Ole Miss \u2014 real upgrade over underperforming Kelly",
+    "top_qb": {
+      "name": "Garrett Nussmeier",
+      "pass_yds": 1927,
+      "pass_td": 12,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Caden Durham",
+      "rush_yds": 505,
+      "rush_td": 3
+    },
+    "top_wr": {
+      "name": "Barion Brown",
+      "rec_yds": 495,
+      "rec_td": 1,
+      "rec": 52
+    },
+    "top_defender": {
+      "name": "Harold Perkins",
+      "sacks": 4.0,
+      "tfl": 8.0
+    },
+    "returning_prod_pct": 66.0,
+    "talent_score": 920.0,
+    "user_notes": ""
+  },
+  "Liberty": {
+    "head_coach": "Jamey Chadwell",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Ethan Vasko",
+      "pass_yds": 1961,
+      "pass_td": 10,
+      "pass_int": 12
+    },
+    "top_rb": {
+      "name": "Evan Dickens",
+      "rush_yds": 1325,
+      "rush_td": 16
+    },
+    "top_wr": {
+      "name": "Donte Lee Jr",
+      "rec_yds": 589,
+      "rec_td": 5,
+      "rec": 32
+    },
+    "top_defender": {
+      "name": "Eli Hall",
+      "sacks": 4.0,
+      "tfl": 4.5
+    },
+    "returning_prod_pct": 99.6,
+    "talent_score": 599.1,
+    "user_notes": ""
+  },
+  "Louisiana": {
+    "head_coach": "Michael Desormeaux",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "D'Wayne' Winfield",
+      "pass_yds": 1324,
+      "pass_td": 10,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Bill Davis",
+      "rush_yds": 739,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Shelton Sampson Jr.",
+      "rec_yds": 495,
+      "rec_td": 5,
+      "rec": 29
+    },
+    "top_defender": {
+      "name": "Jordan Lawson",
+      "sacks": 4.5,
+      "tfl": 11.5
+    },
+    "returning_prod_pct": 57.2,
+    "talent_score": 585.8,
+    "user_notes": ""
+  },
+  "Louisiana Tech": {
+    "head_coach": "Sonny Cumbie",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Blake Baker",
+      "pass_yds": 1252,
+      "pass_td": 5,
+      "pass_int": 3
+    },
+    "top_rb": {
+      "name": "Clay Thevenin",
+      "rush_yds": 605,
+      "rush_td": 8
+    },
+    "top_wr": {
+      "name": "Eli Finley",
+      "rec_yds": 441,
+      "rec_td": 0,
+      "rec": 37
+    },
+    "top_defender": {
+      "name": "Jadon Mayfield",
+      "sacks": 3.5,
+      "tfl": 9.0
+    },
+    "returning_prod_pct": 54.3,
+    "talent_score": 493.5,
+    "user_notes": ""
+  },
+  "Louisville": {
+    "head_coach": "Jeff Brohm",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Miller Moss",
+      "pass_yds": 2526,
+      "pass_td": 14,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Isaac Brown",
+      "rush_yds": 782,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Chris Bell",
+      "rec_yds": 917,
+      "rec_td": 6,
+      "rec": 72
+    },
+    "top_defender": {
+      "name": "Clev Lubin",
+      "sacks": 6.5,
+      "tfl": 11.0
+    },
+    "returning_prod_pct": 46.4,
+    "talent_score": 700.8,
+    "user_notes": ""
+  },
+  "Marshall": {
+    "head_coach": "Tony Gibson",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Carlos Del Rio-Wilson",
+      "pass_yds": 2043,
+      "pass_td": 17,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Carlos Del Rio-Wilson",
+      "rush_yds": 658,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Demarcus Lacey",
+      "rec_yds": 769,
+      "rec_td": 5,
+      "rec": 65
+    },
+    "top_defender": {
+      "name": "Braydin Ward",
+      "sacks": 4.5,
+      "tfl": 6.0
+    },
+    "returning_prod_pct": 100.4,
+    "talent_score": 590.6,
+    "user_notes": ""
+  },
+  "Maryland": {
+    "head_coach": "Mike Locksley",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Malik Washington",
+      "pass_yds": 2963,
+      "pass_td": 17,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "DeJuan Williams",
+      "rush_yds": 501,
+      "rush_td": 3
+    },
+    "top_wr": {
+      "name": "Shaleak Knotts",
+      "rec_yds": 717,
+      "rec_td": 6,
+      "rec": 44
+    },
+    "top_defender": {
+      "name": "Sidney Stewart",
+      "sacks": 7.0,
+      "tfl": 10.5
+    },
+    "returning_prod_pct": 12.8,
+    "talent_score": 699.3,
+    "user_notes": ""
+  },
+  "Massachusetts": {
+    "head_coach": "Joe Harasymiak",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "AJ Hairston",
+      "pass_yds": 957,
+      "pass_td": 4,
+      "pass_int": 4
+    },
+    "top_rb": {
+      "name": "Brandon Hood",
+      "rush_yds": 368,
+      "rush_td": 2
+    },
+    "top_wr": {
+      "name": "Jacquon Gibson",
+      "rec_yds": 616,
+      "rec_td": 0,
+      "rec": 63
+    },
+    "top_defender": {
+      "name": "Marques White",
+      "sacks": 5.0,
+      "tfl": 10.5
+    },
+    "returning_prod_pct": 76.3,
+    "talent_score": 488.7,
+    "user_notes": ""
+  },
+  "Memphis": {
+    "head_coach": "Charles Huff",
+    "coaching_change": true,
+    "coaching_note": "Lateral swap \u2014 both are similar tier G5-level HCs",
+    "top_qb": {
+      "name": "Brendon Lewis",
+      "pass_yds": 2567,
+      "pass_td": 15,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Sutton Smith",
+      "rush_yds": 669,
+      "rush_td": 7
+    },
+    "top_wr": {
+      "name": "Cortez Braham",
+      "rec_yds": 889,
+      "rec_td": 8,
+      "rec": 63
+    },
+    "top_defender": {
+      "name": "Sam Brumfield",
+      "sacks": 4.5,
+      "tfl": 11.0
+    },
+    "returning_prod_pct": 11.9,
+    "talent_score": 668.6,
+    "user_notes": ""
+  },
+  "Miami": {
+    "head_coach": "Mario Cristobal",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Carson Beck",
+      "pass_yds": 3072,
+      "pass_td": 25,
+      "pass_int": 10
+    },
+    "top_rb": {
+      "name": "Mark Fletcher Jr.",
+      "rush_yds": 685,
+      "rush_td": 10
+    },
+    "top_wr": {
+      "name": "Malachi Toney",
+      "rec_yds": 970,
+      "rec_td": 7,
+      "rec": 84
+    },
+    "top_defender": {
+      "name": "Akheem Mesidor",
+      "sacks": 7.0,
+      "tfl": 12.0
+    },
+    "returning_prod_pct": 12.5,
+    "talent_score": 874.6,
+    "user_notes": ""
+  },
+  "Miami (OH)": {
+    "head_coach": "Chuck Martin",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Dequan Finn",
+      "pass_yds": 1451,
+      "pass_td": 9,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Jordan Brunson",
+      "rush_yds": 724,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Kamryn Perry",
+      "rec_yds": 966,
+      "rec_td": 6,
+      "rec": 42
+    },
+    "top_defender": {
+      "name": "Adam Trick",
+      "sacks": 8.0,
+      "tfl": 12.0
+    },
+    "returning_prod_pct": 48.0,
+    "talent_score": 592.1,
+    "user_notes": ""
+  },
+  "Michigan": {
+    "head_coach": "Kyle Wittingham",
+    "coaching_change": true,
+    "coaching_note": "Wittingham is a legend \u2014 huge upgrade over interim Moore",
+    "top_qb": {
+      "name": "Bryce Underwood",
+      "pass_yds": 2229,
+      "pass_td": 9,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Jordan Marshall",
+      "rush_yds": 932,
+      "rush_td": 10
+    },
+    "top_wr": {
+      "name": "Andrew Marsh",
+      "rec_yds": 641,
+      "rec_td": 3,
+      "rec": 42
+    },
+    "top_defender": {
+      "name": "Derrick Moore",
+      "sacks": 9.5,
+      "tfl": 10.0
+    },
+    "returning_prod_pct": 39.5,
+    "talent_score": 907.2,
+    "user_notes": ""
+  },
+  "Michigan State": {
+    "head_coach": "Pat Fitzgerald",
+    "coaching_change": true,
+    "coaching_note": "Fitzgerald is proven and patient \u2014 big upgrade for program rebuild",
+    "top_qb": {
+      "name": "Aidan Chiles",
+      "pass_yds": 1392,
+      "pass_td": 10,
+      "pass_int": 3
+    },
+    "top_rb": {
+      "name": "Makhi Frazier",
+      "rush_yds": 520,
+      "rush_td": 2
+    },
+    "top_wr": {
+      "name": "Nick Marsh",
+      "rec_yds": 662,
+      "rec_td": 6,
+      "rec": 59
+    },
+    "top_defender": {
+      "name": "Jordan Hall",
+      "sacks": 2.5,
+      "tfl": 4.5
+    },
+    "returning_prod_pct": 68.7,
+    "talent_score": 717.4,
+    "user_notes": ""
+  },
+  "Middle Tennessee": {
+    "head_coach": "Derek Mason",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Nick Vattiato",
+      "pass_yds": 2157,
+      "pass_td": 16,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Jekail Middlebrook",
+      "rush_yds": 752,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Cam'Ron Lacy",
+      "rec_yds": 529,
+      "rec_td": 3,
+      "rec": 38
+    },
+    "top_defender": {
+      "name": "Brandon Buckner",
+      "sacks": 4.5,
+      "tfl": 6.5
+    },
+    "returning_prod_pct": 99.0,
+    "talent_score": 520.5,
+    "user_notes": ""
+  },
+  "Minnesota": {
+    "head_coach": "P.J. Fleck",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Drake Lindsey",
+      "pass_yds": 2235,
+      "pass_td": 16,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Darius Taylor",
+      "rush_yds": 554,
+      "rush_td": 3
+    },
+    "top_wr": {
+      "name": "Lemeke Brockington",
+      "rec_yds": 484,
+      "rec_td": 4,
+      "rec": 46
+    },
+    "top_defender": {
+      "name": "Anthony Smith",
+      "sacks": 10.5,
+      "tfl": 13.5
+    },
+    "returning_prod_pct": 44.2,
+    "talent_score": 711.0,
+    "user_notes": ""
+  },
+  "Mississippi State": {
+    "head_coach": "Jeff Lebby",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Blake Shapen",
+      "pass_yds": 2436,
+      "pass_td": 15,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Fluff Bothwell",
+      "rush_yds": 639,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Brenen Thompson",
+      "rec_yds": 948,
+      "rec_td": 6,
+      "rec": 53
+    },
+    "top_defender": {
+      "name": "Nic Mitchell",
+      "sacks": 2.5,
+      "tfl": 5.0
+    },
+    "returning_prod_pct": 41.6,
+    "talent_score": 770.5,
+    "user_notes": ""
+  },
+  "Missouri": {
+    "head_coach": "Eli Drinkwitz",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Beau Pribula",
+      "pass_yds": 1946,
+      "pass_td": 11,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Ahmad Hardy",
+      "rush_yds": 1560,
+      "rush_td": 16
+    },
+    "top_wr": {
+      "name": "Kevin Coleman Jr.",
+      "rec_yds": 715,
+      "rec_td": 1,
+      "rec": 63
+    },
+    "top_defender": {
+      "name": "Damon Wilson Jr.",
+      "sacks": 8.5,
+      "tfl": 9.0
+    },
+    "returning_prod_pct": 20.1,
+    "talent_score": 804.8,
+    "user_notes": ""
+  },
+  "Missouri State": {
+    "head_coach": "Ryan Beard",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Jacob Clark",
+      "pass_yds": 2895,
+      "pass_td": 24,
+      "pass_int": 11
+    },
+    "top_rb": {
+      "name": "Shomari Lawrence",
+      "rush_yds": 964,
+      "rush_td": 7
+    },
+    "top_wr": {
+      "name": "Jmariyae Robinson",
+      "rec_yds": 536,
+      "rec_td": 6,
+      "rec": 40
+    },
+    "top_defender": {
+      "name": "DJ Wesolak",
+      "sacks": 4.0,
+      "tfl": 5.5
+    },
+    "returning_prod_pct": NaN,
+    "talent_score": 426.1,
+    "user_notes": ""
+  },
+  "NC State": {
+    "head_coach": "Dave Doeren",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "CJ Bailey",
+      "pass_yds": 2884,
+      "pass_td": 23,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Daylan Smothers",
+      "rush_yds": 939,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Terrell Anderson",
+      "rec_yds": 637,
+      "rec_td": 5,
+      "rec": 38
+    },
+    "top_defender": {
+      "name": "Travali Price",
+      "sacks": 3.5,
+      "tfl": 5.0
+    },
+    "returning_prod_pct": 94.8,
+    "talent_score": 707.5,
+    "user_notes": ""
+  },
+  "Navy": {
+    "head_coach": "Brian Newberry",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Blake Horvath",
+      "pass_yds": 1472,
+      "pass_td": 10,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Blake Horvath",
+      "rush_yds": 1147,
+      "rush_td": 15
+    },
+    "top_wr": {
+      "name": "Eli Heidenreich",
+      "rec_yds": 877,
+      "rec_td": 5,
+      "rec": 46
+    },
+    "top_defender": {
+      "name": "Landon Robinson",
+      "sacks": 6.0,
+      "tfl": 8.0
+    },
+    "returning_prod_pct": 97.3,
+    "talent_score": NaN,
+    "user_notes": ""
+  },
+  "Nebraska": {
+    "head_coach": "Matt Rhule",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Dylan Raiola",
+      "pass_yds": 2000,
+      "pass_td": 18,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Emmett Johnson",
+      "rush_yds": 1451,
+      "rush_td": 12
+    },
+    "top_wr": {
+      "name": "Nyziah Hunter",
+      "rec_yds": 617,
+      "rec_td": 5,
+      "rec": 43
+    },
+    "top_defender": {
+      "name": "Williams Nwaneri",
+      "sacks": 2.5,
+      "tfl": 5.0
+    },
+    "returning_prod_pct": 59.3,
+    "talent_score": 821.4,
+    "user_notes": ""
+  },
+  "Nevada": {
+    "head_coach": "Jeff Choate",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Carter Jones",
+      "pass_yds": 1001,
+      "pass_td": 6,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Caleb Ramseur",
+      "rush_yds": 683,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Jett Carpenter",
+      "rec_yds": 374,
+      "rec_td": 2,
+      "rec": 35
+    },
+    "top_defender": {
+      "name": "Dylan Labarbera",
+      "sacks": 6.5,
+      "tfl": 16.5
+    },
+    "returning_prod_pct": 65.8,
+    "talent_score": 488.7,
+    "user_notes": ""
+  },
+  "New Mexico": {
+    "head_coach": "Jason Eck",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Jack Layne",
+      "pass_yds": 2398,
+      "pass_td": 13,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Damon Bankston",
+      "rush_yds": 578,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Keagan Johnson",
+      "rec_yds": 712,
+      "rec_td": 3,
+      "rec": 55
+    },
+    "top_defender": {
+      "name": "Keyshawn James-Newby",
+      "sacks": 8.0,
+      "tfl": 13.0
+    },
+    "returning_prod_pct": 12.5,
+    "talent_score": 378.8,
+    "user_notes": ""
+  },
+  "New Mexico State": {
+    "head_coach": "Tony Sanchez",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Logan Fife",
+      "pass_yds": 2232,
+      "pass_td": 11,
+      "pass_int": 12
+    },
+    "top_rb": {
+      "name": "Kadarius Calloway",
+      "rush_yds": 450,
+      "rush_td": 3
+    },
+    "top_wr": {
+      "name": "Donovan Faupel",
+      "rec_yds": 661,
+      "rec_td": 7,
+      "rec": 61
+    },
+    "top_defender": {
+      "name": "Ezra Christensen",
+      "sacks": 5.0,
+      "tfl": 11.0
+    },
+    "returning_prod_pct": 55.5,
+    "talent_score": 402.9,
+    "user_notes": ""
+  },
+  "North Carolina": {
+    "head_coach": "Bill Belichick",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Giovanni Lopez",
+      "pass_yds": 1747,
+      "pass_td": 10,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Demon June",
+      "rush_yds": 464,
+      "rush_td": 2
+    },
+    "top_wr": {
+      "name": "Jordan Shipp",
+      "rec_yds": 671,
+      "rec_td": 6,
+      "rec": 60
+    },
+    "top_defender": {
+      "name": "Melkart Abou-Jaoude",
+      "sacks": 10.5,
+      "tfl": 12.0
+    },
+    "returning_prod_pct": 15.9,
+    "talent_score": 753.2,
+    "user_notes": ""
+  },
+  "North Dakota State": {
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Cole Payton",
+      "pass_yds": 2719,
+      "pass_td": 16,
+      "pass_int": 4
+    },
+    "top_rb": {
+      "name": "Barika Kpeenu",
+      "rush_yds": 1005,
+      "rush_td": 20
+    },
+    "top_wr": {
+      "name": "Bryce Lance",
+      "rec_yds": 1079,
+      "rec_td": 8,
+      "rec": 51
+    },
+    "top_defender": null,
+    "returning_prod_pct": NaN,
+    "talent_score": NaN,
+    "user_notes": ""
+  },
+  "North Texas": {
+    "head_coach": "Neal Brown",
+    "coaching_change": true,
+    "coaching_note": "Roster turnover + Brown runs different system than Morris \u2014 wash",
+    "top_qb": {
+      "name": "Drew Mestemaker",
+      "pass_yds": 4119,
+      "pass_td": 31,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Caleb Hawkins",
+      "rush_yds": 1226,
+      "rush_td": 23
+    },
+    "top_wr": {
+      "name": "Wyatt Young",
+      "rec_yds": 1209,
+      "rec_td": 10,
+      "rec": 63
+    },
+    "top_defender": {
+      "name": "Keviyan Huddleston",
+      "sacks": 5.0,
+      "tfl": 9.5
+    },
+    "returning_prod_pct": 56.3,
+    "talent_score": 569.1,
+    "user_notes": ""
+  },
+  "Northern Illinois": {
+    "head_coach": "Rob Harley",
+    "coaching_change": true,
+    "coaching_note": "Interim promotion \u2014 high uncertainty",
+    "top_qb": {
+      "name": "Josh Holst",
+      "pass_yds": 689,
+      "pass_td": 4,
+      "pass_int": 3
+    },
+    "top_rb": {
+      "name": "Chavon Wright",
+      "rush_yds": 875,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "DeAree Rogers",
+      "rec_yds": 506,
+      "rec_td": 3,
+      "rec": 46
+    },
+    "top_defender": {
+      "name": "Filip Maciorowski",
+      "sacks": 2.5,
+      "tfl": 5.5
+    },
+    "returning_prod_pct": 53.1,
+    "talent_score": 471.0,
+    "user_notes": ""
+  },
+  "Northwestern": {
+    "head_coach": "David Braun",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Preston Stone",
+      "pass_yds": 2174,
+      "pass_td": 14,
+      "pass_int": 12
+    },
+    "top_rb": {
+      "name": "Caleb Komolafe",
+      "rush_yds": 886,
+      "rush_td": 10
+    },
+    "top_wr": {
+      "name": "Griffin Wilde",
+      "rec_yds": 783,
+      "rec_td": 6,
+      "rec": 61
+    },
+    "top_defender": {
+      "name": "Aidan Hubbard",
+      "sacks": 4.5,
+      "tfl": 7.0
+    },
+    "returning_prod_pct": 68.0,
+    "talent_score": 678.0,
+    "user_notes": ""
+  },
+  "Notre Dame": {
+    "head_coach": "Marcus Freeman",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "C.J. Carr",
+      "pass_yds": 2741,
+      "pass_td": 24,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Jeremiyah Love",
+      "rush_yds": 1372,
+      "rush_td": 18
+    },
+    "top_wr": {
+      "name": "Jordan Faison",
+      "rec_yds": 640,
+      "rec_td": 4,
+      "rec": 49
+    },
+    "top_defender": {
+      "name": "Boubacar Traore",
+      "sacks": 6.5,
+      "tfl": 10.0
+    },
+    "returning_prod_pct": 36.8,
+    "talent_score": 912.1,
+    "user_notes": ""
+  },
+  "Ohio": {
+    "head_coach": "John Hauser",
+    "coaching_change": true,
+    "coaching_note": "Hauser was interim and is continuing \u2014 stable transition",
+    "top_qb": {
+      "name": "Parker Navarro",
+      "pass_yds": 2232,
+      "pass_td": 14,
+      "pass_int": 10
+    },
+    "top_rb": {
+      "name": "Sieh Bangura",
+      "rush_yds": 1243,
+      "rush_td": 14
+    },
+    "top_wr": {
+      "name": "Chase Hendricks",
+      "rec_yds": 950,
+      "rec_td": 7,
+      "rec": 67
+    },
+    "top_defender": {
+      "name": "Jay Crable",
+      "sacks": 6.0,
+      "tfl": 8.0
+    },
+    "returning_prod_pct": 64.8,
+    "talent_score": 470.0,
+    "user_notes": ""
+  },
+  "Ohio State": {
+    "head_coach": "Ryan Day",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Julian Sayin",
+      "pass_yds": 3323,
+      "pass_td": 31,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Bo Jackson",
+      "rush_yds": 1035,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Jeremiah Smith",
+      "rec_yds": 1086,
+      "rec_td": 11,
+      "rec": 80
+    },
+    "top_defender": {
+      "name": "Caden Curry",
+      "sacks": 11.0,
+      "tfl": 16.5
+    },
+    "returning_prod_pct": 30.8,
+    "talent_score": 973.7,
+    "user_notes": ""
+  },
+  "Oklahoma": {
+    "head_coach": "Brent Venables",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "John Mateer",
+      "pass_yds": 2578,
+      "pass_td": 12,
+      "pass_int": 10
+    },
+    "top_rb": {
+      "name": "Tory Blaylock",
+      "rush_yds": 446,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Isaiah Sategna",
+      "rec_yds": 932,
+      "rec_td": 7,
+      "rec": 63
+    },
+    "top_defender": {
+      "name": "R Mason Thomas",
+      "sacks": 6.5,
+      "tfl": 9.5
+    },
+    "returning_prod_pct": 52.8,
+    "talent_score": 882.6,
+    "user_notes": ""
+  },
+  "Oklahoma State": {
+    "head_coach": "Eric Morris",
+    "coaching_change": true,
+    "coaching_note": "Morris had great success at North Texas \u2014 fresh energy vs aging Gundy",
+    "top_qb": {
+      "name": "Zane Flores",
+      "pass_yds": 1454,
+      "pass_td": 3,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Rodney Fields Jr.",
+      "rush_yds": 614,
+      "rush_td": 1
+    },
+    "top_wr": {
+      "name": "Gavin Freeman",
+      "rec_yds": 481,
+      "rec_td": 4,
+      "rec": 53
+    },
+    "top_defender": {
+      "name": "Wendell Gregory",
+      "sacks": 4.0,
+      "tfl": 12.0
+    },
+    "returning_prod_pct": 44.5,
+    "talent_score": 702.7,
+    "user_notes": ""
+  },
+  "Old Dominion": {
+    "head_coach": "Ricky Rahne",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Colton Joseph",
+      "pass_yds": 2619,
+      "pass_td": 21,
+      "pass_int": 10
+    },
+    "top_rb": {
+      "name": "Colton Joseph",
+      "rush_yds": 1011,
+      "rush_td": 13
+    },
+    "top_wr": {
+      "name": "Tre' Brown III",
+      "rec_yds": 751,
+      "rec_td": 4,
+      "rec": 37
+    },
+    "top_defender": {
+      "name": "Jeremy Mack Jr.",
+      "sacks": 4.5,
+      "tfl": 8.5
+    },
+    "returning_prod_pct": 74.2,
+    "talent_score": 477.4,
+    "user_notes": ""
+  },
+  "Ole Miss": {
+    "head_coach": "Pete Golding",
+    "coaching_change": true,
+    "coaching_note": "Losing Kiffin but Golding won 2 playoff games \u2014 loaded roster softens the drop",
+    "top_qb": {
+      "name": "Trinidad Chambliss",
+      "pass_yds": 3016,
+      "pass_td": 18,
+      "pass_int": 3
+    },
+    "top_rb": {
+      "name": "Kewan Lacy",
+      "rush_yds": 1279,
+      "rush_td": 20
+    },
+    "top_wr": {
+      "name": "Harrison Wallace III",
+      "rec_yds": 719,
+      "rec_td": 3,
+      "rec": 46
+    },
+    "top_defender": {
+      "name": "Princewill Umanmielen",
+      "sacks": 6.5,
+      "tfl": 10.0
+    },
+    "returning_prod_pct": 17.5,
+    "talent_score": 813.1,
+    "user_notes": ""
+  },
+  "Oregon": {
+    "head_coach": "Dan Lanning",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Dante Moore",
+      "pass_yds": 2733,
+      "pass_td": 24,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Noah Whittington",
+      "rush_yds": 774,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Malik Benson",
+      "rec_yds": 526,
+      "rec_td": 4,
+      "rec": 31
+    },
+    "top_defender": {
+      "name": "Teitum Tuioti",
+      "sacks": 7.0,
+      "tfl": 13.5
+    },
+    "returning_prod_pct": 18.7,
+    "talent_score": 941.2,
+    "user_notes": ""
+  },
+  "Oregon State": {
+    "head_coach": "JaMarcus Shephard",
+    "coaching_change": true,
+    "coaching_note": "Shephard is unproven as HC \u2014 continuity from Bray era uncertain",
+    "top_qb": {
+      "name": "Maalik Murphy",
+      "pass_yds": 1802,
+      "pass_td": 9,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Anthony Hankerson",
+      "rush_yds": 1088,
+      "rush_td": 9
+    },
+    "top_wr": {
+      "name": "Trent Walker",
+      "rec_yds": 823,
+      "rec_td": 2,
+      "rec": 68
+    },
+    "top_defender": {
+      "name": "Jojo Johnson",
+      "sacks": 2.5,
+      "tfl": 6.5
+    },
+    "returning_prod_pct": 52.2,
+    "talent_score": 668.0,
+    "user_notes": ""
+  },
+  "Penn State": {
+    "head_coach": "Matt Campbell",
+    "coaching_change": true,
+    "coaching_note": "Campbell is elite \u2014 modest upgrade or lateral depending on fit",
+    "top_qb": {
+      "name": "Drew Allar",
+      "pass_yds": 1100,
+      "pass_td": 8,
+      "pass_int": 3
+    },
+    "top_rb": {
+      "name": "Kaytron Allen",
+      "rush_yds": 1303,
+      "rush_td": 15
+    },
+    "top_wr": {
+      "name": "Trebor Pena",
+      "rec_yds": 452,
+      "rec_td": 1,
+      "rec": 44
+    },
+    "top_defender": {
+      "name": "Dani Dennis-Sutton",
+      "sacks": 5.5,
+      "tfl": 10.0
+    },
+    "returning_prod_pct": 56.5,
+    "talent_score": 910.4,
+    "user_notes": ""
+  },
+  "Pittsburgh": {
+    "head_coach": "Pat Narduzzi",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Mason Heintschel",
+      "pass_yds": 2101,
+      "pass_td": 15,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Ja'Kyrian Turner",
+      "rush_yds": 654,
+      "rush_td": 7
+    },
+    "top_wr": {
+      "name": "Raphael Williams",
+      "rec_yds": 684,
+      "rec_td": 6,
+      "rec": 47
+    },
+    "top_defender": {
+      "name": "Jimmy Scott",
+      "sacks": 4.0,
+      "tfl": 7.5
+    },
+    "returning_prod_pct": 74.9,
+    "talent_score": 681.2,
+    "user_notes": ""
+  },
+  "Purdue": {
+    "head_coach": "Barry Odom",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Ryan Browne",
+      "pass_yds": 2153,
+      "pass_td": 9,
+      "pass_int": 10
+    },
+    "top_rb": {
+      "name": "Devin Mockobee",
+      "rush_yds": 521,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Michael Jackson III",
+      "rec_yds": 570,
+      "rec_td": 1,
+      "rec": 63
+    },
+    "top_defender": {
+      "name": "Mani Powell",
+      "sacks": 5.0,
+      "tfl": 12.0
+    },
+    "returning_prod_pct": 54.3,
+    "talent_score": 687.7,
+    "user_notes": ""
+  },
+  "Rice": {
+    "head_coach": "Scott Abell",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Chase Jenkins",
+      "pass_yds": 1025,
+      "pass_td": 9,
+      "pass_int": 2
+    },
+    "top_rb": {
+      "name": "Quinton Jackson",
+      "rush_yds": 811,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Aaron Turner",
+      "rec_yds": 374,
+      "rec_td": 3,
+      "rec": 53
+    },
+    "top_defender": {
+      "name": "Tony Anyanwu",
+      "sacks": 5.0,
+      "tfl": 6.5
+    },
+    "returning_prod_pct": 75.1,
+    "talent_score": 530.1,
+    "user_notes": ""
+  },
+  "Rutgers": {
+    "head_coach": "Greg Schiano",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Athan Kaliakmanis",
+      "pass_yds": 3124,
+      "pass_td": 20,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Antwan Raymond",
+      "rush_yds": 1241,
+      "rush_td": 13
+    },
+    "top_wr": {
+      "name": "KJ Duff",
+      "rec_yds": 1084,
+      "rec_td": 7,
+      "rec": 60
+    },
+    "top_defender": {
+      "name": "Eric O'Neill",
+      "sacks": 2.5,
+      "tfl": 10.0
+    },
+    "returning_prod_pct": 67.4,
+    "talent_score": 689.2,
+    "user_notes": ""
+  },
+  "SMU": {
+    "head_coach": "Rhett Lashlee",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Kevin Jennings",
+      "pass_yds": 3363,
+      "pass_td": 26,
+      "pass_int": 10
+    },
+    "top_rb": {
+      "name": "TJ Harden",
+      "rush_yds": 747,
+      "rush_td": 7
+    },
+    "top_wr": {
+      "name": "Jordan Hudson",
+      "rec_yds": 749,
+      "rec_td": 6,
+      "rec": 56
+    },
+    "top_defender": {
+      "name": "Isaiah Smith",
+      "sacks": 9.0,
+      "tfl": 17.0
+    },
+    "returning_prod_pct": 50.1,
+    "talent_score": 766.7,
+    "user_notes": ""
+  },
+  "Sacramento State": {
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Cardell Williams",
+      "pass_yds": 1621,
+      "pass_td": 10,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Rodney Hammond Jr.",
+      "rush_yds": 1214,
+      "rush_td": 13
+    },
+    "top_wr": {
+      "name": "Ernest Campbell",
+      "rec_yds": 755,
+      "rec_td": 8,
+      "rec": 37
+    },
+    "top_defender": {
+      "name": "DeSean Watts",
+      "sacks": 0.0,
+      "tfl": 1.0
+    },
+    "returning_prod_pct": NaN,
+    "talent_score": NaN,
+    "user_notes": ""
+  },
+  "Sam Houston": {
+    "head_coach": "Phil Longo",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Hunter Watson",
+      "pass_yds": 1108,
+      "pass_td": 5,
+      "pass_int": 4
+    },
+    "top_rb": {
+      "name": "Landan Brown",
+      "rush_yds": 487,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Chris Reed",
+      "rec_yds": 460,
+      "rec_td": 5,
+      "rec": 30
+    },
+    "top_defender": {
+      "name": "Christopher Eaton Jr.",
+      "sacks": 5.0,
+      "tfl": 9.0
+    },
+    "returning_prod_pct": 90.1,
+    "talent_score": 477.4,
+    "user_notes": ""
+  },
+  "San Diego State": {
+    "head_coach": "Sean Lewis",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Jayden Denegal",
+      "pass_yds": 1810,
+      "pass_td": 9,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Lucky Sutton",
+      "rush_yds": 1232,
+      "rush_td": 10
+    },
+    "top_wr": {
+      "name": "Jordan Napier",
+      "rec_yds": 632,
+      "rec_td": 2,
+      "rec": 48
+    },
+    "top_defender": {
+      "name": "Ryan Henderson",
+      "sacks": 7.0,
+      "tfl": 9.0
+    },
+    "returning_prod_pct": 80.3,
+    "talent_score": 594.3,
+    "user_notes": ""
+  },
+  "San Jos\u00e9 State": {
+    "head_coach": "Ken Niumatalolo",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Walker Eget",
+      "pass_yds": 3058,
+      "pass_td": 17,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Steve Chavez-Soto",
+      "rush_yds": 448,
+      "rush_td": 7
+    },
+    "top_wr": {
+      "name": "Danny Scudero",
+      "rec_yds": 1297,
+      "rec_td": 10,
+      "rec": 88
+    },
+    "top_defender": {
+      "name": "Vili Taufatofua",
+      "sacks": 4.0,
+      "tfl": 7.0
+    },
+    "returning_prod_pct": 58.7,
+    "talent_score": 522.9,
+    "user_notes": ""
+  },
+  "South Alabama": {
+    "head_coach": "Major Applewhite",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Bishop Davenport",
+      "pass_yds": 2072,
+      "pass_td": 12,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Kentrel Bullock",
+      "rush_yds": 1085,
+      "rush_td": 14
+    },
+    "top_wr": {
+      "name": "Devin Voisin",
+      "rec_yds": 775,
+      "rec_td": 4,
+      "rec": 67
+    },
+    "top_defender": {
+      "name": "Nathan Jennings",
+      "sacks": 2.0,
+      "tfl": 2.0
+    },
+    "returning_prod_pct": 25.4,
+    "talent_score": 544.9,
+    "user_notes": ""
+  },
+  "South Carolina": {
+    "head_coach": "Shane Beamer",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Lanorris Sellers",
+      "pass_yds": 2437,
+      "pass_td": 13,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Rahsul Faison",
+      "rush_yds": 470,
+      "rush_td": 3
+    },
+    "top_wr": {
+      "name": "Nyck Harbor",
+      "rec_yds": 618,
+      "rec_td": 6,
+      "rec": 30
+    },
+    "top_defender": {
+      "name": "Bryan Thomas Jr.",
+      "sacks": 7.0,
+      "tfl": 11.0
+    },
+    "returning_prod_pct": 62.5,
+    "talent_score": 833.3,
+    "user_notes": ""
+  },
+  "South Florida": {
+    "head_coach": "Brian Hartline",
+    "coaching_change": true,
+    "coaching_note": "WR coach \u2192 HC leap is enormous \u2014 high uncertainty replacing Golesh",
+    "top_qb": {
+      "name": "Byrum Brown",
+      "pass_yds": 3158,
+      "pass_td": 28,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Byrum Brown",
+      "rush_yds": 1008,
+      "rush_td": 14
+    },
+    "top_wr": {
+      "name": "Keshaun Singleton",
+      "rec_yds": 877,
+      "rec_td": 8,
+      "rec": 50
+    },
+    "top_defender": {
+      "name": "Mac Harris",
+      "sacks": 6.0,
+      "tfl": 7.5
+    },
+    "returning_prod_pct": 99.9,
+    "talent_score": 666.9,
+    "user_notes": ""
+  },
+  "Southern Miss": {
+    "head_coach": "Blake Anderson",
+    "coaching_change": true,
+    "coaching_note": "Anderson is experienced (Utah State/Ark State) \u2014 stable transition",
+    "top_qb": {
+      "name": "Braylon Braxton",
+      "pass_yds": 2795,
+      "pass_td": 23,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Jeffery Pittman",
+      "rush_yds": 640,
+      "rush_td": 8
+    },
+    "top_wr": {
+      "name": "Elijah Metcalf",
+      "rec_yds": 677,
+      "rec_td": 2,
+      "rec": 52
+    },
+    "top_defender": {
+      "name": "J'Mond Tapp",
+      "sacks": 7.5,
+      "tfl": 11.5
+    },
+    "returning_prod_pct": 52.3,
+    "talent_score": 602.5,
+    "user_notes": ""
+  },
+  "Stanford": {
+    "head_coach": "Tavita Pritchard",
+    "coaching_change": true,
+    "coaching_note": "Stanford OC to HC \u2014 program still stabilizing after chaos",
+    "top_qb": {
+      "name": "Ben Gulbranson",
+      "pass_yds": 1813,
+      "pass_td": 9,
+      "pass_int": 10
+    },
+    "top_rb": {
+      "name": "Micah Ford",
+      "rush_yds": 643,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "CJ Williams",
+      "rec_yds": 757,
+      "rec_td": 6,
+      "rec": 60
+    },
+    "top_defender": {
+      "name": "Clay Patterson",
+      "sacks": 4.0,
+      "tfl": 5.5
+    },
+    "returning_prod_pct": 18.9,
+    "talent_score": 707.3,
+    "user_notes": ""
+  },
+  "Syracuse": {
+    "head_coach": "Fran Brown",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Steven Angeli",
+      "pass_yds": 1317,
+      "pass_td": 10,
+      "pass_int": 2
+    },
+    "top_rb": {
+      "name": "Yasin Willis",
+      "rush_yds": 553,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Johntay Cook II",
+      "rec_yds": 559,
+      "rec_td": 2,
+      "rec": 47
+    },
+    "top_defender": {
+      "name": "Kevin Jobity Jr.",
+      "sacks": 5.0,
+      "tfl": 6.0
+    },
+    "returning_prod_pct": 14.3,
+    "talent_score": 727.8,
+    "user_notes": ""
+  },
+  "TCU": {
+    "head_coach": "Sonny Dykes",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Josh Hoover",
+      "pass_yds": 3472,
+      "pass_td": 29,
+      "pass_int": 13
+    },
+    "top_rb": {
+      "name": "Jeremy Payne",
+      "rush_yds": 550,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Eric McAlister",
+      "rec_yds": 1121,
+      "rec_td": 10,
+      "rec": 64
+    },
+    "top_defender": {
+      "name": "Kaleb Elarms-Orr",
+      "sacks": 4.0,
+      "tfl": 9.5
+    },
+    "returning_prod_pct": 60.6,
+    "talent_score": 745.0,
+    "user_notes": ""
+  },
+  "Temple": {
+    "head_coach": "K.C. Keeler",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Evan Simon",
+      "pass_yds": 2098,
+      "pass_td": 25,
+      "pass_int": 2
+    },
+    "top_rb": {
+      "name": "Jevyon Ducker",
+      "rush_yds": 809,
+      "rush_td": 7
+    },
+    "top_wr": {
+      "name": "Jovanni Bermudez",
+      "rec_yds": 501,
+      "rec_td": 4,
+      "rec": 39
+    },
+    "top_defender": {
+      "name": "Cam'Ron Stewart",
+      "sacks": 5.0,
+      "tfl": 10.5
+    },
+    "returning_prod_pct": 99.9,
+    "talent_score": 507.9,
+    "user_notes": ""
+  },
+  "Tennessee": {
+    "head_coach": "Josh Heupel",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Joey Aguilar",
+      "pass_yds": 3444,
+      "pass_td": 24,
+      "pass_int": 10
+    },
+    "top_rb": {
+      "name": "DeSean Bishop",
+      "rush_yds": 983,
+      "rush_td": 14
+    },
+    "top_wr": {
+      "name": "Chris Brazzell II",
+      "rec_yds": 1017,
+      "rec_td": 9,
+      "rec": 62
+    },
+    "top_defender": {
+      "name": "Dominic Bailey",
+      "sacks": 4.5,
+      "tfl": 6.5
+    },
+    "returning_prod_pct": 22.1,
+    "talent_score": 866.6,
+    "user_notes": ""
+  },
+  "Texas": {
+    "head_coach": "Steve Sarkisian",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Arch Manning",
+      "pass_yds": 2942,
+      "pass_td": 24,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Tre Wisner",
+      "rush_yds": 597,
+      "rush_td": 3
+    },
+    "top_wr": {
+      "name": "Ryan Wingo",
+      "rec_yds": 770,
+      "rec_td": 7,
+      "rec": 50
+    },
+    "top_defender": {
+      "name": "Colin Simmons",
+      "sacks": 11.0,
+      "tfl": 13.5
+    },
+    "returning_prod_pct": 28.3,
+    "talent_score": 973.5,
+    "user_notes": ""
+  },
+  "Texas A&M": {
+    "head_coach": "Mike Elko",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Marcel Reed",
+      "pass_yds": 2932,
+      "pass_td": 25,
+      "pass_int": 10
+    },
+    "top_rb": {
+      "name": "Rueben Owens",
+      "rush_yds": 618,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Kevin Concepcion",
+      "rec_yds": 886,
+      "rec_td": 9,
+      "rec": 57
+    },
+    "top_defender": {
+      "name": "Cashius Howell",
+      "sacks": 12.5,
+      "tfl": 15.0
+    },
+    "returning_prod_pct": 75.3,
+    "talent_score": 917.3,
+    "user_notes": ""
+  },
+  "Texas State": {
+    "head_coach": "G.J. Kinne",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Brad Jackson",
+      "pass_yds": 3049,
+      "pass_td": 18,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Lincoln Pare",
+      "rush_yds": 1023,
+      "rush_td": 11
+    },
+    "top_wr": {
+      "name": "Beau Sparks",
+      "rec_yds": 1113,
+      "rec_td": 9,
+      "rec": 80
+    },
+    "top_defender": {
+      "name": "Kalil Alexander",
+      "sacks": 4.0,
+      "tfl": 10.5
+    },
+    "returning_prod_pct": 92.7,
+    "talent_score": 612.2,
+    "user_notes": ""
+  },
+  "Texas Tech": {
+    "head_coach": "Joey McGuire",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Behren Morton",
+      "pass_yds": 2643,
+      "pass_td": 22,
+      "pass_int": 4
+    },
+    "top_rb": {
+      "name": "Cameron Dickey",
+      "rush_yds": 1109,
+      "rush_td": 14
+    },
+    "top_wr": {
+      "name": "Caleb Douglas",
+      "rec_yds": 830,
+      "rec_td": 7,
+      "rec": 53
+    },
+    "top_defender": {
+      "name": "David Bailey",
+      "sacks": 13.5,
+      "tfl": 17.5
+    },
+    "returning_prod_pct": 58.9,
+    "talent_score": 757.5,
+    "user_notes": ""
+  },
+  "Toledo": {
+    "head_coach": "Mike Jacobs",
+    "coaching_change": true,
+    "coaching_note": "Candle built Toledo into a winner \u2014 Jacobs unproven as HC",
+    "top_qb": {
+      "name": "Tucker Gleason",
+      "pass_yds": 2515,
+      "pass_td": 21,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "DeaMonte Trayanum",
+      "rush_yds": 950,
+      "rush_td": 11
+    },
+    "top_wr": {
+      "name": "Junior Vandeross",
+      "rec_yds": 947,
+      "rec_td": 11,
+      "rec": 75
+    },
+    "top_defender": {
+      "name": "Martez Poynter",
+      "sacks": 5.5,
+      "tfl": 8.0
+    },
+    "returning_prod_pct": 68.5,
+    "talent_score": 620.1,
+    "user_notes": ""
+  },
+  "Troy": {
+    "head_coach": "Gerad Parker",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Tucker Kilcrease",
+      "pass_yds": 1421,
+      "pass_td": 9,
+      "pass_int": 4
+    },
+    "top_rb": {
+      "name": "Tae Meadows",
+      "rush_yds": 695,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Rara Thomas",
+      "rec_yds": 577,
+      "rec_td": 5,
+      "rec": 34
+    },
+    "top_defender": {
+      "name": "Donnie Smith",
+      "sacks": 10.0,
+      "tfl": 12.5
+    },
+    "returning_prod_pct": 33.4,
+    "talent_score": 561.9,
+    "user_notes": ""
+  },
+  "Tulane": {
+    "head_coach": "Will Hall",
+    "coaching_change": true,
+    "coaching_note": "Sumrall was elite at Tulane (11-2) \u2014 Hall is solid but a step down",
+    "top_qb": {
+      "name": "Jake Retzlaff",
+      "pass_yds": 2862,
+      "pass_td": 14,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Jake Retzlaff",
+      "rush_yds": 610,
+      "rush_td": 16
+    },
+    "top_wr": {
+      "name": "Shazz Preston",
+      "rec_yds": 598,
+      "rec_td": 4,
+      "rec": 38
+    },
+    "top_defender": {
+      "name": "Jordan Norman",
+      "sacks": 6.0,
+      "tfl": 8.0
+    },
+    "returning_prod_pct": 14.6,
+    "talent_score": 650.9,
+    "user_notes": ""
+  },
+  "Tulsa": {
+    "head_coach": "Tre Lamb",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Baylor Hayes",
+      "pass_yds": 2159,
+      "pass_td": 12,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Dominic Richardson",
+      "rush_yds": 1065,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Brody Foley",
+      "rec_yds": 521,
+      "rec_td": 7,
+      "rec": 36
+    },
+    "top_defender": {
+      "name": "J'Dan Burnett",
+      "sacks": 6.5,
+      "tfl": 9.5
+    },
+    "returning_prod_pct": 99.0,
+    "talent_score": 594.8,
+    "user_notes": ""
+  },
+  "UAB": {
+    "head_coach": "Alex Mortensen",
+    "coaching_change": true,
+    "coaching_note": "Mortensen was interim and stays on \u2014 continuity but uncertainty",
+    "top_qb": {
+      "name": "Jalen Kitna",
+      "pass_yds": 2462,
+      "pass_td": 13,
+      "pass_int": 11
+    },
+    "top_rb": {
+      "name": "Jevon Jackson",
+      "rush_yds": 900,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Iverson Hooks",
+      "rec_yds": 927,
+      "rec_td": 7,
+      "rec": 72
+    },
+    "top_defender": {
+      "name": "Chris Burge",
+      "sacks": 3.5,
+      "tfl": 5.0
+    },
+    "returning_prod_pct": 72.7,
+    "talent_score": 540.9,
+    "user_notes": ""
+  },
+  "UCF": {
+    "head_coach": "Scott Frost",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Tayven Jackson",
+      "pass_yds": 2151,
+      "pass_td": 10,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Myles Montgomery",
+      "rush_yds": 705,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Duane Thomas Jr.",
+      "rec_yds": 528,
+      "rec_td": 0,
+      "rec": 53
+    },
+    "top_defender": {
+      "name": "Malachi Lawrence",
+      "sacks": 7.0,
+      "tfl": 11.0
+    },
+    "returning_prod_pct": 31.0,
+    "talent_score": 710.0,
+    "user_notes": ""
+  },
+  "UCLA": {
+    "head_coach": "Bob Chesney",
+    "coaching_change": true,
+    "coaching_note": "Big jump for Chesney but Foster was bad \u2014 hard to be worse",
+    "top_qb": {
+      "name": "Nico Iamaleava",
+      "pass_yds": 1928,
+      "pass_td": 13,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Nico Iamaleava",
+      "rush_yds": 505,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Kwazi Gilmer",
+      "rec_yds": 535,
+      "rec_td": 4,
+      "rec": 50
+    },
+    "top_defender": {
+      "name": "Anthony Jones",
+      "sacks": 1.5,
+      "tfl": 2.5
+    },
+    "returning_prod_pct": 21.9,
+    "talent_score": 766.6,
+    "user_notes": ""
+  },
+  "UConn": {
+    "head_coach": "Jim Mora",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Joe Fagnano",
+      "pass_yds": 3441,
+      "pass_td": 28,
+      "pass_int": 1
+    },
+    "top_rb": {
+      "name": "Camryn Edwards",
+      "rush_yds": 1132,
+      "rush_td": 14
+    },
+    "top_wr": {
+      "name": "Skyler Bell",
+      "rec_yds": 1276,
+      "rec_td": 13,
+      "rec": 101
+    },
+    "top_defender": {
+      "name": "Bryun Parham",
+      "sacks": 9.5,
+      "tfl": 14.5
+    },
+    "returning_prod_pct": 68.0,
+    "talent_score": 568.1,
+    "user_notes": ""
+  },
+  "UL Monroe": {
+    "head_coach": "Bryant Vincent",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Aidan Armenta",
+      "pass_yds": 1619,
+      "pass_td": 12,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Zachary Palmer-Smith",
+      "rush_yds": 660,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Jonathan Bibbs",
+      "rec_yds": 383,
+      "rec_td": 3,
+      "rec": 26
+    },
+    "top_defender": {
+      "name": "D'Arco Perkins-McAllister",
+      "sacks": 4.0,
+      "tfl": 4.0
+    },
+    "returning_prod_pct": 78.2,
+    "talent_score": 473.3,
+    "user_notes": ""
+  },
+  "UNLV": {
+    "head_coach": "Dan Mullen",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Anthony Colandrea",
+      "pass_yds": 3275,
+      "pass_td": 23,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Jai'Den Thomas",
+      "rush_yds": 983,
+      "rush_td": 12
+    },
+    "top_wr": {
+      "name": "Jaden Bradley",
+      "rec_yds": 869,
+      "rec_td": 4,
+      "rec": 54
+    },
+    "top_defender": {
+      "name": "Tunmise Adeleye",
+      "sacks": 6.0,
+      "tfl": 7.5
+    },
+    "returning_prod_pct": 15.2,
+    "talent_score": 700.5,
+    "user_notes": ""
+  },
+  "USC": {
+    "head_coach": "Lincoln Riley",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Jayden Maiava",
+      "pass_yds": 3431,
+      "pass_td": 23,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "King Miller",
+      "rush_yds": 873,
+      "rush_td": 7
+    },
+    "top_wr": {
+      "name": "Makai Lemon",
+      "rec_yds": 1156,
+      "rec_td": 11,
+      "rec": 79
+    },
+    "top_defender": {
+      "name": "Braylan Shelby",
+      "sacks": 4.5,
+      "tfl": 6.0
+    },
+    "returning_prod_pct": 36.8,
+    "talent_score": 847.5,
+    "user_notes": ""
+  },
+  "UTEP": {
+    "head_coach": "Scotty Walden",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Skyler Locklear",
+      "pass_yds": 1418,
+      "pass_td": 13,
+      "pass_int": 11
+    },
+    "top_rb": {
+      "name": "Ashten Emory",
+      "rush_yds": 569,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Wondame Davis Jr.",
+      "rec_yds": 604,
+      "rec_td": 6,
+      "rec": 25
+    },
+    "top_defender": {
+      "name": "Udoka Ezeani",
+      "sacks": 5.0,
+      "tfl": 9.5
+    },
+    "returning_prod_pct": 100.0,
+    "talent_score": 551.9,
+    "user_notes": ""
+  },
+  "UTSA": {
+    "head_coach": "Jeff Traylor",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Owen McCown",
+      "pass_yds": 2695,
+      "pass_td": 27,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Robert Henry",
+      "rush_yds": 1045,
+      "rush_td": 9
+    },
+    "top_wr": {
+      "name": "Devin Mccuin",
+      "rec_yds": 653,
+      "rec_td": 7,
+      "rec": 59
+    },
+    "top_defender": {
+      "name": "Nnanna Anyanwu",
+      "sacks": 5.0,
+      "tfl": 7.0
+    },
+    "returning_prod_pct": 96.2,
+    "talent_score": 662.1,
+    "user_notes": ""
+  },
+  "Utah": {
+    "head_coach": "Morgan Scalley",
+    "coaching_change": true,
+    "coaching_note": "Losing a legend in Wittingham \u2014 Scalley is DC with no HC track record",
+    "top_qb": {
+      "name": "Devon Dampier",
+      "pass_yds": 2180,
+      "pass_td": 22,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Wayshawn Parker",
+      "rush_yds": 931,
+      "rush_td": 6
+    },
+    "top_wr": {
+      "name": "Ryan Davis",
+      "rec_yds": 659,
+      "rec_td": 4,
+      "rec": 57
+    },
+    "top_defender": {
+      "name": "John Henry Daley",
+      "sacks": 11.5,
+      "tfl": 17.5
+    },
+    "returning_prod_pct": 14.0,
+    "talent_score": 707.9,
+    "user_notes": ""
+  },
+  "Utah State": {
+    "head_coach": "Bronco Mendenhall",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Bryson Barnes",
+      "pass_yds": 2686,
+      "pass_td": 18,
+      "pass_int": 4
+    },
+    "top_rb": {
+      "name": "Bryson Barnes",
+      "rush_yds": 733,
+      "rush_td": 9
+    },
+    "top_wr": {
+      "name": "Braden Pegan",
+      "rec_yds": 925,
+      "rec_td": 5,
+      "rec": 60
+    },
+    "top_defender": {
+      "name": "John Miller",
+      "sacks": 7.5,
+      "tfl": 9.5
+    },
+    "returning_prod_pct": 63.1,
+    "talent_score": 503.6,
+    "user_notes": ""
+  },
+  "Vanderbilt": {
+    "head_coach": "Clark Lea",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Diego Pavia",
+      "pass_yds": 3192,
+      "pass_td": 27,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Diego Pavia",
+      "rush_yds": 826,
+      "rush_td": 9
+    },
+    "top_wr": {
+      "name": "Eli Stowers",
+      "rec_yds": 765,
+      "rec_td": 4,
+      "rec": 61
+    },
+    "top_defender": {
+      "name": "Miles Capers",
+      "sacks": 4.5,
+      "tfl": 9.0
+    },
+    "returning_prod_pct": 85.9,
+    "talent_score": 685.4,
+    "user_notes": ""
+  },
+  "Virginia": {
+    "head_coach": "Tony Elliott",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Chandler Morris",
+      "pass_yds": 2802,
+      "pass_td": 16,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "J'mari Taylor",
+      "rush_yds": 1062,
+      "rush_td": 14
+    },
+    "top_wr": {
+      "name": "Trell Harris",
+      "rec_yds": 847,
+      "rec_td": 5,
+      "rec": 59
+    },
+    "top_defender": {
+      "name": "Daniel Rickert",
+      "sacks": 7.0,
+      "tfl": 8.5
+    },
+    "returning_prod_pct": 28.0,
+    "talent_score": 666.7,
+    "user_notes": ""
+  },
+  "Virginia Tech": {
+    "head_coach": "James Franklin",
+    "coaching_change": true,
+    "coaching_note": "Franklin is one of the best HCs in CFB \u2014 transformative hire",
+    "top_qb": {
+      "name": "Kyron Drones",
+      "pass_yds": 1919,
+      "pass_td": 17,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Marcellous Hawkins",
+      "rush_yds": 749,
+      "rush_td": 1
+    },
+    "top_wr": {
+      "name": "Ayden Greene",
+      "rec_yds": 516,
+      "rec_td": 3,
+      "rec": 31
+    },
+    "top_defender": {
+      "name": "Kemari Copeland",
+      "sacks": 4.5,
+      "tfl": 8.0
+    },
+    "returning_prod_pct": 49.5,
+    "talent_score": 712.2,
+    "user_notes": ""
+  },
+  "Wake Forest": {
+    "head_coach": "Jake Dickert",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Robby Ashford",
+      "pass_yds": 2169,
+      "pass_td": 9,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Demond Claiborne",
+      "rush_yds": 905,
+      "rush_td": 10
+    },
+    "top_wr": {
+      "name": "Chris Barnes",
+      "rec_yds": 547,
+      "rec_td": 3,
+      "rec": 39
+    },
+    "top_defender": {
+      "name": "Langston Hardy",
+      "sacks": 6.5,
+      "tfl": 14.5
+    },
+    "returning_prod_pct": 26.2,
+    "talent_score": 627.2,
+    "user_notes": ""
+  },
+  "Washington": {
+    "head_coach": "Jedd Fisch",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Demond Williams Jr.",
+      "pass_yds": 2850,
+      "pass_td": 21,
+      "pass_int": 8
+    },
+    "top_rb": {
+      "name": "Jonah Coleman",
+      "rush_yds": 673,
+      "rush_td": 14
+    },
+    "top_wr": {
+      "name": "Denzel Boston",
+      "rec_yds": 755,
+      "rec_td": 10,
+      "rec": 56
+    },
+    "top_defender": {
+      "name": "Jacob Lane",
+      "sacks": 3.5,
+      "tfl": 7.5
+    },
+    "returning_prod_pct": 42.4,
+    "talent_score": 720.6,
+    "user_notes": ""
+  },
+  "Washington State": {
+    "head_coach": "Kirby Moore",
+    "coaching_change": true,
+    "coaching_note": "Moore was Arkansas OC \u2014 first-time HC replacing Rogers who just left",
+    "top_qb": {
+      "name": "Zevi Eckhaus",
+      "pass_yds": 1758,
+      "pass_td": 12,
+      "pass_int": 9
+    },
+    "top_rb": {
+      "name": "Kirby Vorhees",
+      "rush_yds": 576,
+      "rush_td": 5
+    },
+    "top_wr": {
+      "name": "Josh Meredith",
+      "rec_yds": 641,
+      "rec_td": 3,
+      "rec": 49
+    },
+    "top_defender": {
+      "name": "Isaac Terrell",
+      "sacks": 7.0,
+      "tfl": 12.0
+    },
+    "returning_prod_pct": 24.9,
+    "talent_score": 569.5,
+    "user_notes": ""
+  },
+  "West Virginia": {
+    "head_coach": "Rich Rodriguez",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Scotty Fox Jr.",
+      "pass_yds": 1276,
+      "pass_td": 7,
+      "pass_int": 6
+    },
+    "top_rb": {
+      "name": "Diore Hubbard",
+      "rush_yds": 335,
+      "rush_td": 4
+    },
+    "top_wr": {
+      "name": "Cam Vaughn",
+      "rec_yds": 540,
+      "rec_td": 4,
+      "rec": 35
+    },
+    "top_defender": {
+      "name": "Reid Carrico",
+      "sacks": 4.5,
+      "tfl": 8.0
+    },
+    "returning_prod_pct": 26.1,
+    "talent_score": 662.3,
+    "user_notes": ""
+  },
+  "Western Kentucky": {
+    "head_coach": "Tyson Helton",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Maverick McIvor",
+      "pass_yds": 1863,
+      "pass_td": 12,
+      "pass_int": 5
+    },
+    "top_rb": {
+      "name": "Marvis Parrish",
+      "rush_yds": 511,
+      "rush_td": 0
+    },
+    "top_wr": {
+      "name": "Matthew Henry",
+      "rec_yds": 762,
+      "rec_td": 6,
+      "rec": 48
+    },
+    "top_defender": {
+      "name": "Dominic Oliver",
+      "sacks": 3.0,
+      "tfl": 4.0
+    },
+    "returning_prod_pct": 33.2,
+    "talent_score": 561.4,
+    "user_notes": ""
+  },
+  "Western Michigan": {
+    "head_coach": "Lance Taylor",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Broc Lowry",
+      "pass_yds": 1683,
+      "pass_td": 7,
+      "pass_int": 2
+    },
+    "top_rb": {
+      "name": "Broc Lowry",
+      "rush_yds": 940,
+      "rush_td": 14
+    },
+    "top_wr": {
+      "name": "Tailique Williams",
+      "rec_yds": 478,
+      "rec_td": 2,
+      "rec": 35
+    },
+    "top_defender": {
+      "name": "Nadame Tucker",
+      "sacks": 14.5,
+      "tfl": 21.5
+    },
+    "returning_prod_pct": 99.9,
+    "talent_score": 534.4,
+    "user_notes": ""
+  },
+  "Wisconsin": {
+    "head_coach": "Luke Fickell",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Hunter Simmons",
+      "pass_yds": 664,
+      "pass_td": 2,
+      "pass_int": 7
+    },
+    "top_rb": {
+      "name": "Darrion Dupree",
+      "rush_yds": 363,
+      "rush_td": 2
+    },
+    "top_wr": {
+      "name": "Lance Mason",
+      "rec_yds": 398,
+      "rec_td": 4,
+      "rec": 30
+    },
+    "top_defender": {
+      "name": "Darryl Peterson",
+      "sacks": 6.5,
+      "tfl": 11.5
+    },
+    "returning_prod_pct": 40.2,
+    "talent_score": 763.2,
+    "user_notes": ""
+  },
+  "Wyoming": {
+    "head_coach": "Jay Sawvel",
+    "coaching_change": false,
+    "coaching_note": "",
+    "top_qb": {
+      "name": "Kaden Anderson",
+      "pass_yds": 1971,
+      "pass_td": 12,
+      "pass_int": 10
+    },
+    "top_rb": {
+      "name": "Samuel Harris",
+      "rush_yds": 552,
+      "rush_td": 1
+    },
+    "top_wr": {
+      "name": "Chris Durr Jr.",
+      "rec_yds": 513,
+      "rec_td": 4,
+      "rec": 46
+    },
+    "top_defender": {
+      "name": "Ben Florentine",
+      "sacks": 4.0,
+      "tfl": 6.0
+    },
+    "returning_prod_pct": 77.4,
+    "talent_score": 489.3,
+    "user_notes": ""
+  }
+}

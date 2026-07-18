@@ -43,3 +43,4 @@ logs/
 # IDE
 .vscode/
 .idea/
+!cache/team_profiles_2026.json
