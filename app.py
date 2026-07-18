@@ -2244,9 +2244,9 @@ elif page == "📅 Schedule & Predictions":
     if os.path.exists(_lines_cache):
         import time as _time
         _age_mins = int((_time.time() - os.path.getmtime(_lines_cache)) / 60)
-        st.caption(f"Lines last updated: {_age_mins}m ago — click Refresh to pull latest from Owls Insight")
+        st.caption(f"Lines last updated: {_age_mins}m ago — click Refresh to pull latest")
     else:
-        st.caption("No cached lines — click Refresh to pull from Owls Insight")
+        st.caption("Lines via The Odds API / DraftKings — click Refresh to update")
 
     if schedule_df.empty:
         st.warning("No schedule data available.")
@@ -2334,16 +2334,60 @@ elif page == "📅 Schedule & Predictions":
         with st.spinner("Generating predictions..."):
             week_sched = predict_all_games(week_sched, ratings_df)
 
-    # Merge Vegas lines from Owls Insight
-    lines_cache = "cache/lines_live.csv"
-    if os.path.exists(lines_cache):
+    # Merge Vegas lines — try Owls cache, then Odds API, then CFBD cache
+    _lines_loaded = False
+    _lines_cache = "cache/lines_live.csv"
+    _cfbd_cache  = os.path.join(os.path.dirname(__file__), f"cache/lines_{CURRENT_SEASON}.csv")
+
+    if os.path.exists(_lines_cache):
         try:
-            _raw = pd.read_csv(lines_cache)
+            _raw = pd.read_csv(_lines_cache)
             _want = {"homeTeam", "awayTeam", "spread", "overUnder", "home_ml", "away_ml"}
             _cols = [c for c in _want if c in _raw.columns]
-            vegas_df = _raw[_cols].rename(columns={
-                "spread": "vegas_spread", "overUnder": "vegas_total",
-            })
+            vegas_df = _raw[_cols].rename(columns={"spread": "vegas_spread", "overUnder": "vegas_total"})
+            week_sched = week_sched.merge(vegas_df, on=["homeTeam", "awayTeam"], how="left")
+            _lines_loaded = True
+        except Exception:
+            pass
+
+    if not _lines_loaded:
+        try:
+            from data.odds_api_fetcher import fetch_ncaaf_game_lines
+            from data.team_names import normalize as _norm
+            _odds = fetch_ncaaf_game_lines()
+            if not _odds.empty:
+                # Normalize both sides so team names align with schedule
+                _odds = _odds.copy()
+                _odds["homeTeam"] = _odds["homeTeam"].map(_norm)
+                _odds["awayTeam"] = _odds["awayTeam"].map(_norm)
+                _want = {"homeTeam", "awayTeam", "spread", "overUnder", "home_ml", "away_ml"}
+                _cols = [c for c in _want if c in _odds.columns]
+                vegas_df = _odds[_cols].rename(columns={"spread": "vegas_spread", "overUnder": "vegas_total"})
+                # Normalize schedule team names for merge, then restore
+                _sched_norm = week_sched[["homeTeam", "awayTeam"]].copy()
+                _sched_norm["homeTeam_n"] = _sched_norm["homeTeam"].map(_norm)
+                _sched_norm["awayTeam_n"] = _sched_norm["awayTeam"].map(_norm)
+                vegas_df = vegas_df.rename(columns={"homeTeam": "homeTeam_n", "awayTeam": "awayTeam_n"})
+                week_sched = week_sched.assign(
+                    homeTeam_n=week_sched["homeTeam"].map(_norm),
+                    awayTeam_n=week_sched["awayTeam"].map(_norm),
+                ).merge(vegas_df, on=["homeTeam_n", "awayTeam_n"], how="left").drop(
+                    columns=["homeTeam_n", "awayTeam_n"], errors="ignore"
+                )
+                _lines_loaded = True
+        except Exception:
+            pass
+
+    if not _lines_loaded and os.path.exists(_cfbd_cache):
+        try:
+            _raw = pd.read_csv(_cfbd_cache)
+            _raw = _raw[_raw["spread"].notna()].copy()
+            _dk = _raw[_raw["provider"].str.lower() == "draftkings"]
+            _raw = _dk if not _dk.empty else _raw
+            _raw = _raw.drop_duplicates(subset=["homeTeam", "awayTeam"])
+            _want = {"homeTeam", "awayTeam", "spread", "overUnder"}
+            _cols = [c for c in _want if c in _raw.columns]
+            vegas_df = _raw[_cols].rename(columns={"spread": "vegas_spread", "overUnder": "vegas_total"})
             week_sched = week_sched.merge(vegas_df, on=["homeTeam", "awayTeam"], how="left")
         except Exception:
             pass
