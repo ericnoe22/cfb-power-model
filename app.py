@@ -605,7 +605,7 @@ def load_schedule():
     return pd.DataFrame()
 
 
-@st.cache_data(ttl=1800)
+@st.cache_data(ttl=300)
 def load_multibook_lines():
     """Pull multi-book lines from Owls Insight. Returns (multibook_df, source)."""
     try:
@@ -623,7 +623,7 @@ def load_multibook_lines():
     return pd.DataFrame(), "unavailable"
 
 
-@st.cache_data(ttl=1800)  # cache 30 mins — refresh picks up new lines
+@st.cache_data(ttl=300)  # cache 30 mins — refresh picks up new lines
 def load_live_lines():
     """Pull current NCAAF lines from Owls Insight, tagged with CFB week number."""
     try:
