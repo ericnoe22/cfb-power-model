@@ -2341,11 +2341,19 @@ elif page == "📅 Schedule & Predictions":
 
     if os.path.exists(_lines_cache):
         try:
+            from data.team_names import normalize as _norm
             _raw = pd.read_csv(_lines_cache)
             _want = {"homeTeam", "awayTeam", "spread", "overUnder", "home_ml", "away_ml"}
             _cols = [c for c in _want if c in _raw.columns]
             vegas_df = _raw[_cols].rename(columns={"spread": "vegas_spread", "overUnder": "vegas_total"})
-            week_sched = week_sched.merge(vegas_df, on=["homeTeam", "awayTeam"], how="left")
+            # Normalize both sides to handle name variants (e.g. UL Monroe vs Louisiana-Monroe)
+            vegas_df = vegas_df.rename(columns={"homeTeam": "homeTeam_n", "awayTeam": "awayTeam_n"})
+            week_sched = week_sched.assign(
+                homeTeam_n=week_sched["homeTeam"].map(_norm),
+                awayTeam_n=week_sched["awayTeam"].map(_norm),
+            ).merge(vegas_df, on=["homeTeam_n", "awayTeam_n"], how="left").drop(
+                columns=["homeTeam_n", "awayTeam_n"], errors="ignore"
+            )
             _lines_loaded = True
         except Exception:
             pass
