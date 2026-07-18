@@ -169,16 +169,21 @@ def predict_all_games(schedule_df, ratings_df, fcs_lookup=None):
     schedule_df["_home"] = schedule_df["homeTeam"].map(normalize)
     schedule_df["_away"] = schedule_df["awayTeam"].map(normalize)
 
+    # Normalize ratings team names to match — ensures "UTSA" → "UT San Antonio" etc.
+    # are found correctly rather than being misclassified as FCS opponents.
+    ratings_norm = ratings_df.copy()
+    ratings_norm["team"] = ratings_norm["team"].map(normalize)
+
     preds = []
     for _, row in schedule_df.iterrows():
         home = row["_home"]
         away = row["_away"]
 
         # Detect FBS vs FCS matchup
-        fcs, fbs_team, fcs_team, fbs_is_home = is_fcs_game(home, away, ratings_df)
+        fcs, fbs_team, fcs_team, fbs_is_home = is_fcs_game(home, away, ratings_norm)
 
         if fcs and fcs_lookup:
-            fbs_row = ratings_df[ratings_df["team"] == fbs_team]
+            fbs_row = ratings_norm[ratings_norm["team"] == fbs_team]
             fbs_comp = float(fbs_row["composite"].values[0]) if not fbs_row.empty else 0.0
             pred = predict_fcs_game(fbs_team, fbs_is_home, fbs_comp, fcs_lookup)
             pred["home_team"] = home
@@ -190,7 +195,7 @@ def predict_all_games(schedule_df, ratings_df, fcs_lookup=None):
             pred = predict_game(
                 home_team=home,
                 away_team=away,
-                ratings_df=ratings_df,
+                ratings_df=ratings_norm,
                 neutral=row.get("neutralSite", False),
                 weather_adj_total=row.get("weather_total_adj", 0.0),
                 weather_adj_spread=row.get("weather_spread_adj", 0.0),

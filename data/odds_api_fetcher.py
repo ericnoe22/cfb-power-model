@@ -23,14 +23,21 @@ BOOK_PRIO   = ["draftkings", "fanduel", "betmgm", "caesars", "pinnacle"]
 # Pre-normalization overrides for names that are ambiguous after mascot stripping.
 # Applied BEFORE _clean so the right school name survives.
 _PRE_OVERRIDES = {
-    "Miami Hurricanes":      "Miami",
-    "Miami (FL)":            "Miami",
-    "Miami Florida":         "Miami",
-    "Miami Ohio":            "Miami (OH)",
-    "Miami (Ohio)":          "Miami (OH)",
-    "Miami (OH) RedHawks":   "Miami (OH)",
-    "Miami RedHawks":        "Miami (OH)",
-    "Miami Red Hawks":       "Miami (OH)",
+    "Miami Hurricanes":           "Miami",
+    "Miami (FL)":                 "Miami",
+    "Miami Florida":              "Miami",
+    "Miami Ohio":                 "Miami (OH)",
+    "Miami (Ohio)":               "Miami (OH)",
+    "Miami (OH) RedHawks":        "Miami (OH)",
+    "Miami RedHawks":             "Miami (OH)",
+    "Miami Red Hawks":            "Miami (OH)",
+    # Odds API occasionally appends mascots not in our strip list
+    "Sacramento State Hornets":   "Sacramento State",
+    "UMass Minutemen":            "Massachusetts",
+    "Sam Houston State":              "Sam Houston",
+    "Sam Houston State Bearkats":     "Sam Houston",
+    "UT San Antonio Roadrunners": "UTSA",
+    "Louisiana Monroe Warhawks":  "UL Monroe",
 }
 
 def _normalize_team(name: str) -> str:
@@ -122,6 +129,89 @@ def fetch_ncaaf_championship_odds() -> pd.DataFrame:
     df = pd.DataFrame(rows)
     if not df.empty and "best_odds" in df.columns:
         df = df.sort_values("best_odds").reset_index(drop=True)  # lowest odds = favorite
+    return df
+
+
+def fetch_ncaaf_game_lines() -> pd.DataFrame:
+    """
+    Fetch current NCAAF game spreads, totals, and moneylines from The Odds API.
+
+    Returns a DataFrame with one row per game (consensus: DraftKings if available,
+    else best book), columns: homeTeam, awayTeam, spread, overUnder, home_ml,
+    away_ml, commence_time, books_available.
+    Returns empty DataFrame if unavailable.
+    """
+    data = _get(
+        "sports/americanfootball_ncaaf/odds/",
+        params={
+            "regions":    "us",
+            "markets":    "spreads,totals,h2h",
+            "bookmakers": ",".join(BOOK_PRIO),
+            "oddsFormat": "american",
+        },
+    )
+    if not data or not isinstance(data, list):
+        return pd.DataFrame()
+
+    rows = []
+    for event in data:
+        home_raw = event.get("home_team", "")
+        away_raw = event.get("away_team", "")
+        home = _normalize_team(home_raw)
+        away = _normalize_team(away_raw)
+        commence = event.get("commence_time", "")
+
+        book_map = {bm["key"]: bm for bm in event.get("bookmakers", [])}
+
+        spread = over_under = home_ml = away_ml = None
+        spread_book = total_book = ml_book = None
+
+        for book in BOOK_PRIO:
+            bm = book_map.get(book)
+            if not bm:
+                continue
+            for mkt in bm.get("markets", []):
+                if mkt["key"] == "spreads" and spread is None:
+                    for o in mkt["outcomes"]:
+                        if _normalize_team(o["name"]) == home:
+                            spread = float(o["point"])
+                            spread_book = bm["title"]
+                            break
+                elif mkt["key"] == "totals" and over_under is None:
+                    for o in mkt["outcomes"]:
+                        if o["name"] == "Over":
+                            over_under = float(o["point"])
+                            total_book = bm["title"]
+                            break
+                elif mkt["key"] == "h2h" and home_ml is None:
+                    for o in mkt["outcomes"]:
+                        if _normalize_team(o["name"]) == home:
+                            home_ml = int(o["price"])
+                        else:
+                            away_ml = int(o["price"])
+                    if home_ml is not None:
+                        ml_book = bm["title"]
+
+        if spread is None and over_under is None:
+            continue  # skip games with no lines at all
+
+        rows.append({
+            "homeTeam":      home,
+            "awayTeam":      away,
+            "commence_time": commence,
+            "spread":        spread,
+            "overUnder":     over_under,
+            "home_ml":       home_ml,
+            "away_ml":       away_ml,
+            "spread_book":   spread_book,
+            "total_book":    total_book,
+            "books_available": len(book_map),
+        })
+
+    df = pd.DataFrame(rows)
+    if not df.empty and "commence_time" in df.columns:
+        df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce")
+        df = df.sort_values("commence_dt").reset_index(drop=True)
     return df
 
 

@@ -53,6 +53,8 @@ MASCOT_STRIP = [
     "Seahawks", "Thunderbirds", "Lumberjacks", "49ers", "Retrievers",
     "Redhawks", "Owls", "Hilltoppers", "Flames", "Mocs", "Norse",
     "Penguins", "Ospreys", "Flames", "Buccaneers",
+    "Minutemen", "Hornets", "Statesmen", "Govs", "Colonials",
+    "Anteaters", "Roadrunners", "Skyhawks", "Aggies",
 ]
 
 

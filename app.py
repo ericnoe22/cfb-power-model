@@ -635,13 +635,34 @@ def load_live_lines():
             raise ValueError("empty")
     except Exception:
         cache_path = "cache/lines_live.csv"
+        cfbd_path  = os.path.join(os.path.dirname(__file__), f"cache/lines_{CURRENT_SEASON}.csv")
         if os.path.exists(cache_path):
             import time
             age_mins = (time.time() - os.path.getmtime(cache_path)) / 60
             df = pd.read_csv(cache_path)
             source = f"cached ({int(age_mins)}m ago)"
         else:
-            return pd.DataFrame(), "unavailable"
+            # Try The Odds API as secondary live source
+            try:
+                from data.odds_api_fetcher import fetch_ncaaf_game_lines
+                odds_df = fetch_ncaaf_game_lines()
+                if not odds_df.empty:
+                    df = odds_df
+                    source = f"The Odds API / DraftKings ({len(df)} games)"
+                else:
+                    raise ValueError("empty")
+            except Exception:
+                # Final fallback: CFBD lines cache
+                if os.path.exists(cfbd_path):
+                    raw = pd.read_csv(cfbd_path)
+                    raw = raw[raw["spread"].notna()].copy()
+                    dk = raw[raw["provider"].str.lower() == "draftkings"]
+                    raw = dk if not dk.empty else raw
+                    raw = raw.drop_duplicates(subset=["homeTeam", "awayTeam"]).reset_index(drop=True)
+                    df = raw
+                    source = f"CFBD / DraftKings ({len(df)} games)"
+                else:
+                    return pd.DataFrame(), "unavailable"
 
     # ── Tag each game with a CFB week number ──────────────────────────────
     # Match to the season schedule by team pair (normalize both sides).
@@ -1488,11 +1509,9 @@ elif page == "🏆 Season Projections":
         st.stop()
 
     # Remove FCS teams — they appear as opponents in the schedule but aren't
-    # FBS programs we want to project
-    proj_df = proj_df[
-        (proj_df["conference"] != "FCS") &
-        (~proj_df["team"].str.contains(r"\(FCS\)", na=False))
-    ].copy()
+    # FBS programs we want to project. Filter to teams in ratings_df (FBS only).
+    fbs_team_set = set(ratings_df["team"].tolist())
+    proj_df = proj_df[proj_df["team"].isin(fbs_team_set)].copy()
 
     # Try to load Vegas win totals
     vegas_totals = load_win_totals()
@@ -1876,10 +1895,8 @@ elif page == "🎯 Betting Edges":
         with st.spinner("Loading projections..."):
             _proj = load_season_projections(schedule_df, ratings_df)
         if not _proj.empty:
-            _proj = _proj[
-                (_proj["conference"] != "FCS") &
-                (~_proj["team"].str.contains(r"\(FCS\)", na=False))
-            ]
+            _fbs = set(ratings_df["team"].tolist())
+            _proj = _proj[_proj["team"].isin(_fbs)]
             _top = _proj.head(15)[["team", "conference", "projected_wins",
                                    "floor_wins", "ceiling_wins"]].copy()
             _top.columns = ["Team", "Conference", "Proj W", "Floor", "Ceiling"]

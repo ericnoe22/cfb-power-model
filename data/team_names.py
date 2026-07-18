@@ -25,6 +25,7 @@ TEAM_NAME_MAP = {
     "Miami (OH)":                 "Miami (OH)",   # keep as-is, distinct from Miami (FL)
     "FIU":                        "Florida International",
     "UTSA":                       "UT San Antonio",
+    "Sam Houston State":          "Sam Houston",
 }
 
 # Reverse map: CFBD name → canonical display name (for readability)
