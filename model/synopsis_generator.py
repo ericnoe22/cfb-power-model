@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 load_dotenv()
 
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "..", "cache")
-MODEL = "claude-haiku-4-5-20251001"
+MODEL = "claude-sonnet-4-6"
 
 _TEAM_PROFILES = None
 
@@ -114,20 +114,38 @@ def _build_prompt(game):
     if fcs_note:
         lines.append(f"Note: {fcs_note}")
 
-    # Inject team profiles (2025 stats, coach, returners) if available
+    # Inject team roster & context (2026 current roster + 2025 production for returning players)
     profiles = _get_team_profiles()
     if profiles:
         from data.team_profile_builder import format_profile_for_prompt
         home_ctx = format_profile_for_prompt(home, profiles)
         away_ctx = format_profile_for_prompt(away, profiles)
         if home_ctx:
-            lines.append(f"{home} context (2025 season): {home_ctx}")
+            lines.append(f"{home} 2026 roster context: {home_ctx}")
         if away_ctx:
-            lines.append(f"{away} context (2025 season): {away_ctx}")
+            lines.append(f"{away} 2026 roster context: {away_ctx}")
+
+    # Inject team intel (Pick Six rankings, expert outlooks, future sources)
+    try:
+        from data.team_intel import format_intel_for_prompt
+        home_intel = format_intel_for_prompt(home)
+        away_intel = format_intel_for_prompt(away)
+        if home_intel:
+            lines.append(f"{home} expert intel: {home_intel}")
+        if away_intel:
+            lines.append(f"{away} expert intel: {away_intel}")
+    except Exception:
+        pass
 
     data_block = "\n".join(lines)
 
-    return f"""You are a college football analyst writing a sharp, concise game preview for a betting-focused audience.
+    return f"""You are a sharp college football analyst writing a betting-focused preview for the 2026 season.
+
+ROSTER RULES — read before the data:
+- The roster context shows the CURRENT 2026 players. Stats labeled "in 2025" belong to players who are BACK this year.
+- Players described as "departed" or "transferred out" are NO LONGER on the team. Do not mention them, their stats, or their absence — treat them as if they never existed for this preview.
+- When a "new starter" is listed, that is the actual 2026 starting QB. Reference them by name.
+- Only discuss players who are confirmed on the 2026 roster.
 
 Here is the data for this matchup:
 {data_block}
@@ -135,11 +153,10 @@ Here is the data for this matchup:
 Write a 3-4 sentence preview that covers:
 1. The key matchup dynamic — which team has the edge and why (use the ratings and player context)
 2. What the model thinks vs. Vegas — does it agree, disagree, and on which side
-3. One specific angle a bettor should watch (e.g., a key player matchup, defensive mismatch, high/low scoring lean)
+3. One specific angle a bettor should watch (e.g., a key player matchup, defensive mismatch, scoring lean)
 
-Note: player stats are from the 2025 season. Some players may have transferred or departed for the NFL Draft.
 Be direct and analytical. No filler phrases like "In a highly anticipated matchup..." or "Both teams will look to...".
-Write as if you're a sharp analyst, not a hype piece. Keep it under 120 words."""
+Write as a sharp analyst. Under 120 words."""
 
 
 def generate_synopsis(game, week=None, force=False):
@@ -172,6 +189,7 @@ def generate_synopsis(game, week=None, force=False):
         with client.messages.stream(
             model=MODEL,
             max_tokens=256,
+            system="You are a sharp college football analyst for the 2026 season. Only reference players confirmed on the 2026 roster. Never mention players who have departed or transferred — treat them as if they don't exist.",
             messages=[{"role": "user", "content": prompt}],
         ) as stream:
             final = stream.get_final_message()
@@ -218,6 +236,7 @@ def generate_synopses_batch(games, week=None, force=False):
             with client.messages.stream(
                 model=MODEL,
                 max_tokens=256,
+                system="You are a sharp college football analyst for the 2026 season. Only reference players confirmed on the 2026 roster. Never mention players who have departed or transferred — treat them as if they don't exist.",
                 messages=[{"role": "user", "content": prompt}],
             ) as stream:
                 final = stream.get_final_message()

@@ -210,7 +210,7 @@ def fetch_ncaaf_game_lines() -> pd.DataFrame:
 
     df = pd.DataFrame(rows)
     if not df.empty and "commence_time" in df.columns:
-        df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce")
+        df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce", format="ISO8601")
         df = df.sort_values("commence_dt").reset_index(drop=True)
     return df
 

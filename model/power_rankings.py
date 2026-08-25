@@ -55,6 +55,14 @@ def _normalize_talent(talent_series):
     return z_score(talent_series) * 5   # 1 SD ≈ 5 SP+ points
 
 
+def _normalize_sagarin(sagarin_series):
+    """
+    Sagarin Predictor (~40–105 for FBS, mean ~75). Convert to SP+ scale.
+    1 SD ≈ 8 SP+ points — Sagarin spreads over a wider range than SP+.
+    """
+    return z_score(sagarin_series) * 8
+
+
 # ── Main builder ───────────────────────────────────────────────────────────
 
 def build_composite_ratings(
@@ -64,6 +72,7 @@ def build_composite_ratings(
     returning_df=None,
     talent_df=None,
     epa_df=None,
+    sagarin_df=None,
     week=None,
     season=CURRENT_SEASON,
     apply_coaching=True,
@@ -171,6 +180,20 @@ def build_composite_ratings(
     else:
         base["epa_net"] = np.nan
 
+    # ── Merge Sagarin ─────────────────────────────────────────────────────
+    if sagarin_df is not None and not sagarin_df.empty:
+        sag_col = "predictor" if "predictor" in sagarin_df.columns else \
+                  "sagarin_rating" if "sagarin_rating" in sagarin_df.columns else None
+        if sag_col and "team" in sagarin_df.columns:
+            base = base.merge(
+                sagarin_df[["team", sag_col]].rename(columns={sag_col: "sagarin"}),
+                on="team", how="left"
+            )
+        else:
+            base["sagarin"] = np.nan
+    else:
+        base["sagarin"] = np.nan
+
     # ── Normalize each metric to SP+ scale ───────────────────────────────
     base["sp_plus_norm"]    = base["sp_plus"].fillna(base["sp_plus"].mean())
     base["fpi_norm"]        = base["fpi"].fillna(base["fpi"].mean()) if base["fpi"].notna().any() \
@@ -180,6 +203,8 @@ def build_composite_ratings(
                               base["returning_prod"].mean() if base["returning_prod"].notna().any() else 0.55))
     base["talent_norm"]     = _normalize_talent(base["talent"].fillna(
                               base["talent"].mean() if base["talent"].notna().any() else 500))
+    base["sagarin_norm"]    = _normalize_sagarin(base["sagarin"].fillna(
+                              base["sagarin"].mean() if base["sagarin"].notna().any() else 75.0))
     # EPA net: convert to SP+ scale (1 SD ≈ 5 SP+ points)
     base["epa_norm"]        = z_score(base["epa_net"].fillna(0)) * 5 \
                               if base["epa_net"].notna().any() else pd.Series(0.0, index=base.index)
@@ -187,14 +212,15 @@ def build_composite_ratings(
     # ── Weighted composite ────────────────────────────────────────────────
     w = weights
     epa_w = w.get("epa_adj", 0.0)
-    # Redistribute epa_adj weight from elo so total stays at 1.0
+    sag_w = w.get("sagarin", 0.0)
     elo_w = max(0, w["elo"] - epa_w)
     base["composite"] = (
-        w["sp_plus"]        * base["sp_plus_norm"]  +
-        w["fpi"]            * base["fpi_norm"]       +
-        elo_w               * base["elo_norm"]       +
-        w["returning_prod"] * base["returning_norm"] +
-        w["talent"]         * base["talent_norm"]    +
+        w["sp_plus"]        * base["sp_plus_norm"]   +
+        w["fpi"]            * base["fpi_norm"]        +
+        sag_w               * base["sagarin_norm"]    +
+        elo_w               * base["elo_norm"]        +
+        w["returning_prod"] * base["returning_norm"]  +
+        w["talent"]         * base["talent_norm"]     +
         epa_w               * base["epa_norm"]
     )
 

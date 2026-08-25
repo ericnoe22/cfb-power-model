@@ -41,11 +41,12 @@ HOME_FIELD_ADVANTAGE = 2.5
 # Composite rating weights — must sum to 1.0
 # Increase elo_weight as the season progresses (more games = more reliable)
 RATING_WEIGHTS = {
-    "sp_plus":            0.40,
-    "fpi":                0.50,
+    "sp_plus":            0.28,
+    "fpi":                0.25,
+    "sagarin":            0.30,
     "elo":                0.10,
-    "returning_prod":     0.00,
-    "talent":             0.00,
+    "returning_prod":     0.05,
+    "talent":             0.02,
     # Opponent-adjusted EPA/PPA (CFBD Patreon). 0% preseason — no data yet.
     # Increase to ~10% once several weeks of games are played (shift from elo).
     "epa_adj":            0.00,

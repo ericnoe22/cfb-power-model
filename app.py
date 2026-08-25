@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-import os, sys
+import os, sys, json
 
 sys.path.append(os.path.dirname(__file__))
 from config import CURRENT_SEASON, EDGE_THRESHOLD_SPREAD, EDGE_THRESHOLD_TOTAL, RATING_WEIGHTS
@@ -554,9 +554,9 @@ def load_ratings():
 def _compute_composite(df):
     """Add composite rating column to a ratings DataFrame."""
     from model.power_rankings import build_composite_ratings, z_score, _normalize_elo, \
-        _normalize_returning, _normalize_talent
+        _normalize_returning, _normalize_talent, _normalize_sagarin
 
-    # The prebuilt CSV already has sp_plus, fpi, elo, returning_prod, talent
+    # The prebuilt CSV already has sp_plus, fpi, elo, returning_prod, talent, sagarin
     weights = RATING_WEIGHTS
 
     if "sp_plus" not in df.columns:
@@ -568,10 +568,12 @@ def _compute_composite(df):
     df["elo_norm"]       = _normalize_elo(df["elo"].fillna(1500)) if "elo" in df.columns else 0
     df["returning_norm"] = _normalize_returning(df["returning_prod"].fillna(0.55)) if "returning_prod" in df.columns else 0
     df["talent_norm"]    = _normalize_talent(df["talent"].fillna(df["talent"].mean())) if "talent" in df.columns else 0
+    df["sagarin_norm"]   = _normalize_sagarin(df["sagarin"].fillna(df["sagarin"].mean())) if "sagarin" in df.columns and df["sagarin"].notna().any() else 0
 
     df["composite"] = (
         weights["sp_plus"]        * df["sp_plus_norm"]   +
         weights["fpi"]            * df["fpi_norm"]        +
+        weights.get("sagarin", 0) * df["sagarin_norm"]    +
         weights["elo"]            * df["elo_norm"]        +
         weights["returning_prod"] * df["returning_norm"]  +
         weights["talent"]         * df["talent_norm"]
@@ -623,7 +625,47 @@ def load_multibook_lines():
     return pd.DataFrame(), "unavailable"
 
 
-@st.cache_data(ttl=300)  # cache 30 mins — refresh picks up new lines
+@st.cache_data(ttl=3600)  # refresh hourly — forecasts don't change faster
+def load_week_weather(week_num, _game_ids_tuple):
+    """
+    Fetch weather for every game in a week and return a DataFrame keyed by game id.
+    _game_ids_tuple: tuple of game IDs used as the cache key (leading underscore
+    tells Streamlit not to hash the schedule df itself).
+    Returns DataFrame with columns: id, weather_wind_mph, weather_temp_f,
+    weather_precip_inch, weather_is_dome, weather_total_adj.
+    """
+    import pandas as pd
+    from data.weather_fetcher import add_weather_to_schedule
+
+    venues_path = os.path.join(os.path.dirname(__file__), "cache", "venues.csv")
+    if not os.path.exists(venues_path):
+        return pd.DataFrame()
+
+    venues_df = pd.read_csv(venues_path).rename(columns={
+        "latitude":  "location.y",
+        "longitude": "location.x",
+    })
+    # add_weather_to_schedule matches on 'name' column
+    if "name" not in venues_df.columns:
+        return pd.DataFrame()
+
+    # We can't pass the full schedule df through cache safely, so we reconstruct
+    # a minimal one from the cache using the stored schedule json
+    try:
+        sched_path = os.path.join(os.path.dirname(__file__), "cache", "schedule_2026.json")
+        with open(sched_path) as _f:
+            all_games = pd.json_normalize(__import__("json").load(_f))
+        week_games = all_games[all_games["week"] == week_num].copy()
+        if week_games.empty:
+            return pd.DataFrame()
+        result = add_weather_to_schedule(week_games, venues_df)
+        weather_cols = ["id"] + [c for c in result.columns if c.startswith("weather_")]
+        return result[[c for c in weather_cols if c in result.columns]]
+    except Exception:
+        return pd.DataFrame()
+
+
+@st.cache_data(ttl=300)  # cache 5 mins — refresh picks up new lines
 def load_live_lines():
     """Pull current NCAAF lines from Owls Insight, tagged with CFB week number."""
     try:
@@ -666,42 +708,63 @@ def load_live_lines():
 
     # ── Tag each game with a CFB week number ──────────────────────────────
     # Match to the season schedule by team pair (normalize both sides).
-    # Owls and CFBD sometimes disagree on home/away, so we try both orderings.
     sched_path = os.path.join(os.path.dirname(__file__), f"{CURRENT_SEASON}_schedule_with_power.csv")
+    season_start = pd.Timestamp(f"{CURRENT_SEASON}-08-28", tz="UTC")
+
+    from data.team_names import normalize
+    df["homeTeam"] = df["homeTeam"].map(normalize)
+    df["awayTeam"] = df["awayTeam"].map(normalize)
+
     if os.path.exists(sched_path):
-        from data.team_names import normalize
-        sched = pd.read_csv(sched_path)[["homeTeam", "awayTeam", "week", "neutralSite"]].drop_duplicates()
+        sched = pd.read_csv(sched_path)[["homeTeam", "awayTeam", "week", "neutralSite", "startDate"]].drop_duplicates()
         sched["homeTeam"] = sched["homeTeam"].map(normalize)
         sched["awayTeam"] = sched["awayTeam"].map(normalize)
-        # Build a lookup keyed by frozenset of the two teams → week
+        sched["sched_dt"] = pd.to_datetime(sched["startDate"], utc=True, errors="coerce", format="ISO8601")
+
         sched_week_map = {
-            frozenset([h, a]): (w, n)
-            for h, a, w, n in zip(sched["homeTeam"], sched["awayTeam"],
-                                   sched["week"], sched["neutralSite"])
+            frozenset([h, a]): (w, n, sd)
+            for h, a, w, n, sd in zip(sched["homeTeam"], sched["awayTeam"],
+                                       sched["week"], sched["neutralSite"], sched["sched_dt"])
         }
-        df["homeTeam"] = df["homeTeam"].map(normalize)
-        df["awayTeam"] = df["awayTeam"].map(normalize)
-        df["week"] = df.apply(
-            lambda r: sched_week_map.get(frozenset([r["homeTeam"], r["awayTeam"]]), (None, False))[0],
-            axis=1
-        )
-        df["neutralSite"] = df.apply(
-            lambda r: sched_week_map.get(frozenset([r["homeTeam"], r["awayTeam"]]), (None, False))[1],
-            axis=1
+
+        df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce", format="ISO8601")
+
+        def _assign_week(r):
+            match = sched_week_map.get(frozenset([r["homeTeam"], r["awayTeam"]]))
+            if match is None:
+                return None, False
+            week, neutral, sched_dt = match
+            # Reject if Owls game date is >14 days from the CFBD schedule date —
+            # prevents a future conference game from being mistakenly used for an
+            # early neutral-site game between the same two teams.
+            if pd.notna(r["commence_dt"]) and pd.notna(sched_dt):
+                if abs((r["commence_dt"] - sched_dt).days) > 14:
+                    return None, False
+            return week, neutral
+
+        df[["week", "neutralSite"]] = df.apply(
+            lambda r: pd.Series(_assign_week(r)), axis=1
         )
     else:
         df["week"] = None
         df["neutralSite"] = False
+        df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce", format="ISO8601")
 
-    # Fallback: derive week from game date (week 1 = Aug 29, 2026)
-    if "commence_dt" in df.columns and df["week"].isna().any():
-        import datetime, pytz
-        season_start = pd.Timestamp(f"{CURRENT_SEASON}-08-28", tz="UTC")
-        df.loc[df["week"].isna(), "week"] = (
-            (df.loc[df["week"].isna(), "commence_dt"] - season_start).dt.days // 7 + 1
-        ).clip(lower=1)
+    # Date-based fallback: for games with no schedule match (neutral-site kickoff
+    # games not yet in CFBD), derive week from the Owls commence_time.
+    # Only applies to FBS vs FBS games — keeps the Betting Edges page clean.
+    if "commence_dt" not in df.columns:
+        df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce", format="ISO8601")
 
-    df["week"] = pd.to_numeric(df["week"], errors="coerce").fillna(1).astype(int)
+    unmatched = df["week"].isna() & df["commence_dt"].notna()
+    if unmatched.any():
+        derived = ((df.loc[unmatched, "commence_dt"] - season_start).dt.days // 7 + 1).clip(lower=1)
+        df.loc[unmatched, "week"] = derived
+        # Only keep derived-week games that fall within the regular season
+        df = df[df["week"].notna() & (df["week"] <= 15)].copy()
+
+    df = df[df["week"].notna()].copy()
+    df["week"] = pd.to_numeric(df["week"], errors="coerce").astype(int)
     return df, source
 
 
@@ -965,10 +1028,12 @@ with st.sidebar:
         "🎰 Title Odds",
         "⚔️ Head-to-Head",
         "🎯 Betting Edges",
+        "👥 Team Profiles",
     ]
     _admin_pages = [
         "📈 Model Performance",
         "🔧 Update Data",
+        "📋 Pick Tracker",
     ]
 
     if st.session_state["admin_unlocked"]:
@@ -1094,13 +1159,30 @@ def render_board_view(sched_df):
 
         neutral_tag = ' <span style="color:#7a95b5;font-size:0.7rem">N</span>' if neutral else ""
 
+        # Weather badge — only show when conditions materially affect scoring
+        wind      = row.get("weather_wind_mph")
+        temp      = row.get("weather_temp_f")
+        precip    = row.get("weather_precip_inch")
+        is_dome   = row.get("weather_is_dome", False)
+        wx_parts  = []
+        if not is_dome and wind and not pd.isna(wind) and float(wind) > 15:
+            wx_parts.append(f"💨 {int(wind)} mph")
+        if not is_dome and temp and not pd.isna(temp) and float(temp) < 40:
+            wx_parts.append(f"🌡 {int(temp)}°F")
+        if not is_dome and precip and not pd.isna(precip) and float(precip) > 0.1:
+            wx_parts.append("🌧")
+        wx_badge = (
+            f'<span style="color:#f0c040;font-size:0.65rem;margin-left:6px">'
+            + "  ".join(wx_parts) + "</span>"
+        ) if wx_parts else ""
+
         # Two-line matchup row: away on top, home on bottom
         rows_html += f'''
 <div style="display:grid;grid-template-columns:1fr auto auto auto;align-items:center;
             padding:8px 12px;border-bottom:1px solid #1a2744;gap:8px;">
   <div>
     <div style="color:#ccc;font-size:0.9rem;padding-bottom:4px">{away} {score_away}{edge_badge}</div>
-    <div style="color:#ccc;font-size:0.9rem">{home}{neutral_tag} {score_home}</div>
+    <div style="color:#ccc;font-size:0.9rem">{home}{neutral_tag} {score_home}{wx_badge}</div>
   </div>
   <div style="text-align:center;min-width:90px">
     <div style="color:#7a95b5;font-size:0.65rem;font-weight:600;margin-bottom:2px">MODEL</div>
@@ -1229,6 +1311,17 @@ def render_matchup_card(row, idx, ratings_df, synopsis=None):
             st.success(f"**Bet:** {bet}", icon="🎯")
         if home_pts and pd.notna(home_pts) and away_pts and pd.notna(away_pts):
             st.caption(f"Final: {away} {int(away_pts)} – {int(home_pts)} {home}")
+
+        # Weather
+        _wind = row.get("weather_wind_mph")
+        _temp = row.get("weather_temp_f")
+        _dome = row.get("weather_is_dome", False)
+        _wx_parts = []
+        if not _dome:
+            if _wind and pd.notna(_wind): _wx_parts.append(f"💨 {float(_wind):.0f} mph")
+            if _temp and pd.notna(_temp): _wx_parts.append(f"🌡 {float(_temp):.0f}°F")
+        if _wx_parts:
+            st.caption("Weather: " + "  ·  ".join(_wx_parts))
 
         # AI synopsis
         if synopsis and not synopsis.startswith("Preview unavailable"):
@@ -1988,7 +2081,9 @@ elif page == "🎯 Betting Edges":
                     r.get("vegas_spread"), r.get("bet_spread"), team_ats
                 ), axis=1
             )
-        edges_summary = summarize_edges(edges)
+        edges_summary = summarize_edges(edges, min_grade="A", conf_only=True)
+        if edges_summary.empty and not edges.empty:
+            st.caption("Showing A/A+ conference games only — the highest-confidence filter combination from backtesting. Adjust in edge_finder.py to see more.")
 
         # ── Pre-generate synopses for all edge games ───────────────────────
         from model.synopsis_generator import generate_synopses_batch, _game_key
@@ -2042,9 +2137,14 @@ elif page == "🎯 Betting Edges":
                                   delta=f"{edge_val:+.1f} pts" if not pd.isna(edge_val) else "")
                     c5.markdown(f"<h3 style='color:{color};text-align:center'>{grade}</h3>",
                                 unsafe_allow_html=True)
+                    def _fmt(v, decimals=1):
+                        try:
+                            return f"{float(v):.{decimals}f}" if v is not None and str(v) != "nan" else "—"
+                        except (TypeError, ValueError):
+                            return "—"
                     st.caption(
-                        f"Model spread: **{row.get('predicted_spread')}** | Vegas: **{row.get('vegas_spread')}** | "
-                        f"Model total: **{row.get('predicted_total')}** | Vegas: **{row.get('vegas_total')}** | "
+                        f"Model spread: **{_fmt(row.get('predicted_spread'))}** | Vegas: **{_fmt(row.get('vegas_spread'))}** | "
+                        f"Model total: **{_fmt(row.get('predicted_total'))}** | Vegas: **{_fmt(row.get('vegas_total'))}** | "
                         f"Confidence: {row.get('confidence', 0):.0%}"
                     )
                     if row.get("hist_total_note"):
@@ -2323,9 +2423,18 @@ elif page == "📅 Schedule & Predictions":
         st.info(f"No games scheduled for {week_label}.")
         st.stop()
 
+    # ── Weather (only for a specific week, not "All") ──────────────────────
+    if page_week != "All" and "id" in week_sched.columns:
+        _game_ids = tuple(sorted(week_sched["id"].dropna().astype(int).tolist()))
+        if _game_ids:
+            _weather_df = load_week_weather(int(page_week), _game_ids)
+            if not _weather_df.empty:
+                week_sched = week_sched.merge(_weather_df, on="id", how="left")
+
     if not ratings_df.empty:
         with st.spinner("Generating predictions..."):
-            week_sched = predict_all_games(week_sched, ratings_df)
+            week_sched = predict_all_games(week_sched, ratings_df,
+                                           week=int(page_week) if page_week != "All" else None)
 
     # Merge Vegas lines — reuse load_live_lines() which handles Owls → Odds API → CFBD fallback
     _sched_lines, _sched_lines_source = load_live_lines()
@@ -2429,25 +2538,57 @@ elif page == "📅 Schedule & Predictions":
 
     if view_mode == "Board":
         render_board_view(week_sched)
+
+        if not week_sched.empty:
+            st.divider()
+            _gd_col1, _gd_col2 = st.columns([5, 1])
+            with _gd_col1:
+                _game_labels = [
+                    f"{str(r.get('awayTeam','')).replace(' (FCS)','')}  @  {str(r.get('homeTeam','')).replace(' (FCS)','')}"
+                    for _, r in week_sched.iterrows()
+                ]
+                _selected_label = st.selectbox(
+                    "Game detail", _game_labels, index=0,
+                    label_visibility="collapsed",
+                    key="board_game_select",
+                    placeholder="Select a game for full detail..."
+                )
+            with _gd_col2:
+                _open_detail = st.button("View Detail ▶", use_container_width=True, key="board_open_detail")
+
+            if _open_detail and _selected_label:
+                _detail_idx = _game_labels.index(_selected_label)
+                _detail_row = week_sched.iloc[_detail_idx]
+                show_matchup_detail(_detail_row, ratings_df)
     else:
         from model.synopsis_generator import generate_synopses_batch, _game_key
         sched_synopses = {}
+        _syn_session_key = f"synopses_w{page_week}"
         if page_week != "All" and os.getenv("ANTHROPIC_API_KEY"):
-            games_for_syn = [
-                {
-                    "homeTeam": str(r.get("homeTeam", "")).replace(" (FCS)", ""),
-                    "awayTeam": str(r.get("awayTeam", "")).replace(" (FCS)", ""),
-                    "neutral": str(r.get("neutralSite", "")).lower() in ("true", "1", "yes"),
-                    "predicted_spread": r.get("predicted_spread"),
-                    "vegas_spread": r.get("vegas_spread"),
-                    "predicted_total": r.get("predicted_total"),
-                    "vegas_total": r.get("vegas_total"),
-                    "week": int(page_week),
-                }
-                for _, r in week_sched.iterrows()
-            ]
-            with st.spinner("Generating AI game previews..."):
-                sched_synopses = generate_synopses_batch(games_for_syn, week=int(page_week))
+            if _syn_session_key in st.session_state:
+                # Already generated this session — skip the API/file round-trip
+                sched_synopses = st.session_state[_syn_session_key]
+            else:
+                # Only generate previews for games that have Vegas lines —
+                # FCS tune-ups and lineless games don't need AI previews, and
+                # generating 60+ synopses serially is what makes Cards view slow.
+                games_for_syn = [
+                    {
+                        "homeTeam": str(r.get("homeTeam", "")).replace(" (FCS)", ""),
+                        "awayTeam": str(r.get("awayTeam", "")).replace(" (FCS)", ""),
+                        "neutral": str(r.get("neutralSite", "")).lower() in ("true", "1", "yes"),
+                        "predicted_spread": r.get("predicted_spread"),
+                        "vegas_spread": r.get("vegas_spread"),
+                        "predicted_total": r.get("predicted_total"),
+                        "vegas_total": r.get("vegas_total"),
+                        "week": int(page_week),
+                    }
+                    for _, r in week_sched.iterrows()
+                    if pd.notna(r.get("vegas_spread")) or pd.notna(r.get("vegas_total"))
+                ]
+                with st.spinner(f"Generating AI previews for {len(games_for_syn)} lined games..."):
+                    sched_synopses = generate_synopses_batch(games_for_syn, week=int(page_week))
+                st.session_state[_syn_session_key] = sched_synopses
 
         for idx, row in week_sched.iterrows():
             home_clean = str(row.get("homeTeam", "")).replace(" (FCS)", "")
@@ -2670,6 +2811,40 @@ Use the button below to force-reload data from your local CSV files.
         st.rerun()
 
     st.divider()
+    st.subheader("Roster Update")
+    st.caption("Pulls current 2026 rosters from ESPN and rebuilds team profiles. Run before the season and after major roster moves.")
+
+    _roster_col1, _roster_col2 = st.columns([1, 3])
+    with _roster_col1:
+        _force_rosters = st.checkbox("Force full re-fetch", value=False, key="roster_force",
+                                     help="Re-download all 138 rosters from ESPN even if already cached (~35s)")
+    with _roster_col2:
+        _run_rosters = st.button("🏈 Refresh ESPN Rosters + Rebuild Profiles", use_container_width=True)
+
+    if _run_rosters:
+        import time as _time
+        _t0 = _time.time()
+        with st.spinner("Fetching ESPN rosters (138 teams)..."):
+            try:
+                from data.espn_fetcher import fetch_all_fbs_rosters
+                _rosters = fetch_all_fbs_rosters(force_refresh=_force_rosters)
+                st.info(f"ESPN rosters: {len(_rosters)} teams fetched in {_time.time()-_t0:.0f}s")
+            except Exception as _e:
+                st.error(f"ESPN roster fetch failed: {_e}")
+                _rosters = {}
+
+        if _rosters:
+            with st.spinner("Rebuilding team profiles..."):
+                try:
+                    from data.team_profile_builder import build_team_profiles
+                    _profiles = build_team_profiles(year=CURRENT_SEASON - 1, force=True)
+                    st.cache_data.clear()
+                    st.success(f"Done — {len(_profiles)} team profiles rebuilt in {_time.time()-_t0:.0f}s total.")
+                    st.rerun()
+                except Exception as _e:
+                    st.error(f"Profile rebuild failed: {_e}")
+
+    st.divider()
     st.subheader("Data Status")
     files = {
         f"Power Ratings ({CURRENT_SEASON})": PREBUILT_RATINGS_PATH,
@@ -2677,6 +2852,7 @@ Use the button below to force-reload data from your local CSV files.
         "Elo CSV":                           os.path.join(os.path.dirname(__file__), "cache", "elo_current.csv"),
         f"SP+ ({CURRENT_SEASON})":           os.path.join(os.path.dirname(__file__), "cache", f"sp_plus_{CURRENT_SEASON}.csv"),
         f"FPI ({CURRENT_SEASON})":           os.path.join(os.path.dirname(__file__), "cache", f"fpi_{CURRENT_SEASON}.csv"),
+        f"Sagarin ({CURRENT_SEASON})":       os.path.join(os.path.dirname(__file__), "cache", f"sagarin_{CURRENT_SEASON}.json"),
         "Performance Log":                   os.path.join(os.path.dirname(__file__), "outputs", "performance_log.csv"),
     }
     for label, path in files.items():
@@ -2702,6 +2878,260 @@ Once you upgrade:
 
 The model will automatically use opponent-adjusted metrics when available.
     """)
+
+# ── Page: Team Profiles ────────────────────────────────────────────────────
+
+elif page == "👥 Team Profiles":
+    st.title("Team Profiles")
+    st.caption("Edit coordinator info and notes injected into AI game previews. Changes take effect immediately.")
+
+    _profiles_path = os.path.join(os.path.dirname(__file__), "cache", "team_profiles_2026.json")
+
+    @st.cache_data(ttl=0)
+    def _load_profiles_admin():
+        if not os.path.exists(_profiles_path):
+            return {}
+        with open(_profiles_path) as _f:
+            return json.load(_f)
+
+    def _save_profiles(profiles_dict):
+        with open(_profiles_path, "w") as _f:
+            json.dump(profiles_dict, _f, indent=2)
+        st.cache_data.clear()
+
+    _all_profiles = _load_profiles_admin()
+    if not _all_profiles:
+        st.warning("No team profiles found. Run `python data/team_profile_builder.py` first.")
+        st.stop()
+
+    _team_list = sorted(_all_profiles.keys())
+    _selected = st.selectbox("Select team", _team_list, key="tp_team_select")
+
+    if _selected:
+        _p = _all_profiles[_selected]
+
+        st.subheader(_selected)
+
+        # Read-only info
+        with st.expander("Roster snapshot (from 2025 CFBD stats)", expanded=False):
+            _cols_ro = st.columns(2)
+            with _cols_ro[0]:
+                st.markdown(f"**Head Coach:** {_p.get('head_coach','—')}" + (" *(new)*" if _p.get('coaching_change') else ""))
+                if _p.get("coaching_note"):
+                    st.caption(_p["coaching_note"])
+                qb = _p.get("top_qb")
+                if qb:
+                    st.markdown(f"**QB:** {qb['name']} — {qb.get('pass_yds',0):,} yds / {qb.get('pass_td',0)} TD / {qb.get('pass_int',0)} INT")
+                rb = _p.get("top_rb")
+                if rb:
+                    st.markdown(f"**RB:** {rb['name']} — {rb.get('rush_yds',0):,} yds / {rb.get('rush_td',0)} TD")
+            with _cols_ro[1]:
+                wr = _p.get("top_wr")
+                if wr:
+                    st.markdown(f"**WR:** {wr['name']} — {wr.get('rec_yds',0):,} rec yds / {wr.get('rec_td',0)} TD")
+                defender = _p.get("top_defender")
+                if defender:
+                    st.markdown(f"**Top defender:** {defender['name']} — {defender.get('sacks',0)} sacks / {defender.get('tfl',0)} TFL")
+                st.markdown(f"**Ret. production:** {_p.get('returning_prod_pct',0):.0f}%")
+                st.markdown(f"**Talent score:** {_p.get('talent_score',0):.0f}")
+
+        # Pick Six expert intel
+        try:
+            from data.team_intel import get_team_intel
+            _intel = get_team_intel(_selected)
+            _ps = _intel.get("sources", {}).get("pick_six_2026", {})
+            if _ps:
+                with st.expander("📖 Pick Six Previews 2026 (Brett Ciancia)", expanded=True):
+                    _ps_rank = _ps.get("rank")
+                    _ps_conf = _ps.get("conf", "")
+                    _ps_conf_rank = _ps.get("conf_rank")
+                    _rank_str = f"#{_ps_rank} overall"
+                    if _ps_conf and _ps_conf_rank:
+                        _rank_str += f" · #{_ps_conf_rank} in {_ps_conf}"
+                    st.markdown(f"**Expert rank:** {_rank_str}")
+                    _outlook = _ps.get("outlook", "").strip()
+                    if _outlook:
+                        st.markdown(_outlook)
+        except Exception:
+            pass
+
+        # Coordinator / notes — display for all, edit for admin
+        st.divider()
+        _oc_val    = _p.get("oc_name", "").strip()
+        _dc_val    = _p.get("dc_name", "").strip()
+        _notes_val = _p.get("user_notes", "").strip()
+
+        if st.session_state.get("admin_unlocked"):
+            st.subheader("Edit coordinator & notes")
+            st.caption("Saved to cache/team_profiles_2026.json and injected into AI preview prompts.")
+
+            with st.form(key=f"tp_form_{_selected}"):
+                _oc = st.text_input("Offensive Coordinator (OC)", value=_oc_val, placeholder="e.g. Chip Kelly")
+                _dc = st.text_input("Defensive Coordinator (DC)", value=_dc_val, placeholder="e.g. Jim Knowles")
+                _notes = st.text_area(
+                    "Team notes / storylines",
+                    value=_notes_val,
+                    height=100,
+                    placeholder="e.g. Starting QB transferred in from Bama; defense is fully rebuilt after 8 transfers out",
+                )
+                _submit = st.form_submit_button("Save")
+
+            if _submit:
+                _all_profiles[_selected]["oc_name"]    = _oc.strip()
+                _all_profiles[_selected]["dc_name"]    = _dc.strip()
+                _all_profiles[_selected]["user_notes"] = _notes.strip()
+                _save_profiles(_all_profiles)
+                st.success(f"Saved profile for {_selected}.")
+                # Update local references for prompt preview below
+                _oc_val    = _oc.strip()
+                _dc_val    = _dc.strip()
+                _notes_val = _notes.strip()
+        else:
+            # Public read-only view
+            _coord_parts = []
+            if _oc_val:
+                _coord_parts.append(f"**OC:** {_oc_val}")
+            if _dc_val:
+                _coord_parts.append(f"**DC:** {_dc_val}")
+            if _coord_parts:
+                st.markdown("  &nbsp;  ".join(_coord_parts))
+            if _notes_val:
+                st.info(_notes_val)
+
+
+# ── Page: Pick Tracker ────────────────────────────────────────────────────
+
+elif page == "📋 Pick Tracker":
+    from model.clv_tracker import (
+        log_pick as _log_pick, update_closing_line as _upd_cl,
+        update_outcome as _upd_outcome, load_log as _load_log,
+        compute_stats as _compute_stats,
+    )
+
+    st.title("Pick Tracker")
+    st.caption("Log every pick with the line you got. Record closing lines and results after games. CLV tells you whether the model is finding real edge.")
+
+    _pt_log = _load_log()
+    _pt_stats = _compute_stats(_pt_log)
+
+    # ── Stats banner ───────────────────────────────────────────────────
+    if _pt_stats["n_picks"] > 0:
+        _sc1, _sc2, _sc3, _sc4 = st.columns(4)
+        _sc1.metric("Total Picks", _pt_stats["n_picks"])
+        _sc2.metric("Win %", f"{_pt_stats['win_pct']:.1f}%" if _pt_stats["win_pct"] else "—")
+        _sc3.metric("ROI", f"{_pt_stats['roi']:+.1f}%" if _pt_stats["roi"] is not None else "—",
+                    delta_color="normal")
+        _sc4.metric("Avg CLV", f"{_pt_stats['avg_clv']:+.2f} pts" if _pt_stats["avg_clv"] is not None else "—",
+                    help="Positive = consistently beating the closing line = real edge")
+
+        if _pt_stats.get("by_grade"):
+            st.caption("Performance by grade:")
+            _gcols = st.columns(len(_pt_stats["by_grade"]))
+            for _gi, (_gk, _gv) in enumerate(_pt_stats["by_grade"].items()):
+                _gcols[_gi].metric(
+                    f"Grade {_gk}",
+                    f"{_gv['pct']:.1f}%  ({_gv['n']} picks)",
+                    f"ROI {_gv['roi']:+.1f}%",
+                )
+        if _pt_stats["n_pending"] > 0:
+            st.info(f"{_pt_stats['n_pending']} picks pending result/closing line.", icon="⏳")
+    else:
+        st.info("No picks logged yet. Use the form below to log your first pick.", icon="📝")
+
+    st.divider()
+    _pt_tab1, _pt_tab2, _pt_tab3 = st.tabs(["Log a Pick", "Update Results", "Full Log"])
+
+    # ── Tab 1: Log a pick ──────────────────────────────────────────────
+    with _pt_tab1:
+        st.subheader("Log a new pick")
+        st.caption("Enter the game and the line you actually got when placing the bet.")
+        with st.form("pt_log_form"):
+            _ptc1, _ptc2 = st.columns(2)
+            with _ptc1:
+                _pt_season  = st.number_input("Season", value=CURRENT_SEASON, step=1)
+                _pt_week    = st.number_input("Week",   value=1, min_value=1, max_value=20, step=1)
+                _pt_home    = st.text_input("Home team")
+                _pt_away    = st.text_input("Away team")
+            with _ptc2:
+                _pt_btype   = st.selectbox("Bet type", ["spread", "total"])
+                _pt_bside   = st.selectbox("Side",     ["Home", "Away", "Over", "Under"])
+                _pt_line    = st.number_input("Line you got", value=0.0, step=0.5,
+                                              help="Spread: the home-team spread you bet (e.g. -3.5 if you bet home -3.5). Total: the over/under number.")
+                _pt_grade   = st.selectbox("Edge grade at time of pick", ["A+", "A", "B", "C", ""])
+            _pt_msp = st.number_input("Model spread", value=0.0, step=0.1)
+            _pt_mtot = st.number_input("Model total",  value=0.0, step=0.1)
+            _pt_notes = st.text_input("Notes (optional)", placeholder="e.g. fading public on Alabama")
+            _pt_submit = st.form_submit_button("Log Pick")
+
+        if _pt_submit:
+            if not _pt_home or not _pt_away:
+                st.error("Home and away team are required.")
+            else:
+                _ok = _log_pick(
+                    season=int(_pt_season), week=int(_pt_week),
+                    home_team=_pt_home.strip(), away_team=_pt_away.strip(),
+                    bet_side=_pt_bside, bet_type=_pt_btype,
+                    model_spread=_pt_msp, model_total=_pt_mtot,
+                    line_at_bet=_pt_line, edge_grade=_pt_grade, notes=_pt_notes,
+                )
+                if _ok:
+                    st.success(f"Logged: {_pt_away} @ {_pt_home} — {_pt_bside} {_pt_btype} at {_pt_line:+.1f}")
+                    st.cache_data.clear()
+                    st.rerun()
+                else:
+                    st.warning("A pick for this game + bet type already exists.")
+
+    # ── Tab 2: Update results ──────────────────────────────────────────
+    with _pt_tab2:
+        st.subheader("Update closing lines & outcomes")
+
+        _pending = _pt_log[_pt_log["won"].isna() | (_pt_log["won"] == "None")]
+        if _pending.empty:
+            st.success("All picks are settled.")
+        else:
+            st.caption(f"{len(_pending)} pick(s) need updating.")
+            for _, _pr in _pending.iterrows():
+                _key = f"upd_{_pr['season']}_{_pr['week']}_{_pr['home_team']}_{_pr['away_team']}_{_pr['bet_type']}"
+                with st.expander(f"Wk {_pr['week']} — {_pr['away_team']} @ {_pr['home_team']}  ({_pr['bet_type'].upper()})"):
+                    st.write(f"**Bet:** {_pr['bet_side']}  |  **Line:** {_pr['line_at_bet']:+.1f}  |  **Grade:** {_pr['edge_grade']}")
+                    _uc1, _uc2 = st.columns(2)
+                    with _uc1:
+                        st.markdown("**Closing line**")
+                        _cl_val = st.number_input("Closing line", value=float(_pr["line_at_bet"] or 0), step=0.5, key=f"cl_{_key}")
+                        if st.button("Save closing line", key=f"clbtn_{_key}"):
+                            _upd_cl(
+                                int(_pr["season"]), int(_pr["week"]),
+                                _pr["home_team"], _pr["away_team"],
+                                _pr["bet_type"], _cl_val,
+                            )
+                            st.success("Closing line saved.")
+                            st.rerun()
+                    with _uc2:
+                        st.markdown("**Final score**")
+                        _hs = st.number_input("Home score", min_value=0, step=1, key=f"hs_{_key}")
+                        _as = st.number_input("Away score", min_value=0, step=1, key=f"as_{_key}")
+                        if st.button("Record result", key=f"resbtn_{_key}"):
+                            _n = _upd_outcome(
+                                int(_pr["season"]), int(_pr["week"]),
+                                _pr["home_team"], _pr["away_team"],
+                                float(_hs), float(_as),
+                            )
+                            st.success(f"Result recorded for {_n} pick(s).")
+                            st.rerun()
+
+    # ── Tab 3: Full log ────────────────────────────────────────────────
+    with _pt_tab3:
+        st.subheader("Full pick log")
+        if _pt_log.empty:
+            st.info("No picks yet.")
+        else:
+            _disp = _pt_log.copy()
+            _disp["won"] = _disp["won"].map(
+                lambda v: "✅ Win" if str(v).lower() == "true"
+                else ("❌ Loss" if str(v).lower() == "false" else "⏳ Pending")
+            )
+            st.dataframe(_disp, use_container_width=True, hide_index=True)
+
 
 # ── Page: Head-to-Head ────────────────────────────────────────────────────
 elif page == "⚔️ Head-to-Head":

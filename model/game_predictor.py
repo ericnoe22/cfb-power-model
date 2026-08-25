@@ -44,7 +44,7 @@ def predict_spread(home_composite, away_composite, neutral=False):
 def predict_total(home_composite, away_composite,
                   home_off_rating=None, away_off_rating=None,
                   home_def_rating=None, away_def_rating=None,
-                  league_avg_off=27.2,
+                  league_avg_off=25.7,
                   weather_adj=0.0):
     """
     Predict the game total (combined score).
@@ -65,12 +65,15 @@ def predict_total(home_composite, away_composite,
         # SP+ offense/defense breakdown — most accurate
         home_expected = home_off_rating + away_def_rating - league_avg_off
         away_expected = away_off_rating + home_def_rating - league_avg_off
-        # Floor: no team should be expected to score fewer than 17 pts,
-        # even against an elite defense. The lowest-total FBS games
-        # (Minnesota/Iowa type slugfests) still land around 35-36 pts combined.
-        home_expected = max(17.0, home_expected)
-        away_expected = max(17.0, away_expected)
+        # Per-team floor/ceiling: even the worst FBS offense scores 17;
+        # even the best offense against the worst defense caps at 38 —
+        # SP+ extreme values compound unrealistically without this ceiling.
+        home_expected = max(17.0, min(38.0, home_expected))
+        away_expected = max(17.0, min(38.0, away_expected))
         base_total = home_expected + away_expected
+        # Total floor: two evenly matched G5 teams still combine for ~42 pts;
+        # the per-team floor of 17 alone bottoms out too low for those matchups.
+        base_total = max(42.0, base_total)
     else:
         # Fallback: composite ratings with conservative scaling factor.
         # Composites reflect overall team quality (offense + defense), so high
@@ -83,8 +86,24 @@ def predict_total(home_composite, away_composite,
     return round(base_total, 1)
 
 
+def _week_confidence(week):
+    """
+    Confidence multiplier based on how many weeks of in-season data exist.
+    Preseason SP+/FPI are projections; week 6+ ratings incorporate real results.
+    """
+    if week is None or week == 0:
+        return 0.60   # preseason
+    if week <= 2:
+        return 0.70
+    if week <= 4:
+        return 0.80
+    if week <= 7:
+        return 0.90
+    return 1.00       # week 8+ — ratings are battle-tested
+
+
 def predict_game(home_team, away_team, ratings_df, neutral=False,
-                 weather_adj_total=0.0, weather_adj_spread=0.0):
+                 weather_adj_total=0.0, weather_adj_spread=0.0, week=None):
     """
     Predict spread and total for a single game.
 
@@ -122,17 +141,30 @@ def predict_game(home_team, away_team, ratings_df, neutral=False,
                            home_def_rating=h_def, away_def_rating=a_def,
                            weather_adj=weather_adj_total)
 
-    # Confidence: higher when both teams have full data
+    # ── Confidence ────────────────────────────────────────────────────────
+    # Combines two signals:
+    #   1. Week-based reliability (preseason ratings are projections, not results)
+    #   2. Rating-system agreement (SP+ and FPI leaning same direction = more signal)
     def _has_val(row, col):
         vals = row[col].values if col in row.columns else []
         return len(vals) > 0 and not pd.isna(vals[0])
 
-    data_completeness = sum([
-        1 if _has_val(home_row, "sp_plus") else 0,
-        1 if _has_val(home_row, "elo")     else 0,
-        1 if _has_val(away_row, "sp_plus") else 0,
-        1 if _has_val(away_row, "elo")     else 0,
-    ]) / 4
+    week_conf = _week_confidence(week)
+
+    # Agreement bonus: do SP+ and FPI both favour the same side?
+    h_sp_norm = home_row["sp_plus_norm"].values[0] if "sp_plus_norm" in home_row.columns else None
+    a_sp_norm = away_row["sp_plus_norm"].values[0] if "sp_plus_norm" in away_row.columns else None
+    h_fpi_norm = home_row["fpi_norm"].values[0]    if "fpi_norm"     in home_row.columns else None
+    a_fpi_norm = away_row["fpi_norm"].values[0]    if "fpi_norm"     in away_row.columns else None
+
+    agreement_bonus = 0.0
+    if None not in (h_sp_norm, a_sp_norm, h_fpi_norm, a_fpi_norm):
+        sp_home_favoured  = (h_sp_norm  - a_sp_norm)  > 0
+        fpi_home_favoured = (h_fpi_norm - a_fpi_norm) > 0
+        if sp_home_favoured == fpi_home_favoured:
+            agreement_bonus = 0.10   # both systems agree on winner
+
+    confidence = round(min(1.0, week_conf + agreement_bonus), 2)
 
     return {
         "home_team": home_team,
@@ -143,11 +175,11 @@ def predict_game(home_team, away_team, ratings_df, neutral=False,
         "predicted_spread": round(spread, 1),
         "predicted_total":  round(total, 1),
         "weather_total_adj": weather_adj_total,
-        "confidence": round(data_completeness, 2),
+        "confidence": confidence,
     }
 
 
-def predict_all_games(schedule_df, ratings_df, fcs_lookup=None):
+def predict_all_games(schedule_df, ratings_df, fcs_lookup=None, week=None):
     """
     Run predictions for every game in the schedule.
     schedule_df: needs homeTeam, awayTeam, neutralSite columns.
@@ -192,6 +224,7 @@ def predict_all_games(schedule_df, ratings_df, fcs_lookup=None):
             pred["away_composite"] = None if fbs_is_home else fbs_comp
             pred["weather_total_adj"] = 0.0
         else:
+            game_week = week or (int(row["week"]) if pd.notna(row.get("week")) else None)
             pred = predict_game(
                 home_team=home,
                 away_team=away,
@@ -199,6 +232,7 @@ def predict_all_games(schedule_df, ratings_df, fcs_lookup=None):
                 neutral=row.get("neutralSite", False),
                 weather_adj_total=row.get("weather_total_adj", 0.0),
                 weather_adj_spread=row.get("weather_spread_adj", 0.0),
+                week=game_week,
             )
             pred["home_team"] = home
             pred["away_team"] = away

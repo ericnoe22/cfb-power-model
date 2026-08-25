@@ -26,6 +26,16 @@ TEAM_NAME_MAP = {
     "FIU":                        "Florida International",
     "UTSA":                       "UT San Antonio",
     "Sam Houston State":          "Sam Houston",
+    # Owls Insight mascot-suffixed names missed by the stripper
+    "Syracuse Orange":            "Syracuse",
+    "Minnesota Golden Gophers":   "Minnesota",
+    "Louisiana Ragin Cajuns":     "Louisiana",
+    # FCS opponent variants → CFBD schedule names
+    "Albany":                     "UAlbany",
+    "Nicholls State":             "Nicholls",
+    "Long Island":                "Long Island University",
+    "Bethune Cookman":            "Bethune-Cookman",
+    "UTRGV":                      "UT Rio Grande Valley",
 }
 
 # Reverse map: CFBD name → canonical display name (for readability)

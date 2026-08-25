@@ -26,6 +26,17 @@ BOOK_PRIORITY = ["draftkings", "fanduel", "betmgm", "bet365", "caesars",
 
 # Owls Insight uses "School Mascot" format — strip known mascots
 # to match CFBD team names (school name only)
+# Owls-specific name overrides applied BEFORE mascot stripping.
+# Handles cases where Owls appends a partial mascot or uses a non-standard suffix.
+_OWLS_OVERRIDES = {
+    "Army Black":          "Army",        # Black Knights → strips to "Army Black"
+    "Navy Midshipmen":     "Navy",
+    "Delaware Blue Hens":  "Delaware",
+    "Maryland Terrapins":  "Maryland",
+    "Albany NY":           "UAlbany",
+    "Connecticut":         "UConn",
+}
+
 MASCOT_STRIP = [
     # Multi-word mascots first (order matters — longest match wins)
     "Crimson Tide", "Nittany Lions", "Tar Heels", "Blue Devils", "Demon Deacons",
@@ -64,6 +75,9 @@ def _clean_team_name(raw_name):
     Falls back to normalize() which handles known CFBD variants.
     """
     name = raw_name.strip()
+    # Exact overrides first (Owls-specific naming quirks)
+    if name in _OWLS_OVERRIDES:
+        return _OWLS_OVERRIDES[name]
     # Strip trailing venue notes like "(Neutral Venue)" but NOT state disambiguators
     # like "(OH)" or "(FL)" — those are part of the canonical team name.
     import re
@@ -74,6 +88,10 @@ def _clean_team_name(raw_name):
         if name_lower.endswith(mascot.lower()):
             cleaned = name[: -len(mascot)].strip()
             if cleaned:
+                # Re-check overrides after mascot strip (e.g. "Army Black Knights"
+                # → strip "Knights" → "Army Black" → override → "Army")
+                if cleaned in _OWLS_OVERRIDES:
+                    return _OWLS_OVERRIDES[cleaned]
                 return normalize(cleaned)
     return normalize(name)
 
@@ -233,7 +251,7 @@ def fetch_ncaaf_lines(force_refresh=False):
 
     for df in [consensus_df, multibook_df]:
         if not df.empty and "commence_time" in df.columns:
-            df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce")
+            df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce", format="ISO8601")
 
     if not consensus_df.empty:
         consensus_df = (
@@ -281,58 +299,20 @@ def fetch_ncaaf_schedule():
 
     df = pd.DataFrame(rows)
     if not df.empty and "commence_time" in df.columns:
-        df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce")
+        df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce", format="ISO8601")
         df = df.sort_values("commence_dt").reset_index(drop=True)
     return df
 
 
 def fetch_ncaaf_win_totals():
     """
-    Fetch season win total lines (futures) for NCAAF teams.
-    Tries the futures endpoint; returns DataFrame with team, wins_line, over_odds,
-    under_odds, book columns.  Returns empty DataFrame if unavailable.
+    Owls Insight does not expose a season win totals endpoint — their API only
+    covers game-level lines (ncaaf/odds, ncaaf/spreads, ncaaf/totals, ncaaf/moneyline).
+    Win totals/futures require a higher subscription tier (ncaaf/props → 403).
+
+    Callers should use the manual CSV at cache/win_totals_{year}_manual.csv instead.
     """
-    # Try futures endpoint — may require higher subscription tier
-    for path in ("ncaaf/futures", "ncaaf/odds/futures"):
-        raw = _get_endpoint(path)
-        if raw:
-            break
-    else:
-        return pd.DataFrame()
-
-    rows = []
-    markets = raw if isinstance(raw, list) else list(raw.values())
-    for item in markets:
-        team_raw = item.get("team", item.get("name", item.get("home_team", "")))
-        team = _clean_team_name(team_raw) if team_raw else ""
-        for bm in item.get("bookmakers", [item]):
-            book = bm.get("title", bm.get("key", ""))
-            for mkt in bm.get("markets", [bm]):
-                if "win" not in str(mkt.get("key", "")).lower():
-                    continue
-                for outcome in mkt.get("outcomes", []):
-                    if outcome.get("name", "").lower() == "over":
-                        rows.append({
-                            "team":       team,
-                            "wins_line":  outcome.get("point"),
-                            "over_odds":  outcome.get("price"),
-                            "under_odds": next(
-                                (o.get("price") for o in mkt.get("outcomes", [])
-                                 if o.get("name", "").lower() == "under"),
-                                None
-                            ),
-                            "book": book,
-                        })
-
-    df = pd.DataFrame(rows)
-    # Keep best (highest) over line per team across books
-    if not df.empty:
-        df = (
-            df.sort_values("wins_line", ascending=False)
-            .drop_duplicates(subset=["team"])
-            .reset_index(drop=True)
-        )
-    return df
+    return pd.DataFrame()
 
 
 def _get_endpoint(path):

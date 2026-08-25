@@ -1,0 +1,968 @@
+[
+  {
+    "team": "Ohio State",
+    "sagarin_name": "Ohio State",
+    "sagarin_rating": 103.07,
+    "predictor": 103.07,
+    "sagarin_rank": 1
+  },
+  {
+    "team": "Oregon",
+    "sagarin_name": "Oregon",
+    "sagarin_rating": 101.74,
+    "predictor": 101.74,
+    "sagarin_rank": 2
+  },
+  {
+    "team": "Notre Dame",
+    "sagarin_name": "Notre Dame",
+    "sagarin_rating": 101.0,
+    "predictor": 101.0,
+    "sagarin_rank": 3
+  },
+  {
+    "team": "Indiana",
+    "sagarin_name": "Indiana",
+    "sagarin_rating": 100.44,
+    "predictor": 100.44,
+    "sagarin_rank": 4
+  },
+  {
+    "team": "Texas",
+    "sagarin_name": "Texas",
+    "sagarin_rating": 98.5,
+    "predictor": 98.5,
+    "sagarin_rank": 5
+  },
+  {
+    "team": "Georgia",
+    "sagarin_name": "Georgia",
+    "sagarin_rating": 97.38,
+    "predictor": 97.38,
+    "sagarin_rank": 6
+  },
+  {
+    "team": "Miami",
+    "sagarin_name": "Miami-Florida",
+    "sagarin_rating": 95.73,
+    "predictor": 95.73,
+    "sagarin_rank": 7
+  },
+  {
+    "team": "Texas A&M",
+    "sagarin_name": "Texas A&M",
+    "sagarin_rating": 92.87,
+    "predictor": 92.87,
+    "sagarin_rank": 8
+  },
+  {
+    "team": "Oklahoma",
+    "sagarin_name": "Oklahoma",
+    "sagarin_rating": 92.66,
+    "predictor": 92.66,
+    "sagarin_rank": 9
+  },
+  {
+    "team": "LSU",
+    "sagarin_name": "LSU",
+    "sagarin_rating": 92.31,
+    "predictor": 92.31,
+    "sagarin_rank": 10
+  },
+  {
+    "team": "USC",
+    "sagarin_name": "Southern California",
+    "sagarin_rating": 92.11,
+    "predictor": 92.11,
+    "sagarin_rank": 11
+  },
+  {
+    "team": "Texas Tech",
+    "sagarin_name": "Texas Tech",
+    "sagarin_rating": 92.08,
+    "predictor": 92.08,
+    "sagarin_rank": 12
+  },
+  {
+    "team": "Michigan",
+    "sagarin_name": "Michigan",
+    "sagarin_rating": 91.82,
+    "predictor": 91.82,
+    "sagarin_rank": 13
+  },
+  {
+    "team": "Alabama",
+    "sagarin_name": "Alabama",
+    "sagarin_rating": 91.76,
+    "predictor": 91.76,
+    "sagarin_rank": 14
+  },
+  {
+    "team": "Ole Miss",
+    "sagarin_name": "Mississippi",
+    "sagarin_rating": 91.18,
+    "predictor": 91.18,
+    "sagarin_rank": 15
+  },
+  {
+    "team": "Florida",
+    "sagarin_name": "Florida",
+    "sagarin_rating": 87.91,
+    "predictor": 87.91,
+    "sagarin_rank": 16
+  },
+  {
+    "team": "Tennessee",
+    "sagarin_name": "Tennessee",
+    "sagarin_rating": 87.9,
+    "predictor": 87.9,
+    "sagarin_rank": 17
+  },
+  {
+    "team": "Penn State",
+    "sagarin_name": "Penn State",
+    "sagarin_rating": 87.68,
+    "predictor": 87.68,
+    "sagarin_rank": 18
+  },
+  {
+    "team": "Washington",
+    "sagarin_name": "Washington",
+    "sagarin_rating": 87.63,
+    "predictor": 87.63,
+    "sagarin_rank": 19
+  },
+  {
+    "team": "Iowa",
+    "sagarin_name": "Iowa",
+    "sagarin_rating": 85.4,
+    "predictor": 85.4,
+    "sagarin_rank": 20
+  },
+  {
+    "team": "Missouri",
+    "sagarin_name": "Missouri",
+    "sagarin_rating": 84.98,
+    "predictor": 84.98,
+    "sagarin_rank": 21
+  },
+  {
+    "team": "Auburn",
+    "sagarin_name": "Auburn",
+    "sagarin_rating": 84.38,
+    "predictor": 84.38,
+    "sagarin_rank": 22
+  },
+  {
+    "team": "South Carolina",
+    "sagarin_name": "South Carolina",
+    "sagarin_rating": 84.2,
+    "predictor": 84.2,
+    "sagarin_rank": 23
+  },
+  {
+    "team": "BYU",
+    "sagarin_name": "BYU",
+    "sagarin_rating": 84.02,
+    "predictor": 84.02,
+    "sagarin_rank": 24
+  },
+  {
+    "team": "SMU",
+    "sagarin_name": "SMU",
+    "sagarin_rating": 83.06,
+    "predictor": 83.06,
+    "sagarin_rank": 25
+  },
+  {
+    "team": "Wisconsin",
+    "sagarin_name": "Wisconsin",
+    "sagarin_rating": 82.49,
+    "predictor": 82.49,
+    "sagarin_rank": 26
+  },
+  {
+    "team": "Louisville",
+    "sagarin_name": "Louisville",
+    "sagarin_rating": 82.09,
+    "predictor": 82.09,
+    "sagarin_rank": 27
+  },
+  {
+    "team": "Clemson",
+    "sagarin_name": "Clemson",
+    "sagarin_rating": 81.63,
+    "predictor": 81.63,
+    "sagarin_rank": 28
+  },
+  {
+    "team": "Utah",
+    "sagarin_name": "Utah",
+    "sagarin_rating": 81.6,
+    "predictor": 81.6,
+    "sagarin_rank": 29
+  },
+  {
+    "team": "Illinois",
+    "sagarin_name": "Illinois",
+    "sagarin_rating": 81.12,
+    "predictor": 81.12,
+    "sagarin_rank": 30
+  },
+  {
+    "team": "Nebraska",
+    "sagarin_name": "Nebraska",
+    "sagarin_rating": 80.57,
+    "predictor": 80.57,
+    "sagarin_rank": 31
+  },
+  {
+    "team": "Vanderbilt",
+    "sagarin_name": "Vanderbilt",
+    "sagarin_rating": 80.09,
+    "predictor": 80.09,
+    "sagarin_rank": 32
+  },
+  {
+    "team": "Kentucky",
+    "sagarin_name": "Kentucky",
+    "sagarin_rating": 79.45,
+    "predictor": 79.45,
+    "sagarin_rank": 33
+  },
+  {
+    "team": "Minnesota",
+    "sagarin_name": "Minnesota",
+    "sagarin_rating": 79.37,
+    "predictor": 79.37,
+    "sagarin_rank": 34
+  },
+  {
+    "team": "UCLA",
+    "sagarin_name": "UCLA",
+    "sagarin_rating": 79.24,
+    "predictor": 79.24,
+    "sagarin_rank": 35
+  },
+  {
+    "team": "Pittsburgh",
+    "sagarin_name": "Pittsburgh",
+    "sagarin_rating": 78.78,
+    "predictor": 78.78,
+    "sagarin_rank": 36
+  },
+  {
+    "team": "Houston",
+    "sagarin_name": "Houston",
+    "sagarin_rating": 78.71,
+    "predictor": 78.71,
+    "sagarin_rank": 37
+  },
+  {
+    "team": "Mississippi State",
+    "sagarin_name": "Mississippi State",
+    "sagarin_rating": 78.28,
+    "predictor": 78.28,
+    "sagarin_rank": 38
+  },
+  {
+    "team": "Kansas State",
+    "sagarin_name": "Kansas State",
+    "sagarin_rating": 77.98,
+    "predictor": 77.98,
+    "sagarin_rank": 39
+  },
+  {
+    "team": "Florida State",
+    "sagarin_name": "Florida State",
+    "sagarin_rating": 77.72,
+    "predictor": 77.72,
+    "sagarin_rank": 40
+  },
+  {
+    "team": "Arizona",
+    "sagarin_name": "Arizona",
+    "sagarin_rating": 77.7,
+    "predictor": 77.7,
+    "sagarin_rank": 41
+  },
+  {
+    "team": "Virginia Tech",
+    "sagarin_name": "Virginia Tech",
+    "sagarin_rating": 77.49,
+    "predictor": 77.49,
+    "sagarin_rank": 42
+  },
+  {
+    "team": "Northwestern",
+    "sagarin_name": "Northwestern",
+    "sagarin_rating": 77.49,
+    "predictor": 77.49,
+    "sagarin_rank": 43
+  },
+  {
+    "team": "Virginia",
+    "sagarin_name": "Virginia",
+    "sagarin_rating": 77.43,
+    "predictor": 77.43,
+    "sagarin_rank": 44
+  },
+  {
+    "team": "Arizona State",
+    "sagarin_name": "Arizona State",
+    "sagarin_rating": 77.11,
+    "predictor": 77.11,
+    "sagarin_rank": 45
+  },
+  {
+    "team": "TCU",
+    "sagarin_name": "TCU",
+    "sagarin_rating": 76.92,
+    "predictor": 76.92,
+    "sagarin_rank": 46
+  },
+  {
+    "team": "Georgia Tech",
+    "sagarin_name": "Georgia Tech",
+    "sagarin_rating": 76.31,
+    "predictor": 76.31,
+    "sagarin_rank": 47
+  },
+  {
+    "team": "Arkansas",
+    "sagarin_name": "Arkansas",
+    "sagarin_rating": 75.76,
+    "predictor": 75.76,
+    "sagarin_rank": 48
+  },
+  {
+    "team": "NC State",
+    "sagarin_name": "NC State",
+    "sagarin_rating": 75.29,
+    "predictor": 75.29,
+    "sagarin_rank": 49
+  },
+  {
+    "team": "Baylor",
+    "sagarin_name": "Baylor",
+    "sagarin_rating": 74.67,
+    "predictor": 74.67,
+    "sagarin_rank": 50
+  },
+  {
+    "team": "Oklahoma State",
+    "sagarin_name": "Oklahoma State",
+    "sagarin_rating": 74.55,
+    "predictor": 74.55,
+    "sagarin_rank": 51
+  },
+  {
+    "team": "Maryland",
+    "sagarin_name": "Maryland",
+    "sagarin_rating": 74.14,
+    "predictor": 74.14,
+    "sagarin_rank": 52
+  },
+  {
+    "team": "Kansas",
+    "sagarin_name": "Kansas",
+    "sagarin_rating": 74.06,
+    "predictor": 74.06,
+    "sagarin_rank": 53
+  },
+  {
+    "team": "California",
+    "sagarin_name": "California",
+    "sagarin_rating": 74.05,
+    "predictor": 74.05,
+    "sagarin_rank": 54
+  },
+  {
+    "team": "Rutgers",
+    "sagarin_name": "Rutgers",
+    "sagarin_rating": 73.3,
+    "predictor": 73.3,
+    "sagarin_rank": 55
+  },
+  {
+    "team": "West Virginia",
+    "sagarin_name": "West Virginia",
+    "sagarin_rating": 73.11,
+    "predictor": 73.11,
+    "sagarin_rank": 56
+  },
+  {
+    "team": "Wake Forest",
+    "sagarin_name": "Wake Forest",
+    "sagarin_rating": 72.71,
+    "predictor": 72.71,
+    "sagarin_rank": 57
+  },
+  {
+    "team": "Duke",
+    "sagarin_name": "Duke",
+    "sagarin_rating": 72.32,
+    "predictor": 72.32,
+    "sagarin_rank": 58
+  },
+  {
+    "team": "Michigan State",
+    "sagarin_name": "Michigan State",
+    "sagarin_rating": 72.15,
+    "predictor": 72.15,
+    "sagarin_rank": 59
+  },
+  {
+    "team": "UCF",
+    "sagarin_name": "Central Florida(UCF)",
+    "sagarin_rating": 71.77,
+    "predictor": 71.77,
+    "sagarin_rank": 60
+  },
+  {
+    "team": "North Carolina",
+    "sagarin_name": "North Carolina",
+    "sagarin_rating": 70.72,
+    "predictor": 70.72,
+    "sagarin_rank": 61
+  },
+  {
+    "team": "Purdue",
+    "sagarin_name": "Purdue",
+    "sagarin_rating": 70.4,
+    "predictor": 70.4,
+    "sagarin_rank": 62
+  },
+  {
+    "team": "Cincinnati",
+    "sagarin_name": "Cincinnati",
+    "sagarin_rating": 70.29,
+    "predictor": 70.29,
+    "sagarin_rank": 63
+  },
+  {
+    "team": "Colorado",
+    "sagarin_name": "Colorado",
+    "sagarin_rating": 69.8,
+    "predictor": 69.8,
+    "sagarin_rank": 64
+  },
+  {
+    "team": "Boise State",
+    "sagarin_name": "Boise State",
+    "sagarin_rating": 69.71,
+    "predictor": 69.71,
+    "sagarin_rank": 65
+  },
+  {
+    "team": "Syracuse",
+    "sagarin_name": "Syracuse",
+    "sagarin_rating": 69.2,
+    "predictor": 69.2,
+    "sagarin_rank": 66
+  },
+  {
+    "team": "Iowa State",
+    "sagarin_name": "Iowa State",
+    "sagarin_rating": 68.73,
+    "predictor": 68.73,
+    "sagarin_rank": 67
+  },
+  {
+    "team": "Stanford",
+    "sagarin_name": "Stanford",
+    "sagarin_rating": 66.8,
+    "predictor": 66.8,
+    "sagarin_rank": 69
+  },
+  {
+    "team": "Boston College",
+    "sagarin_name": "Boston College",
+    "sagarin_rating": 65.7,
+    "predictor": 65.7,
+    "sagarin_rank": 71
+  },
+  {
+    "team": "San Diego State",
+    "sagarin_name": "San Diego State",
+    "sagarin_rating": 64.58,
+    "predictor": 64.58,
+    "sagarin_rank": 72
+  },
+  {
+    "team": "Navy",
+    "sagarin_name": "Navy",
+    "sagarin_rating": 64.23,
+    "predictor": 64.23,
+    "sagarin_rank": 73
+  },
+  {
+    "team": "UNLV",
+    "sagarin_name": "UNLV",
+    "sagarin_rating": 64.16,
+    "predictor": 64.16,
+    "sagarin_rank": 74
+  },
+  {
+    "team": "UTSA",
+    "sagarin_name": "UTSA",
+    "sagarin_rating": 63.92,
+    "predictor": 63.92,
+    "sagarin_rank": 75
+  },
+  {
+    "team": "North Dakota State",
+    "sagarin_name": "North Dakota State",
+    "sagarin_rating": 63.83,
+    "predictor": 63.83,
+    "sagarin_rank": 76
+  },
+  {
+    "team": "Tulane",
+    "sagarin_name": "Tulane",
+    "sagarin_rating": 63.39,
+    "predictor": 63.39,
+    "sagarin_rank": 77
+  },
+  {
+    "team": "Memphis",
+    "sagarin_name": "Memphis",
+    "sagarin_rating": 63.24,
+    "predictor": 63.24,
+    "sagarin_rank": 78
+  },
+  {
+    "team": "South Florida",
+    "sagarin_name": "South Florida",
+    "sagarin_rating": 63.15,
+    "predictor": 63.15,
+    "sagarin_rank": 79
+  },
+  {
+    "team": "Army",
+    "sagarin_name": "Army West Point",
+    "sagarin_rating": 62.91,
+    "predictor": 62.91,
+    "sagarin_rank": 80
+  },
+  {
+    "team": "New Mexico",
+    "sagarin_name": "New Mexico",
+    "sagarin_rating": 62.81,
+    "predictor": 62.81,
+    "sagarin_rank": 81
+  },
+  {
+    "team": "James Madison",
+    "sagarin_name": "James Madison",
+    "sagarin_rating": 62.67,
+    "predictor": 62.67,
+    "sagarin_rank": 82
+  },
+  {
+    "team": "Texas State",
+    "sagarin_name": "Texas State",
+    "sagarin_rating": 61.61,
+    "predictor": 61.61,
+    "sagarin_rank": 83
+  },
+  {
+    "team": "Washington State",
+    "sagarin_name": "Washington State",
+    "sagarin_rating": 61.44,
+    "predictor": 61.44,
+    "sagarin_rank": 84
+  },
+  {
+    "team": "Hawai'i",
+    "sagarin_name": "Hawai'i",
+    "sagarin_rating": 60.58,
+    "predictor": 60.58,
+    "sagarin_rank": 85
+  },
+  {
+    "team": "East Carolina",
+    "sagarin_name": "East Carolina",
+    "sagarin_rating": 60.51,
+    "predictor": 60.51,
+    "sagarin_rank": 86
+  },
+  {
+    "team": "Old Dominion",
+    "sagarin_name": "Old Dominion",
+    "sagarin_rating": 60.09,
+    "predictor": 60.09,
+    "sagarin_rank": 87
+  },
+  {
+    "team": "Fresno State",
+    "sagarin_name": "Fresno State",
+    "sagarin_rating": 59.78,
+    "predictor": 59.78,
+    "sagarin_rank": 88
+  },
+  {
+    "team": "Air Force",
+    "sagarin_name": "Air Force",
+    "sagarin_rating": 58.76,
+    "predictor": 58.76,
+    "sagarin_rank": 90
+  },
+  {
+    "team": "Liberty",
+    "sagarin_name": "Liberty",
+    "sagarin_rating": 58.2,
+    "predictor": 58.2,
+    "sagarin_rank": 92
+  },
+  {
+    "team": "Western Kentucky",
+    "sagarin_name": "Western Kentucky",
+    "sagarin_rating": 57.94,
+    "predictor": 57.94,
+    "sagarin_rank": 93
+  },
+  {
+    "team": "Marshall",
+    "sagarin_name": "Marshall",
+    "sagarin_rating": 57.57,
+    "predictor": 57.57,
+    "sagarin_rank": 94
+  },
+  {
+    "team": "Western Michigan",
+    "sagarin_name": "Western Michigan",
+    "sagarin_rating": 57.53,
+    "predictor": 57.53,
+    "sagarin_rank": 95
+  },
+  {
+    "team": "Florida Atlantic",
+    "sagarin_name": "Florida Atlantic",
+    "sagarin_rating": 57.47,
+    "predictor": 57.47,
+    "sagarin_rank": 96
+  },
+  {
+    "team": "North Texas",
+    "sagarin_name": "North Texas",
+    "sagarin_rating": 56.76,
+    "predictor": 56.76,
+    "sagarin_rank": 98
+  },
+  {
+    "team": "Tulsa",
+    "sagarin_name": "Tulsa",
+    "sagarin_rating": 56.53,
+    "predictor": 56.53,
+    "sagarin_rank": 99
+  },
+  {
+    "team": "Toledo",
+    "sagarin_name": "Toledo",
+    "sagarin_rating": 56.53,
+    "predictor": 56.53,
+    "sagarin_rank": 100
+  },
+  {
+    "team": "Miami (OH)",
+    "sagarin_name": "Miami-Ohio",
+    "sagarin_rating": 56.45,
+    "predictor": 56.45,
+    "sagarin_rank": 101
+  },
+  {
+    "team": "Troy",
+    "sagarin_name": "Troy",
+    "sagarin_rating": 56.23,
+    "predictor": 56.23,
+    "sagarin_rank": 102
+  },
+  {
+    "team": "Oregon State",
+    "sagarin_name": "Oregon State",
+    "sagarin_rating": 56.18,
+    "predictor": 56.18,
+    "sagarin_rank": 103
+  },
+  {
+    "team": "Jacksonville State",
+    "sagarin_name": "Jacksonville State",
+    "sagarin_rating": 55.87,
+    "predictor": 55.87,
+    "sagarin_rank": 106
+  },
+  {
+    "team": "Temple",
+    "sagarin_name": "Temple",
+    "sagarin_rating": 55.61,
+    "predictor": 55.61,
+    "sagarin_rank": 107
+  },
+  {
+    "team": "Utah State",
+    "sagarin_name": "Utah State",
+    "sagarin_rating": 55.26,
+    "predictor": 55.26,
+    "sagarin_rank": 109
+  },
+  {
+    "team": "UConn",
+    "sagarin_name": "Connecticut",
+    "sagarin_rating": 55.22,
+    "predictor": 55.22,
+    "sagarin_rank": 110
+  },
+  {
+    "team": "Louisiana",
+    "sagarin_name": "Louisiana-Lafayette",
+    "sagarin_rating": 55.07,
+    "predictor": 55.07,
+    "sagarin_rank": 111
+  },
+  {
+    "team": "Louisiana Tech",
+    "sagarin_name": "Louisiana Tech",
+    "sagarin_rating": 54.99,
+    "predictor": 54.99,
+    "sagarin_rank": 112
+  },
+  {
+    "team": "Colorado State",
+    "sagarin_name": "Colorado State",
+    "sagarin_rating": 54.84,
+    "predictor": 54.84,
+    "sagarin_rank": 113
+  },
+  {
+    "team": "Delaware",
+    "sagarin_name": "Delaware",
+    "sagarin_rating": 53.94,
+    "predictor": 53.94,
+    "sagarin_rank": 114
+  },
+  {
+    "team": "Arkansas State",
+    "sagarin_name": "Arkansas State",
+    "sagarin_rating": 53.82,
+    "predictor": 53.82,
+    "sagarin_rank": 115
+  },
+  {
+    "team": "Wyoming",
+    "sagarin_name": "Wyoming",
+    "sagarin_rating": 53.8,
+    "predictor": 53.8,
+    "sagarin_rank": 116
+  },
+  {
+    "team": "App State",
+    "sagarin_name": "Appalachian State",
+    "sagarin_rating": 53.78,
+    "predictor": 53.78,
+    "sagarin_rank": 117
+  },
+  {
+    "team": "South Alabama",
+    "sagarin_name": "South Alabama",
+    "sagarin_rating": 53.75,
+    "predictor": 53.75,
+    "sagarin_rank": 118
+  },
+  {
+    "team": "Georgia Southern",
+    "sagarin_name": "Georgia Southern",
+    "sagarin_rating": 53.34,
+    "predictor": 53.34,
+    "sagarin_rank": 120
+  },
+  {
+    "team": "Kennesaw State",
+    "sagarin_name": "Kennesaw State",
+    "sagarin_rating": 53.34,
+    "predictor": 53.34,
+    "sagarin_rank": 121
+  },
+  {
+    "team": "Central Michigan",
+    "sagarin_name": "Central Michigan",
+    "sagarin_rating": 53.14,
+    "predictor": 53.14,
+    "sagarin_rank": 122
+  },
+  {
+    "team": "Ohio",
+    "sagarin_name": "Ohio",
+    "sagarin_rating": 53.0,
+    "predictor": 53.0,
+    "sagarin_rank": 123
+  },
+  {
+    "team": "Nevada",
+    "sagarin_name": "Nevada",
+    "sagarin_rating": 52.05,
+    "predictor": 52.05,
+    "sagarin_rank": 127
+  },
+  {
+    "team": "Florida International",
+    "sagarin_name": "Fla. International",
+    "sagarin_rating": 51.97,
+    "predictor": 51.97,
+    "sagarin_rank": 128
+  },
+  {
+    "team": "Coastal Carolina",
+    "sagarin_name": "Coastal Carolina",
+    "sagarin_rating": 51.21,
+    "predictor": 51.21,
+    "sagarin_rank": 131
+  },
+  {
+    "team": "Eastern Michigan",
+    "sagarin_name": "Eastern Michigan",
+    "sagarin_rating": 51.09,
+    "predictor": 51.09,
+    "sagarin_rank": 133
+  },
+  {
+    "team": "San Jos\u00e9 State",
+    "sagarin_name": "San Jose State",
+    "sagarin_rating": 50.82,
+    "predictor": 50.82,
+    "sagarin_rank": 134
+  },
+  {
+    "team": "Rice",
+    "sagarin_name": "Rice",
+    "sagarin_rating": 50.61,
+    "predictor": 50.61,
+    "sagarin_rank": 136
+  },
+  {
+    "team": "Bowling Green",
+    "sagarin_name": "Bowling Green",
+    "sagarin_rating": 49.48,
+    "predictor": 49.48,
+    "sagarin_rank": 141
+  },
+  {
+    "team": "Buffalo",
+    "sagarin_name": "Buffalo",
+    "sagarin_rating": 49.06,
+    "predictor": 49.06,
+    "sagarin_rank": 142
+  },
+  {
+    "team": "New Mexico State",
+    "sagarin_name": "New Mexico State",
+    "sagarin_rating": 48.39,
+    "predictor": 48.39,
+    "sagarin_rank": 144
+  },
+  {
+    "team": "UAB",
+    "sagarin_name": "UAB",
+    "sagarin_rating": 48.17,
+    "predictor": 48.17,
+    "sagarin_rank": 145
+  },
+  {
+    "team": "Northern Illinois",
+    "sagarin_name": "Northern Illinois",
+    "sagarin_rating": 48.14,
+    "predictor": 48.14,
+    "sagarin_rank": 146
+  },
+  {
+    "team": "Missouri State",
+    "sagarin_name": "Missouri State",
+    "sagarin_rating": 48.11,
+    "predictor": 48.11,
+    "sagarin_rank": 147
+  },
+  {
+    "team": "Akron",
+    "sagarin_name": "Akron",
+    "sagarin_rating": 47.94,
+    "predictor": 47.94,
+    "sagarin_rank": 148
+  },
+  {
+    "team": "Georgia State",
+    "sagarin_name": "Georgia State",
+    "sagarin_rating": 47.38,
+    "predictor": 47.38,
+    "sagarin_rank": 153
+  },
+  {
+    "team": "Southern Miss",
+    "sagarin_name": "Southern Miss",
+    "sagarin_rating": 47.34,
+    "predictor": 47.34,
+    "sagarin_rank": 154
+  },
+  {
+    "team": "UTEP",
+    "sagarin_name": "UTEP",
+    "sagarin_rating": 46.71,
+    "predictor": 46.71,
+    "sagarin_rank": 158
+  },
+  {
+    "team": "UL Monroe",
+    "sagarin_name": "LouisianaMonroe(ULM)",
+    "sagarin_rating": 46.39,
+    "predictor": 46.39,
+    "sagarin_rank": 160
+  },
+  {
+    "team": "Middle Tennessee",
+    "sagarin_name": "Middle Tennessee",
+    "sagarin_rating": 46.11,
+    "predictor": 46.11,
+    "sagarin_rank": 164
+  },
+  {
+    "team": "Sacramento State",
+    "sagarin_name": "Sacramento State",
+    "sagarin_rating": 45.22,
+    "predictor": 45.22,
+    "sagarin_rank": 172
+  },
+  {
+    "team": "Kent State",
+    "sagarin_name": "Kent State",
+    "sagarin_rating": 44.3,
+    "predictor": 44.3,
+    "sagarin_rank": 177
+  },
+  {
+    "team": "Sam Houston State",
+    "sagarin_name": "Sam Houston State",
+    "sagarin_rating": 43.58,
+    "predictor": 43.58,
+    "sagarin_rank": 182
+  },
+  {
+    "team": "Charlotte",
+    "sagarin_name": "Charlotte",
+    "sagarin_rating": 42.87,
+    "predictor": 42.87,
+    "sagarin_rank": 185
+  },
+  {
+    "team": "Ball State",
+    "sagarin_name": "Ball State",
+    "sagarin_rating": 42.69,
+    "predictor": 42.69,
+    "sagarin_rank": 186
+  },
+  {
+    "team": "Massachusetts",
+    "sagarin_name": "Massachusetts",
+    "sagarin_rating": 35.9,
+    "predictor": 35.9,
+    "sagarin_rank": 226
+  }
+]

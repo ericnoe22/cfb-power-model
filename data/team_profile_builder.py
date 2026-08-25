@@ -32,7 +32,7 @@ import sys
 import pandas as pd
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from data.cfbd_fetcher import _get
+from data.cfbd_fetcher import _get, fetch_transfer_portal
 
 ROOT      = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 CACHE_DIR = os.path.join(ROOT, "cache")
@@ -119,6 +119,60 @@ def _fetch_ratings():
     return out
 
 
+def _fetch_portal(year=2026):
+    """
+    Load transfer portal data for the upcoming season.
+    Returns (departures, incoming):
+      departures: {(origin_team, "First Last"): destination_or_""}
+      incoming:   {team: [{"name", "position", "origin", "rating"}, ...]} top-rated first
+    """
+    try:
+        df = fetch_transfer_portal(year=year)
+    except Exception as e:
+        print(f"  WARNING: transfer portal fetch failed: {e}")
+        return {}, {}
+    if df.empty:
+        return {}, {}
+
+    df["name"] = (df["firstName"].fillna("") + " " + df["lastName"].fillna("")).str.strip()
+    departures = {
+        (row["origin"], row["name"]): row.get("destination") or ""
+        for _, row in df.iterrows() if row.get("origin")
+    }
+    incoming = {}
+    with_dest = df[df["destination"].notna()].copy()
+    with_dest["rating"] = pd.to_numeric(with_dest["rating"], errors="coerce").fillna(0.0)
+    for team, grp in with_dest.groupby("destination"):
+        top = grp.sort_values("rating", ascending=False).head(3)
+        incoming[team] = [
+            {"name": r["name"], "position": r.get("position") or "",
+             "origin": r.get("origin") or "", "rating": float(r["rating"])}
+            for _, r in top.iterrows()
+        ]
+    return departures, incoming
+
+
+def _tag_departure(player, team, departures):
+    """If the player left via the portal, add a 'departed_to' field."""
+    if player and (team, player["name"]) in departures:
+        player["departed_to"] = departures[(team, player["name"])] or "unknown"
+    return player
+
+
+def _validate_roster(player, team_roster):
+    """
+    Cross-check a player against the ESPN 2026 roster.
+    If they're not found and weren't already flagged via portal,
+    mark as not on 2026 roster (graduated, silent transfer, etc.).
+    """
+    if not player or not team_roster or player.get("departed_to"):
+        return player
+    from data.espn_fetcher import is_on_roster
+    if not is_on_roster(player["name"], team_roster):
+        player["departed_to"] = "not on 2026 roster"
+    return player
+
+
 # ── Build profiles ───────────────────────────────────────────────────────────
 
 def build_team_profiles(year=2025, force=False):
@@ -146,6 +200,16 @@ def build_team_profiles(year=2025, force=False):
 
     print(f"Building profiles for {len(teams_to_build)} teams...")
     stats = _fetch_all_stats(year)
+    departures, incoming = _fetch_portal(year=year + 1)
+
+    # Load ESPN 2026 rosters for roster validation
+    try:
+        from data.espn_fetcher import load_fbs_rosters, get_qb_room
+        espn_rosters = load_fbs_rosters()
+        print(f"  ESPN rosters loaded: {len(espn_rosters)} teams")
+    except Exception as e:
+        print(f"  WARNING: ESPN rosters unavailable ({e}) — skipping roster validation")
+        espn_rosters = {}
 
     # Pre-pivot the stats we care about (one pass each)
     pass_yds  = _pivot_stats(stats, "passing",  "YDS")
@@ -228,6 +292,28 @@ def build_team_profiles(year=2025, force=False):
                     "tfl":   float(tfl_row["val"]),
                 }
 
+        # Flag any 2025 stat leaders who left via the transfer portal
+        top_qb       = _tag_departure(top_qb, team, departures)
+        top_rb       = _tag_departure(top_rb, team, departures)
+        top_wr       = _tag_departure(top_wr, team, departures)
+        top_defender = _tag_departure(top_defender, team, departures)
+
+        # Validate against ESPN 2026 roster — catches graduates and silent transfers
+        team_roster = espn_rosters.get(team, {})
+        top_qb       = _validate_roster(top_qb, team_roster)
+        top_rb       = _validate_roster(top_rb, team_roster)
+        top_wr       = _validate_roster(top_wr, team_roster)
+        top_defender = _validate_roster(top_defender, team_roster)
+
+        # Build QB room from ESPN 2026 roster (most senior first)
+        qb_room = []
+        if team_roster:
+            qb_room = [
+                {"name": qb["name"], "class": qb["class"], "jersey": qb["jersey"]}
+                for qb in get_qb_room(team_roster)
+            ]
+
+        prev = existing.get(team, {})
         profiles[team] = {
             "head_coach":      c["name"],
             "coaching_change": c["changed"],
@@ -236,11 +322,16 @@ def build_team_profiles(year=2025, force=False):
             "top_rb":          top_rb,
             "top_wr":          top_wr,
             "top_defender":    top_defender,
+            "qb_room":         qb_room,
+            "key_transfers_in": incoming.get(team, []),
             # returning_prod is a fraction (0.0–1.0); store as pct for readability
             "returning_prod_pct": round(r.get("returning_prod", 0.0) * 100, 1),
             # talent is raw recruit composite (e.g. 973 = elite)
             "talent_score":    round(r.get("talent", 0.0), 1),
-            "user_notes":      existing.get(team, {}).get("user_notes", ""),
+            # manually editable fields — preserved across rebuilds
+            "oc_name":    prev.get("oc_name", ""),
+            "dc_name":    prev.get("dc_name", ""),
+            "user_notes": prev.get("user_notes", ""),
         }
 
     os.makedirs(CACHE_DIR, exist_ok=True)
@@ -274,26 +365,83 @@ def format_profile_for_prompt(team, profiles):
     coach = p.get("head_coach", "")
     if coach and coach != "Unknown":
         tag = " (new coach)" if p.get("coaching_change") else ""
-        parts.append(f"{coach}{tag}")
+        parts.append(f"HC {coach}{tag}")
 
+    oc = p.get("oc_name", "").strip()
+    if oc:
+        parts.append(f"OC {oc}")
+
+    dc = p.get("dc_name", "").strip()
+    if dc:
+        parts.append(f"DC {dc}")
+
+    def _dest(player):
+        dest = player.get("departed_to", "")
+        if not dest:
+            return ""
+        if dest in ("unknown", "not on 2026 roster"):
+            return " (transferred out)"
+        return f" (transferred to {dest})"
+
+    # QB — lead with the 2026 reality, not 2025 stats of a player who is gone
     qb = p.get("top_qb")
+    qb_room = p.get("qb_room", [])
     if qb and qb.get("pass_yds", 0) > 100:
-        parts.append(f"QB {qb['name']} ({qb['pass_yds']} pass yds, {qb['pass_td']} TD)")
+        if qb.get("departed_to"):
+            # 2025 starter is gone — lead with the 2026 QB room
+            if qb_room:
+                starter = qb_room[0]
+                depth_str = (", " + ", ".join(f"{q['name']} ({q['class']})" for q in qb_room[1:3])
+                             if len(qb_room) > 1 else "")
+                dest_note = _dest(qb)
+                parts.append(
+                    f"2026 QB: {starter['name']} ({starter['class']})"
+                    f" — new starter after {qb['name']} departed{dest_note}"
+                    f"{depth_str}"
+                )
+            else:
+                parts.append(f"2026 QB situation unclear — {qb['name']} departed{_dest(qb)}")
+        else:
+            # Returning starter — look up class year from qb_room, then show 2025 stats
+            qb_class = next(
+                (q["class"] for q in qb_room if q["name"].lower().replace(".", "") ==
+                 qb["name"].lower().replace(".", "")),
+                "returning"
+            )
+            parts.append(f"2026 QB: {qb['name']} ({qb_class}"
+                         f", {qb['pass_yds']} pass yds / {qb['pass_td']} TD in 2025)")
 
+    # RB — only include if still on the team
     rb = p.get("top_rb")
     if rb and rb.get("rush_yds", 0) > 50:
-        parts.append(f"RB {rb['name']} ({rb['rush_yds']} rush yds)")
+        if not rb.get("departed_to"):
+            parts.append(f"2026 RB: {rb['name']} ({rb['rush_yds']} rush yds in 2025)")
+        else:
+            parts.append(f"lost top RB {rb['name']}{_dest(rb)}")
 
+    # WR — only include if still on the team
     wr = p.get("top_wr")
     if wr and wr.get("rec_yds", 0) > 50:
-        parts.append(f"WR {wr['name']} ({wr['rec_yds']} rec yds)")
+        if not wr.get("departed_to"):
+            parts.append(f"2026 WR: {wr['name']} ({wr['rec_yds']} rec yds in 2025)")
+        else:
+            parts.append(f"lost top WR {wr['name']}{_dest(wr)}")
 
+    # Defender — only include if still on the team
     defender = p.get("top_defender")
     if defender:
-        if defender.get("sacks", 0) >= 1.0:
-            parts.append(f"pass rusher {defender['name']} ({defender['sacks']} sacks)")
-        elif defender.get("tfl", 0) >= 3.0:
-            parts.append(f"LB/DL {defender['name']} ({defender['tfl']} TFL)")
+        if not defender.get("departed_to"):
+            if defender.get("sacks", 0) >= 1.0:
+                parts.append(f"2026 pass rusher: {defender['name']} ({defender['sacks']} sacks in 2025)")
+            elif defender.get("tfl", 0) >= 3.0:
+                parts.append(f"2026 LB/DL: {defender['name']} ({defender['tfl']} TFL in 2025)")
+        else:
+            parts.append(f"lost top defender {defender['name']}{_dest(defender)}")
+
+    transfers_in = p.get("key_transfers_in", [])
+    if transfers_in:
+        adds = ", ".join(f"{t['position']} {t['name']} (from {t['origin']})" for t in transfers_in)
+        parts.append(f"key transfer additions: {adds}")
 
     ret = p.get("returning_prod_pct", 0)
     if ret:

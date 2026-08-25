@@ -16,6 +16,9 @@ cache/*
 !cache/fpi_2026.csv
 !cache/fpi_projections_2026.csv
 !cache/elo_current.csv
+!cache/sagarin_2026.json
+!cache/team_intel_2026.json
+!cache/lines_live.csv
 
 # Streamlit: keep config.toml (theme), exclude secrets
 .streamlit/secrets.toml

@@ -66,6 +66,13 @@ def fetch_completed_games(year=CURRENT_SEASON, force_refresh=False):
     return completed
 
 
+def fetch_transfer_portal(year=CURRENT_SEASON, force_refresh=False):
+    """Fetch transfer portal entries (origin, destination, position, rating) for a season."""
+    data = _get("/player/portal", {"year": year},
+                cache_key=f"portal_{year}", force_refresh=force_refresh)
+    return pd.json_normalize(data)
+
+
 # ── Team stats & ratings ───────────────────────────────────────────────────
 
 def fetch_sp_plus(year=CURRENT_SEASON, force_refresh=False):
