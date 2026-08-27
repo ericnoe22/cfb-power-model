@@ -765,6 +765,17 @@ def load_live_lines():
 
     df = df[df["week"].notna()].copy()
     df["week"] = pd.to_numeric(df["week"], errors="coerce").astype(int)
+
+    # Drop FCS vs FCS matchups — keep any game where at least one team is FBS
+    try:
+        _ratings_path = os.path.join(os.path.dirname(__file__), f"{CURRENT_SEASON}_power_rating_cleaned.csv")
+        _fbs = set(pd.read_csv(_ratings_path)["team"].tolist())
+        from data.team_names import normalize as _n
+        _fbs_norm = {_n(t) for t in _fbs}
+        df = df[(df["homeTeam"].isin(_fbs_norm)) | (df["awayTeam"].isin(_fbs_norm))].copy()
+    except Exception:
+        pass
+
     return df, source
 
 
