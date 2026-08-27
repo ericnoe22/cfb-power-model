@@ -603,6 +603,16 @@ def load_schedule():
     if os.path.exists(SCHEDULE_PATH):
         df = pd.read_csv(SCHEDULE_PATH)
         df = df.drop_duplicates(subset=["homeTeam", "awayTeam", "week"])
+        # Filter to games involving at least one FBS team — drops FCS vs FCS
+        try:
+            from data.team_names import normalize as _n
+            _fbs = {_n(t) for t in pd.read_csv(PREBUILT_RATINGS_PATH)["team"].tolist()}
+            df["_hn"] = df["homeTeam"].map(_n)
+            df["_an"] = df["awayTeam"].map(_n)
+            df = df[(df["_hn"].isin(_fbs)) | (df["_an"].isin(_fbs))].drop(
+                columns=["_hn", "_an"])
+        except Exception:
+            pass
         return df
     return pd.DataFrame()
 
