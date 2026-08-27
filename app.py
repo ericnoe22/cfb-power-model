@@ -721,49 +721,74 @@ def load_live_lines():
         sched["awayTeam"] = sched["awayTeam"].map(normalize)
         sched["sched_dt"] = pd.to_datetime(sched["startDate"], utc=True, errors="coerce", format="ISO8601")
 
+        # pair → (week, neutralSite, sched_dt)
         sched_week_map = {
             frozenset([h, a]): (w, n, sd)
             for h, a, w, n, sd in zip(sched["homeTeam"], sched["awayTeam"],
                                        sched["week"], sched["neutralSite"], sched["sched_dt"])
         }
 
+        # team → {week → set of opponents} — used to detect phantom Owls lines
+        _twg: dict = {}
+        for h, a, w in zip(sched["homeTeam"], sched["awayTeam"], sched["week"]):
+            _twg.setdefault(h, {}).setdefault(int(w), set()).add(a)
+            _twg.setdefault(a, {}).setdefault(int(w), set()).add(h)
+
+        # All scheduled pairs anywhere in the season
+        all_sched_pairs = set(sched_week_map.keys())
+
         df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce", format="ISO8601")
 
         def _assign_week(r):
-            match = sched_week_map.get(frozenset([r["homeTeam"], r["awayTeam"]]))
-            if match is None:
-                return None, False
-            week, neutral, sched_dt = match
-            # Reject if Owls game date is >14 days from the CFBD schedule date —
-            # prevents a future conference game from being mistakenly used for an
-            # early neutral-site game between the same two teams.
-            if pd.notna(r["commence_dt"]) and pd.notna(sched_dt):
-                if abs((r["commence_dt"] - sched_dt).days) > 14:
-                    return None, False
-            return week, neutral
+            pair = frozenset([r["homeTeam"], r["awayTeam"]])
+            match = sched_week_map.get(pair)
+            if match is not None:
+                week, neutral, sched_dt = match
+                # Reject if Owls date is >14 days from CFBD date — this is a future
+                # conference game priced early with a wrong date. Drop entirely
+                # (don't fall back to date formula — that would assign wrong week).
+                if pd.notna(r["commence_dt"]) and pd.notna(sched_dt):
+                    if abs((r["commence_dt"] - sched_dt).days) > 14:
+                        return None, False, True  # (week, neutral, in_sched)
+                return week, neutral, True
+            return None, False, False
 
-        df[["week", "neutralSite"]] = df.apply(
+        df[["week", "neutralSite", "_in_sched"]] = df.apply(
             lambda r: pd.Series(_assign_week(r)), axis=1
         )
     else:
         df["week"] = None
         df["neutralSite"] = False
+        df["_in_sched"] = False
         df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce", format="ISO8601")
+        all_sched_pairs = set()
+        _twg = {}
 
-    # Date-based fallback: for games with no schedule match (neutral-site kickoff
-    # games not yet in CFBD), derive week from the Owls commence_time.
-    # Only applies to FBS vs FBS games — keeps the Betting Edges page clean.
+    # Date-based fallback ONLY for games genuinely not in the CFBD schedule.
+    # Games that ARE in the schedule but with wrong dates (future conference games
+    # priced early) stay dropped — don't assign them a wrong week via date math.
     if "commence_dt" not in df.columns:
         df["commence_dt"] = pd.to_datetime(df["commence_time"], utc=True, errors="coerce", format="ISO8601")
 
-    unmatched = df["week"].isna() & df["commence_dt"].notna()
-    if unmatched.any():
-        derived = ((df.loc[unmatched, "commence_dt"] - season_start).dt.days // 7 + 1).clip(lower=1)
-        df.loc[unmatched, "week"] = derived
-        # Only keep derived-week games that fall within the regular season
-        df = df[df["week"].notna() & (df["week"] <= 15)].copy()
+    truly_unmatched = df["week"].isna() & df["commence_dt"].notna() & ~df["_in_sched"]
+    if truly_unmatched.any():
+        derived = ((df.loc[truly_unmatched, "commence_dt"] - season_start).dt.days // 7 + 1).clip(lower=1)
 
-    df = df[df["week"].notna()].copy()
+        # Phantom check: if either team has a DIFFERENT CFBD game that week,
+        # this Owls entry is a phantom early line — drop it.
+        keep_idx = []
+        for idx, row in df[truly_unmatched].iterrows():
+            wk = int(derived[idx])
+            h_others = _twg.get(row["homeTeam"], {}).get(wk, set()) - {row["awayTeam"]}
+            a_others = _twg.get(row["awayTeam"], {}).get(wk, set()) - {row["homeTeam"]}
+            if not h_others and not a_others:
+                keep_idx.append(idx)
+
+        if keep_idx:
+            df.loc[keep_idx, "week"] = derived[keep_idx].values
+
+    df = df.drop(columns=["_in_sched"], errors="ignore")
+    df = df[df["week"].notna() & (df["week"] <= 15)].copy()
     df["week"] = pd.to_numeric(df["week"], errors="coerce").astype(int)
 
     # Drop FCS vs FCS matchups — keep any game where at least one team is FBS
