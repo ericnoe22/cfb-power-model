@@ -2315,12 +2315,28 @@ elif page == "🎯 Betting Edges":
         if hist_lines.empty:
             st.info("No historical line movement data yet — available once the season starts.")
         else:
-            # Get best closing line per game (prefer DraftKings)
+            # Pick best row per game: prefer a book that has BOTH spread and spreadOpen.
+            # Priority: DraftKings → Bovada → any book with opening line → first row.
             hl = hist_lines.copy()
             if "provider" in hl.columns:
-                dk = hl[hl["provider"] == "DraftKings"]
-                hl = dk if not dk.empty else hl
-            hl = hl.drop_duplicates(subset=["homeTeam", "awayTeam", "week"])
+                _pref_order = ["DraftKings", "Bovada", "ESPN Bet", "FanDuel"]
+                _has_open = hl["spreadOpen"].notna() & hl["spread"].notna()
+                _rows = []
+                for _game_key, _grp in hl.groupby(["homeTeam", "awayTeam", "week"], sort=False):
+                    _with_open = _grp[_has_open.reindex(_grp.index, fill_value=False)]
+                    _pool = _with_open if not _with_open.empty else _grp
+                    _chosen = None
+                    for _book in _pref_order:
+                        _match = _pool[_pool["provider"] == _book]
+                        if not _match.empty:
+                            _chosen = _match.iloc[0]
+                            break
+                    if _chosen is None:
+                        _chosen = _pool.iloc[0]
+                    _rows.append(_chosen)
+                hl = pd.DataFrame(_rows).reset_index(drop=True)
+            else:
+                hl = hl.drop_duplicates(subset=["homeTeam", "awayTeam", "week"])
 
             # Only keep games with both opening and closing lines
             hl = hl[hl["spreadOpen"].notna() & hl["spread"].notna()].copy()

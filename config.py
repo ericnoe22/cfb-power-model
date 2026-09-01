@@ -47,8 +47,8 @@ RATING_WEIGHTS = {
     "elo":                0.10,
     "returning_prod":     0.05,
     "talent":             0.02,
-    # Opponent-adjusted EPA/PPA (CFBD Patreon). 0% preseason — no data yet.
-    # Increase to ~10% once several weeks of games are played (shift from elo).
+    # Opponent-adjusted EPA/PPA (CFBD Patreon). 0% through Week 1 — only 16/138
+    # teams have data. Ramp: ~3% Week 3, ~6% Week 5, ~10% Week 8+ (shift from elo).
     "epa_adj":            0.00,
 }
 
