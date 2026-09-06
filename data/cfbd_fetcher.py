@@ -154,22 +154,34 @@ def fetch_ppa_teams(year=CURRENT_SEASON, force_refresh=False):
     return df
 
 
-def fetch_advanced_box_scores(year=CURRENT_SEASON, week=None, force_refresh=False):
+def fetch_advanced_box_scores(year=CURRENT_SEASON, week=None, team=None, force_refresh=False):
     """
-    Fetch game-level advanced box scores with opponent-adjusted EPA breakdown.
-    Requires $1/month CFBD Patreon tier.
+    Fetch game-level advanced box scores (one row per team per game) with
+    PPA, success rate, explosiveness, line yards, and standard/passing-down
+    and rush/pass splits. Requires $1/month CFBD Patreon tier.
 
-    Returns one row per team per game with EPA, success rate, explosiveness,
-    havoc, and line yards.
+    Uses /stats/game/advanced, NOT /game/box/advanced — the latter only
+    accepts a single game id and can't do a bulk season/week pull.
+
+    Note on sign convention: a team's defense.* fields are literally that
+    team's OPPONENT's offense.* fields for that game (mirrored, not
+    separately negated the way the season-level opponent-adjusted PPA
+    endpoint is). So a team's net PPA edge for a single game is simply
+    offense.ppa - defense.ppa (or offense.totalPPA - defense.totalPPA for
+    the play-count-weighted version) — no need to look up the opponent's row.
+
+    Pass week= to scope to one week; omit it to pull the whole season to date.
     """
     if not CFBD_PATREON:
         print("⚠️  Advanced box scores require CFBD Patreon tier.")
         return pd.DataFrame()
-    params = {"year": year, "seasonType": "regular"}
+    params = {"year": year, "seasonType": "regular", "excludeGarbageTime": True}
     if week:
         params["week"] = week
-    key = f"advanced_box_{year}" + (f"_week{week}" if week else "")
-    data = _get("/game/box/advanced", params, cache_key=key, force_refresh=force_refresh)
+    if team:
+        params["team"] = team
+    key = f"advanced_box_{year}" + (f"_week{week}" if week else "") + (f"_{team}" if team else "")
+    data = _get("/stats/game/advanced", params, cache_key=key, force_refresh=force_refresh)
     df = pd.json_normalize(data)
     return df
 

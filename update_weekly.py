@@ -21,12 +21,13 @@ from data.cfbd_fetcher import (
     fetch_sp_plus, fetch_fpi, fetch_elo, fetch_talent,
     fetch_returning_production, fetch_consensus_lines,
     fetch_teams, fetch_coaches,
-    fetch_ppa_teams, fetch_epa_per_play,
+    fetch_ppa_teams, fetch_epa_per_play, fetch_advanced_box_scores,
 )
 from data.owls_fetcher import fetch_ncaaf_lines
 from data.sagarin_fetcher import fetch_sagarin
 from model.elo import run_season_elos, initialize_season_elos
 from model.power_rankings import build_composite_ratings
+from model.game_quality import compute_game_quality_flags
 
 
 def main():
@@ -99,6 +100,26 @@ def main():
     else:
         elo_ratings = pd.DataFrame()
         print("\n⚠️  No games found — skipping Elo update")
+
+    # ── 2b. Advanced box scores + scoreboard/efficiency mismatch flags ────
+    print(f"\n📥 Fetching advanced box scores ({year})...")
+    try:
+        # Always pull the whole season to date (not just this week) so the
+        # flags file stays a complete game log; CFBD doesn't revise past
+        # weeks, so re-fetching is cheap and just extends the cache.
+        box_df = fetch_advanced_box_scores(year=year, force_refresh=force)
+        if not box_df.empty:
+            box_df.to_csv(f"cache/advanced_box_{year}.csv", index=False)
+            print(f"   ✅ Advanced box scores: {len(box_df)} team-game rows")
+            flags_df = compute_game_quality_flags(games_df, box_df)
+            if not flags_df.empty:
+                flags_df.to_csv(f"outputs/game_quality_flags_{year}.csv", index=False)
+                n_flagged = flags_df["flag"].notna().sum()
+                print(f"   ✅ Quality-of-win flags: {n_flagged} team-games flagged (of {len(flags_df)})")
+        else:
+            print("   ⚠️  No advanced box score data (preseason or Patreon tier off)")
+    except Exception as e:
+        print(f"   ❌ Advanced box score fetch failed: {e}")
 
     # ── 3. Pull SP+ (manual import takes priority over CFBD API) ─────────────
     print(f"\n📥 Fetching SP+ ratings ({year})...")

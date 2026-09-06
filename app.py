@@ -3001,6 +3001,31 @@ elif page == "👥 Team Profiles":
         except Exception:
             pass
 
+        # Game log — advanced box scores + scoreboard/efficiency mismatch flags
+        _flags_path = os.path.join(os.path.dirname(__file__), "outputs", f"game_quality_flags_{CURRENT_SEASON}.csv")
+        if os.path.exists(_flags_path):
+            _flags_df = pd.read_csv(_flags_path)
+            _team_games = _flags_df[_flags_df["team"] == _selected].sort_values("week")
+            if not _team_games.empty:
+                with st.expander(f"Game log — advanced box scores ({len(_team_games)} games)", expanded=False):
+                    st.caption(
+                        "Net PPA margin = this team's offensive PPA/play minus what it allowed on "
+                        "defense. Positive means they outplayed the opponent play-for-play, "
+                        "regardless of final score. A flag means the scoreboard and the box score disagree."
+                    )
+                    for _, _g in _team_games.iterrows():
+                        _result = "W" if _g["won"] else "L"
+                        _label = f"Wk {int(_g['week'])} vs {_g['opponent']} — {_result} {int(_g['score_for'])}-{int(_g['score_against'])}"
+                        if _g["flag"] == "won_but_outplayed":
+                            _label += "  ⚠️ won but outplayed"
+                        elif _g["flag"] == "lost_but_outplayed":
+                            _label += "  ⚠️ lost despite outplaying"
+                        _cols = st.columns([3, 1, 1, 1])
+                        _cols[0].markdown(_label)
+                        _cols[1].metric("Net PPA/play", f"{_g['net_ppa_margin']:+.2f}")
+                        _cols[2].metric("Off success%", f"{_g['off_success_rate']*100:.0f}%" if pd.notna(_g["off_success_rate"]) else "—")
+                        _cols[3].metric("Off pass-down%", f"{_g['off_passing_downs_success_rate']*100:.0f}%" if pd.notna(_g["off_passing_downs_success_rate"]) else "—")
+
         # Coordinator / notes — display for all, edit for admin
         st.divider()
         _oc_val    = _p.get("oc_name", "").strip()
