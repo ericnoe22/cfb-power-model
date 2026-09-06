@@ -534,17 +534,24 @@ def load_ratings():
         # Merge SP+ offense/defense ratings for accurate total predictions.
         # predict_total uses these directly when available; otherwise falls back
         # to the composite-based estimate which over-predicts for elite matchups.
+        # build_composite_ratings() already carries offense.rating/defense.rating
+        # through from the same SP+ fetch, so only backfill from the cache file
+        # when the prebuilt CSV doesn't already have them — merging unconditionally
+        # here duplicates the columns (pandas silently suffixes both to _x/_y since
+        # they aren't the join key), which breaks every reader of the bare names.
+        from data.team_names import normalize as _norm
+        df["team"] = df["team"].map(_norm)
+        has_off_def = {"offense.rating", "defense.rating"}.issubset(df.columns) and \
+            df["offense.rating"].notna().any() and df["defense.rating"].notna().any()
         sp_path = os.path.join(os.path.dirname(__file__), f"cache/sp_plus_{CURRENT_SEASON}.csv")
-        if os.path.exists(sp_path) and os.path.getsize(sp_path) > 0:
+        if not has_off_def and os.path.exists(sp_path) and os.path.getsize(sp_path) > 0:
             try:
                 sp = pd.read_csv(sp_path)
             except Exception:
                 sp = pd.DataFrame()
             if {"offense.rating", "defense.rating", "team"}.issubset(sp.columns):
-                from data.team_names import normalize as _norm
                 sp = sp[["team", "offense.rating", "defense.rating"]].copy()
                 sp["team"] = sp["team"].map(_norm)
-                df["team"] = df["team"].map(_norm)
                 df = df.merge(sp, on="team", how="left")
 
         return df
@@ -1561,8 +1568,10 @@ if page == "📊 Power Rankings":
         "offense_overall": "Off EPA",
         "defense_overall": "Def EPA",
         "epa_net": "Net EPA",
+        "havoc_total": "Def Havoc",
         "returning_prod": "Ret. Prod.",
         "talent": "Talent",
+        "specialTeams.rating": "Special Teams",
     }
 
     def _make_table(col_map):
@@ -2981,6 +2990,21 @@ elif page == "👥 Team Profiles":
                 st.markdown(f"**Ret. production:** {_p.get('returning_prod_pct',0):.0f}%")
                 st.markdown(f"**Talent score:** {_p.get('talent_score',0):.0f}")
 
+        # SP+ breakdown — display only. Overall SP+ rating already equals
+        # offense.rating - defense.rating + specialTeams.rating exactly, so
+        # special teams is fully priced into the composite already; this is
+        # transparency into where a team's SP+ number comes from, not a
+        # second, separately-weighted input.
+        if not ratings_df.empty and _selected in ratings_df["team"].values:
+            _row = ratings_df[ratings_df["team"] == _selected].iloc[0]
+            if pd.notna(_row.get("offense.rating")) or pd.notna(_row.get("specialTeams.rating")):
+                st.caption("SP+ breakdown (offense − defense + special teams = overall)")
+                _sp_cols = st.columns(4)
+                _sp_cols[0].metric("Offense", f"{_row.get('offense.rating', float('nan')):.1f}" if pd.notna(_row.get("offense.rating")) else "—")
+                _sp_cols[1].metric("Defense", f"{_row.get('defense.rating', float('nan')):.1f}" if pd.notna(_row.get("defense.rating")) else "—")
+                _sp_cols[2].metric("Special Teams", f"{_row.get('specialTeams.rating', float('nan')):+.1f}" if pd.notna(_row.get("specialTeams.rating")) else "—")
+                _sp_cols[3].metric("SP+ Overall", f"{_row.get('sp_plus', float('nan')):.1f}" if pd.notna(_row.get("sp_plus")) else "—")
+
         # Pick Six expert intel
         try:
             from data.team_intel import get_team_intel
@@ -3011,7 +3035,10 @@ elif page == "👥 Team Profiles":
                     st.caption(
                         "Net PPA margin = this team's offensive PPA/play minus what it allowed on "
                         "defense. Positive means they outplayed the opponent play-for-play, "
-                        "regardless of final score. A flag means the scoreboard and the box score disagree."
+                        "regardless of final score. Turnover margin = takeaways minus giveaways — "
+                        "one of the least repeatable stats in football, so a lopsided margin behind "
+                        "a win or loss is a regression-to-the-mean flag, not a rating input. A flag "
+                        "means the scoreboard and the underlying data disagree."
                     )
                     for _, _g in _team_games.iterrows():
                         _result = "W" if _g["won"] else "L"
@@ -3020,11 +3047,16 @@ elif page == "👥 Team Profiles":
                             _label += "  ⚠️ won but outplayed"
                         elif _g["flag"] == "lost_but_outplayed":
                             _label += "  ⚠️ lost despite outplaying"
-                        _cols = st.columns([3, 1, 1, 1])
+                        if _g["turnover_flag"] == "won_despite_turnovers":
+                            _label += "  🎲 won despite turnovers"
+                        elif _g["turnover_flag"] == "lost_despite_turnovers":
+                            _label += "  🎲 lost despite forcing turnovers"
+                        _cols = st.columns([3, 1, 1, 1, 1])
                         _cols[0].markdown(_label)
                         _cols[1].metric("Net PPA/play", f"{_g['net_ppa_margin']:+.2f}")
                         _cols[2].metric("Off success%", f"{_g['off_success_rate']*100:.0f}%" if pd.notna(_g["off_success_rate"]) else "—")
                         _cols[3].metric("Off pass-down%", f"{_g['off_passing_downs_success_rate']*100:.0f}%" if pd.notna(_g["off_passing_downs_success_rate"]) else "—")
+                        _cols[4].metric("Turnover margin", f"{int(_g['turnover_margin']):+d}" if pd.notna(_g["turnover_margin"]) else "—")
 
         # Coordinator / notes — display for all, edit for admin
         st.divider()

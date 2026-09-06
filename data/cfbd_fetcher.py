@@ -186,6 +186,57 @@ def fetch_advanced_box_scores(year=CURRENT_SEASON, week=None, team=None, force_r
     return df
 
 
+# Traditional box-score categories worth coercing to numeric; the rest
+# (thirdDownEff "3-10", possessionTime "19:52", etc.) stay as strings.
+_TEAM_GAME_STAT_NUMERIC_COLS = [
+    "points", "firstDowns", "totalYards", "netPassingYards", "rushingYards",
+    "rushingAttempts", "turnovers", "fumblesLost", "totalFumbles",
+    "fumblesRecovered", "interceptions", "tacklesForLoss", "sacks",
+    "kickReturns", "kickReturnYards", "kickReturnTDs",
+    "puntReturns", "puntReturnYards", "puntReturnTDs",
+    "tackles", "defensiveTDs", "passingTDs", "kickingPoints",
+]
+
+
+def fetch_team_game_stats(year=CURRENT_SEASON, week=None, force_refresh=False):
+    """
+    Fetch traditional per-team-per-game box score stats (turnovers, fumbles
+    lost, interceptions, time of possession, tackles for loss, etc.) from
+    /games/teams. CFBD requires one of week/team/conference — this always
+    scopes by week, so callers loop over the season's played weeks.
+
+    Returns one row per team per game, with each stat category (originally
+    a {category, stat} pair) flattened into its own column.
+    """
+    if not week:
+        raise ValueError("fetch_team_game_stats requires week (CFBD's /games/teams needs week, team, or conference)")
+    params = {"year": year, "week": week, "seasonType": "regular"}
+    key = f"games_teams_{year}_week{week}"
+    data = _get("/games/teams", params, cache_key=key, force_refresh=force_refresh)
+
+    rows = []
+    for game in data:
+        game_id = game.get("id")
+        for t in game.get("teams", []):
+            row = {
+                "gameId": game_id,
+                "week": week,
+                "team": t.get("team"),
+                "conference": t.get("conference"),
+                "homeAway": t.get("homeAway"),
+                "points": t.get("points"),
+            }
+            for s in t.get("stats", []):
+                row[s["category"]] = s["stat"]
+            rows.append(row)
+
+    df = pd.DataFrame(rows)
+    for col in _TEAM_GAME_STAT_NUMERIC_COLS:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    return df
+
+
 def fetch_epa_per_play(year=CURRENT_SEASON, force_refresh=False):
     """
     Fetch season-level EPA per play broken down by team and situation.

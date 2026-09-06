@@ -43,10 +43,18 @@ HOME_FIELD_ADVANTAGE = 2.5
 RATING_WEIGHTS = {
     "sp_plus":            0.28,
     "fpi":                0.25,
-    "sagarin":            0.30,
+    "sagarin":            0.27,
     "elo":                0.10,
     "returning_prod":     0.05,
     "talent":             0.02,
+    # Defensive havoc rate (TFLs, forced fumbles, pass breakups per play) —
+    # season-level, from CFBD's /stats/season/advanced. Only ~0.70 correlated
+    # with opponent-adjusted defensive PPA (defense_overall) in 2025 full-
+    # season data, i.e. it's disruption/aggression, not a re-statement of
+    # scoring efficiency, so it earns its own small weight rather than
+    # folding into epa_adj. Carved out of sagarin (was 0.30) since that's
+    # the least havoc-related of the existing inputs.
+    "def_havoc":          0.03,
     # Opponent-adjusted EPA/PPA (CFBD Patreon). 0.00 here = preseason default
     # (no games played yet). Once build_composite_ratings() is called with a
     # week argument, it auto-ramps this weight 2.5 pts/week (carved out of

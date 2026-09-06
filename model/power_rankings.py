@@ -4,12 +4,12 @@ power_rankings.py — builds the composite power rating for every FBS team.
 The composite is expressed in the same unit as SP+:
   "predicted points better/worse than an average FBS team per game"
 
-Sources blended (weights configurable in config.py):
-  - SP+       (35%): efficiency-based, accounts for opponent quality
-  - FPI       (20%): ESPN's power index
-  - Elo       (25%): form-based, updated after each result
-  - Returning  (10%): % of production returning (preseason only, fades mid-season)
-  - Talent     (10%): 247Sports composite recruiting score
+Sources blended (weights configurable in config.py, see RATING_WEIGHTS):
+  - SP+, FPI, Sagarin: efficiency/power-index ratings, each opponent-adjusted
+  - Elo: form-based, updated after each result (partly ceded to epa_adj in-season)
+  - Returning production, talent: preseason-only signals, fade in-season
+  - Defensive havoc rate: disruption/aggression, distinct from PPA efficiency
+  - Opponent-adjusted EPA/PPA: ramped in as real per-play data accumulates
 """
 
 import numpy as np
@@ -63,6 +63,16 @@ def _normalize_sagarin(sagarin_series):
     return z_score(sagarin_series) * 8
 
 
+def _normalize_havoc(havoc_series):
+    """
+    Defensive havoc rate (fraction of opponent plays with a TFL, forced
+    fumble, INT, or pass breakup — higher = more disruptive defense).
+    Convert to SP+ scale; kept modest since it's already ~0.70 correlated
+    with opponent-adjusted defensive PPA and shouldn't double up on it.
+    """
+    return z_score(havoc_series) * 5   # 1 SD ≈ 5 SP+ points
+
+
 # ── Main builder ───────────────────────────────────────────────────────────
 
 def build_composite_ratings(
@@ -73,6 +83,7 @@ def build_composite_ratings(
     talent_df=None,
     epa_df=None,
     sagarin_df=None,
+    havoc_df=None,
     week=None,
     season=CURRENT_SEASON,
     apply_coaching=True,
@@ -194,6 +205,12 @@ def build_composite_ratings(
     else:
         base["sagarin"] = np.nan
 
+    # ── Merge defensive havoc rate ────────────────────────────────────────
+    if havoc_df is not None and not havoc_df.empty and "havoc_total" in havoc_df.columns:
+        base = base.merge(havoc_df[["team", "havoc_total"]], on="team", how="left")
+    else:
+        base["havoc_total"] = np.nan
+
     # ── Normalize each metric to SP+ scale ───────────────────────────────
     base["sp_plus_norm"]    = base["sp_plus"].fillna(base["sp_plus"].mean())
     base["fpi_norm"]        = base["fpi"].fillna(base["fpi"].mean()) if base["fpi"].notna().any() \
@@ -209,6 +226,10 @@ def build_composite_ratings(
     has_epa_data = base["epa_net"].notna().any()
     base["epa_norm"]        = z_score(base["epa_net"].fillna(0)) * 5 \
                               if has_epa_data else pd.Series(0.0, index=base.index)
+    has_havoc_data = base["havoc_total"].notna().any()
+    base["havoc_norm"]      = _normalize_havoc(base["havoc_total"].fillna(
+                              base["havoc_total"].mean() if has_havoc_data else 0.0)) \
+                              if has_havoc_data else pd.Series(0.0, index=base.index)
 
     # Phase in opponent-adjusted EPA/PPA as real per-play performance data
     # accumulates, carved out of Elo's weight (elo_w below = elo - epa_adj).
@@ -223,9 +244,20 @@ def build_composite_ratings(
     if week and week >= 1 and has_epa_data:
         weights["epa_adj"] = min(RATING_WEIGHTS["elo"], 0.025 * week)
 
+    # def_havoc is a static (non-zero) config weight, unlike epa_adj which
+    # defaults to 0 and ramps in. So when no havoc data is available (no
+    # havoc_df passed — preseason, or callers like backtest.py that don't
+    # fetch it), give its weight back to sagarin (where it was carved from)
+    # rather than silently multiplying a real weight against an all-zero
+    # signal, which would just dilute the rest of the composite by 3%.
+    if not has_havoc_data:
+        weights["sagarin"] = weights.get("sagarin", 0.0) + weights.get("def_havoc", 0.0)
+        weights["def_havoc"] = 0.0
+
     # ── Weighted composite ────────────────────────────────────────────────
     w = weights
     epa_w = w.get("epa_adj", 0.0)
+    havoc_w = w.get("def_havoc", 0.0)
     sag_w = w.get("sagarin", 0.0)
     elo_w = max(0, w["elo"] - epa_w)
     base["composite"] = (
@@ -235,12 +267,19 @@ def build_composite_ratings(
         elo_w               * base["elo_norm"]        +
         w["returning_prod"] * base["returning_norm"]  +
         w["talent"]         * base["talent_norm"]     +
+        havoc_w              * base["havoc_norm"]      +
         epa_w               * base["epa_norm"]
     )
 
-    # ── Carry over SP+ offense/defense ratings for total prediction ───────
+    # ── Carry over SP+ offense/defense/special-teams ratings for display ──
+    # NOTE: specialTeams.rating is NOT given a composite weight — SP+'s
+    # overall "rating" is already exactly offense.rating - defense.rating +
+    # specialTeams.rating (verified across 2026 preseason data), so it's
+    # already fully priced into sp_plus_norm above. Carried over here only
+    # so the dashboard can show the breakdown; weighting it too would
+    # double-count it.
     if sp_df is not None and not sp_df.empty:
-        off_def_cols = [c for c in sp_df.columns if c in ("offense.rating", "defense.rating")]
+        off_def_cols = [c for c in sp_df.columns if c in ("offense.rating", "defense.rating", "specialTeams.rating")]
         if off_def_cols and "team" in sp_df.columns:
             sp_name_col = "team"
             od = sp_df[[sp_name_col] + off_def_cols].rename(columns={sp_name_col: "team"})

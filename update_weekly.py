@@ -22,6 +22,7 @@ from data.cfbd_fetcher import (
     fetch_returning_production, fetch_consensus_lines,
     fetch_teams, fetch_coaches,
     fetch_ppa_teams, fetch_epa_per_play, fetch_advanced_box_scores,
+    fetch_team_game_stats,
 )
 from data.owls_fetcher import fetch_ncaaf_lines
 from data.sagarin_fetcher import fetch_sagarin
@@ -103,6 +104,7 @@ def main():
 
     # ── 2b. Advanced box scores + scoreboard/efficiency mismatch flags ────
     print(f"\n📥 Fetching advanced box scores ({year})...")
+    box_df = pd.DataFrame()
     try:
         # Always pull the whole season to date (not just this week) so the
         # flags file stays a complete game log; CFBD doesn't revise past
@@ -111,15 +113,44 @@ def main():
         if not box_df.empty:
             box_df.to_csv(f"cache/advanced_box_{year}.csv", index=False)
             print(f"   ✅ Advanced box scores: {len(box_df)} team-game rows")
-            flags_df = compute_game_quality_flags(games_df, box_df)
-            if not flags_df.empty:
-                flags_df.to_csv(f"outputs/game_quality_flags_{year}.csv", index=False)
-                n_flagged = flags_df["flag"].notna().sum()
-                print(f"   ✅ Quality-of-win flags: {n_flagged} team-games flagged (of {len(flags_df)})")
         else:
             print("   ⚠️  No advanced box score data (preseason or Patreon tier off)")
     except Exception as e:
         print(f"   ❌ Advanced box score fetch failed: {e}")
+
+    # ── 2c. Traditional box score stats (turnovers) for the luck flag ─────
+    # /games/teams requires a week per call, so loop over every week that
+    # already has completed games; each week is cached individually so
+    # re-runs only fetch the current week.
+    print(f"\n📥 Fetching turnover data ({year})...")
+    team_game_stats_df = pd.DataFrame()
+    try:
+        weeks_played = sorted(games_df["week"].dropna().unique().tolist()) if not games_df.empty else []
+        weekly_frames = []
+        for wk in weeks_played:
+            wk_df = fetch_team_game_stats(year=year, week=int(wk), force_refresh=force)
+            if not wk_df.empty:
+                weekly_frames.append(wk_df)
+        if weekly_frames:
+            team_game_stats_df = pd.concat(weekly_frames, ignore_index=True)
+            team_game_stats_df.to_csv(f"cache/team_game_stats_{year}.csv", index=False)
+            print(f"   ✅ Team game stats: {len(team_game_stats_df)} team-game rows across {len(weeks_played)} weeks")
+        else:
+            print("   ⚠️  No team game stats — preseason or unavailable")
+    except Exception as e:
+        print(f"   ❌ Team game stats fetch failed: {e}")
+
+    # ── 2d. Compute scoreboard/efficiency + turnover-luck flags ───────────
+    if not box_df.empty:
+        try:
+            flags_df = compute_game_quality_flags(games_df, box_df, team_game_stats_df)
+            if not flags_df.empty:
+                flags_df.to_csv(f"outputs/game_quality_flags_{year}.csv", index=False)
+                n_flagged = flags_df["flag"].notna().sum()
+                n_to_flagged = flags_df["turnover_flag"].notna().sum()
+                print(f"   ✅ Quality-of-win flags: {n_flagged} efficiency, {n_to_flagged} turnover-luck (of {len(flags_df)} team-games)")
+        except Exception as e:
+            print(f"   ❌ Quality flag computation failed: {e}")
 
     # ── 3. Pull SP+ (manual import takes priority over CFBD API) ─────────────
     print(f"\n📥 Fetching SP+ ratings ({year})...")
@@ -213,6 +244,28 @@ def main():
         print(f"   ❌ EPA fetch failed: {e}")
         epa_df = pd.DataFrame()
 
+    # ── 4d. Pull defensive havoc rate (season-level advanced stats) ───────
+    # Distinct signal from opponent-adjusted PPA above (~0.70 correlated, not
+    # redundant) — always fetched, since it lives in /stats/season/advanced,
+    # a different endpoint from /ppa/teams and not returned by the PPA path.
+    print(f"\n📥 Fetching defensive havoc rate ({year})...")
+    havoc_df = pd.DataFrame()
+    try:
+        if "havoc_total" in epa_df.columns:
+            havoc_df = epa_df[["team", "havoc_total"]].copy()
+        else:
+            adv_df = fetch_epa_per_play(year=year, force_refresh=force)
+            if not adv_df.empty and "havoc_total" in adv_df.columns:
+                havoc_df = adv_df[["team", "havoc_total"]].copy()
+        if not havoc_df.empty:
+            havoc_df.to_csv(f"cache/havoc_{year}.csv", index=False)
+            print(f"   ✅ Havoc rate: {len(havoc_df)} teams")
+        else:
+            print("   ⚠️  No havoc data — preseason or unavailable")
+    except Exception as e:
+        print(f"   ❌ Havoc fetch failed: {e}")
+        havoc_df = pd.DataFrame()
+
     # ── 5. Build composite ratings ────────────────────────────────────────
     print("\n⚙️  Building composite power ratings...")
     try:
@@ -241,6 +294,7 @@ def main():
             returning_df=returning_df if not returning_df.empty else None,
             talent_df=talent_df if not talent_df.empty else None,
             epa_df=epa_df if not epa_df.empty else None,
+            havoc_df=havoc_df if not havoc_df.empty else None,
             week=args.week,
             season=year,
         )
