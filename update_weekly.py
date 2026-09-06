@@ -174,28 +174,40 @@ def main():
             else:
                 sp_df = pd.DataFrame()
 
-    # ── 4. Pull FPI ───────────────────────────────────────────────────────
+    # ── 4. Pull FPI (manual import takes priority over CFBD API) ─────────
+    # CFBD's /ratings/fpi mirrors ESPN's FPI on its own sync schedule, which
+    # can lag ESPN's live site by several points right after games finish
+    # (confirmed: force_refresh against CFBD returned identical, stale
+    # values while ESPN's site had already moved). When that happens, save
+    # a fresher pull as cache/fpi_{year}_week{N}_manual.csv (team, fpi
+    # columns) and it's used instead — same pattern as the SP+ manual import.
     print(f"\n📥 Fetching FPI ratings ({year})...")
     fpi_df = pd.DataFrame()
-    try:
-        fpi_df = fetch_fpi(year=year, force_refresh=force)
-        if not fpi_df.empty and "fpi" in fpi_df.columns:
-            fpi_df.to_csv(f"cache/fpi_{year}.csv", index=False)
-            print(f"   ✅ FPI loaded for {len(fpi_df)} teams")
-        else:
-            # Fall back to cached file from setup_season.py
+    if args.week:
+        manual_fpi = f"cache/fpi_{year}_week{args.week}_manual.csv"
+        if os.path.exists(manual_fpi):
+            fpi_df = pd.read_csv(manual_fpi)
+            print(f"   ✅ Manual FPI loaded for {len(fpi_df)} teams (week {args.week})")
+    if fpi_df.empty:
+        try:
+            fpi_df = fetch_fpi(year=year, force_refresh=force)
+            if not fpi_df.empty and "fpi" in fpi_df.columns:
+                fpi_df.to_csv(f"cache/fpi_{year}.csv", index=False)
+                print(f"   ✅ FPI loaded for {len(fpi_df)} teams")
+            else:
+                # Fall back to cached file from setup_season.py
+                fpi_cache = f"cache/fpi_{year}.csv"
+                if os.path.exists(fpi_cache):
+                    fpi_df = pd.read_csv(fpi_cache)
+                    print(f"   → Using cached FPI ({len(fpi_df)} teams)")
+                else:
+                    print("   ⚠️  FPI not available — preseason or API issue")
+        except Exception as e:
+            print(f"   ❌ FPI fetch failed: {e}")
             fpi_cache = f"cache/fpi_{year}.csv"
             if os.path.exists(fpi_cache):
                 fpi_df = pd.read_csv(fpi_cache)
                 print(f"   → Using cached FPI ({len(fpi_df)} teams)")
-            else:
-                print("   ⚠️  FPI not available — preseason or API issue")
-    except Exception as e:
-        print(f"   ❌ FPI fetch failed: {e}")
-        fpi_cache = f"cache/fpi_{year}.csv"
-        if os.path.exists(fpi_cache):
-            fpi_df = pd.read_csv(fpi_cache)
-            print(f"   → Using cached FPI ({len(fpi_df)} teams)")
 
     # ── 5. Pull talent + returning production ─────────────────────────────
     print(f"\n📥 Fetching talent & returning production ({year})...")
