@@ -98,6 +98,10 @@ def main():
             regressed  = initialize_season_elos(prior_elos)
             elo_df = pd.DataFrame([{"team": t, "elo": e} for t, e in regressed.items()])
             elo_df.to_csv("cache/elo_current.csv", index=False)
+            # Frozen baseline update_weekly.py replays the season onto every week —
+            # never re-regressed, so re-running setup_season.py mid-season won't help
+            # (it always regresses prior_year fresh); this file is the one-time anchor.
+            elo_df.to_csv(f"cache/elo_preseason_{year}.csv", index=False)
             top5 = elo_df.sort_values("elo", ascending=False).head(5)
             print(f"   ✅ {prior_year} Elo regressed to {year} preseason ({len(elo_df)} teams)")
             for _, r in top5.iterrows():

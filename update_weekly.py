@@ -58,22 +58,35 @@ def main():
     if not games_df.empty:
         print("\n📊 Updating Elo ratings...")
         try:
-            # Load prior season Elo as starting point if available
+            # Load this season's starting Elo baseline. run_season_elos() replays
+            # ALL completed games in games_df from this baseline every time it's
+            # called, so the baseline must be frozen once per season and never
+            # re-derived from cache/elo_current.csv — that file is this script's
+            # own OUTPUT (this season's live, game-updated ratings), and running
+            # initialize_season_elos() on it again would regress already-in-progress
+            # ratings back toward 1500 on every weekly run, compounding indefinitely.
             initial_elos = {}
-            prior_json = f"cache/elo_{year-1}.json"
-            prior_csv  = f"cache/elo_current.csv"
-            if os.path.exists(prior_json):
+            preseason_csv = f"cache/elo_preseason_{year}.csv"
+            prior_json    = f"cache/elo_{year-1}.json"
+            prior_csv     = f"cache/elo_current.csv"
+            if os.path.exists(preseason_csv):
+                preseason_df = pd.read_csv(preseason_csv)
+                initial_elos = dict(zip(preseason_df["team"], preseason_df["elo"]))
+                print(f"   → Using frozen {year} preseason Elo baseline ({len(initial_elos)} teams) [{preseason_csv}]")
+            elif os.path.exists(prior_json):
                 import json as _json
                 with open(prior_json) as _f:
                     _records = _json.load(_f)
                 prior_elos = {r["team"]: r["elo"] for r in _records if "team" in r and "elo" in r}
                 initial_elos = initialize_season_elos(prior_elos)
-                print(f"   → Initialized from {year-1} Elo ratings ({len(initial_elos)} teams) [{prior_json}]")
+                pd.DataFrame([{"team": t, "elo": e} for t, e in initial_elos.items()]).to_csv(preseason_csv, index=False)
+                print(f"   → Initialized from {year-1} Elo ratings ({len(initial_elos)} teams) [{prior_json}], froze baseline → {preseason_csv}")
             elif os.path.exists(prior_csv):
                 prior_df = pd.read_csv(prior_csv)
                 prior_elos = dict(zip(prior_df["team"], prior_df["elo"]))
                 initial_elos = initialize_season_elos(prior_elos)
-                print(f"   → Initialized from cached Elo ({len(initial_elos)} teams) [{prior_csv}]")
+                pd.DataFrame([{"team": t, "elo": e} for t, e in initial_elos.items()]).to_csv(preseason_csv, index=False)
+                print(f"   → Initialized from cached Elo ({len(initial_elos)} teams) [{prior_csv}], froze baseline → {preseason_csv}")
 
             elo_ratings, elo_history = run_season_elos(games_df, initial_elos)
             elo_ratings.to_csv(f"cache/elo_current.csv", index=False)

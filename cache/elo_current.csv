@@ -1,373 +1,677 @@
 team,elo
-Indiana,2092.2
+Indiana,2095.1
 Notre Dame,2020.1
-Ohio State,1946.6
-Oregon,1899.7
-Georgia,1889.9
-Texas Tech,1889.2
-Miami,1859.8
+Ohio State,1947.0
+Oregon,1902.9
+Georgia,1894.2
+Texas Tech,1892.5
+Miami,1861.8
 Ole Miss,1856.3
-Utah,1833.2
-Penn State,1817.8
-Iowa,1805.9
-Texas,1798.2
-James Madison,1783.5
-Vanderbilt,1766.0
-USC,1761.3
-Texas A&M,1760.4
+Utah,1838.9
+Penn State,1823.5
+Texas,1809.4
+Iowa,1808.2
+James Madison,1786.9
+Vanderbilt,1773.6
+USC,1771.5
+Texas A&M,1765.1
+Alabama,1762.5
 Washington,1756.2
-Alabama,1749.9
 SMU,1746.4
-Oklahoma,1717.0
-Tennessee,1700.9
-Michigan,1700.2
-South Florida,1691.8
-Clemson,1678.5
-Missouri,1675.0
-BYU,1675.0
+Oklahoma,1719.8
+Tennessee,1714.7
+Michigan,1702.8
+South Florida,1695.9
+Missouri,1690.6
+BYU,1688.8
 Louisville,1674.3
-North Texas,1646.3
-South Carolina,1637.9
-Arizona,1631.6
-LSU,1622.5
-Kansas State,1621.8
+LSU,1658.8
+Arizona,1647.9
+Kansas State,1644.4
+North Texas,1643.4
+Clemson,1642.2
+South Carolina,1640.5
+UTSA,1636.3
+Old Dominion,1636.0
+Auburn,1623.5
 Virginia,1619.8
-Auburn,1619.0
-Old Dominion,1619.0
-UTSA,1617.6
+Iowa State,1609.5
+Duke,1604.6
 TCU,1602.9
-Toledo,1602.2
-Iowa State,1590.3
-Duke,1585.4
-Pittsburgh,1579.8
-Arizona State,1576.3
-Texas State,1574.2
-UNLV,1572.0
-Georgia Tech,1566.5
-Illinois,1566.5
-Boise State,1565.8
-East Carolina,1565.1
-Florida,1565.1
-Army,1562.3
-Ohio,1558.8
-Tulane,1558.1
-Navy,1552.5
-Northwestern,1551.8
-Arkansas,1549.7
+Arizona State,1601.6
+Pittsburgh,1595.5
+Army,1588.4
+UNLV,1580.3
+Navy,1572.8
+Florida,1572.6
+Northwestern,1572.6
+Illinois,1572.5
+Arkansas,1570.5
+Toledo,1570.0
+Nebraska,1569.2
+Texas State,1563.0
+Boise State,1562.6
+Valdosta State,1554.6
+East Carolina,1552.5
+Memphis,1552.4
+North Dakota,1552.1
+Grambling,1550.8
+Virginia State,1550.7
+Georgia Tech,1550.5
+North Dakota State,1550.5
+Mercer,1550.0
+Alabama State,1549.7
 NC State,1549.6
+Minnesota St Moorhead,1547.9
+Illinois State,1546.2
 Florida State,1545.6
-Memphis,1541.4
-Nebraska,1540.6
+Saginaw Valley State,1545.2
+Northern State,1544.4
+Jackson State,1544.4
+San Diego State,1544.2
+Minnesota,1542.7
+Northeastern State,1542.4
+Montana,1541.9
+Carson Newman,1539.9
+South Dakota,1539.9
+Davenport,1539.2
+Elon,1539.1
+Ferris State,1538.9
+Grand Valley State,1538.9
+Tulane,1538.9
+Montana State,1538.3
+South Dakota Mines,1538.2
+Kansas,1537.5
+Stephen F. Austin,1537.4
+Robert Morris,1537.4
+American International,1537.3
+Wofford,1537.1
+Tennessee Tech,1537.0
+Michigan Tech,1536.7
+Idaho State,1536.7
+Richmond,1536.2
+Benedict,1535.6
 South Carolina State,1535.4
-Illinois State,1534.4
+Colgate,1535.3
+CSU Pueblo,1535.2
+Harding,1534.4
 Washington State,1534.3
-Fresno State,1533.6
-South Dakota State,1532.9
+Brockport,1533.5
+Wisconsin River Falls,1533.3
+Lake Forest,1532.9
+Wisconsin Whitewater,1532.8
 Incarnate Word,1532.8
-Shorter,1532.4
-Western Michigan,1532.2
-Southwest Baptist,1532.1
-Norfolk State,1532.0
-Western Illinois,1531.3
-Alcorn State,1531.0
+Alfred State,1532.7
+Black Hills State,1531.8
+Fayetteville State,1531.7
+Saint Vincent,1531.7
+Clarion,1531.7
+Mass Maritime,1531.0
 Valparaiso,1530.5
-Arkansas-Pine Bluff,1530.4
-Hampton,1530.3
-UT Rio Grande Valley,1530.1
-Grambling,1529.8
-Lenoir Rhyne,1529.8
-South Dakota,1529.2
-Tusculum,1528.4
-Elon,1528.4
-Nicholls,1528.1
-Youngstown State,1527.9
-West Virginia State,1527.7
-Valdosta State,1526.7
-Idaho State,1526.7
-Wofford,1526.7
-Alabama State,1526.4
-Virginia State,1526.4
-Northern State,1525.8
-North Alabama,1525.6
-Western Carolina,1525.5
-North Dakota State,1525.5
-Tennessee Tech,1525.5
-Saginaw Valley State,1525.5
+Ohio Wesleyan,1530.3
+Ohio,1530.2
+Tarleton State,1530.2
+Coe,1529.8
+Western Michigan,1529.6
+Greensboro,1529.6
+Wisconsin Platteville,1528.8
+Albright,1528.8
+William & Mary,1528.6
+Newberry,1528.4
+Cal Poly,1528.4
+Mount St Joseph,1528.1
+Concord,1528.0
+Wake Forest,1527.5
+St. John Fisher,1527.2
+Western Carolina,1527.0
+Christopher Newport,1526.9
+Bridgewater State,1526.7
+Misericordia,1526.7
+Lake Erie,1526.7
+Rensselaer,1526.7
+Augustana (IL),1526.7
+George Fox,1526.4
+La Verne,1526.4
+Gustavus Adolphus,1526.1
+Heidelberg,1526.1
+LaGrange,1525.5
+Franklin & Marshall,1525.5
+North Central College,1525.2
+Luther,1525.2
 Dayton,1525.2
-Benedict,1524.8
-Minnesota St Moorhead,1524.8
-Richmond,1524.5
-North Dakota,1524.5
-CSU Pueblo,1523.7
-Tarleton State,1523.7
-Austin Peay,1523.3
-West Virginia Wesleyan,1523.3
-Upper Iowa,1522.9
-Concordia St. Paul,1522.9
-Furman,1522.9
-Wheeling,1522.9
+Fort Lewis,1524.9
+Trinity (TX),1524.8
+Vermont State Castleton,1524.8
+Hillsdale,1524.8
+California (PA),1524.6
+Hardin Simmons,1524.1
+Olivet,1524.1
+Morehead State,1523.9
+Pomona Pitzer,1523.7
+Fresno State,1523.4
+Lehigh,1523.3
+Oklahoma Baptist,1523.3
+UC Davis,1523.3
+Western Oregon,1523.3
+East Stroudsburg,1523.3
+Wayne State (NE),1523.0
+Minnesota State,1523.0
+Emporia State,1523.0
+Stevenson,1522.9
+Hanover,1522.9
+West Florida,1522.9
+Roosevelt,1522.7
+Millsaps,1522.4
 Lincoln (MO),1522.4
-Wake Forest,1521.7
-UAlbany,1521.4
-Edward Waters,1521.4
-American International,1521.4
+West Alabama,1522.4
+Loras,1521.9
+Utica,1521.9
+Plymouth State,1521.4
+Springfield,1521.4
+Coast Guard,1521.4
+Trine,1521.4
+East Tennessee State,1520.9
+Bethel University Tennessee,1520.9
+Dickinson,1520.9
+Walsh,1520.9
 Florida A&M,1520.9
-Fayetteville State,1520.9
-Howard,1520.8
-Davenport,1520.3
 Texas Southern,1520.3
-San Diego State,1519.6
-Presbyterian,1519.0
-Mercer,1517.4
-UNC Pembroke,1517.4
-Midwestern State,1516.5
-Lamar,1516.5
-Northern Arizona,1516.5
-Montana,1516.5
-Delaware State,1516.5
-St. Thomas (MN),1515.4
-Butler,1512.7
-Cal Poly,1512.7
-South Dakota Mines,1511.8
-UC Davis,1511.8
-Minnesota State,1511.8
-Bryant,1511.8
-Central Oklahoma,1511.8
-Campbell,1511.8
-Michigan Tech,1511.8
-Fort Hays,1511.8
-Emporia State,1511.8
-Northwest Missouri State,1511.8
-Jackson State,1511.8
-Eastern Illinois,1511.8
-Lehigh,1511.8
-Chattanooga,1511.8
-Western Oregon,1511.8
-Stephen F. Austin,1511.8
-Kentucky State,1511.8
-Central Arkansas,1511.8
-Wayne State (NE),1511.8
-Montana State,1511.8
-Morgan State,1511.8
-Washburn,1511.8
-Allen,1511.8
-Grand Valley State,1511.8
-Maine,1511.8
-Catawba,1511.8
-Houston Christian,1511.8
-Robert Morris,1511.8
-Weber State,1511.8
-Colgate,1511.8
-William & Mary,1511.8
-Rhode Island,1511.8
-Ohio Dominican,1511.8
-Concord,1511.8
-Lock Haven,1511.8
-Augustana (SD),1511.8
+Bemidji State,1519.8
+Western Colorado,1519.7
+McNeese,1519.6
+Western Illinois,1519.5
+Marietta,1519.0
+Endicott,1519.0
+Carthage,1518.2
+Johns Hopkins,1518.2
+Wabash,1518.2
+New Mexico Highlands,1517.5
+Lenoir Rhyne,1517.4
+Shepherd,1517.4
+Wisconsin Eau Claire,1517.4
+UConn,1516.8
+UT Martin,1516.6
+Adrian,1516.5
+Geneva,1516.5
+Hobart,1516.5
+Pacific Lutheran,1516.5
+Manchester,1516.5
+Austin Peay,1515.7
+Washington and Lee,1515.4
+Schreiner,1515.4
+Arkansas Tech,1515.4
+McDaniel,1515.4
+Indianapolis,1515.1
+Norfolk State,1515.0
+Wagner,1514.9
+Arkansas-Pine Bluff,1514.8
+Houston,1514.8
+Sul Ross State,1514.3
+Claremont Mudd Scripps,1514.2
+Wisconsin Stevens Point,1514.2
+Wheeling,1513.8
+Marist,1513.1
+Upper Iowa,1512.8
+Keystone,1512.7
+Findlay,1512.6
+North Greenville,1512.2
+South Dakota State,1512.1
+Southeastern Oklahoma State,1511.8
+Benedictine (IL),1511.8
+Macalester,1511.8
+North Carolina Wesleyan,1511.8
+Howard Payne,1511.8
+Knox,1511.8
+Wisconsin Stout,1511.8
+Gettysburg,1511.8
 Louisiana Christian,1511.8
-Walsh,1511.8
-Roosevelt,1511.8
-Southeast Missouri State,1511.8
-Western New Mexico,1511.8
-Western Colorado,1511.8
-Black Hills State,1511.8
-Ferris State,1511.8
-Minnesota,1511.2
-Kansas,1511.2
-Carson Newman,1511.0
-Lindenwood,1511.0
-West Florida,1511.0
-Southwest Minnesota State,1511.0
+Wilkes,1511.8
+Kutztown,1511.8
+Muhlenberg,1511.8
+SUNY Cortland,1511.8
+Kenyon,1511.8
+Concordia (MN),1511.8
+SUNY Morrisville,1511.8
+Linfield,1511.8
+Merchant Marine,1511.8
+Wilmington (OH),1511.8
+Northwood,1511.8
+Henderson State,1511.8
+Hiram,1511.8
+Carroll (WI),1511.8
+Case Western Reserve,1511.8
+Mary Hardin Baylor,1511.8
+Illinois College,1511.8
+Concordia Chicago,1511.8
+Berry,1511.8
+IU Pennsylvania,1511.8
+MIT,1511.8
+St. Lawrence,1511.8
+Washington St. Louis,1511.8
+Simpson (CA),1511.8
+Capital,1511.8
+DePauw,1511.8
+McMurry,1511.8
+Salve Regina,1511.8
+Shenandoah,1511.8
+East Central,1511.8
+Lycoming,1511.8
+Allegheny,1511.8
+Wisconsin Lutheran,1511.8
+Concordia (WI),1511.8
+Central Oklahoma,1511.8
+Andrew,1511.8
+Fitchburg State,1511.8
+John Carroll,1511.8
+Illinois Wesleyan,1511.8
+Wayland Baptist,1511.8
+Western Connecticut State,1511.8
+Bethany (WV),1511.8
+Erskine,1511.8
+Framingham State,1511.8
+Lewis & Clark,1511.8
+Hope,1511.8
+Hamline,1511.8
+Calvin,1511.8
+West Chester,1511.8
+East Texas Baptist,1511.8
+Northwest Missouri State,1511.8
+Wartburg,1511.8
+UT Rio Grande Valley,1511.4
+Bloomsburg,1511.1
+Grinnell,1511.0
+Franklin,1511.0
+Saint John's (MN),1511.0
+Ursinus,1511.0
+Mars Hill,1510.9
+Campbell,1510.3
 Rocky Mountain,1510.0
-West Alabama,1510.0
+Washburn,1509.3
+Edinboro,1509.1
+Furman,1509.1
+Minnesota Duluth,1509.1
+Howard,1509.1
+Kentucky,1509.0
+Beloit,1508.7
 Slippery Rock,1508.7
-Houston,1508.4
-Baylor,1506.3
-New Haven,1505.5
-New Mexico Highlands,1505.5
+New Mexico,1507.8
+Central Missouri,1506.9
+UNC Pembroke,1506.6
+Southwest Baptist,1505.7
+Wheaton (IL),1505.5
+SUNY Maritime,1505.5
+Nicholls,1505.5
+North Carolina Central,1505.0
+North Alabama,1504.8
+Eastern Washington,1503.7
+Ohio Dominican,1502.7
+West Virginia State,1502.1
+Susquehanna,1501.8
+Baylor,1501.8
+UCF,1501.8
 Wisconsin,1501.4
-New Mexico,1495.8
-Eastern New Mexico,1494.5
-Marist,1494.5
-Minnesota Duluth,1491.3
-University of Mary,1490.0
-Tuskegee,1490.0
-Southern Illinois,1489.0
-Tiffin,1489.0
-Charleston Southern,1489.0
+Fort Valley State,1501.2
+Southern,1500.9
+Tuskegee,1500.6
+Tiffin,1500.5
+Stonehill,1500.5
+Southern Illinois,1500.4
+Chattanooga,1500.3
+Fort Hays,1500.3
+Alabama A&M,1500.3
+Northern Arizona,1500.2
+Colorado Mesa,1500.2
+West Liberty,1500.0
+Central Arkansas,1499.9
+UAlbany,1499.9
+Western New Mexico,1499.8
+Concordia St. Paul,1499.8
+Delaware State,1499.7
+Villanova,1499.7
+Sioux Falls,1499.7
+Catawba,1499.6
+Southern Utah,1499.3
+Stetson,1499.2
+Allen,1499.0
+Virginia Union,1499.0
+Jacksonville State,1498.7
+Union,1498.2
+William Jewell,1498.2
+Stony Brook,1497.6
+Sacramento State,1497.4
+Lindenwood,1496.9
+Cincinnati,1496.8
+Weber State,1496.0
+Lock Haven,1495.9
+Tusculum,1495.7
+Anderson (SC),1495.0
+Mount Union,1494.5
+Worcester State,1494.5
+Youngstown State,1494.4
+Wingate,1494.1
+Augustana (SD),1494.0
+Missouri Southern State,1493.6
+New Haven,1493.2
+Southeast Missouri State,1492.6
+Monmouth,1492.6
+Midwestern State,1491.6
+West Virginia Wesleyan,1491.6
+Florida Memorial University,1491.4
+Rockford,1491.3
+Shaw,1490.8
+Louisiana Tech,1490.8
+Colorado School of Mines,1490.7
+Mount Mercy,1489.0
+North Park,1489.0
+Wisconsin La Crosse,1489.0
 Valley City State,1489.0
-Nebraska Kearney,1488.2
-Minot State,1488.2
-Chicago State,1488.2
-Indiana State,1488.2
-Angelo State,1488.2
-Missouri Western,1488.2
-Northwestern State,1488.2
-Adams State,1488.2
-Bemidji State,1488.2
-Drake,1488.2
-Murray State,1488.2
-Pittsburg State,1488.2
-West Georgia,1488.2
-Davidson,1488.2
-UT Martin,1488.2
-Ferrum,1488.2
-West Texas,1488.2
-Wagner,1488.2
-Texas Wesleyan,1488.2
-Colorado Mesa,1488.2
-Sioux Falls,1488.2
-Central State,1488.2
-Northern Colorado,1488.2
-Colorado School of Mines,1488.2
-Utah Tech,1488.2
-Villanova,1488.2
-Charleston (WV),1488.2
-Truman State,1488.2
-SE Louisiana,1488.2
-Tennessee State,1488.2
-Holy Cross,1488.2
-Morehead State,1488.2
-Texas A&M-Kingsville,1488.2
-Towson,1488.2
-Merrimack,1488.2
-East Tennessee State,1488.2
-Stonehill,1488.2
-West Liberty,1488.2
+Missouri S&T,1489.0
+Delaware Valley,1489.0
+Edward Waters,1488.8
+Southern Oregon,1488.5
+Pace,1488.5
+San Diego,1488.5
+Georgetown,1488.5
+Kentucky Christian,1488.4
+St. Scholastica,1488.2
+Rhodes,1488.2
+Whittier,1488.2
+Rochester (NY),1488.2
+Ripon,1488.2
+Monmouth (IL),1488.2
+Southwestern U,1488.2
+Lincoln (PA),1488.2
+Nichols,1488.2
+Methodist,1488.2
+Rowan,1488.2
+Ouachita Baptist,1488.2
+Waynesburg,1488.2
+UMass Dartmouth,1488.2
+Norwich,1488.2
+Crown,1488.2
+Elmhurst,1488.2
+Minnesota Morris,1488.2
+Dean,1488.2
+Kean,1488.2
+Nebraska Wesleyan,1488.2
+King's,1488.2
+Puget Sound,1488.2
+Anderson (IN),1488.2
+Wisconsin Oshkosh,1488.2
+Arkansas Monticello,1488.2
+Juniata,1488.2
 Shippensburg,1488.2
-McNeese,1488.2
-North Carolina A&T,1488.2
-Livingstone,1488.2
-Fordham,1488.2
-Portland State,1488.2
+Otterbein,1488.2
+Ashland,1488.2
+Lyon,1488.2
+Eureka,1488.2
+Dubuque,1488.2
+Oberlin,1488.2
+St. Norbert,1488.2
+Montclair State,1488.2
+Martin Luther,1488.2
+Huntingdon,1488.2
+Pacific (OR),1488.2
+Southern Nazarene,1488.2
+Wayne State (MI),1488.2
+Carnegie Mellon,1488.2
+Wooster,1488.2
+Denison,1488.2
+Kalamazoo,1488.2
+Albion,1488.2
+Sewanee,1488.2
+Husson,1488.2
+Grove City,1488.2
+Moravian,1488.2
+BLUEFIELD,1488.2
+Rose Hulman,1488.2
+Averett,1488.2
+Buena Vista,1488.2
+The College of New Jersey,1488.2
+Assumption,1488.2
+William Paterson,1488.2
+Millersville,1487.8
+St. Thomas (MN),1487.8
 Georgetown College Kentucky,1487.3
-Idaho,1487.3
-Winona State,1484.6
-UConn,1483.9
-Stony Brook,1483.5
-Southern Utah,1483.5
-Eastern Washington,1483.5
-Missouri Southern State,1483.5
-Abilene Christian,1483.5
-East Texas A&M,1482.6
-Wingate,1482.6
-UVA Wise,1481.0
-Cincinnati,1479.7
+Alvernia,1487.3
+Morgan State,1486.5
+Presbyterian,1486.4
+Butler,1486.2
+Augsburg,1485.8
+Northwestern (MN),1485.8
+Chadron State,1485.8
+Bryant,1485.7
+Emory & Henry,1485.6
+Austin,1484.6
+Southwestern Oklahoma State,1484.6
+Catholic,1484.6
+Wittenberg,1484.6
+Kentucky State,1484.5
+Chowan,1484.4
+Mississippi State,1484.3
+Central Washington,1484.3
+Tennessee State,1483.9
+Glenville State,1483.8
+Alfred,1483.5
+Widener,1483.5
+Westminster (MO),1483.5
+Ohio Northern,1483.5
+Cal Lutheran,1483.5
+Frostburg State,1482.6
+Alma,1482.6
+Hampton,1482.6
+Eastern New Mexico,1482.5
+Keiser (Fl),1482.1
+Clark Atlanta,1482.0
+Sacred Heart,1481.9
+Hampden Sydney,1481.8
+Ithaca,1481.8
+Lakeland,1481.8
+Idaho,1481.6
+Franklin Pierce,1481.4
+Westminster (PA),1481.0
+Eastern,1481.0
+Eastern Illinois,1480.3
+Angelo State,1480.3
+Abilene Christian,1480.2
+Dakota State University,1480.0
+Northern Iowa,1479.8
 Gannon,1479.7
-North Carolina Central,1479.7
-Alabama A&M,1479.2
-Shaw,1479.1
+Southwest Minnesota State,1479.4
+Randolph Macon,1479.1
 Albany State,1479.1
-New Hampshire,1478.6
-Florida Memorial University,1478.6
+University of Mary,1478.8
+Chicago,1478.6
+Western New England,1478.6
 Monroe,1478.6
-Rutgers,1478.3
-Marshall,1477.6
-Mississippi State,1477.6
+New England,1478.6
+New England College,1478.6
+Washington & Jefferson,1478.1
+St. Olaf,1478.1
+Belhaven,1477.6
 Central Methodist,1477.6
-Jamestown,1477.1
+Northern Colorado,1477.5
+Davidson,1477.5
+Shorter,1477.4
+The Citadel,1477.3
+Bridgewater,1477.1
 Thomas More,1477.1
-Quincy,1477.1
-Anderson (SC),1477.1
-Gardner-Webb,1476.7
+Centre,1477.1
+Minot State,1477.0
+Pittsburg State,1477.0
+Phoenix,1476.9
 Post,1476.7
-Central Missouri,1476.3
+Southern Arkansas,1476.7
+Nebraska Kearney,1476.6
+Seton Hill,1476.4
+Alcorn State,1476.3
+Willamette,1476.3
 Prairie View A&M,1476.3
-Bucknell,1475.5
-Kentucky,1475.5
-Long Island University,1475.5
-Northern Michigan,1475.2
+Kentucky Wesleyan,1475.9
+Chapman,1475.9
+Millikin,1475.9
+Ferrum,1475.9
+Bowie State,1475.7
 Johnson C. Smith,1475.2
-Fairmont State,1474.8
-Eastern Kentucky,1474.5
-Monmouth,1474.5
-McKendree,1474.5
-Samford,1474.4
-Chadron State,1474.2
-Southern,1473.6
-Barton,1473.6
-The Citadel,1473.3
-VMI,1473.3
-Emory & Henry,1473.3
-Chowan,1472.3
-Mercyhurst,1472.1
-Mississippi Valley State,1471.9
-Glenville State,1471.6
-Bluefield State,1471.6
+Westfield State,1475.2
+Texas Lutheran,1475.2
+Bethel (MN),1474.8
+Lawrence,1474.8
+Lebanon Valley,1474.5
+Point University,1474.5
+Utah Tech,1474.4
+Central College,1473.9
+Maryville (TN),1473.9
+Lamar,1473.9
+Redlands,1473.6
+Azusa Pacific,1473.6
+WPI,1473.3
+Curry,1473.3
+Saint Anselm,1473.3
+Simpson (IA),1473.3
+Hartwick,1473.3
+Southern Connecticut State,1473.3
+Apprentice School,1473.1
+Bentley,1472.9
+FDU Florham,1472.8
+Marian (IN),1472.3
+Warner,1472.1
+Marshall,1471.9
+Muskingum,1471.9
+Reinhardt,1471.6
+Aurora,1471.2
+Gallaudet,1471.2
+Thomas,1471.1
 Central Connecticut,1470.8
-Clark Atlanta,1470.2
-Virginia Union,1470.2
+Guilford,1470.4
+Cornell (IA),1470.2
 UT Permian Basin,1469.9
+Bluffton,1469.7
 Virginia Lynchburg,1469.7
-Morehouse,1469.6
 Lawrence Tech,1469.5
-Miles,1469.0
+Truman State,1469.3
+Maine Maritime,1469.0
+UVA Wise,1468.9
 Northwestern (IA),1468.7
-Jacksonville State,1468.2
-Winston-Salem State,1468.0
+Maryland,1468.6
+Texas A&M-Kingsville,1468.5
+Michigan State,1468.5
+Hilbert,1468.3
+Towson,1467.9
 William Woods,1467.9
-Andrew,1467.6
+Webber International,1467.9
+Thiel,1467.3
+Carleton,1467.2
 Oklahoma Panhandle,1467.2
-Stetson,1467.1
+Central State,1467.2
+Greenville,1467.1
+Lafayette,1467.1
+Southern Virginia,1466.7
+Buffalo State,1466.5
+Gardner-Webb,1466.3
+Quincy,1466.2
+Winona State,1466.0
+Jamestown,1465.6
 St. Francis (IL),1465.6
-Sacramento State,1465.2
+Northwestern (OK),1465.6
+Holy Cross,1464.7
 Savannah State,1464.6
-UCF,1463.6
-Utah State,1462.2
-Liberty,1458.7
-Louisiana Tech,1451.7
-Hawai'i,1445.6
-Michigan State,1436.3
-Western Kentucky,1435.6
-Miami (OH),1430.0
-Maryland,1420.9
-Air Force,1420.2
-Troy,1418.8
-Virginia Tech,1417.4
-Stanford,1410.2
-California,1402.0
-Boston College,1401.3
-Delaware,1399.2
-Colorado,1390.8
+Bucknell,1464.0
+Rhode Island,1463.9
+Fairmont State,1463.7
+Northern Michigan,1463.7
+Portland State,1463.6
+Charleston (WV),1463.6
+Fordham,1463.2
+Samford,1463.0
+Elizabeth City State,1462.9
+Drake,1462.8
+Duquesne,1462.7
+Adams State,1462.1
+Barton,1461.9
+Bethune-Cookman,1461.8
+West Texas,1461.1
+Chicago State,1459.8
+Livingstone,1459.4
+Rutgers,1458.9
+Virginia Tech,1458.7
+Morehouse,1457.8
+Missouri Western,1457.6
+Air Force,1457.5
+Delta State,1457.1
+Winston-Salem State,1457.1
+East Texas A&M,1457.0
+Texas Wesleyan,1456.8
+Lane College,1455.8
+Bluefield State,1455.4
+Liberty,1455.3
+Maine,1452.4
+Utah State,1452.2
+SE Louisiana,1451.4
+McKendree,1449.7
+Merrimack,1449.5
+Long Island University,1449.2
+Northwestern State,1449.1
+Houston Christian,1448.8
+Charleston Southern,1448.0
+Miles,1447.9
+Eastern Kentucky,1444.0
+Indiana State,1442.9
+West Georgia,1442.1
+Mississippi Valley State,1439.7
+Murray State,1438.7
+Delaware,1437.9
+Hawai'i,1437.3
+VMI,1432.0
+Louisiana,1426.4
+North Carolina A&T,1423.5
+South Alabama,1422.0
+Troy,1421.8
+Mercyhurst,1418.0
+New Hampshire,1417.7
+Miami (OH),1414.3
+Kennesaw State,1413.1
+Georgia Southern,1410.8
+Stanford,1408.2
+Colorado,1406.8
+Southern Miss,1397.2
+Western Kentucky,1396.5
 North Carolina,1390.1
-South Alabama,1385.2
-Louisiana,1383.8
-Missouri State,1379.6
-Florida International,1376.8
-UCLA,1375.4
-Arkansas State,1371.9
-Georgia Southern,1369.8
-Kennesaw State,1367.0
-Buffalo,1358.6
-Wyoming,1356.5
-West Virginia,1353.7
-Eastern Michigan,1352.1
-Nevada,1343.9
-Southern Miss,1342.5
-Bowling Green,1332.0
-Northern Illinois,1313.1
-Central Michigan,1312.4
-Purdue,1308.9
-Temple,1303.3
-App State,1301.2
-UAB,1278.8
-Syracuse,1277.4
-Florida Atlantic,1274.6
-Middle Tennessee,1264.8
-Coastal Carolina,1264.1
-New Mexico State,1264.0
-Colorado State,1258.5
-Oregon State,1255.0
-San José State,1250.6
-UTEP,1244.5
-Georgia State,1228.4
-Tulsa,1227.0
-Oklahoma State,1227.0
-Akron,1220.7
-Rice,1180.8
-Charlotte,1166.1
-UL Monroe,1161.2
-Ball State,1157.0
-Kent State,1150.7
-Sam Houston,1145.8
-Massachusetts,952.6
+California,1389.4
+UCLA,1388.0
+Boston College,1384.2
+Nevada,1383.0
+Buffalo,1380.1
+Missouri State,1374.9
+Florida International,1372.7
+West Virginia,1365.0
+Arkansas State,1360.9
+App State,1360.6
+Purdue,1354.2
+Temple,1351.2
+Syracuse,1338.3
+Eastern Michigan,1337.6
+Bowling Green,1325.5
+Wyoming,1321.7
+New Mexico State,1318.1
+Middle Tennessee,1314.3
+Northern Illinois,1310.8
+Central Michigan,1300.4
+Colorado State,1293.3
+Georgia State,1293.1
+UAB,1272.8
+Florida Atlantic,1267.1
+San José State,1265.1
+Coastal Carolina,1252.8
+Oregon State,1248.6
+Tulsa,1248.4
+Rice,1243.8
+UTEP,1241.7
+Akron,1214.9
+Oklahoma State,1205.6
+Charlotte,1162.1
+Ball State,1156.6
+UL Monroe,1154.5
+Kent State,1148.1
+Sam Houston,1142.8
+Massachusetts,972.0
