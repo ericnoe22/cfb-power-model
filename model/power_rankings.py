@@ -206,8 +206,22 @@ def build_composite_ratings(
     base["sagarin_norm"]    = _normalize_sagarin(base["sagarin"].fillna(
                               base["sagarin"].mean() if base["sagarin"].notna().any() else 75.0))
     # EPA net: convert to SP+ scale (1 SD ≈ 5 SP+ points)
+    has_epa_data = base["epa_net"].notna().any()
     base["epa_norm"]        = z_score(base["epa_net"].fillna(0)) * 5 \
-                              if base["epa_net"].notna().any() else pd.Series(0.0, index=base.index)
+                              if has_epa_data else pd.Series(0.0, index=base.index)
+
+    # Phase in opponent-adjusted EPA/PPA as real per-play performance data
+    # accumulates, carved out of Elo's weight (elo_w below = elo - epa_adj).
+    # Elo only sees the final score, so a favorite that escapes with a bad
+    # offensive performance against a weak opponent (e.g. a 1-point Hail Mary
+    # win) still banks a near-full Elo win. Opponent-adjusted EPA reflects how
+    # the game was actually played, so once EPA data actually exists for this
+    # call, let it start pulling weight the moment week 1 results exist,
+    # ramping 2.5 pts/week up to the full 10% carve-out by week 4+. Gated on
+    # has_epa_data so callers that don't fetch EPA (e.g. backtest.py) don't
+    # silently lose Elo weight to a no-op zero signal.
+    if week and week >= 1 and has_epa_data:
+        weights["epa_adj"] = min(RATING_WEIGHTS["elo"], 0.025 * week)
 
     # ── Weighted composite ────────────────────────────────────────────────
     w = weights

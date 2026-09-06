@@ -47,8 +47,11 @@ RATING_WEIGHTS = {
     "elo":                0.10,
     "returning_prod":     0.05,
     "talent":             0.02,
-    # Opponent-adjusted EPA/PPA (CFBD Patreon). 0% preseason — no data yet.
-    # Increase to ~10% once several weeks of games are played (shift from elo).
+    # Opponent-adjusted EPA/PPA (CFBD Patreon). 0.00 here = preseason default
+    # (no games played yet). Once build_composite_ratings() is called with a
+    # week argument, it auto-ramps this weight 2.5 pts/week (carved out of
+    # elo) up to a 10% cap by week 4+ — see model/power_rankings.py. Don't
+    # hand-edit this value for in-season weeks; pass week= instead.
     "epa_adj":            0.00,
 }
 
