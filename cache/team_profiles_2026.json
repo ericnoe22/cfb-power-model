@@ -1,6 +1,6 @@
 {
   "Air Force": {
-    "head_coach": "Troy Calhoun",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -45,25 +45,30 @@
         "jersey": "13"
       },
       {
-        "name": "Jackson King",
-        "class": "Junior",
-        "jersey": "14"
-      },
-      {
         "name": "Evan Medders",
         "class": "Sophomore",
         "jersey": "5"
+      },
+      {
+        "name": "Cade Spradling",
+        "class": "Sophomore",
+        "jersey": "7"
+      },
+      {
+        "name": "Howard Fisher IV",
+        "class": "",
+        "jersey": "4"
       }
     ],
     "key_transfers_in": [],
     "returning_prod_pct": 57.4,
-    "talent_score": NaN,
+    "talent_score": 272.4,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Akron": {
-    "head_coach": "Joe Moorhead",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -126,26 +131,26 @@
         "rating": 0.86
       },
       {
-        "name": "Reese Poffenbarger",
-        "position": "QB",
-        "origin": "North Texas",
-        "rating": 0.85
-      },
-      {
         "name": "Shamar McNeil",
         "position": "CB",
         "origin": "Missouri",
         "rating": 0.85
+      },
+      {
+        "name": "Reese Poffenbarger",
+        "position": "QB",
+        "origin": "North Texas",
+        "rating": 0.85
       }
     ],
     "returning_prod_pct": 91.8,
-    "talent_score": 537.2,
+    "talent_score": 546.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Alabama": {
-    "head_coach": "Kalen DeBoer",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -208,26 +213,26 @@
         "rating": 0.94
       },
       {
-        "name": "Noah Rogers",
-        "position": "WR",
-        "origin": "NC State",
-        "rating": 0.93
-      },
-      {
         "name": "Terrance Green",
         "position": "DL",
         "origin": "Oregon",
         "rating": 0.93
+      },
+      {
+        "name": "Noah Rogers",
+        "position": "WR",
+        "origin": "NC State",
+        "rating": 0.93
       }
     ],
     "returning_prod_pct": 26.4,
-    "talent_score": 993.5,
+    "talent_score": 973.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "App State": {
-    "head_coach": "Dowell Loggains",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -241,7 +246,7 @@
       "name": "Rashod Dubinion",
       "rush_yds": 868,
       "rush_td": 4,
-      "departed_to": "not on 2026 roster"
+      "departed_to": NaN
     },
     "top_wr": {
       "name": "Jaden Barnes",
@@ -297,20 +302,20 @@
         "rating": 0.86
       },
       {
-        "name": "Alex Mitchell",
-        "position": "LB",
-        "origin": "Middle Tennessee",
+        "name": "Kaleb Purdy",
+        "position": "S",
+        "origin": "Tennessee Tech",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 37.9,
-    "talent_score": 611.3,
+    "talent_score": 621.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Arizona": {
-    "head_coach": "Brent Brennan",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -322,8 +327,7 @@
     "top_rb": {
       "name": "Ismail Mahdi",
       "rush_yds": 785,
-      "rush_td": 4,
-      "departed_to": "not on 2026 roster"
+      "rush_td": 4
     },
     "top_wr": {
       "name": "Kris Hutson",
@@ -345,23 +349,23 @@
       },
       {
         "name": "Mason Bray",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "15"
       },
       {
         "name": "Sawyer Anderson",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "7"
+      },
+      {
+        "name": "Luke Haugo",
+        "class": "Sophomore",
+        "jersey": "16"
       },
       {
         "name": "Oscar Rios",
         "class": "Freshman",
         "jersey": "9"
-      },
-      {
-        "name": "Luke Haugo",
-        "class": "Freshman",
-        "jersey": "16"
       }
     ],
     "key_transfers_in": [
@@ -378,20 +382,20 @@
         "rating": 0.89
       },
       {
-        "name": "Cam Chapa",
-        "position": "S",
-        "origin": "Northern Colorado",
+        "name": "Antwan Roberts",
+        "position": "RB",
+        "origin": "Marshall",
         "rating": 0.87
       }
     ],
     "returning_prod_pct": 64.9,
-    "talent_score": 651.6,
+    "talent_score": 699.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Arizona State": {
-    "head_coach": "Kenny Dillingham",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -428,18 +432,18 @@
       },
       {
         "name": "Cutter Boley",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "8"
+      },
+      {
+        "name": "Cameron Dyer",
+        "class": "Sophomore",
+        "jersey": "13"
       },
       {
         "name": "Jake Fette",
         "class": "Freshman",
         "jersey": "2"
-      },
-      {
-        "name": "Cameron Dyer",
-        "class": "Freshman",
-        "jersey": "13"
       }
     ],
     "key_transfers_in": [
@@ -463,15 +467,15 @@
       }
     ],
     "returning_prod_pct": 15.5,
-    "talent_score": 738.5,
+    "talent_score": 722.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Arkansas": {
-    "head_coach": "Ryan Silverfield",
-    "coaching_change": true,
-    "coaching_note": "Silverfield (Memphis) lateral move up \u2014 solid but unproven at P4 level",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Taylen Green",
       "pass_yds": 2714,
@@ -505,12 +509,12 @@
       },
       {
         "name": "KJ Jackson",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "7"
       },
       {
         "name": "AJ Hill",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "2"
       },
       {
@@ -540,13 +544,13 @@
       }
     ],
     "returning_prod_pct": 14.5,
-    "talent_score": 772.6,
+    "talent_score": 745.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Arkansas State": {
-    "head_coach": "Butch Jones",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -603,12 +607,6 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Makai Shahid",
-        "position": "S",
-        "origin": "Youngstown State",
-        "rating": 0.86
-      },
-      {
         "name": "Manasse Itete",
         "position": "IOL",
         "origin": "Florida State",
@@ -619,16 +617,22 @@
         "position": "QB",
         "origin": "Texas",
         "rating": 0.86
+      },
+      {
+        "name": "Joshua Ofor",
+        "position": "LB",
+        "origin": "NC State",
+        "rating": 0.86
       }
     ],
     "returning_prod_pct": 30.0,
-    "talent_score": 591.3,
+    "talent_score": 606.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Army": {
-    "head_coach": "Jeff Monken",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -679,15 +683,15 @@
     ],
     "key_transfers_in": [],
     "returning_prod_pct": 80.2,
-    "talent_score": 23.7,
+    "talent_score": 303.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Auburn": {
-    "head_coach": "Alex Golesh",
-    "coaching_change": true,
-    "coaching_note": "Golesh was excellent at South Florida \u2014 upgrade from Freeze",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Jackson Arnold",
       "pass_yds": 1309,
@@ -765,13 +769,13 @@
       }
     ],
     "returning_prod_pct": 14.4,
-    "talent_score": 891.8,
+    "talent_score": 828.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "BYU": {
-    "head_coach": "Kalani Sitake",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -841,13 +845,13 @@
       }
     ],
     "returning_prod_pct": 78.5,
-    "talent_score": 649.4,
+    "talent_score": 689.4,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Ball State": {
-    "head_coach": "Mike Uremovich",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -906,26 +910,26 @@
         "rating": 0.85
       },
       {
-        "name": "Jared Badie",
-        "position": "EDGE",
-        "origin": "San Diego State",
+        "name": "Jacob Jeudy",
+        "position": "IOL",
+        "origin": "Concord",
         "rating": 0.85
       },
       {
-        "name": "Jacob Jeudy",
-        "position": "IOL",
-        "origin": "Concord University",
+        "name": "Tyler Mizzell",
+        "position": "QB",
+        "origin": "Concord",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 5.7,
-    "talent_score": 495.4,
+    "talent_score": 563.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Baylor": {
-    "head_coach": "Dave Aranda",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -995,20 +999,20 @@
         "rating": 0.92
       },
       {
-        "name": "Dre'lon Miller",
-        "position": "WR",
-        "origin": "Colorado",
+        "name": "Garrick Ponder",
+        "position": "EDGE",
+        "origin": "Southern Miss",
         "rating": 0.88
       }
     ],
     "returning_prod_pct": 60.2,
-    "talent_score": 726.3,
+    "talent_score": 723.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Boise State": {
-    "head_coach": "Spencer Danielson",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -1059,9 +1063,9 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Juelz Goff",
-        "position": "RB",
-        "origin": "Pittsburgh",
+        "name": "Roman Tillmon",
+        "position": "S",
+        "origin": "South Dakota",
         "rating": 0.86
       },
       {
@@ -1071,20 +1075,20 @@
         "rating": 0.86
       },
       {
-        "name": "Roman Tillmon",
-        "position": "S",
-        "origin": "South Dakota",
+        "name": "Juelz Goff",
+        "position": "RB",
+        "origin": "Pittsburgh",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 66.3,
-    "talent_score": 610.6,
+    "talent_score": 641.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Boston College": {
-    "head_coach": "Bill O'Brien",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -1125,11 +1129,6 @@
         "jersey": "10"
       },
       {
-        "name": "Anthony Coellner",
-        "class": "Freshman",
-        "jersey": "5"
-      },
-      {
         "name": "Jake Coniglio",
         "class": "Freshman",
         "jersey": "7"
@@ -1138,6 +1137,11 @@
         "name": "Femi Babalola",
         "class": "Freshman",
         "jersey": "11"
+      },
+      {
+        "name": "Anthony Coellner",
+        "class": "Freshman",
+        "jersey": "18"
       }
     ],
     "key_transfers_in": [
@@ -1154,20 +1158,20 @@
         "rating": 0.87
       },
       {
-        "name": "KJ Sampson",
-        "position": "DL",
-        "origin": "Florida State",
+        "name": "Grayson Wilson",
+        "position": "QB",
+        "origin": "Arkansas",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 15.6,
-    "talent_score": 650.1,
+    "talent_score": 660.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Bowling Green": {
-    "head_coach": "Eddie George",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -1193,7 +1197,7 @@
       "name": "Myles Bradley",
       "sacks": 5.0,
       "tfl": 5.5,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "qb_room": [
       {
@@ -1235,26 +1239,26 @@
         "rating": 0.86
       },
       {
+        "name": "Ke'Marion Baldwin",
+        "position": "RB",
+        "origin": "Charleston Southern",
+        "rating": 0.85
+      },
+      {
         "name": "Armahn Hale",
         "position": "S",
         "origin": "New Mexico State",
         "rating": 0.85
-      },
-      {
-        "name": "John Baker IV",
-        "position": "EDGE",
-        "origin": "Toledo",
-        "rating": 0.85
       }
     ],
     "returning_prod_pct": -6.2,
-    "talent_score": 527.3,
+    "talent_score": 568.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Buffalo": {
-    "head_coach": "Pete Lembo",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -1313,28 +1317,28 @@
         "rating": 0.86
       },
       {
-        "name": "Logan Goodwin",
-        "position": "EDGE",
-        "origin": "Indiana-Pennsylvania",
-        "rating": 0.84
-      },
-      {
         "name": "Joey Cheshire",
         "position": "LB",
         "origin": "Cornell",
         "rating": 0.84
+      },
+      {
+        "name": "Stantavious Smith",
+        "position": "DL",
+        "origin": "Florida A&M",
+        "rating": 0.84
       }
     ],
     "returning_prod_pct": -0.8,
-    "talent_score": 513.3,
+    "talent_score": 549.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "California": {
-    "head_coach": "Tosh Lupoi",
-    "coaching_change": true,
-    "coaching_note": "Longtime DC/assistant \u2014 no prior HC experience at any level",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Jaron-Keawe Sagapolutele",
       "pass_yds": 3109,
@@ -1400,26 +1404,26 @@
         "rating": 0.93
       },
       {
-        "name": "Ian Strong",
-        "position": "WR",
-        "origin": "Rutgers",
-        "rating": 0.92
-      },
-      {
         "name": "Adam Mohammed",
         "position": "RB",
         "origin": "Washington",
         "rating": 0.92
+      },
+      {
+        "name": "Ian Strong",
+        "position": "WR",
+        "origin": "Rutgers",
+        "rating": 0.92
       }
     ],
     "returning_prod_pct": 58.3,
-    "talent_score": 726.2,
+    "talent_score": 751.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Central Michigan": {
-    "head_coach": "Matt Drinkall",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -1440,7 +1444,7 @@
       "rec_yds": 513,
       "rec_td": 3,
       "rec": 35,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "top_defender": {
       "name": "Michael Heldman",
@@ -1496,13 +1500,13 @@
       }
     ],
     "returning_prod_pct": 54.0,
-    "talent_score": 481.2,
+    "talent_score": 540.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Charlotte": {
-    "head_coach": "Tim Albin",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -1532,15 +1536,15 @@
     "qb_room": [],
     "key_transfers_in": [
       {
-        "name": "Jaden Barnes",
-        "position": "WR",
-        "origin": "App State",
-        "rating": 0.86
-      },
-      {
         "name": "J'ven Williams",
         "position": "OT",
         "origin": "Penn State",
+        "rating": 0.86
+      },
+      {
+        "name": "Jaden Barnes",
+        "position": "WR",
+        "origin": "App State",
         "rating": 0.86
       },
       {
@@ -1551,13 +1555,13 @@
       }
     ],
     "returning_prod_pct": 40.9,
-    "talent_score": 526.3,
+    "talent_score": 576.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Cincinnati": {
-    "head_coach": "Scott Satterfield",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -1581,9 +1585,9 @@
       "departed_to": "not on 2026 roster"
     },
     "top_defender": {
-      "name": "Jalen Hunt",
+      "name": "Jake Golday",
       "sacks": 3.5,
-      "tfl": 6.0,
+      "tfl": 4.0,
       "departed_to": "not on 2026 roster"
     },
     "qb_room": [
@@ -1599,17 +1603,17 @@
       },
       {
         "name": "Will Kocher",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "15"
       },
       {
         "name": "Samaj Jones",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "5"
       },
       {
         "name": "JJ Miller",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "22"
       },
       {
@@ -1639,13 +1643,13 @@
       }
     ],
     "returning_prod_pct": 8.3,
-    "talent_score": 644.1,
+    "talent_score": 634.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Clemson": {
-    "head_coach": "Dabo Swinney",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -1684,11 +1688,6 @@
         "jersey": "14"
       },
       {
-        "name": "Christopher Vizzina",
-        "class": "Senior",
-        "jersey": "17"
-      },
-      {
         "name": "Chris Denson",
         "class": "Sophomore",
         "jersey": "15"
@@ -1712,28 +1711,28 @@
         "rating": 0.87
       },
       {
-        "name": "London Merritt",
-        "position": "EDGE",
-        "origin": "Colorado",
-        "rating": 0.87
-      },
-      {
         "name": "Chris Johnson Jr.",
         "position": "RB",
         "origin": "SMU",
         "rating": 0.87
+      },
+      {
+        "name": "London Merritt",
+        "position": "EDGE",
+        "origin": "Colorado",
+        "rating": 0.87
       }
     ],
     "returning_prod_pct": 41.4,
-    "talent_score": 918.4,
+    "talent_score": 862.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Coastal Carolina": {
-    "head_coach": "Ryan Beard",
-    "coaching_change": true,
-    "coaching_note": "Beard won big at FCS Missouri State \u2014 step up but manageable",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Tad Hudson",
       "pass_yds": 942,
@@ -1752,7 +1751,7 @@
       "rec_yds": 274,
       "rec_td": 1,
       "rec": 24,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "top_defender": {
       "name": "Ezekiel Durham-Campbell",
@@ -1789,12 +1788,6 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Trever Jackson",
-        "position": "QB",
-        "origin": "Arkansas",
-        "rating": 0.86
-      },
-      {
         "name": "Jalen Lee",
         "position": "S",
         "origin": "South Dakota State",
@@ -1805,16 +1798,22 @@
         "position": "WR",
         "origin": "Missouri State",
         "rating": 0.86
+      },
+      {
+        "name": "Trever Jackson",
+        "position": "QB",
+        "origin": "Arkansas",
+        "rating": 0.86
       }
     ],
     "returning_prod_pct": 15.4,
-    "talent_score": 610.9,
+    "talent_score": 574.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Colorado": {
-    "head_coach": "Deion Sanders",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -1880,15 +1879,15 @@
       }
     ],
     "returning_prod_pct": 13.7,
-    "talent_score": 755.2,
+    "talent_score": 731.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Colorado State": {
-    "head_coach": "Jim Mora",
-    "coaching_change": true,
-    "coaching_note": "Mora is a proven veteran HC \u2014 significant upgrade from Norvell",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Jackson Brousseau",
       "pass_yds": 1354,
@@ -1912,28 +1911,39 @@
     "top_defender": {
       "name": "Lemondre Joe",
       "sacks": 3.5,
-      "tfl": 4.5
+      "tfl": 4.5,
+      "departed_to": "not on 2026 roster"
     },
     "qb_room": [
       {
-        "name": "Tahj Bullock",
-        "class": "Senior",
-        "jersey": "12"
-      },
-      {
         "name": "Tommy Poholsky",
-        "class": "Sophomore",
+        "class": "Senior",
         "jersey": "13"
       },
       {
         "name": "Darius Curry",
-        "class": "Freshman",
+        "class": "Junior",
         "jersey": "3"
       },
       {
-        "name": "Tyler Lewis",
+        "name": "K'saan Farrar",
+        "class": "Sophomore",
+        "jersey": "2"
+      },
+      {
+        "name": "Hauss Hejny",
+        "class": "Sophomore",
+        "jersey": "8"
+      },
+      {
+        "name": "Darnell Kelly",
         "class": "Freshman",
-        "jersey": "17"
+        "jersey": "16"
+      },
+      {
+        "name": "Carter Emanuel",
+        "class": "Freshman",
+        "jersey": "19"
       }
     ],
     "key_transfers_in": [
@@ -1944,26 +1954,26 @@
         "rating": 0.87
       },
       {
-        "name": "Quinton Harris",
-        "position": "OT",
-        "origin": "TCU",
-        "rating": 0.86
-      },
-      {
         "name": "Pearce Spurlin III",
         "position": "TE",
         "origin": "Georgia",
         "rating": 0.86
+      },
+      {
+        "name": "Caleb Presley",
+        "position": "CB",
+        "origin": "San Jos\u00e9 State",
+        "rating": 0.86
       }
     ],
     "returning_prod_pct": 39.6,
-    "talent_score": 583.7,
+    "talent_score": 640.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Delaware": {
-    "head_coach": "Ryan Carty",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2037,20 +2047,20 @@
         "rating": 0.85
       },
       {
-        "name": "Sam Siafa",
-        "position": "DL",
-        "origin": "Penn State",
+        "name": "Bryson Graves",
+        "position": "WR",
+        "origin": "Coastal Carolina",
         "rating": 0.84
       }
     ],
     "returning_prod_pct": 84.9,
-    "talent_score": 242.8,
+    "talent_score": 483.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Duke": {
-    "head_coach": "Manny Diaz",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2118,26 +2128,26 @@
         "rating": 0.88
       },
       {
-        "name": "Javen Nicholas",
-        "position": "WR",
-        "origin": "Charlotte",
-        "rating": 0.87
-      },
-      {
         "name": "Dylan Flowers",
         "position": "CB",
         "origin": "Western Kentucky",
         "rating": 0.87
+      },
+      {
+        "name": "Javen Nicholas",
+        "position": "WR",
+        "origin": "Charlotte",
+        "rating": 0.87
       }
     ],
     "returning_prod_pct": 17.1,
-    "talent_score": 669.2,
+    "talent_score": 668.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "East Carolina": {
-    "head_coach": "Blake Harrell",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2202,20 +2212,20 @@
         "rating": 0.86
       },
       {
-        "name": "Jeremiah Melvin",
-        "position": "WR",
-        "origin": "Wake Forest",
+        "name": "Crews Law",
+        "position": "LB",
+        "origin": "Memphis",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 13.6,
-    "talent_score": 611.5,
+    "talent_score": 623.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Eastern Michigan": {
-    "head_coach": "Chris Creighton",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2253,6 +2263,11 @@
         "jersey": "10"
       },
       {
+        "name": "Jace Stuckey",
+        "class": "Junior",
+        "jersey": "12"
+      },
+      {
         "name": "Bryce Button",
         "class": "Sophomore",
         "jersey": "19"
@@ -2271,28 +2286,28 @@
         "rating": 0.86
       },
       {
-        "name": "Cole Dellinger",
-        "position": "IOL",
-        "origin": "Michigan State",
-        "rating": 0.84
-      },
-      {
         "name": "Tyler McMillan",
         "position": "OT",
         "origin": "Illinois",
         "rating": 0.84
+      },
+      {
+        "name": "Cole Dellinger",
+        "position": "IOL",
+        "origin": "Michigan State",
+        "rating": 0.84
       }
     ],
     "returning_prod_pct": 72.1,
-    "talent_score": 572.9,
+    "talent_score": 580.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Florida": {
-    "head_coach": "Jon Sumrall",
-    "coaching_change": true,
-    "coaching_note": "Sumrall won 11 at Tulane \u2014 massive upgrade over Napier's tenure",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "D.J. Lagway",
       "pass_yds": 2264,
@@ -2315,17 +2330,17 @@
       "name": "Jayden Woods",
       "sacks": 3.5,
       "tfl": 5.0,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "qb_room": [
       {
         "name": "Aaron Philo",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "12"
       },
       {
         "name": "Tramell Jones Jr.",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "9"
       },
       {
@@ -2342,26 +2357,26 @@
         "rating": 0.94
       },
       {
-        "name": "London Montgomery",
-        "position": "RB",
-        "origin": "East Carolina",
-        "rating": 0.89
-      },
-      {
         "name": "Aaron Philo",
         "position": "QB",
         "origin": "Georgia Tech",
         "rating": 0.89
+      },
+      {
+        "name": "London Montgomery",
+        "position": "RB",
+        "origin": "East Carolina",
+        "rating": 0.89
       }
     ],
     "returning_prod_pct": 69.1,
-    "talent_score": 898.6,
+    "talent_score": 891.1,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Florida Atlantic": {
-    "head_coach": "Zach Kittley",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2426,13 +2441,13 @@
       }
     ],
     "returning_prod_pct": 68.4,
-    "talent_score": 605.2,
+    "talent_score": 593.4,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Florida International": {
-    "head_coach": "Willie Simmons",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2459,7 +2474,7 @@
       "name": "Kenton Simmons",
       "sacks": 7.0,
       "tfl": 9.0,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "qb_room": [
       {
@@ -2476,11 +2491,6 @@
         "name": "JJ Kohl",
         "class": "Junior",
         "jersey": "17"
-      },
-      {
-        "name": "Trey Whirley",
-        "class": "Sophomore",
-        "jersey": "23"
       },
       {
         "name": "DJ Alexander",
@@ -2501,26 +2511,26 @@
         "rating": 0.86
       },
       {
-        "name": "Brayshawn Littlejohn",
-        "position": "LB",
-        "origin": "App State",
-        "rating": 0.85
-      },
-      {
         "name": "Jamorie Flagg",
         "position": "DL",
         "origin": "Florida State",
         "rating": 0.85
+      },
+      {
+        "name": "Brayshawn Littlejohn",
+        "position": "LB",
+        "origin": "App State",
+        "rating": 0.85
       }
     ],
     "returning_prod_pct": 31.6,
-    "talent_score": 562.6,
+    "talent_score": 607.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Florida State": {
-    "head_coach": "Mike Norvell",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2546,13 +2556,18 @@
       "name": "Mandrell Desir",
       "sacks": 6.5,
       "tfl": 7.5,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "qb_room": [
       {
         "name": "Dean DeNobile",
         "class": "Senior",
         "jersey": "4"
+      },
+      {
+        "name": "Michael Grant",
+        "class": "Senior",
+        "jersey": "12"
       },
       {
         "name": "Ashton Daniels",
@@ -2565,14 +2580,14 @@
         "jersey": "1"
       },
       {
-        "name": "Michael Grant",
-        "class": "Junior",
-        "jersey": "12"
+        "name": "Kevin Sperry",
+        "class": "Sophomore",
+        "jersey": "9"
       },
       {
-        "name": "Kevin Sperry",
+        "name": "Jaden O'Neal",
         "class": "Freshman",
-        "jersey": "9"
+        "jersey": "16"
       }
     ],
     "key_transfers_in": [
@@ -2596,13 +2611,13 @@
       }
     ],
     "returning_prod_pct": 40.1,
-    "talent_score": 828.5,
+    "talent_score": 800.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Fresno State": {
-    "head_coach": "Matt Entz",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2664,26 +2679,26 @@
         "rating": 0.85
       },
       {
+        "name": "Oscar Weigel",
+        "position": "OT",
+        "origin": "San Diego",
+        "rating": 0.85
+      },
+      {
         "name": "Croix Stewart",
         "position": "S",
         "origin": "UCLA",
         "rating": 0.85
-      },
-      {
-        "name": "Khristian Martin",
-        "position": "QB",
-        "origin": "Maryland",
-        "rating": 0.85
       }
     ],
     "returning_prod_pct": 38.3,
-    "talent_score": 586.8,
+    "talent_score": 609.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Georgia": {
-    "head_coach": "Kirby Smart",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2713,33 +2728,33 @@
     "qb_room": [
       {
         "name": "Ryan Puglisi",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "12"
       },
       {
         "name": "Colter Ginn",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "17"
       },
       {
         "name": "Ryan Montgomery",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "15"
+      },
+      {
+        "name": "Hezekiah Millender",
+        "class": "Sophomore",
+        "jersey": "19"
+      },
+      {
+        "name": "Jake Bobo",
+        "class": "Sophomore",
+        "jersey": "25"
       },
       {
         "name": "Bryson Beaver",
         "class": "Freshman",
         "jersey": "18"
-      },
-      {
-        "name": "Hezekiah Millender",
-        "class": "Freshman",
-        "jersey": "19"
-      },
-      {
-        "name": "Jake Bobo",
-        "class": "Freshman",
-        "jersey": "25"
       }
     ],
     "key_transfers_in": [
@@ -2763,13 +2778,13 @@
       }
     ],
     "returning_prod_pct": 68.7,
-    "talent_score": 1003.0,
+    "talent_score": 1003.7,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Georgia Southern": {
-    "head_coach": "Clay Helton",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2796,7 +2811,7 @@
       "name": "MJ Stroud",
       "sacks": 6.5,
       "tfl": 14.5,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "qb_room": [
       {
@@ -2827,9 +2842,9 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Kam Mikell",
-        "position": "WR",
-        "origin": "Colorado",
+        "name": "Rashon Myles Jr.",
+        "position": "LB",
+        "origin": "Abilene Christian",
         "rating": 0.86
       },
       {
@@ -2839,20 +2854,20 @@
         "rating": 0.86
       },
       {
-        "name": "Rashon Myles Jr.",
-        "position": "LB",
-        "origin": "Abilene Christian",
+        "name": "Kam Mikell",
+        "position": "WR",
+        "origin": "Colorado",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 5.8,
-    "talent_score": 574.5,
+    "talent_score": 634.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Georgia State": {
-    "head_coach": "Dell McGee",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2915,26 +2930,26 @@
         "rating": 0.86
       },
       {
-        "name": "Marcus Mascoll",
-        "position": "IOL",
-        "origin": "Florida",
+        "name": "Deuce Lee",
+        "position": "S",
+        "origin": "Monmouth",
         "rating": 0.85
       },
       {
-        "name": "Toby Bolton",
+        "name": "Darius Johnson Jr.",
         "position": "CB",
-        "origin": "Tennessee Tech",
+        "origin": "Gardner-Webb",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 46.5,
-    "talent_score": 612.0,
+    "talent_score": 573.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Georgia Tech": {
-    "head_coach": "Brent Key",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -2966,23 +2981,28 @@
     "qb_room": [
       {
         "name": "Ben Guthrie",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "18"
       },
       {
         "name": "Graham Knowles",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "14"
       },
       {
         "name": "Alberto Mendoza",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "15"
       },
       {
         "name": "Grady Adamson",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "9"
+      },
+      {
+        "name": "Cole Bergeron",
+        "class": "Freshman",
+        "jersey": "12"
       }
     ],
     "key_transfers_in": [
@@ -3006,13 +3026,13 @@
       }
     ],
     "returning_prod_pct": 12.6,
-    "talent_score": 715.6,
+    "talent_score": 751.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Hawai'i": {
-    "head_coach": "Timmy Chang",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -3072,24 +3092,24 @@
       {
         "name": "Ozzy Pollard",
         "position": "DL",
-        "origin": "Marian College",
+        "origin": "Marian",
         "rating": 0.85
       },
       {
-        "name": "Tre' Griffiths",
-        "position": "WR",
-        "origin": "Oklahoma State",
+        "name": "Khalil Walker",
+        "position": "IOL",
+        "origin": "South Florida",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 64.5,
-    "talent_score": 481.2,
+    "talent_score": 556.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Houston": {
-    "head_coach": "Willie Fritz",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -3124,14 +3144,14 @@
         "jersey": "15"
       },
       {
+        "name": "Luke Carney",
+        "class": "Sophomore",
+        "jersey": "17"
+      },
+      {
         "name": "Keisean Henderson",
         "class": "Freshman",
         "jersey": "5"
-      },
-      {
-        "name": "Ryan Smith",
-        "class": "Freshman",
-        "jersey": "12"
       },
       {
         "name": "Canon Toon",
@@ -3139,22 +3159,22 @@
         "jersey": "13"
       },
       {
-        "name": "Luke Carney",
+        "name": "Ryan Smith",
         "class": "Freshman",
-        "jersey": "17"
+        "jersey": "18"
       }
     ],
     "key_transfers_in": [
       {
-        "name": "Anthony Boswell",
-        "position": "IOL",
-        "origin": "Toledo",
-        "rating": 0.88
-      },
-      {
         "name": "Ashton Porter",
         "position": "DL",
         "origin": "Oregon",
+        "rating": 0.88
+      },
+      {
+        "name": "Anthony Boswell",
+        "position": "IOL",
+        "origin": "Toledo",
         "rating": 0.88
       },
       {
@@ -3165,13 +3185,13 @@
       }
     ],
     "returning_prod_pct": 81.2,
-    "talent_score": 656.7,
+    "talent_score": 695.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Illinois": {
-    "head_coach": "Bret Bielema",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -3208,13 +3228,8 @@
       },
       {
         "name": "Carson Boyd",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "2"
-      },
-      {
-        "name": "Jershaun Newton",
-        "class": "Freshman",
-        "jersey": "6"
       },
       {
         "name": "Michael Clayton II",
@@ -3229,7 +3244,7 @@
     ],
     "key_transfers_in": [
       {
-        "name": "James Finley",
+        "name": "James Finley IV",
         "position": "S",
         "origin": "Northern Illinois",
         "rating": 0.9
@@ -3248,13 +3263,13 @@
       }
     ],
     "returning_prod_pct": 21.1,
-    "talent_score": 662.1,
+    "talent_score": 704.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Indiana": {
-    "head_coach": "Curt Cignetti",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -3284,38 +3299,27 @@
     },
     "qb_room": [
       {
-        "name": "Grant Wilson",
-        "class": "Senior",
-        "jersey": "2"
-      },
-      {
         "name": "Josh Hoover",
         "class": "Senior",
         "jersey": "10"
       },
       {
         "name": "Jacob Bell",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "12"
       },
       {
         "name": "Maverick Geske",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "14"
       },
       {
         "name": "Tyler Cherry",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "15"
       }
     ],
     "key_transfers_in": [
-      {
-        "name": "Tobi Osunsanmi",
-        "position": "EDGE",
-        "origin": "Kansas State",
-        "rating": 0.94
-      },
       {
         "name": "Nick Marsh",
         "position": "WR",
@@ -3323,20 +3327,26 @@
         "rating": 0.94
       },
       {
-        "name": "Joe Brunner",
-        "position": "IOL",
-        "origin": "Wisconsin",
+        "name": "Tobi Osunsanmi",
+        "position": "EDGE",
+        "origin": "Kansas State",
+        "rating": 0.94
+      },
+      {
+        "name": "Josh Hoover",
+        "position": "QB",
+        "origin": "TCU",
         "rating": 0.93
       }
     ],
     "returning_prod_pct": 16.6,
-    "talent_score": 645.3,
+    "talent_score": 735.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Iowa": {
-    "head_coach": "Kirk Ferentz",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -3359,9 +3369,9 @@
       "departed_to": "not on 2026 roster"
     },
     "top_defender": {
-      "name": "Ethan Hurkett",
+      "name": "Max Llewellyn",
       "sacks": 6.0,
-      "tfl": 8.5,
+      "tfl": 9.0,
       "departed_to": "not on 2026 roster"
     },
     "qb_room": [
@@ -3412,15 +3422,15 @@
       }
     ],
     "returning_prod_pct": 34.2,
-    "talent_score": 710.0,
+    "talent_score": 722.7,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Iowa State": {
-    "head_coach": "Jimmy Rogers",
-    "coaching_change": true,
-    "coaching_note": "Losing Campbell (elite program builder) is a significant hit",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Rocco Becht",
       "pass_yds": 2565,
@@ -3482,26 +3492,26 @@
         "rating": 0.87
       },
       {
-        "name": "Salahadin Allah",
-        "position": "RB",
-        "origin": "Oregon State",
+        "name": "Maasai King",
+        "position": "OT",
+        "origin": "Akron",
         "rating": 0.86
       },
       {
-        "name": "Malcolm Jones",
-        "position": "S",
-        "origin": "Jacksonville State",
+        "name": "Caden Maas",
+        "position": "IOL",
+        "origin": "Sioux Falls",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 1.7,
-    "talent_score": 648.9,
+    "talent_score": 669.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Jacksonville State": {
-    "head_coach": "Charles Kelly",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -3535,7 +3545,7 @@
         "jersey": "12"
       },
       {
-        "name": "Kadyn Mitchell",
+        "name": "Kadyn Palmer",
         "class": "Freshman",
         "jersey": "2"
       },
@@ -3557,34 +3567,34 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Caleb Holmes",
-        "position": "IOL",
-        "origin": "Pittsburgh",
-        "rating": 0.86
-      },
-      {
         "name": "Rob Billings IV",
         "position": "S",
         "origin": "Clemson",
         "rating": 0.86
       },
       {
-        "name": "Ronnel Johnson",
+        "name": "Caleb Holmes",
+        "position": "IOL",
+        "origin": "Pittsburgh",
+        "rating": 0.86
+      },
+      {
+        "name": "Darius Cannon",
         "position": "WR",
-        "origin": "Missouri State",
+        "origin": "Murray State",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 49.5,
-    "talent_score": 519.9,
+    "talent_score": 602.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "James Madison": {
-    "head_coach": "Billy Napier",
-    "coaching_change": true,
-    "coaching_note": "Chesney went 12-2 \u2014 Napier was fired from Florida; JMU loses big",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Alonza Barnett",
       "pass_yds": 2533,
@@ -3641,26 +3651,26 @@
         "rating": 0.87
       },
       {
-        "name": "Jayon Harvey",
-        "position": "CB",
-        "origin": "Findlay",
+        "name": "Corey Scott",
+        "position": "WR",
+        "origin": "West Florida",
         "rating": 0.86
       },
       {
-        "name": "Ernest Willor Jr.",
-        "position": "EDGE",
-        "origin": "Wisconsin",
+        "name": "Micah Matthews",
+        "position": "WR",
+        "origin": "Virginia Tech",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 8.0,
-    "talent_score": 459.5,
+    "talent_score": 588.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Kansas": {
-    "head_coach": "Lance Leipold",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -3741,15 +3751,15 @@
       }
     ],
     "returning_prod_pct": 18.1,
-    "talent_score": 705.3,
+    "talent_score": 684.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Kansas State": {
-    "head_coach": "Collin Klein",
-    "coaching_change": true,
-    "coaching_note": "Klein is beloved at KSU but first-time HC replacing proven Klieman",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Avery Johnson",
       "pass_yds": 2380,
@@ -3787,12 +3797,12 @@
       },
       {
         "name": "Blake Barnett",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "3"
       },
       {
         "name": "Dillon Duff",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "10"
       }
     ],
@@ -3817,13 +3827,13 @@
       }
     ],
     "returning_prod_pct": 71.4,
-    "talent_score": 705.9,
+    "talent_score": 718.7,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Kennesaw State": {
-    "head_coach": "Jerry Mack",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -3864,23 +3874,17 @@
         "jersey": "2"
       },
       {
-        "name": "Skyler Williams",
-        "class": "Freshman",
-        "jersey": "3"
-      },
-      {
         "name": "Jamarcus Harrison",
         "class": "Freshman",
         "jersey": "5"
+      },
+      {
+        "name": "Julian Lapene",
+        "class": "Freshman",
+        "jersey": "18"
       }
     ],
     "key_transfers_in": [
-      {
-        "name": "Tony Williams",
-        "position": "S",
-        "origin": "UCF",
-        "rating": 0.86
-      },
       {
         "name": "Brayden Munroe",
         "position": "WR",
@@ -3888,20 +3892,26 @@
         "rating": 0.86
       },
       {
-        "name": "Luke Duska",
-        "position": "IOL",
-        "origin": "Elon",
+        "name": "Tony Williams",
+        "position": "S",
+        "origin": "UCF",
+        "rating": 0.86
+      },
+      {
+        "name": "Luke Evans",
+        "position": "CB",
+        "origin": "Miami (OH)",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 6.1,
-    "talent_score": 338.9,
+    "talent_score": 502.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Kent State": {
-    "head_coach": "Mark Carney",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -3914,7 +3924,7 @@
       "name": "Gavin Garcia",
       "rush_yds": 647,
       "rush_td": 3,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "top_wr": {
       "name": "Cade Wolford",
@@ -3958,6 +3968,12 @@
     ],
     "key_transfers_in": [
       {
+        "name": "Hayden Dawahare",
+        "position": "LB",
+        "origin": "Kentucky",
+        "rating": 0.84
+      },
+      {
         "name": "Davion Pritchard",
         "position": "CB",
         "origin": "Pittsburgh",
@@ -3968,24 +3984,18 @@
         "position": "LB",
         "origin": "Coastal Carolina",
         "rating": 0.84
-      },
-      {
-        "name": "Hayden Dawahare",
-        "position": "LB",
-        "origin": "Kentucky",
-        "rating": 0.84
       }
     ],
     "returning_prod_pct": 64.1,
-    "talent_score": 456.2,
+    "talent_score": 522.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Kentucky": {
-    "head_coach": "Will Stein",
-    "coaching_change": true,
-    "coaching_note": "Stoops left program in rough shape (5-7) \u2014 floor is already priced in",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Cutter Boley",
       "pass_yds": 2160,
@@ -4007,21 +4017,26 @@
       "departed_to": "not on 2026 roster"
     },
     "top_defender": {
-      "name": "Steven Soles Jr.",
+      "name": "Mi'Quise Grace",
       "sacks": 3.5,
-      "tfl": 4.5,
-      "departed_to": "Arkansas"
+      "tfl": 7.0,
+      "departed_to": "not on 2026 roster"
     },
     "qb_room": [
       {
         "name": "Kenny Minchey",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "3"
       },
       {
         "name": "Carson Cruver",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "15"
+      },
+      {
+        "name": "JacQai Long",
+        "class": "Junior",
+        "jersey": "16"
       },
       {
         "name": "Brennen Ward",
@@ -4029,14 +4044,14 @@
         "jersey": "14"
       },
       {
-        "name": "JacQai Long",
-        "class": "Sophomore",
-        "jersey": "16"
-      },
-      {
         "name": "Matt Ponatoski",
         "class": "Freshman",
         "jersey": "9"
+      },
+      {
+        "name": "William Drakeford Jr.",
+        "class": "Freshman",
+        "jersey": "17"
       },
       {
         "name": "Kendall Tambling",
@@ -4065,15 +4080,15 @@
       }
     ],
     "returning_prod_pct": 19.3,
-    "talent_score": 763.2,
+    "talent_score": 786.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "LSU": {
-    "head_coach": "Lane Kiffin",
-    "coaching_change": true,
-    "coaching_note": "Kiffin is elite at Ole Miss \u2014 real upgrade over underperforming Kelly",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Garrett Nussmeier",
       "pass_yds": 1927,
@@ -4085,7 +4100,7 @@
       "name": "Caden Durham",
       "rush_yds": 505,
       "rush_td": 3,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "top_wr": {
       "name": "Barion Brown",
@@ -4119,20 +4134,25 @@
       {
         "name": "Husan Longstreet",
         "class": "Freshman",
-        "jersey": "6"
+        "jersey": "8"
+      },
+      {
+        "name": "Cayden Jones",
+        "class": "Freshman",
+        "jersey": "21"
       }
     ],
     "key_transfers_in": [
       {
-        "name": "Princewill Umanmielen",
-        "position": "EDGE",
-        "origin": "Ole Miss",
-        "rating": 0.98
-      },
-      {
         "name": "Jordan Seaton",
         "position": "OT",
         "origin": "Colorado",
+        "rating": 0.98
+      },
+      {
+        "name": "Princewill Umanmielen",
+        "position": "EDGE",
+        "origin": "Ole Miss",
         "rating": 0.98
       },
       {
@@ -4143,13 +4163,13 @@
       }
     ],
     "returning_prod_pct": 21.2,
-    "talent_score": 920.0,
+    "talent_score": 931.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Liberty": {
-    "head_coach": "Jamey Chadwell",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -4218,20 +4238,20 @@
         "rating": 0.86
       },
       {
-        "name": "D-Icey Hopkins",
-        "position": "S",
-        "origin": "Georgia State",
+        "name": "Refeno Vangates",
+        "position": "WR",
+        "origin": "North Carolina Central",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 38.3,
-    "talent_score": 599.1,
+    "talent_score": 633.4,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Louisiana": {
-    "head_coach": "Michael Desormeaux",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -4283,12 +4303,6 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Brodrick Stewart",
-        "position": "DL",
-        "origin": "Tarleton State",
-        "rating": 0.84
-      },
-      {
         "name": "Jayce Mitchell",
         "position": "IOL",
         "origin": "Tulane",
@@ -4299,16 +4313,22 @@
         "position": "EDGE",
         "origin": "East Texas A&M",
         "rating": 0.84
+      },
+      {
+        "name": "Brodrick Stewart",
+        "position": "DL",
+        "origin": "Tarleton State",
+        "rating": 0.84
       }
     ],
     "returning_prod_pct": 91.9,
-    "talent_score": 585.8,
+    "talent_score": 590.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Louisiana Tech": {
-    "head_coach": "Sonny Cumbie",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -4330,10 +4350,9 @@
       "rec": 37
     },
     "top_defender": {
-      "name": "Mekhi Mason",
+      "name": "Jadon Mayfield",
       "sacks": 3.5,
-      "tfl": 14.5,
-      "departed_to": "Kansas State"
+      "tfl": 9.0
     },
     "qb_room": [
       {
@@ -4349,7 +4368,7 @@
       {
         "name": "Jackson Bradley",
         "class": "Freshman",
-        "jersey": "10"
+        "jersey": "7"
       },
       {
         "name": "Michael Kirby",
@@ -4371,20 +4390,20 @@
         "rating": 0.86
       },
       {
-        "name": "Marcus Calwise Jr.",
-        "position": "WR",
-        "origin": "Eastern Kentucky",
+        "name": "Ty Jones",
+        "position": "S",
+        "origin": "Norfolk State",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 63.9,
-    "talent_score": 493.5,
+    "talent_score": 543.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Louisville": {
-    "head_coach": "Jeff Brohm",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -4398,7 +4417,7 @@
       "name": "Isaac Brown",
       "rush_yds": 782,
       "rush_td": 5,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "top_wr": {
       "name": "Chris Bell",
@@ -4419,11 +4438,6 @@
         "jersey": "3"
       },
       {
-        "name": "Davin Wydner",
-        "class": "Junior",
-        "jersey": "11"
-      },
-      {
         "name": "Briggs Cherry",
         "class": "Freshman",
         "jersey": "10"
@@ -4431,7 +4445,7 @@
       {
         "name": "Mason Fields",
         "class": "Freshman",
-        "jersey": ""
+        "jersey": "19"
       }
     ],
     "key_transfers_in": [
@@ -4455,13 +4469,13 @@
       }
     ],
     "returning_prod_pct": 34.8,
-    "talent_score": 700.8,
+    "talent_score": 740.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Marshall": {
-    "head_coach": "Tony Gibson",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -4523,20 +4537,20 @@
         "rating": 0.85
       },
       {
-        "name": "Robby Martin",
-        "position": "IOL",
-        "origin": "West Virginia",
+        "name": "Brayden Hall",
+        "position": "CB",
+        "origin": "Central Connecticut",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 98.8,
-    "talent_score": 590.6,
+    "talent_score": 594.7,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Maryland": {
-    "head_coach": "Mike Locksley",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -4548,7 +4562,8 @@
     "top_rb": {
       "name": "DeJuan Williams",
       "rush_yds": 501,
-      "rush_td": 3
+      "rush_td": 3,
+      "departed_to": "not on 2026 roster"
     },
     "top_wr": {
       "name": "Shaleak Knotts",
@@ -4587,11 +4602,6 @@
         "name": "Nathan Bernhard",
         "class": "Freshman",
         "jersey": "12"
-      },
-      {
-        "name": "Jackson Hamilton",
-        "class": "Freshman",
-        "jersey": "15"
       }
     ],
     "key_transfers_in": [
@@ -4608,20 +4618,20 @@
         "rating": 0.87
       },
       {
-        "name": "Armon Parker",
-        "position": "DL",
-        "origin": "Washington",
+        "name": "Preston Howard",
+        "position": "TE",
+        "origin": "Auburn",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 54.0,
-    "talent_score": 699.3,
+    "talent_score": 719.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Massachusetts": {
-    "head_coach": "Joe Harasymiak",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -4652,6 +4662,11 @@
     },
     "qb_room": [
       {
+        "name": "William Watson III",
+        "class": "Senior",
+        "jersey": "5"
+      },
+      {
         "name": "Will Perry",
         "class": "Junior",
         "jersey": "7"
@@ -4674,12 +4689,6 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Randall King",
-        "position": "WR",
-        "origin": "Campbell",
-        "rating": 0.85
-      },
-      {
         "name": "Greg Knox",
         "position": "OT",
         "origin": "McNeese",
@@ -4690,18 +4699,24 @@
         "position": "DL",
         "origin": "UConn",
         "rating": 0.85
+      },
+      {
+        "name": "Kendric Council",
+        "position": "LB",
+        "origin": "Saint Francis (PA)",
+        "rating": 0.85
       }
     ],
     "returning_prod_pct": -56.7,
-    "talent_score": 488.7,
+    "talent_score": 525.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Memphis": {
-    "head_coach": "Charles Huff",
-    "coaching_change": true,
-    "coaching_note": "Lateral swap \u2014 both are similar tier G5-level HCs",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Brendon Lewis",
       "pass_yds": 2567,
@@ -4748,11 +4763,6 @@
         "name": "Gavin Owens",
         "class": "Freshman",
         "jersey": "15"
-      },
-      {
-        "name": "Grant Troutman",
-        "class": "Freshman",
-        "jersey": "16"
       }
     ],
     "key_transfers_in": [
@@ -4763,26 +4773,26 @@
         "rating": 0.87
       },
       {
-        "name": "Jabari Ishmael",
-        "position": "EDGE",
-        "origin": "Southern Miss",
+        "name": "Marcus Stokes",
+        "position": "QB",
+        "origin": "West Florida",
         "rating": 0.86
       },
       {
-        "name": "Carde Smith",
-        "position": "OT",
+        "name": "Dallan Hayden",
+        "position": "RB",
         "origin": "Colorado",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 5.6,
-    "talent_score": 668.6,
+    "talent_score": 670.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Miami": {
-    "head_coach": "Mario Cristobal",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -4849,26 +4859,26 @@
         "rating": 0.97
       },
       {
-        "name": "Darian Mensah",
-        "position": "QB",
+        "name": "Cooper Barkate",
+        "position": "WR",
         "origin": "Duke",
         "rating": 0.94
       },
       {
-        "name": "Cooper Barkate",
-        "position": "WR",
+        "name": "Darian Mensah",
+        "position": "QB",
         "origin": "Duke",
         "rating": 0.94
       }
     ],
     "returning_prod_pct": 36.9,
-    "talent_score": 874.6,
+    "talent_score": 885.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Miami (OH)": {
-    "head_coach": "Chuck Martin",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -4926,15 +4936,15 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Mikah Coleman",
-        "position": "EDGE",
-        "origin": "Cincinnati",
-        "rating": 0.86
-      },
-      {
         "name": "Devontae Armstrong",
         "position": "IOL",
         "origin": "Ohio State",
+        "rating": 0.86
+      },
+      {
+        "name": "Mikah Coleman",
+        "position": "EDGE",
+        "origin": "Cincinnati",
         "rating": 0.86
       },
       {
@@ -4945,15 +4955,15 @@
       }
     ],
     "returning_prod_pct": 13.9,
-    "talent_score": 592.1,
+    "talent_score": 621.4,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Michigan": {
-    "head_coach": "Kyle Wittingham",
-    "coaching_change": true,
-    "coaching_note": "Wittingham is a legend \u2014 huge upgrade over interim Moore",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Bryce Underwood",
       "pass_yds": 2229,
@@ -5021,15 +5031,15 @@
       }
     ],
     "returning_prod_pct": 69.2,
-    "talent_score": 907.2,
+    "talent_score": 890.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Michigan State": {
-    "head_coach": "Pat Fitzgerald",
-    "coaching_change": true,
-    "coaching_note": "Fitzgerald is proven and patient \u2014 big upgrade for program rebuild",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Aidan Chiles",
       "pass_yds": 1392,
@@ -5051,10 +5061,10 @@
       "departed_to": "Indiana"
     },
     "top_defender": {
-      "name": "Jalen Thompson",
+      "name": "Quindarius Dunnigan",
       "sacks": 2.5,
-      "tfl": 5.5,
-      "departed_to": "Arizona State"
+      "tfl": 5.0,
+      "departed_to": "not on 2026 roster"
     },
     "qb_room": [
       {
@@ -5085,9 +5095,15 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Jaziun Patterson",
-        "position": "RB",
-        "origin": "Iowa",
+        "name": "Tre Bell",
+        "position": "CB",
+        "origin": "Iowa State",
+        "rating": 0.87
+      },
+      {
+        "name": "Ben Murawski",
+        "position": "OT",
+        "origin": "UConn",
         "rating": 0.87
       },
       {
@@ -5095,22 +5111,16 @@
         "position": "EDGE",
         "origin": "Southeast Missouri State",
         "rating": 0.87
-      },
-      {
-        "name": "Charles Brantley",
-        "position": "CB",
-        "origin": "Miami",
-        "rating": 0.87
       }
     ],
     "returning_prod_pct": 20.9,
-    "talent_score": 717.4,
+    "talent_score": 685.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Middle Tennessee": {
-    "head_coach": "Derek Mason",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5167,15 +5177,15 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Reese Tripp",
+        "name": "Brennan Smith",
         "position": "IOL",
-        "origin": "Minnesota",
+        "origin": "Mississippi State",
         "rating": 0.85
       },
       {
-        "name": "Dyson McCutcheon",
-        "position": "S",
-        "origin": "Washington",
+        "name": "Ricky Lee III",
+        "position": "CB",
+        "origin": "Sacramento State",
         "rating": 0.85
       },
       {
@@ -5186,13 +5196,13 @@
       }
     ],
     "returning_prod_pct": 32.5,
-    "talent_score": 520.5,
+    "talent_score": 571.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Minnesota": {
-    "head_coach": "P.J. Fleck",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5221,17 +5231,17 @@
     "qb_room": [
       {
         "name": "Max Shikenjanski",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "6"
       },
       {
         "name": "Drake Lindsey",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "5"
       },
       {
         "name": "Michael Merdinger",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "12"
       },
       {
@@ -5266,13 +5276,13 @@
       }
     ],
     "returning_prod_pct": 64.9,
-    "talent_score": 711.0,
+    "talent_score": 728.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Mississippi State": {
-    "head_coach": "Jeff Lebby",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5348,13 +5358,13 @@
       }
     ],
     "returning_prod_pct": 33.9,
-    "talent_score": 770.5,
+    "talent_score": 804.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Missouri": {
-    "head_coach": "Eli Drinkwitz",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5389,14 +5399,14 @@
         "jersey": "10"
       },
       {
+        "name": "Austin Simmons",
+        "class": "Senior",
+        "jersey": "13"
+      },
+      {
         "name": "Brett Brown",
         "class": "Senior",
         "jersey": "14"
-      },
-      {
-        "name": "Austin Simmons",
-        "class": "Junior",
-        "jersey": "13"
       },
       {
         "name": "Gavin Sidwar",
@@ -5425,13 +5435,13 @@
       }
     ],
     "returning_prod_pct": 42.0,
-    "talent_score": 804.8,
+    "talent_score": 808.4,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Missouri State": {
-    "head_coach": "Ryan Beard",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5500,20 +5510,20 @@
         "rating": 0.85
       },
       {
-        "name": "Isaiah Villanueva",
-        "position": "IOL",
-        "origin": "Jackson State",
+        "name": "William Dixon III",
+        "position": "OT",
+        "origin": "VMI",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 31.3,
-    "talent_score": 426.1,
+    "talent_score": 549.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "NC State": {
-    "head_coach": "Dave Doeren",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5561,7 +5571,7 @@
         "rating": 0.89
       },
       {
-        "name": "Raul Aguirre Jr.",
+        "name": "Popo Aguirre",
         "position": "LB",
         "origin": "Miami",
         "rating": 0.89
@@ -5574,13 +5584,13 @@
       }
     ],
     "returning_prod_pct": 59.9,
-    "talent_score": 707.5,
+    "talent_score": 757.1,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Navy": {
-    "head_coach": "Brian Newberry",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5643,13 +5653,13 @@
     ],
     "key_transfers_in": [],
     "returning_prod_pct": 13.8,
-    "talent_score": NaN,
+    "talent_score": 195.7,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Nebraska": {
-    "head_coach": "Matt Rhule",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5684,7 +5694,7 @@
       },
       {
         "name": "Daniel Kaelin",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "12"
       },
       {
@@ -5714,13 +5724,13 @@
       }
     ],
     "returning_prod_pct": 46.3,
-    "talent_score": 821.4,
+    "talent_score": 787.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Nevada": {
-    "head_coach": "Jeff Choate",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5767,11 +5777,6 @@
         "name": "Reeve Slone",
         "class": "Freshman",
         "jersey": "5"
-      },
-      {
-        "name": "Kaden Martirano",
-        "class": "Freshman",
-        "jersey": "17"
       }
     ],
     "key_transfers_in": [
@@ -5795,13 +5800,13 @@
       }
     ],
     "returning_prod_pct": 35.5,
-    "talent_score": 488.7,
+    "talent_score": 550.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "New Mexico": {
-    "head_coach": "Jason Eck",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5869,26 +5874,26 @@
         "rating": 0.87
       },
       {
-        "name": "Ormanie Arnold",
-        "position": "CB",
-        "origin": "Cincinnati",
-        "rating": 0.85
-      },
-      {
         "name": "Joey Olsen",
         "position": "TE",
         "origin": "USC",
         "rating": 0.85
+      },
+      {
+        "name": "Clay Martineau",
+        "position": "LB",
+        "origin": "Boise State",
+        "rating": 0.85
       }
     ],
     "returning_prod_pct": 58.2,
-    "talent_score": 378.8,
+    "talent_score": 568.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "New Mexico State": {
-    "head_coach": "Tony Sanchez",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -5952,26 +5957,26 @@
         "rating": 0.86
       },
       {
-        "name": "TJ Washington Jr.",
-        "position": "RB",
-        "origin": "Iowa",
+        "name": "Vic Shaw",
+        "position": "EDGE",
+        "origin": "UTSA",
         "rating": 0.85
       },
       {
-        "name": "Lyndon Ravare",
-        "position": "WR",
-        "origin": "Kennesaw State",
+        "name": "Tyler Keinath",
+        "position": "IOL",
+        "origin": "Boise State",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 24.4,
-    "talent_score": 402.9,
+    "talent_score": 460.4,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "North Carolina": {
-    "head_coach": "Bill Belichick",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -6038,20 +6043,20 @@
         "rating": 0.89
       },
       {
-        "name": "Trech Kekahuna",
-        "position": "WR",
-        "origin": "Wisconsin",
-        "rating": 0.88
-      },
-      {
         "name": "Jordan Washington",
         "position": "TE",
         "origin": "Texas",
         "rating": 0.88
+      },
+      {
+        "name": "Trech Kekahuna",
+        "position": "WR",
+        "origin": "Wisconsin",
+        "rating": 0.88
       }
     ],
     "returning_prod_pct": 27.8,
-    "talent_score": 753.2,
+    "talent_score": 767.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
@@ -6129,15 +6134,15 @@
       }
     ],
     "returning_prod_pct": NaN,
-    "talent_score": NaN,
+    "talent_score": 515.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "North Texas": {
-    "head_coach": "Neal Brown",
-    "coaching_change": true,
-    "coaching_note": "Roster turnover + Brown runs different system than Morris \u2014 wash",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Drew Mestemaker",
       "pass_yds": 4119,
@@ -6179,38 +6184,43 @@
         "name": "Chris Jimerson Jr.",
         "class": "Sophomore",
         "jersey": "12"
+      },
+      {
+        "name": "Ziondre Williams",
+        "class": "Freshman",
+        "jersey": "10"
       }
     ],
     "key_transfers_in": [
+      {
+        "name": "Jahiem White",
+        "position": "RB",
+        "origin": "West Virginia",
+        "rating": 0.86
+      },
+      {
+        "name": "Zach Johnson",
+        "position": "CB",
+        "origin": "Southeastern Louisiana",
+        "rating": 0.86
+      },
       {
         "name": "Tayven Jackson",
         "position": "QB",
         "origin": "UCF",
         "rating": 0.86
-      },
-      {
-        "name": "Drew Clemens",
-        "position": "TE",
-        "origin": "Utah",
-        "rating": 0.86
-      },
-      {
-        "name": "Ja'Bree Bickham",
-        "position": "S",
-        "origin": "Boise State",
-        "rating": 0.86
       }
     ],
     "returning_prod_pct": 2.5,
-    "talent_score": 569.1,
+    "talent_score": 602.1,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Northern Illinois": {
-    "head_coach": "Rob Harley",
-    "coaching_change": true,
-    "coaching_note": "Interim promotion \u2014 high uncertainty",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Josh Holst",
       "pass_yds": 689,
@@ -6229,7 +6239,7 @@
       "rec_yds": 506,
       "rec_td": 3,
       "rec": 46,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "top_defender": {
       "name": "Filip Maciorowski",
@@ -6266,19 +6276,25 @@
       {
         "name": "Asa Johnson",
         "class": "Freshman",
-        "jersey": ""
+        "jersey": "16"
       },
       {
         "name": "Cole Latimer",
         "class": "Freshman",
-        "jersey": ""
+        "jersey": "18"
       }
     ],
     "key_transfers_in": [
       {
+        "name": "Taron Dickens",
+        "position": "QB",
+        "origin": "Western Carolina",
+        "rating": 0.85
+      },
+      {
         "name": "Tyrese Stanley",
         "position": "S",
-        "origin": "Morehouse College",
+        "origin": "Morehouse",
         "rating": 0.85
       },
       {
@@ -6286,22 +6302,16 @@
         "position": "S",
         "origin": "Lafayette",
         "rating": 0.84
-      },
-      {
-        "name": "Chevy Trask Jr.",
-        "position": "OT",
-        "origin": "South Carolina State",
-        "rating": 0.83
       }
     ],
     "returning_prod_pct": 43.7,
-    "talent_score": 471.0,
+    "talent_score": 536.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Northwestern": {
-    "head_coach": "David Braun",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -6382,13 +6392,13 @@
       }
     ],
     "returning_prod_pct": 88.5,
-    "talent_score": 678.0,
+    "talent_score": 688.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Notre Dame": {
-    "head_coach": "Marcus Freeman",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -6412,14 +6422,18 @@
     "top_defender": {
       "name": "Boubacar Traore",
       "sacks": 6.5,
-      "tfl": 10.0,
-      "departed_to": "not on 2026 roster"
+      "tfl": 10.0
     },
     "qb_room": [
       {
         "name": "CJ Carr",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "13"
+      },
+      {
+        "name": "Blake Hebert",
+        "class": "Sophomore",
+        "jersey": "12"
       },
       {
         "name": "Teddy Jarrard",
@@ -6430,11 +6444,6 @@
         "name": "Noah Grubbs",
         "class": "Freshman",
         "jersey": "10"
-      },
-      {
-        "name": "Blake Hebert",
-        "class": "Freshman",
-        "jersey": "12"
       }
     ],
     "key_transfers_in": [
@@ -6458,15 +6467,15 @@
       }
     ],
     "returning_prod_pct": 51.2,
-    "talent_score": 912.1,
+    "talent_score": 953.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Ohio": {
-    "head_coach": "John Hauser",
-    "coaching_change": true,
-    "coaching_note": "Hauser was interim and is continuing \u2014 stable transition",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Parker Navarro",
       "pass_yds": 2232,
@@ -6522,32 +6531,32 @@
     ],
     "key_transfers_in": [
       {
-        "name": "CJ Dawson",
-        "position": "IOL",
-        "origin": "Gardner-Webb",
-        "rating": 0.85
-      },
-      {
         "name": "Preston Bowman",
         "position": "WR",
         "origin": "Kentucky",
         "rating": 0.85
       },
       {
-        "name": "KJ Sejour",
-        "position": "CB",
-        "origin": "Chattanooga",
+        "name": "CJ Dawson",
+        "position": "IOL",
+        "origin": "Gardner-Webb",
+        "rating": 0.85
+      },
+      {
+        "name": "Tyler Gillison",
+        "position": "EDGE",
+        "origin": "Michigan State",
         "rating": 0.84
       }
     ],
     "returning_prod_pct": 62.5,
-    "talent_score": 470.0,
+    "talent_score": 522.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Ohio State": {
-    "head_coach": "Ryan Day",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -6581,27 +6590,21 @@
       },
       {
         "name": "Julian Sayin",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "10"
+      },
+      {
+        "name": "Brady Geibel",
+        "class": "Sophomore",
+        "jersey": "19"
       },
       {
         "name": "Luke Fahey",
         "class": "Freshman",
         "jersey": "13"
-      },
-      {
-        "name": "Brady Geibel",
-        "class": "Freshman",
-        "jersey": "19"
       }
     ],
     "key_transfers_in": [
-      {
-        "name": "James Smith",
-        "position": "DL",
-        "origin": "Alabama",
-        "rating": 0.94
-      },
       {
         "name": "Terry Moore",
         "position": "S",
@@ -6609,20 +6612,26 @@
         "rating": 0.94
       },
       {
-        "name": "Earl Little Jr.",
-        "position": "S",
-        "origin": "Florida State",
+        "name": "James Smith",
+        "position": "DL",
+        "origin": "Alabama",
+        "rating": 0.94
+      },
+      {
+        "name": "Qua Russaw",
+        "position": "EDGE",
+        "origin": "Alabama",
         "rating": 0.93
       }
     ],
     "returning_prod_pct": 68.3,
-    "talent_score": 973.7,
+    "talent_score": 964.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Oklahoma": {
-    "head_coach": "Brent Venables",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -6692,15 +6701,15 @@
       }
     ],
     "returning_prod_pct": 63.2,
-    "talent_score": 882.6,
+    "talent_score": 851.1,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Oklahoma State": {
-    "head_coach": "Eric Morris",
-    "coaching_change": true,
-    "coaching_note": "Morris had great success at North Texas \u2014 fresh energy vs aging Gundy",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Zane Flores",
       "pass_yds": 1454,
@@ -6739,11 +6748,6 @@
         "jersey": "17"
       },
       {
-        "name": "Broderick Vehrs",
-        "class": "Freshman",
-        "jersey": "8"
-      },
-      {
         "name": "Luke Tepas",
         "class": "Freshman",
         "jersey": "12"
@@ -6770,13 +6774,13 @@
       }
     ],
     "returning_prod_pct": 0.0,
-    "talent_score": 702.7,
+    "talent_score": 672.7,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Old Dominion": {
-    "head_coach": "Ricky Rahne",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -6840,28 +6844,28 @@
         "rating": 0.86
       },
       {
-        "name": "Jaxon Potter",
-        "position": "QB",
-        "origin": "Washington State",
-        "rating": 0.85
-      },
-      {
         "name": "Raykwon Goldthwaite",
         "position": "OT",
         "origin": "North Alabama",
         "rating": 0.85
+      },
+      {
+        "name": "Jaxon Potter",
+        "position": "QB",
+        "origin": "Washington State",
+        "rating": 0.85
       }
     ],
     "returning_prod_pct": 9.2,
-    "talent_score": 477.4,
+    "talent_score": 544.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Ole Miss": {
-    "head_coach": "Pete Golding",
-    "coaching_change": true,
-    "coaching_note": "Losing Kiffin but Golding won 2 playoff games \u2014 loaded roster softens the drop",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Trinidad Chambliss",
       "pass_yds": 3016,
@@ -6913,11 +6917,6 @@
         "jersey": "13"
       },
       {
-        "name": "Maealiuaki Smith",
-        "class": "Sophomore",
-        "jersey": "16"
-      },
-      {
         "name": "Deuce Knight",
         "class": "Freshman",
         "jersey": "2"
@@ -6931,26 +6930,26 @@
         "rating": 0.94
       },
       {
-        "name": "Deuce Knight",
-        "position": "QB",
-        "origin": "Auburn",
-        "rating": 0.94
-      },
-      {
         "name": "Carius Curne",
         "position": "OT",
         "origin": "LSU",
         "rating": 0.94
+      },
+      {
+        "name": "Deuce Knight",
+        "position": "QB",
+        "origin": "Auburn",
+        "rating": 0.94
       }
     ],
     "returning_prod_pct": 50.3,
-    "talent_score": 813.1,
+    "talent_score": 885.7,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Oregon": {
-    "head_coach": "Dan Lanning",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -6981,8 +6980,13 @@
     "qb_room": [
       {
         "name": "Dante Moore",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "5"
+      },
+      {
+        "name": "Brock Thomas",
+        "class": "Senior",
+        "jersey": "12"
       },
       {
         "name": "Dylan Raiola",
@@ -6990,18 +6994,13 @@
         "jersey": "8"
       },
       {
-        "name": "Brock Thomas",
-        "class": "Junior",
-        "jersey": "12"
-      },
-      {
         "name": "Ryder Hayes",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "14"
       },
       {
         "name": "Akili Smith Jr.",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "11"
       },
       {
@@ -7031,15 +7030,15 @@
       }
     ],
     "returning_prod_pct": 75.3,
-    "talent_score": 941.2,
+    "talent_score": 984.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Oregon State": {
-    "head_coach": "JaMarcus Shephard",
-    "coaching_change": true,
-    "coaching_note": "Shephard is unproven as HC \u2014 continuity from Bray era uncertain",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Maalik Murphy",
       "pass_yds": 1802,
@@ -7050,7 +7049,7 @@
       "name": "Anthony Hankerson",
       "rush_yds": 1088,
       "rush_td": 9,
-      "departed_to": "not on 2026 roster"
+      "departed_to": NaN
     },
     "top_wr": {
       "name": "Trent Walker",
@@ -7094,34 +7093,34 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Kwan Johnson",
-        "position": "OT",
-        "origin": "Eastern Illinois",
-        "rating": 0.86
-      },
-      {
-        "name": "Isaiah Houi",
-        "position": "CB",
-        "origin": "Eastern Illinois",
-        "rating": 0.86
-      },
-      {
         "name": "Daniel Matagi",
         "position": "DL",
         "origin": "Portland State",
         "rating": 0.86
+      },
+      {
+        "name": "Broderick Shull",
+        "position": "OT",
+        "origin": "Auburn",
+        "rating": 0.86
+      },
+      {
+        "name": "Kwan Johnson",
+        "position": "OT",
+        "origin": "Eastern Illinois",
+        "rating": 0.86
       }
     ],
     "returning_prod_pct": 57.9,
-    "talent_score": 668.0,
+    "talent_score": 635.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Penn State": {
-    "head_coach": "Matt Campbell",
-    "coaching_change": true,
-    "coaching_note": "Campbell is elite \u2014 modest upgrade or lateral depending on fit",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Drew Allar",
       "pass_yds": 1100,
@@ -7201,13 +7200,13 @@
       }
     ],
     "returning_prod_pct": 7.6,
-    "talent_score": 910.4,
+    "talent_score": 774.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Pittsburgh": {
-    "head_coach": "Pat Narduzzi",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -7219,7 +7218,8 @@
     "top_rb": {
       "name": "Ja'Kyrian Turner",
       "rush_yds": 654,
-      "rush_td": 7
+      "rush_td": 7,
+      "departed_to": "not on 2026 roster"
     },
     "top_wr": {
       "name": "Raphael Williams",
@@ -7237,7 +7237,7 @@
       {
         "name": "Holden Geriner",
         "class": "Senior",
-        "jersey": "11"
+        "jersey": "15"
       },
       {
         "name": "Mason Heintschel",
@@ -7245,9 +7245,9 @@
         "jersey": "6"
       },
       {
-        "name": "Corey Dailey",
-        "class": "Freshman",
-        "jersey": "5"
+        "name": "Beau Jackson",
+        "class": "Sophomore",
+        "jersey": "12"
       },
       {
         "name": "Angelo Renda",
@@ -7255,9 +7255,9 @@
         "jersey": "8"
       },
       {
-        "name": "Beau Jackson",
+        "name": "Corey Dailey",
         "class": "Freshman",
-        "jersey": "12"
+        "jersey": "16"
       },
       {
         "name": "Davin Friedman",
@@ -7286,13 +7286,13 @@
       }
     ],
     "returning_prod_pct": 39.7,
-    "talent_score": 681.2,
+    "talent_score": 675.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Purdue": {
-    "head_coach": "Barry Odom",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -7368,13 +7368,13 @@
       }
     ],
     "returning_prod_pct": 47.5,
-    "talent_score": 687.7,
+    "talent_score": 698.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Rice": {
-    "head_coach": "Scott Abell",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -7431,15 +7431,15 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Jamir Benjamin",
-        "position": "CB",
-        "origin": "UCLA",
+        "name": "Caden VerMaas",
+        "position": "S",
+        "origin": "Nebraska",
         "rating": 0.85
       },
       {
-        "name": "Austin Harnetiaux",
-        "position": "LB",
-        "origin": "Nevada",
+        "name": "Koa Akui",
+        "position": "S",
+        "origin": "Sacramento State",
         "rating": 0.85
       },
       {
@@ -7450,13 +7450,13 @@
       }
     ],
     "returning_prod_pct": 39.4,
-    "talent_score": 530.1,
+    "talent_score": 589.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Rutgers": {
-    "head_coach": "Greg Schiano",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -7498,9 +7498,9 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Kameron Anthony",
-        "position": "TE",
-        "origin": "Ball State",
+        "name": "Malachi Davis",
+        "position": "EDGE",
+        "origin": "Toledo",
         "rating": 0.86
       },
       {
@@ -7510,20 +7510,20 @@
         "rating": 0.86
       },
       {
-        "name": "Malachi Davis",
-        "position": "EDGE",
-        "origin": "Toledo",
+        "name": "Kameron Anthony",
+        "position": "TE",
+        "origin": "Ball State",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 44.4,
-    "talent_score": 689.2,
+    "talent_score": 709.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "SMU": {
-    "head_coach": "Rhett Lashlee",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -7536,7 +7536,7 @@
       "name": "TJ Harden",
       "rush_yds": 747,
       "rush_td": 7,
-      "departed_to": "not on 2026 roster"
+      "departed_to": NaN
     },
     "top_wr": {
       "name": "Jordan Hudson",
@@ -7564,12 +7564,12 @@
       },
       {
         "name": "Mabrey Mettauer",
-        "class": "Sophomore",
-        "jersey": ""
+        "class": "Junior",
+        "jersey": "28"
       },
       {
         "name": "Ty Hawkins",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "1"
       },
       {
@@ -7599,7 +7599,7 @@
       }
     ],
     "returning_prod_pct": 56.9,
-    "talent_score": 766.7,
+    "talent_score": 764.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
@@ -7629,10 +7629,10 @@
       "departed_to": "Colorado"
     },
     "top_defender": {
-      "name": "Deven Wright",
+      "name": "Derek Houston",
       "sacks": 0.0,
       "tfl": 1.0,
-      "departed_to": "not on 2026 roster"
+      "departed_to": NaN
     },
     "qb_room": [
       {
@@ -7663,15 +7663,15 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Noah King",
-        "position": "CB",
-        "origin": "Colorado",
-        "rating": 0.86
-      },
-      {
         "name": "Garrison Blank",
         "position": "OT",
         "origin": "UCLA",
+        "rating": 0.86
+      },
+      {
+        "name": "Noah King",
+        "position": "CB",
+        "origin": "Colorado",
         "rating": 0.86
       },
       {
@@ -7682,13 +7682,13 @@
       }
     ],
     "returning_prod_pct": NaN,
-    "talent_score": NaN,
+    "talent_score": 561.4,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Sam Houston": {
-    "head_coach": "Phil Longo",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -7696,7 +7696,7 @@
       "pass_yds": 1108,
       "pass_td": 5,
       "pass_int": 4,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "top_rb": {
       "name": "Landan Brown",
@@ -7739,7 +7739,7 @@
       {
         "name": "Shaan Patel",
         "class": "Freshman",
-        "jersey": "19"
+        "jersey": "18"
       }
     ],
     "key_transfers_in": [
@@ -7763,13 +7763,13 @@
       }
     ],
     "returning_prod_pct": 57.7,
-    "talent_score": 477.4,
+    "talent_score": 554.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "San Diego State": {
-    "head_coach": "Sean Lewis",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -7804,17 +7804,17 @@
       {
         "name": "Stone Saunders",
         "class": "Freshman",
-        "jersey": "12"
-      },
-      {
-        "name": "Brady Campbell",
-        "class": "Freshman",
-        "jersey": "14"
+        "jersey": "11"
       },
       {
         "name": "Draiden Trudeau",
         "class": "Freshman",
-        "jersey": "16"
+        "jersey": "13"
+      },
+      {
+        "name": "Brady Campbell",
+        "class": "Freshman",
+        "jersey": "41"
       }
     ],
     "key_transfers_in": [
@@ -7838,13 +7838,13 @@
       }
     ],
     "returning_prod_pct": 98.7,
-    "talent_score": 594.3,
+    "talent_score": 609.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "San Jos\u00e9 State": {
-    "head_coach": "Ken Niumatalolo",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -7916,13 +7916,13 @@
       }
     ],
     "returning_prod_pct": 3.8,
-    "talent_score": 522.9,
+    "talent_score": 569.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "South Alabama": {
-    "head_coach": "Major Applewhite",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -7967,7 +7967,7 @@
         "jersey": "18"
       },
       {
-        "name": "Taylor Jacobs Jr",
+        "name": "Taylor Jacobs Jr.",
         "class": "Freshman",
         "jersey": "15"
       },
@@ -7998,13 +7998,13 @@
       }
     ],
     "returning_prod_pct": 78.6,
-    "talent_score": 544.9,
+    "talent_score": 573.4,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "South Carolina": {
-    "head_coach": "Shane Beamer",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -8079,15 +8079,15 @@
       }
     ],
     "returning_prod_pct": 69.0,
-    "talent_score": 833.3,
+    "talent_score": 862.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "South Florida": {
-    "head_coach": "Brian Hartline",
-    "coaching_change": true,
-    "coaching_note": "WR coach \u2192 HC leap is enormous \u2014 high uncertainty replacing Golesh",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Byrum Brown",
       "pass_yds": 3158,
@@ -8145,22 +8145,22 @@
         "rating": 0.87
       },
       {
-        "name": "Luke Kromenhoek",
-        "position": "QB",
-        "origin": "Mississippi State",
+        "name": "C.J. Hicks",
+        "position": "EDGE",
+        "origin": "Ohio State",
         "rating": 0.87
       }
     ],
     "returning_prod_pct": 12.6,
-    "talent_score": 666.9,
+    "talent_score": 703.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Southern Miss": {
-    "head_coach": "Blake Anderson",
-    "coaching_change": true,
-    "coaching_note": "Anderson is experienced (Utah State/Ark State) \u2014 stable transition",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Braylon Braxton",
       "pass_yds": 2795,
@@ -8211,34 +8211,34 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Will Smith",
-        "position": "EDGE",
-        "origin": "North Texas",
-        "rating": 0.86
-      },
-      {
         "name": "Jonah Martinez",
         "position": "CB",
         "origin": "TCU",
         "rating": 0.86
       },
       {
-        "name": "Jyaire Brown",
-        "position": "CB",
-        "origin": "UCF",
+        "name": "Will Smith",
+        "position": "EDGE",
+        "origin": "North Texas",
+        "rating": 0.86
+      },
+      {
+        "name": "Amari Wilson",
+        "position": "EDGE",
+        "origin": "Georgia Southern",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 90.2,
-    "talent_score": 602.5,
+    "talent_score": 602.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Stanford": {
-    "head_coach": "Tavita Pritchard",
-    "coaching_change": true,
-    "coaching_note": "Stanford OC to HC \u2014 program still stabilizing after chaos",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Ben Gulbranson",
       "pass_yds": 1813,
@@ -8276,7 +8276,12 @@
         "jersey": "10"
       },
       {
-        "name": "Mike Mitchell Jr.",
+        "name": "Luke Levitt",
+        "class": "Sophomore",
+        "jersey": "25"
+      },
+      {
+        "name": "Michael Mitchell Jr.",
         "class": "Freshman",
         "jersey": "9"
       },
@@ -8288,32 +8293,32 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Nico Brown",
-        "position": "WR",
-        "origin": "Yale",
-        "rating": 0.86
-      },
-      {
         "name": "Leroy Bryant",
         "position": "CB",
         "origin": "Washington",
         "rating": 0.86
       },
       {
-        "name": "Davis Warren",
-        "position": "QB",
-        "origin": "Michigan",
+        "name": "Nico Brown",
+        "position": "WR",
+        "origin": "Yale",
+        "rating": 0.86
+      },
+      {
+        "name": "Aidan Kilstrom",
+        "position": "IOL",
+        "origin": "Harvard",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 21.3,
-    "talent_score": 707.3,
+    "talent_score": 705.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Syracuse": {
-    "head_coach": "Fran Brown",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -8334,7 +8339,7 @@
       "rec_yds": 559,
       "rec_td": 2,
       "rec": 47,
-      "departed_to": "not on 2026 roster"
+      "departed_to": "Ole Miss"
     },
     "top_defender": {
       "name": "Kevin Jobity Jr.",
@@ -8381,32 +8386,32 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Matt Outten",
-        "position": "WR",
-        "origin": "Penn State",
-        "rating": 0.87
-      },
-      {
         "name": "Dillan Fontus",
         "position": "DL",
         "origin": "Maryland",
         "rating": 0.87
       },
       {
-        "name": "Ju'Juan Johnson",
-        "position": "RB",
-        "origin": "LSU",
+        "name": "Oluwafunto Akinshilo",
+        "position": "IOL",
+        "origin": "UCLA",
+        "rating": 0.87
+      },
+      {
+        "name": "Matt Outten",
+        "position": "WR",
+        "origin": "Penn State",
         "rating": 0.87
       }
     ],
     "returning_prod_pct": 35.0,
-    "talent_score": 727.8,
+    "talent_score": 745.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "TCU": {
-    "head_coach": "Sonny Dykes",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -8441,6 +8446,16 @@
         "jersey": "1"
       },
       {
+        "name": "Adam Schobel",
+        "class": "Sophomore",
+        "jersey": "11"
+      },
+      {
+        "name": "David Potter",
+        "class": "Sophomore",
+        "jersey": "12"
+      },
+      {
         "name": "Jayden Maples",
         "class": "Freshman",
         "jersey": "6"
@@ -8449,16 +8464,6 @@
         "name": "Jack Daulton",
         "class": "Freshman",
         "jersey": "9"
-      },
-      {
-        "name": "Adam Schobel",
-        "class": "Freshman",
-        "jersey": "11"
-      },
-      {
-        "name": "David Potter",
-        "class": "Freshman",
-        "jersey": "12"
       }
     ],
     "key_transfers_in": [
@@ -8482,13 +8487,13 @@
       }
     ],
     "returning_prod_pct": 22.4,
-    "talent_score": 745.0,
+    "talent_score": 730.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Temple": {
-    "head_coach": "K.C. Keeler",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -8557,26 +8562,26 @@
         "rating": 0.86
       },
       {
-        "name": "John Stone",
-        "position": "IOL",
-        "origin": "Rutgers",
+        "name": "Joey Schlaffer",
+        "position": "TE",
+        "origin": "Penn State",
         "rating": 0.85
       },
       {
-        "name": "Quante Gillians",
-        "position": "DL",
-        "origin": "Syracuse",
+        "name": "Kenedy Uzoma",
+        "position": "WR",
+        "origin": "North Carolina",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 37.0,
-    "talent_score": 507.9,
+    "talent_score": 631.1,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Tennessee": {
-    "head_coach": "Josh Heupel",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -8647,13 +8652,13 @@
       }
     ],
     "returning_prod_pct": 35.3,
-    "talent_score": 866.6,
+    "talent_score": 885.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Texas": {
-    "head_coach": "Steve Sarkisian",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -8721,20 +8726,20 @@
         "rating": 0.94
       },
       {
-        "name": "Rasheem Biles",
-        "position": "LB",
-        "origin": "Pittsburgh",
+        "name": "Melvin Siani",
+        "position": "OT",
+        "origin": "Wake Forest",
         "rating": 0.93
       }
     ],
     "returning_prod_pct": 72.1,
-    "talent_score": 973.5,
+    "talent_score": 985.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Texas A&M": {
-    "head_coach": "Mike Elko",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -8765,22 +8770,22 @@
     "qb_room": [
       {
         "name": "Marcel Reed",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "10"
       },
       {
         "name": "Paxton Land",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "19"
       },
       {
         "name": "Brady Hart",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "13"
       },
       {
         "name": "Eli Morcos",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "14"
       },
       {
@@ -8810,13 +8815,13 @@
       }
     ],
     "returning_prod_pct": 72.8,
-    "talent_score": 917.3,
+    "talent_score": 933.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Texas State": {
-    "head_coach": "G.J. Kinne",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -8841,7 +8846,7 @@
       "name": "Kalil Alexander",
       "sacks": 4.0,
       "tfl": 10.5,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "qb_room": [
       {
@@ -8886,13 +8891,13 @@
       }
     ],
     "returning_prod_pct": 76.0,
-    "talent_score": 612.2,
+    "talent_score": 624.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Texas Tech": {
-    "head_coach": "Joey McGuire",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -8922,29 +8927,34 @@
     },
     "qb_room": [
       {
+        "name": "Thomas Castellanos",
+        "class": "Senior",
+        "jersey": "4"
+      },
+      {
         "name": "Kirk Francis",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "18"
       },
       {
         "name": "Will Hammond",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "15"
       },
       {
         "name": "Lloyd Jones III",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "10"
+      },
+      {
+        "name": "Holden Phillips",
+        "class": "Sophomore",
+        "jersey": "16"
       },
       {
         "name": "Stephen Cannon",
         "class": "Freshman",
         "jersey": "12"
-      },
-      {
-        "name": "Holden Phillips",
-        "class": "Freshman",
-        "jersey": "16"
       }
     ],
     "key_transfers_in": [
@@ -8961,22 +8971,22 @@
         "rating": 0.96
       },
       {
-        "name": "Jordan Church",
-        "position": "IOL",
-        "origin": "Louisville",
+        "name": "Malcolm Simmons",
+        "position": "WR",
+        "origin": "Auburn",
         "rating": 0.91
       }
     ],
     "returning_prod_pct": 53.4,
-    "talent_score": 757.5,
+    "talent_score": 767.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Toledo": {
-    "head_coach": "Mike Jacobs",
-    "coaching_change": true,
-    "coaching_note": "Candle built Toledo into a winner \u2014 Jacobs unproven as HC",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Tucker Gleason",
       "pass_yds": 2515,
@@ -8998,10 +9008,10 @@
       "departed_to": "not on 2026 roster"
     },
     "top_defender": {
-      "name": "Malachi Davis",
+      "name": "Martez Poynter",
       "sacks": 5.5,
-      "tfl": 9.5,
-      "departed_to": "Rutgers"
+      "tfl": 8.0,
+      "departed_to": "not on 2026 roster"
     },
     "qb_room": [
       {
@@ -9027,32 +9037,32 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Khamoni Robinson",
-        "position": "QB",
-        "origin": "Lenoir-Rhyne",
-        "rating": 0.86
-      },
-      {
         "name": "Rico Bond",
         "position": "WR",
         "origin": "Lindenwood",
         "rating": 0.86
       },
       {
-        "name": "Adjatay Dabbs",
-        "position": "WR",
-        "origin": "Mercer",
+        "name": "Khamoni Robinson",
+        "position": "QB",
+        "origin": "Lenoir-Rhyne",
+        "rating": 0.86
+      },
+      {
+        "name": "Tucker Kelleher",
+        "position": "TE",
+        "origin": "BYU",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 66.3,
-    "talent_score": 620.1,
+    "talent_score": 556.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Troy": {
-    "head_coach": "Gerad Parker",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -9081,15 +9091,15 @@
     "qb_room": [],
     "key_transfers_in": [
       {
-        "name": "Bryce Steele",
-        "position": "LB",
-        "origin": "Boston College",
-        "rating": 0.85
-      },
-      {
         "name": "Marcus Goree Jr.",
         "position": "CB",
         "origin": "Tennessee",
+        "rating": 0.85
+      },
+      {
+        "name": "Bryce Steele",
+        "position": "LB",
+        "origin": "Boston College",
         "rating": 0.85
       },
       {
@@ -9100,15 +9110,15 @@
       }
     ],
     "returning_prod_pct": 35.3,
-    "talent_score": 561.9,
+    "talent_score": 596.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Tulane": {
-    "head_coach": "Will Hall",
-    "coaching_change": true,
-    "coaching_note": "Sumrall was elite at Tulane (11-2) \u2014 Hall is solid but a step down",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Jake Retzlaff",
       "pass_yds": 2862,
@@ -9130,10 +9140,10 @@
       "departed_to": "Indiana"
     },
     "top_defender": {
-      "name": "Harvey Dyson III",
+      "name": "Jordan Norman",
       "sacks": 6.0,
-      "tfl": 9.0,
-      "departed_to": "not on 2026 roster"
+      "tfl": 8.0,
+      "departed_to": "Tennessee"
     },
     "qb_room": [
       {
@@ -9175,26 +9185,26 @@
         "rating": 0.87
       },
       {
-        "name": "Justin Agu",
-        "position": "CB",
-        "origin": "Louisville",
-        "rating": 0.86
-      },
-      {
         "name": "DJ Dugar Jr.",
         "position": "RB",
         "origin": "Oklahoma State",
         "rating": 0.86
+      },
+      {
+        "name": "Justin Agu",
+        "position": "CB",
+        "origin": "Louisville",
+        "rating": 0.86
       }
     ],
     "returning_prod_pct": 21.0,
-    "talent_score": 650.9,
+    "talent_score": 665.1,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Tulsa": {
-    "head_coach": "Tre Lamb",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -9268,22 +9278,22 @@
         "rating": 0.87
       },
       {
-        "name": "Trequan Jones",
+        "name": "Damari Alston",
         "position": "RB",
-        "origin": "Old Dominion",
+        "origin": "Auburn",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 41.3,
-    "talent_score": 594.8,
+    "talent_score": 622.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "UAB": {
-    "head_coach": "Alex Mortensen",
-    "coaching_change": true,
-    "coaching_note": "Mortensen was interim and stays on \u2014 continuity but uncertainty",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Jalen Kitna",
       "pass_yds": 2462,
@@ -9329,18 +9339,19 @@
         "name": "Cam Jennings",
         "class": "Sophomore",
         "jersey": "18"
-      },
-      {
-        "name": "Vanden Dugger",
-        "class": "Freshman",
-        "jersey": "12"
       }
     ],
     "key_transfers_in": [
       {
-        "name": "Elijah Pratt",
-        "position": "S",
-        "origin": "SMU",
+        "name": "Shaun Myers",
+        "position": "LB",
+        "origin": "Colorado",
+        "rating": 0.86
+      },
+      {
+        "name": "Marlin Dean",
+        "position": "EDGE",
+        "origin": "Georgia State",
         "rating": 0.86
       },
       {
@@ -9348,22 +9359,16 @@
         "position": "CB",
         "origin": "Southern Miss",
         "rating": 0.86
-      },
-      {
-        "name": "Rod Robinson II",
-        "position": "RB",
-        "origin": "Georgia",
-        "rating": 0.86
       }
     ],
     "returning_prod_pct": 79.6,
-    "talent_score": 540.9,
+    "talent_score": 606.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "UCF": {
-    "head_coach": "Scott Frost",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -9433,22 +9438,22 @@
         "rating": 0.87
       },
       {
-        "name": "Matt Irwin",
-        "position": "S",
-        "origin": "Idaho",
+        "name": "Brady Wayburn",
+        "position": "OT",
+        "origin": "UConn",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 24.8,
-    "talent_score": 710.0,
+    "talent_score": 672.1,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "UCLA": {
-    "head_coach": "Bob Chesney",
-    "coaching_change": true,
-    "coaching_note": "Big jump for Chesney but Foster was bad \u2014 hard to be worse",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Nico Iamaleava",
       "pass_yds": 1928,
@@ -9476,22 +9481,22 @@
     "qb_room": [
       {
         "name": "Nico Iamaleava",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "9"
       },
       {
         "name": "Ty Dieffenbach",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "14"
       },
       {
         "name": "Madden Iamaleava",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "10"
       },
       {
         "name": "Colton Gumino",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "17"
       },
       {
@@ -9514,20 +9519,20 @@
         "rating": 0.9
       },
       {
-        "name": "Riley Robell",
-        "position": "IOL",
+        "name": "Sahir West",
+        "position": "EDGE",
         "origin": "James Madison",
         "rating": 0.88
       }
     ],
     "returning_prod_pct": 57.0,
-    "talent_score": 766.6,
+    "talent_score": 774.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "UConn": {
-    "head_coach": "Jim Mora",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -9559,41 +9564,41 @@
     "qb_room": [
       {
         "name": "Tucker McDonald",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "12"
       },
       {
         "name": "Jake Merklinger",
-        "class": "Freshman",
+        "class": "Junior",
         "jersey": "4"
       },
       {
         "name": "Kalieb Osborne",
-        "class": "Freshman",
+        "class": "Junior",
         "jersey": "7"
+      },
+      {
+        "name": "Tyler Smith",
+        "class": "Sophomore",
+        "jersey": "15"
       },
       {
         "name": "Bo Polston",
         "class": "Freshman",
         "jersey": "13"
-      },
-      {
-        "name": "Tyler Smith",
-        "class": "Freshman",
-        "jersey": "18"
       }
     ],
     "key_transfers_in": [
       {
-        "name": "Moussa Kane",
-        "position": "CB",
-        "origin": "Duke",
-        "rating": 0.86
-      },
-      {
         "name": "Joshua Mickens",
         "position": "EDGE",
         "origin": "Ohio State",
+        "rating": 0.86
+      },
+      {
+        "name": "Jake Merklinger",
+        "position": "QB",
+        "origin": "Tennessee",
         "rating": 0.86
       },
       {
@@ -9604,13 +9609,13 @@
       }
     ],
     "returning_prod_pct": 2.3,
-    "talent_score": 568.1,
+    "talent_score": 652.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "UL Monroe": {
-    "head_coach": "Bryant Vincent",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -9667,15 +9672,15 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Donald Chaney Jr.",
-        "position": "RB",
-        "origin": "Charlotte",
-        "rating": 0.86
-      },
-      {
         "name": "Austin Carlisle",
         "position": "QB",
         "origin": "Houston",
+        "rating": 0.86
+      },
+      {
+        "name": "Don Chaney Jr.",
+        "position": "RB",
+        "origin": "Charlotte",
         "rating": 0.86
       },
       {
@@ -9686,13 +9691,13 @@
       }
     ],
     "returning_prod_pct": 38.7,
-    "talent_score": 473.3,
+    "talent_score": 505.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "UNLV": {
-    "head_coach": "Dan Mullen",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -9712,7 +9717,7 @@
       "rec_yds": 869,
       "rec_td": 4,
       "rec": 54,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "top_defender": {
       "name": "Tunmise Adeleye",
@@ -9750,26 +9755,26 @@
         "rating": 0.87
       },
       {
-        "name": "Keyan Burnett",
-        "position": "TE",
-        "origin": "Arizona",
-        "rating": 0.86
-      },
-      {
         "name": "Kyron Chambers",
         "position": "CB",
         "origin": "SMU",
         "rating": 0.86
+      },
+      {
+        "name": "Keyan Burnett",
+        "position": "TE",
+        "origin": "Arizona",
+        "rating": 0.86
       }
     ],
     "returning_prod_pct": 15.4,
-    "talent_score": 700.5,
+    "talent_score": 696.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "USC": {
-    "head_coach": "Lincoln Riley",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -9843,13 +9848,13 @@
       }
     ],
     "returning_prod_pct": 59.2,
-    "talent_score": 847.5,
+    "talent_score": 899.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "UTEP": {
-    "head_coach": "Scotty Walden",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -9916,13 +9921,13 @@
       }
     ],
     "returning_prod_pct": -1.1,
-    "talent_score": 551.9,
+    "talent_score": 585.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "UTSA": {
-    "head_coach": "Jeff Traylor",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -9954,7 +9959,12 @@
       {
         "name": "Owen McCown",
         "class": "Senior",
-        "jersey": "13"
+        "jersey": "2"
+      },
+      {
+        "name": "Brandon Tennison",
+        "class": "Junior",
+        "jersey": "11"
       },
       {
         "name": "Max Gerlich",
@@ -9981,22 +9991,22 @@
         "rating": 0.86
       },
       {
-        "name": "Dylan Spencer",
-        "position": "EDGE",
-        "origin": "Texas Tech",
+        "name": "James Madison II",
+        "position": "WR",
+        "origin": "Missouri",
         "rating": 0.85
       }
     ],
     "returning_prod_pct": 66.9,
-    "talent_score": 662.1,
+    "talent_score": 655.8,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Utah": {
-    "head_coach": "Morgan Scalley",
-    "coaching_change": true,
-    "coaching_note": "Losing a legend in Wittingham \u2014 Scalley is DC with no HC track record",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Devon Dampier",
       "pass_yds": 2180,
@@ -10026,6 +10036,11 @@
         "name": "Devon Dampier",
         "class": "Senior",
         "jersey": "4"
+      },
+      {
+        "name": "Brandon Rose",
+        "class": "Senior",
+        "jersey": "14"
       },
       {
         "name": "Byrd Ficklin",
@@ -10064,13 +10079,13 @@
       }
     ],
     "returning_prod_pct": 67.9,
-    "talent_score": 707.9,
+    "talent_score": 695.7,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Utah State": {
-    "head_coach": "Bronco Mendenhall",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -10103,37 +10118,47 @@
         "jersey": "3"
       },
       {
+        "name": "Grady Brosterhous",
+        "class": "Senior",
+        "jersey": "9"
+      },
+      {
         "name": "Bryson Barnes",
         "class": "Senior",
         "jersey": "16"
       },
       {
-        "name": "Anthony Garcia",
-        "class": "Sophomore",
-        "jersey": "10"
+        "name": "McCae Hillstead",
+        "class": "Junior",
+        "jersey": "2"
       },
       {
-        "name": "CJ Tiller",
-        "class": "Sophomore",
-        "jersey": "12"
+        "name": "Crew Cacciacarne",
+        "class": "Freshman",
+        "jersey": "17"
       },
       {
-        "name": "Kaden Cox",
+        "name": "Brady Goodman",
+        "class": "Freshman",
+        "jersey": ""
+      },
+      {
+        "name": "Kaleb Maryland",
         "class": "Freshman",
         "jersey": ""
       }
     ],
     "key_transfers_in": [
       {
-        "name": "James Jennette",
-        "position": "EDGE",
-        "origin": "Virginia Tech",
-        "rating": 0.86
-      },
-      {
         "name": "Antonio Bluiett",
         "position": "CB",
         "origin": "North Dakota",
+        "rating": 0.86
+      },
+      {
+        "name": "James Jennette",
+        "position": "EDGE",
+        "origin": "Virginia Tech",
         "rating": 0.86
       },
       {
@@ -10144,13 +10169,13 @@
       }
     ],
     "returning_prod_pct": 65.2,
-    "talent_score": 503.6,
+    "talent_score": 544.0,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Vanderbilt": {
-    "head_coach": "Clark Lea",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -10226,13 +10251,13 @@
       }
     ],
     "returning_prod_pct": 35.4,
-    "talent_score": 685.4,
+    "talent_score": 727.4,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Virginia": {
-    "head_coach": "Tony Elliott",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -10309,15 +10334,15 @@
       }
     ],
     "returning_prod_pct": 9.5,
-    "talent_score": 666.7,
+    "talent_score": 700.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Virginia Tech": {
-    "head_coach": "James Franklin",
-    "coaching_change": true,
-    "coaching_note": "Franklin is one of the best HCs in CFB \u2014 transformative hire",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Kyron Drones",
       "pass_yds": 1919,
@@ -10328,7 +10353,8 @@
     "top_rb": {
       "name": "Marcellous Hawkins",
       "rush_yds": 749,
-      "rush_td": 1
+      "rush_td": 1,
+      "departed_to": "not on 2026 roster"
     },
     "top_wr": {
       "name": "Ayden Greene",
@@ -10344,23 +10370,23 @@
     "qb_room": [
       {
         "name": "Ethan Grunkemeyer",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "17"
       },
       {
         "name": "Kelden Ryan",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "12"
+      },
+      {
+        "name": "Bryce Baker",
+        "class": "Sophomore",
+        "jersey": "22"
       },
       {
         "name": "Troy Huhn",
         "class": "Freshman",
         "jersey": "14"
-      },
-      {
-        "name": "Bryce Baker",
-        "class": "Freshman",
-        "jersey": "22"
       }
     ],
     "key_transfers_in": [
@@ -10384,13 +10410,13 @@
       }
     ],
     "returning_prod_pct": 36.7,
-    "talent_score": 712.2,
+    "talent_score": 769.1,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Wake Forest": {
-    "head_coach": "Jake Dickert",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -10447,32 +10473,32 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Wondame Davis Jr.",
-        "position": "WR",
-        "origin": "UTEP",
-        "rating": 0.87
-      },
-      {
         "name": "Landon Morris",
         "position": "TE",
         "origin": "California",
         "rating": 0.87
       },
       {
-        "name": "Chase Tyler",
+        "name": "Wondame Davis Jr.",
         "position": "WR",
-        "origin": "Duke",
+        "origin": "UTEP",
+        "rating": 0.87
+      },
+      {
+        "name": "Brian Blades ll",
+        "position": "CB",
+        "origin": "Florida International",
         "rating": 0.86
       }
     ],
     "returning_prod_pct": 14.2,
-    "talent_score": 627.2,
+    "talent_score": 680.9,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Washington": {
-    "head_coach": "Jedd Fisch",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -10480,7 +10506,7 @@
       "pass_yds": 2850,
       "pass_td": 21,
       "pass_int": 8,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "top_rb": {
       "name": "Jonah Coleman",
@@ -10502,23 +10528,18 @@
     },
     "qb_room": [
       {
-        "name": "Demond Williams Jr.",
-        "class": "Junior",
-        "jersey": "1"
-      },
-      {
         "name": "Elijah Brown",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "7"
       },
       {
         "name": "Dash Beierly",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "9"
       },
       {
         "name": "Treston McMillan",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "10"
       }
     ],
@@ -10536,22 +10557,22 @@
         "rating": 0.88
       },
       {
-        "name": "Jayden Limar",
-        "position": "RB",
-        "origin": "Oregon",
+        "name": "Christian Moss",
+        "position": "WR",
+        "origin": "Kennesaw State",
         "rating": 0.87
       }
     ],
     "returning_prod_pct": 54.4,
-    "talent_score": 720.6,
+    "talent_score": 777.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Washington State": {
-    "head_coach": "Kirby Moore",
-    "coaching_change": true,
-    "coaching_note": "Moore was Arkansas OC \u2014 first-time HC replacing Rogers who just left",
+    "head_coach": "Unknown",
+    "coaching_change": false,
+    "coaching_note": "",
     "top_qb": {
       "name": "Zevi Eckhaus",
       "pass_yds": 1758,
@@ -10563,7 +10584,7 @@
       "name": "Kirby Vorhees",
       "rush_yds": 576,
       "rush_td": 5,
-      "departed_to": "unknown"
+      "departed_to": NaN
     },
     "top_wr": {
       "name": "Josh Meredith",
@@ -10608,26 +10629,26 @@
         "rating": 0.87
       },
       {
-        "name": "Tank Hawkins",
-        "position": "WR",
-        "origin": "Florida",
-        "rating": 0.86
-      },
-      {
         "name": "Jalil Tucker",
         "position": "CB",
         "origin": "Oregon State",
         "rating": 0.86
+      },
+      {
+        "name": "Jack Pedersen",
+        "position": "TE",
+        "origin": "UCLA",
+        "rating": 0.86
       }
     ],
     "returning_prod_pct": 91.3,
-    "talent_score": 569.5,
+    "talent_score": 630.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "West Virginia": {
-    "head_coach": "Rich Rodriguez",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -10694,15 +10715,15 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Jacob Bradford",
-        "position": "S",
+        "name": "TaRon Francis",
+        "position": "WR",
         "origin": "LSU",
         "rating": 0.87
       },
       {
-        "name": "Tobi Haastrup",
-        "position": "EDGE",
-        "origin": "Oregon",
+        "name": "Jacob Bradford",
+        "position": "S",
+        "origin": "LSU",
         "rating": 0.87
       },
       {
@@ -10713,13 +10734,13 @@
       }
     ],
     "returning_prod_pct": 14.0,
-    "talent_score": 662.3,
+    "talent_score": 707.6,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Western Kentucky": {
-    "head_coach": "Tyson Helton",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -10762,7 +10783,7 @@
       {
         "name": "Rodney Tisdale Jr.",
         "class": "Sophomore",
-        "jersey": "16"
+        "jersey": "5"
       },
       {
         "name": "Cam O'Hara",
@@ -10778,26 +10799,26 @@
         "rating": 0.86
       },
       {
-        "name": "Rhett Larson",
-        "position": "IOL",
-        "origin": "Sam Houston",
-        "rating": 0.85
-      },
-      {
         "name": "CC Ezirim",
         "position": "TE",
         "origin": "Toledo",
         "rating": 0.85
+      },
+      {
+        "name": "Rhett Larson",
+        "position": "IOL",
+        "origin": "Sam Houston",
+        "rating": 0.85
       }
     ],
     "returning_prod_pct": 83.7,
-    "talent_score": 561.4,
+    "talent_score": 611.5,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Western Michigan": {
-    "head_coach": "Lance Taylor",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -10854,26 +10875,26 @@
         "rating": 0.86
       },
       {
+        "name": "Kouri Crump",
+        "position": "S",
+        "origin": "VMI",
+        "rating": 0.84
+      },
+      {
         "name": "Tahj Owens",
         "position": "S",
         "origin": "Princeton",
         "rating": 0.84
-      },
-      {
-        "name": "Willard Ferrell",
-        "position": "CB",
-        "origin": "Presbyterian",
-        "rating": 0.84
       }
     ],
     "returning_prod_pct": 99.7,
-    "talent_score": 534.4,
+    "talent_score": 572.2,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Wisconsin": {
-    "head_coach": "Luke Fickell",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -10904,8 +10925,13 @@
     "qb_room": [
       {
         "name": "Colton Joseph",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "1"
+      },
+      {
+        "name": "Deuce Adams",
+        "class": "Junior",
+        "jersey": "8"
       },
       {
         "name": "Danny O'Neil",
@@ -10913,13 +10939,8 @@
         "jersey": "18"
       },
       {
-        "name": "Deuce Adams",
-        "class": "Sophomore",
-        "jersey": "8"
-      },
-      {
         "name": "Carter Smith",
-        "class": "Freshman",
+        "class": "Sophomore",
         "jersey": "5"
       },
       {
@@ -10942,20 +10963,20 @@
         "rating": 0.88
       },
       {
-        "name": "Austin Kawecki",
-        "position": "IOL",
-        "origin": "Oklahoma State",
+        "name": "Colton Joseph",
+        "position": "QB",
+        "origin": "Old Dominion",
         "rating": 0.87
       }
     ],
     "returning_prod_pct": 31.0,
-    "talent_score": 763.2,
+    "talent_score": 767.7,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
   },
   "Wyoming": {
-    "head_coach": "Jay Sawvel",
+    "head_coach": "Unknown",
     "coaching_change": false,
     "coaching_note": "",
     "top_qb": {
@@ -11003,15 +11024,14 @@
         "name": "Taylor Hasselbeck",
         "class": "Freshman",
         "jersey": "15"
+      },
+      {
+        "name": "Tyler Franklin",
+        "class": "Freshman",
+        "jersey": "34"
       }
     ],
     "key_transfers_in": [
-      {
-        "name": "Diore Hubbard",
-        "position": "RB",
-        "origin": "West Virginia",
-        "rating": 0.85
-      },
       {
         "name": "Travis Franklin Jr.",
         "position": "S",
@@ -11023,10 +11043,16 @@
         "position": "RB",
         "origin": "Western Illinois",
         "rating": 0.85
+      },
+      {
+        "name": "Diore Hubbard",
+        "position": "RB",
+        "origin": "West Virginia",
+        "rating": 0.85
       }
     ],
     "returning_prod_pct": 23.0,
-    "talent_score": 489.3,
+    "talent_score": 528.3,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
