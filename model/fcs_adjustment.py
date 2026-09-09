@@ -29,7 +29,7 @@ from data.cfbd_fetcher import _get, fetch_lines
 from data.team_names import normalize
 from config import HOME_FIELD_ADVANTAGE
 
-DEFAULT_YEARS = [2020, 2021, 2022, 2023, 2024]
+DEFAULT_YEARS = [2023, 2024, 2025]
 
 # ── Extended SP+ (FBS through D3, unofficial fan-maintained extension) ──────
 # CFBD's SP+ only covers FBS. This lets us rate the specific FCS opponent

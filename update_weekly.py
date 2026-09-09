@@ -253,6 +253,17 @@ def main():
                 next_path = f"cache/sp_plus_{year}_week{current_week + 1}.csv"
                 sp_df.to_csv(next_path, index=False)
                 print(f"   ✅ Snapshotted current SP+ ranks → {next_path} (baseline for week {current_week + 1})")
+
+            # Same idea for Sagarin — no historical per-week archive exists
+            # anywhere (sagarin.com only ever shows the current week), so this
+            # is the only way to build up genuine no-leakage weekly snapshots
+            # for backtesting the in-progress season.
+            if current_week is not None and not sagarin_df.empty:
+                import json as _json
+                sag_next_path = f"cache/sagarin_{year}_week{current_week + 1}.json"
+                with open(sag_next_path, "w") as _f:
+                    _json.dump(sagarin_df.to_dict(orient="records"), _f, indent=2)
+                print(f"   ✅ Snapshotted current Sagarin ratings → {sag_next_path} (baseline for week {current_week + 1})")
         else:
             print("   ⚠️  Could not build composite — check input data")
     except Exception as e:

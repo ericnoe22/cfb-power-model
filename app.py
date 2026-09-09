@@ -2708,7 +2708,7 @@ elif page == "📅 Schedule & Predictions":
 elif page == "📈 Model Performance":
     st.title("Model Performance Tracker")
 
-    bt_year_options = list(range(2022, CURRENT_SEASON))
+    bt_year_options = list(range(2022, CURRENT_SEASON + 1))
     bt_year = st.selectbox("Season", options=bt_year_options,
                            index=len(bt_year_options)-1,
                            format_func=lambda y: str(y))

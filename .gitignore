@@ -20,6 +20,7 @@ cache/*
 !cache/team_intel_2026.json
 !cache/lines_live.csv
 !cache/sp_plus_2026_week*.csv
+!cache/sagarin_2026_week*.json
 !cache/fcs_lookup.json
 !cache/extended_sp_plus_2026.csv
 

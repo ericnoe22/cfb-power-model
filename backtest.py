@@ -15,6 +15,7 @@ Usage:
 """
 
 import argparse
+import json
 import os
 import sys
 import pandas as pd
@@ -23,14 +24,14 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(__file__))
 from data.cfbd_fetcher import (
     fetch_sp_plus, fetch_fpi, fetch_elo, fetch_talent,
-    fetch_returning_production, fetch_lines,
+    fetch_returning_production, fetch_lines, fetch_completed_games,
 )
 from model.elo import initialize_season_elos
 from model.power_rankings import build_composite_ratings
-from model.game_predictor import predict_game
+from model.game_predictor import predict_all_games
 from model.edge_finder import find_edges
 from data.team_names import normalize
-from config import EDGE_THRESHOLD_SPREAD, EDGE_THRESHOLD_TOTAL
+from config import EDGE_THRESHOLD_SPREAD, EDGE_THRESHOLD_TOTAL, CURRENT_SEASON
 
 
 JUICE = -110   # standard juice; breakeven win rate = 110/210 = 52.38%
@@ -54,6 +55,32 @@ def grade_edge(spread_edge, total_edge, confidence):
     if score >= 4.5: return "B"
     if score >= 3:   return "C"
     return None
+
+
+def _apply_elo_overrides(ratings_df, elo_by_team):
+    """
+    Nudge composite for specific teams using their known in-season pregame
+    Elo, without disturbing everything else already baked into 'composite'
+    (Sagarin, luck adjustment, coaching flags, etc.) — adds only the delta
+    from the Elo change rather than recomputing composite from scratch.
+    """
+    if not elo_by_team or "elo_norm" not in ratings_df.columns:
+        return ratings_df
+    from config import RATING_WEIGHTS
+    elo_w = RATING_WEIGHTS.get("elo", 0.0)
+    ratings_df = ratings_df.copy()
+    for team, new_elo in elo_by_team.items():
+        if pd.isna(new_elo):
+            continue
+        mask = ratings_df["team"] == team
+        if not mask.any():
+            continue
+        old_elo_norm = float(ratings_df.loc[mask, "elo_norm"].values[0])
+        new_elo_norm = (float(new_elo) - 1500) / 30
+        ratings_df.loc[mask, "composite"] += elo_w * (new_elo_norm - old_elo_norm)
+        ratings_df.loc[mask, "elo"] = new_elo
+        ratings_df.loc[mask, "elo_norm"] = new_elo_norm
+    return ratings_df
 
 
 def build_ratings(year, elo_overrides=None):
@@ -150,17 +177,50 @@ def fetch_weekly_ratings(year, week):
     return sp_df, fpi_df
 
 
-def build_weekly_ratings(year, week, base_ratings, elo_overrides=None):
+def fetch_weekly_sagarin(year, week):
     """
-    Build composite ratings using the SP+/FPI published for a specific week.
+    Load the Sagarin snapshot captured BEFORE a given week's games
+    (cache/sagarin_{year}_week{N}.json — written by update_weekly.py).
+    Sagarin has no historical per-week archive anywhere (sagarin.com only
+    ever shows the current week), so this only has data for weeks of the
+    CURRENT in-progress season that we've actually snapshotted ourselves;
+    historical seasons and un-snapshotted weeks return empty (Sagarin
+    simply doesn't contribute for those, same as before this existed).
+    """
+    path = f"cache/sagarin_{year}_week{week}.json"
+    if not os.path.exists(path):
+        return pd.DataFrame()
+    with open(path) as f:
+        return pd.DataFrame(json.load(f))
+
+
+def build_weekly_ratings(year, week, base_ratings, elo_overrides=None, games_df=None):
+    """
+    Build composite ratings to PREDICT a given week's games.
     Keeps talent/returning prod from the base ratings (season-level only).
+
+    games_df: completed games strictly BEFORE this week (for the luck/
+    regression signal) — caller is responsible for the week cutoff so this
+    stays leakage-free.
+
+    IMPORTANT: SP+/FPI are fetched for week-1, not week. CFBD's
+    /ratings/sp?week=N reflects results THROUGH week N (confirmed
+    empirically — it drifts as results come in and settles once the week
+    is final), not "as published entering week N" despite that being the
+    intent documented on fetch_weekly_ratings(). Fetching week itself here
+    would predict a week's games using SP+ that already includes that
+    week's own results. week-1 for week=1 resolves to week=0, which CFBD
+    doesn't have, so sp_df comes back empty and this correctly falls back
+    to base_ratings (the genuine preseason snapshot) below.
     """
-    sp_df, fpi_df = fetch_weekly_ratings(year, week)
+    sp_df, fpi_df = fetch_weekly_ratings(year, week - 1)
     if sp_df.empty:
         return base_ratings   # fall back to preseason if weekly not available
 
     sp_df = sp_df.rename(columns={"rating": "rating"})  # already named correctly
     fpi_clean = fpi_df[["team", "fpi"]] if (not fpi_df.empty and "fpi" in fpi_df.columns) else pd.DataFrame()
+
+    sagarin_df = fetch_weekly_sagarin(year, week) if year == CURRENT_SEASON else pd.DataFrame()
 
     # Pull talent/returning from base (not available weekly)
     tal_df = base_ratings[["team","talent"]].rename(columns={"talent":"talent"}) \
@@ -182,6 +242,8 @@ def build_weekly_ratings(year, week, base_ratings, elo_overrides=None):
         elo_df=elo_df if not elo_df.empty else None,
         returning_df=ret_df if not ret_df.empty else None,
         talent_df=tal_df if not tal_df.empty else None,
+        sagarin_df=sagarin_df if not sagarin_df.empty else None,
+        games_df=games_df if games_df is not None and not games_df.empty else None,
         week=week, season=year,
     )
     return composite if not composite.empty else base_ratings
@@ -191,6 +253,16 @@ def run_backtest(year=2024, lines_path=None, save=False):
     print(f"\n{'='*58}")
     print(f"  CFB Power Model — Back-Test ({year} Season)")
     print(f"{'='*58}\n")
+
+    if year != CURRENT_SEASON:
+        print(f"  ⚠️  CAVEAT: CFBD's /ratings/sp?week=N returns the SAME final-season\n"
+              f"     value for every week once a season is over (verified empirically —\n"
+              f"     it does not retain real historical weekly snapshots). So for {year},\n"
+              f"     every week's \"prediction\" uses full-season-final SP+/FPI, not what\n"
+              f"     was actually knowable at that point in the season. Results here are\n"
+              f"     a look-ahead-biased upper bound, not real chronological accuracy.\n"
+              f"     Only {CURRENT_SEASON} (the current season, using our own weekly\n"
+              f"     snapshots) is genuinely leakage-free.\n")
 
     # ── Load preseason base ratings (talent, returning prod, preseason Elo) ──
     base_ratings = build_ratings(year)
@@ -229,10 +301,12 @@ def run_backtest(year=2024, lines_path=None, save=False):
         print("❌ No lines data available — aborting.")
         return
 
-    # ── Filter to FBS vs FBS with a spread and final score ───────────
+    # ── Filter to games with an FBS side, a spread, and a final score ────
+    # (FBS vs FBS *and* FBS vs FCS — FCS opponents now get a real prediction
+    # via predict_all_games' opponent-adjusted path instead of being skipped)
     fbs = lines_df[
-        (lines_df.get("homeClassification", pd.Series(["fbs"]*len(lines_df))) == "fbs") &
-        (lines_df.get("awayClassification", pd.Series(["fbs"]*len(lines_df))) == "fbs") &
+        ((lines_df.get("homeClassification", pd.Series(["fbs"]*len(lines_df))) == "fbs") |
+         (lines_df.get("awayClassification", pd.Series(["fbs"]*len(lines_df))) == "fbs")) &
         lines_df["spread"].notna() &
         lines_df["homeScore"].notna()
     ].copy()
@@ -241,78 +315,76 @@ def run_backtest(year=2024, lines_path=None, save=False):
     if "provider" in fbs.columns:
         dk = fbs[fbs["provider"] == "DraftKings"]
         fbs = dk if not dk.empty else fbs
-    fbs = fbs.drop_duplicates(subset=["homeTeam", "awayTeam", "week"])
-
     fbs = fbs.drop_duplicates(subset=["homeTeam", "awayTeam", "week"]).copy()
-    print(f"  Games to evaluate: {len(fbs)} FBS matchups\n")
+    print(f"  Games to evaluate: {len(fbs)} matchups (FBS vs FBS/FCS)\n")
 
     # ── Load per-game pre-game Elo if available (in-season accuracy) ─────
-    elo_by_game = {}
-    elo_candidates = [f"games_with_sp_cleaned.csv", f"cache/games_{year}_regular.json"]
+    # Collapsed to a per-(team, week) map — a team's pregame Elo entering a
+    # week doesn't depend on who they're playing, so this can be applied
+    # once per week to the whole ratings table instead of per matchup.
+    elo_by_team_week = {}
+    elo_candidates = [f"games_with_sp_cleaned.csv"]
     for path in elo_candidates:
         if os.path.exists(path) and path.endswith(".csv"):
             eg = pd.read_csv(path)
             if "homePregameElo" in eg.columns:
                 for _, r in eg.iterrows():
-                    key = (normalize(str(r.get("homeTeam",""))),
-                           normalize(str(r.get("awayTeam",""))),
-                           int(r.get("week", 0)))
-                    elo_by_game[key] = {
-                        "home_elo": r.get("homePregameElo"),
-                        "away_elo": r.get("awayPregameElo"),
-                    }
-                print(f"  In-season Elo: loaded {len(elo_by_game)} per-game entries from {path}")
+                    wk = int(r.get("week", 0))
+                    home = normalize(str(r.get("homeTeam", "")))
+                    away = normalize(str(r.get("awayTeam", "")))
+                    if pd.notna(r.get("homePregameElo")):
+                        elo_by_team_week[(home, wk)] = r["homePregameElo"]
+                    if pd.notna(r.get("awayPregameElo")):
+                        elo_by_team_week[(away, wk)] = r["awayPregameElo"]
+                print(f"  In-season Elo: loaded {len(elo_by_team_week)} team-week entries from {path}")
                 break
+
+    # ── Completed games for the luck/regression signal (prior weeks only) ─
+    try:
+        season_games = fetch_completed_games(year=year)
+    except Exception as e:
+        print(f"  ⚠️  Could not load completed games for luck signal: {e}")
+        season_games = pd.DataFrame()
 
     # ── Pre-cache weekly ratings for all weeks in the dataset ─────────
     weeks = sorted(fbs["week"].dropna().unique().astype(int))
-    print(f"  Fetching weekly SP+/FPI for weeks {weeks[0]}–{weeks[-1]}...")
+    print(f"  Fetching weekly SP+/FPI/Sagarin for weeks {weeks[0]}–{weeks[-1]}...")
     weekly_ratings_cache = {}
     for wk in weeks:
-        weekly_ratings_cache[wk] = build_weekly_ratings(year, wk, base_ratings)
+        prior_games = season_games[season_games["week"] < wk] if not season_games.empty else None
+        ratings = build_weekly_ratings(year, wk, base_ratings, games_df=prior_games)
+        ratings = _apply_elo_overrides(
+            ratings, {t: e for (t, w), e in elo_by_team_week.items() if w == wk}
+        )
+        weekly_ratings_cache[wk] = ratings
     print(f"  ✅ Weekly ratings ready\n")
 
-    # ── Run predictions ───────────────────────────────────────────────
+    # ── Run predictions — batched per week through predict_all_games so
+    # FCS opponents get the same opponent-adjusted handling as production ─
     records = []
+    predictions_by_week = {}
+    for wk in weeks:
+        wk_games = fbs[fbs["week"] == wk][["homeTeam", "awayTeam"]].copy()
+        wk_games["neutralSite"] = False  # not present in the lines endpoint
+        predicted = predict_all_games(wk_games, weekly_ratings_cache[wk], week=int(wk))
+        predictions_by_week[wk] = predicted.set_index(
+            [predicted["homeTeam"].map(normalize), predicted["awayTeam"].map(normalize)]
+        )
+
     for _, row in fbs.iterrows():
         home = normalize(str(row["homeTeam"]))
         away = normalize(str(row["awayTeam"]))
         week = int(row.get("week", 0))
 
-        # Use weekly SP+/FPI ratings for this game's week
-        ratings = weekly_ratings_cache.get(week, base_ratings)
-
-        # Inject per-game Elo into ratings if available
-        game_ratings = ratings.copy()
-        game_key = (home, away, week)
-        if game_key in elo_by_game:
-            elos = elo_by_game[game_key]
-            if pd.notna(elos.get("home_elo")) and pd.notna(elos.get("away_elo")):
-                # Only update the Elo-derived component for these two teams
-                for team, elo_val in [(home, elos["home_elo"]), (away, elos["away_elo"])]:
-                    mask = game_ratings["team"] == team
-                    if mask.any():
-                        game_ratings.loc[mask, "elo"] = elo_val
-                        # Recompute composite for just these two teams
-                        from config import RATING_WEIGHTS
-                        w = RATING_WEIGHTS
-                        game_ratings.loc[mask, "elo_norm"] = (elo_val - 1500) / 30
-                        game_ratings.loc[mask, "composite"] = (
-                            w["sp_plus"]        * game_ratings.loc[mask, "sp_plus_norm"] +
-                            w["fpi"]            * game_ratings.loc[mask, "fpi_norm"] +
-                            w["elo"]            * game_ratings.loc[mask, "elo_norm"] +
-                            w["returning_prod"] * game_ratings.loc[mask, "returning_norm"] +
-                            w["talent"]         * game_ratings.loc[mask, "talent_norm"]
-                        )
-
-        pred = predict_game(home, away, game_ratings,
-                            neutral=row.get("neutralSite", False))
-
-        if pred.get("predicted_spread") is None:
+        wk_preds = predictions_by_week.get(week)
+        if wk_preds is None or (home, away) not in wk_preds.index:
+            continue
+        pred = wk_preds.loc[(home, away)]
+        if pd.isna(pred.get("predicted_spread")):
             continue
 
-        model_spread = pred["predicted_spread"]
-        model_total  = pred["predicted_total"]
+        model_spread = float(pred["predicted_spread"])
+        model_total  = float(pred["predicted_total"])
         vegas_spread = float(row["spread"])
         vegas_total  = float(row["overUnder"]) if pd.notna(row.get("overUnder")) else None
         actual_home  = float(row["homeScore"])
