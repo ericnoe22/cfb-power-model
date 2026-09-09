@@ -38,8 +38,7 @@ DEFAULT_YEARS = [2020, 2021, 2022, 2023, 2024]
 # Scale is NOT the same as CFBD SP+ (much wider range), so it's calibrated
 # against our own composite using the FBS teams present in both sources
 # before being used to project an FCS opponent's rating onto our scale.
-EXTENDED_SP_PATH = os.path.join(os.path.dirname(__file__), "..", "cache", "extended_sp_plus_2026_raw.txt")
-
+# Fetched weekly from a public Google Sheet — see data/extended_sp_fetcher.py.
 _EXTENDED_NAME_MAP = {
     "Miami-FL":       "Miami",
     "Miami-OH":       "Miami (OH)",
@@ -51,14 +50,16 @@ _EXTENDED_NAME_MAP = {
 }
 
 
-def load_extended_sp_plus(path=EXTENDED_SP_PATH):
+def load_extended_sp_plus():
     """Load the extended (FBS-through-D3) SP+ list. Returns DataFrame[team, ext_sp_plus]."""
-    if not os.path.exists(path):
+    from data.extended_sp_fetcher import fetch_extended_sp_plus
+    try:
+        df = fetch_extended_sp_plus()
+    except Exception:
         return pd.DataFrame()
-    df = pd.read_csv(path, sep="\t")
-    if "Team" not in df.columns or "SP+" not in df.columns:
+    if df.empty or "team" not in df.columns or "ext_sp_plus" not in df.columns:
         return pd.DataFrame()
-    df = df.rename(columns={"Team": "team", "SP+": "ext_sp_plus"})
+    df = df.copy()
     df["team"] = df["team"].map(lambda t: _EXTENDED_NAME_MAP.get(t, t)).map(normalize)
     return df[["team", "ext_sp_plus"]].drop_duplicates(subset="team")
 

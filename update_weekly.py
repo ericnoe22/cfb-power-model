@@ -25,6 +25,7 @@ from data.cfbd_fetcher import (
 )
 from data.owls_fetcher import fetch_ncaaf_lines
 from data.sagarin_fetcher import fetch_sagarin
+from data.extended_sp_fetcher import fetch_extended_sp_plus
 from model.elo import run_season_elos, initialize_season_elos
 from model.power_rankings import build_composite_ratings
 
@@ -172,6 +173,14 @@ def main():
         print(f"   ✅ Sagarin: {len(sagarin_df)} FBS teams")
     except Exception as e:
         print(f"   ❌ Sagarin fetch failed: {e}")
+
+    # ── 4c. Pull extended (FBS-through-D3/NAIA) SP+ for FCS opponent grading ─
+    print(f"\n📥 Fetching extended SP+ ratings (FBS-D3, {year})...")
+    try:
+        ext_sp_df = fetch_extended_sp_plus(year=year, force_refresh=force)
+        print(f"   ✅ Extended SP+: {len(ext_sp_df)} teams")
+    except Exception as e:
+        print(f"   ❌ Extended SP+ fetch failed: {e}")
 
     # ── 4c. Pull opponent-adjusted EPA/PPA (Patreon tier) ─────────────────
     print(f"\n📥 Fetching opponent-adjusted EPA/PPA ({year})...")

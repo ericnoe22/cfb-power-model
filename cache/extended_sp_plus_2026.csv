@@ -1,0 +1,770 @@
+team,ext_sp_plus
+Ohio State,82.1
+Georgia,80.8
+Notre Dame,78.9
+Texas,77.5
+Miami-FL,76.8
+Indiana,76.2
+Oregon,76.0
+Texas A&M,76.0
+LSU,75.4
+Oklahoma,73.8
+Alabama,72.1
+Tennessee,72.0
+Penn State,71.9
+Texas Tech,71.0
+Florida,70.7
+Iowa,70.1
+USC,69.8
+BYU,68.9
+South Carolina,68.8
+Ole Miss,65.4
+Utah,65.1
+Missouri,65.0
+Kansas State,64.8
+Arizona,64.7
+Virginia Tech,64.5
+Michigan,64.3
+Vanderbilt,64.2
+Nebraska,64.2
+Washington,64.1
+Virginia,63.6
+SMU,63.2
+Pittsburgh,62.2
+Louisville,62.1
+Minnesota,61.7
+Mississippi State,61.5
+UCLA,61.3
+Maryland,61.2
+Arizona State,60.8
+Kentucky,60.6
+Northwestern,59.9
+Kansas,59.6
+Illinois,59.6
+Auburn,59.1
+Florida State,59.0
+Duke,58.7
+Houston,58.6
+Cincinnati,58.0
+UCF,58.0
+North Carolina,57.9
+Clemson,57.3
+Boise State,57.3
+Baylor,57.0
+New Mexico,56.5
+TCU,56.0
+Navy,55.7
+Arkansas,55.4
+Iowa State,55.2
+San Diego State,55.2
+UTSA,55.0
+Syracuse,54.8
+North Dakota State,54.7
+UNLV,54.4
+Army,54.3
+Memphis,54.2
+Colorado,54.2
+Georgia Tech,53.8
+Wake Forest,53.7
+Purdue,53.3
+Oklahoma State,53.2
+Air Force,53.2
+Michigan State,53.1
+Montana State,51.9
+James Madison,51.8
+NC State,51.4
+Wisconsin,50.6
+Tulsa,49.8
+USF,49.0
+California,48.7
+Rutgers,48.5
+Washington State,48.4
+Louisiana Tech,48.3
+Illinois State,48.3
+Western Michigan,47.9
+West Virginia,47.7
+Stanford,47.4
+Temple,47.2
+UL-Lafayette,46.4
+Georgia Southern,46.3
+Nevada,46.0
+Old Dominion,45.9
+Connecticut,45.8
+Oregon State,45.3
+Jacksonville State,45.1
+Hawaii,45.1
+Appalachian State,44.9
+Montana,44.9
+Liberty,44.9
+Boston College,44.7
+Kennesaw State,44.7
+Tulane,44.7
+Colorado State,44.6
+Delaware,44.5
+Fresno State,44.5
+Texas State,44.3
+South Dakota State,44.3
+East Carolina,44.0
+Toledo,42.7
+Stephen F. Austin,42.3
+Lehigh,42.3
+Miami-OH,42.1
+North Dakota,41.7
+Rice,41.7
+SC State,41.7
+UC Davis,41.4
+Troy,40.7
+South Alabama,40.7
+South Dakota,40.7
+Mercer,40.6
+Utah State,40.6
+Buffalo,40.5
+Coastal Carolina,40.0
+Florida Atlantic,39.9
+Tarleton State,39.5
+San Jose State,39.3
+Bowling Green,39.3
+Western Kentucky,39.0
+North Texas,38.9
+Tennessee Tech,38.8
+Florida International,38.6
+Marshall,37.7
+Idaho State,37.3
+Southern Miss,37.2
+New Mexico State,37.1
+Arkansas State,37.0
+Wyoming,36.9
+Eastern Michigan,36.5
+Elon,36.3
+UAB,36.1
+Ohio,35.7
+Yale,35.5
+Austin Peay,34.1
+Ferris State,34.0
+Rhode Island,33.1
+Sacramento State,33.0
+Jackson State,32.8
+Youngstown State,32.7
+Central Michigan,32.1
+Harvard,32.1
+Richmond,31.9
+Villanova,31.8
+Middle Tennessee,31.3
+Akron,30.7
+Sam Houston,30.6
+West Florida,30.1
+Northern Illinois,29.8
+Georgia State,29.4
+Abilene Christian,29.4
+William & Mary,29.2
+Southern Illinois,29.1
+Prairie View A&M,28.9
+Grand Valley State,28.6
+Incarnate Word,28.5
+Harding,28.4
+Missouri State,27.8
+UTEP,27.8
+Dartmouth,27.4
+Ball State,27.1
+UTRGV,26.9
+Western Carolina,26.7
+Massachusetts,26.3
+Southern Utah,26.2
+Charlotte,26.1
+UT Martin,26.1
+Grambling,25.5
+ETSU,25.2
+Kent State,24.6
+Alabama State,24.4
+Monmouth,24.3
+Colgate,24.0
+Penn,23.8
+McNeese State,23.6
+Lamar,23.6
+Dayton,23.0
+Southeastern Louisiana,22.7
+Eastern Washington,22.6
+Northern Arizona,22.4
+Minnesota State,22.3
+Stony Brook,22.1
+North Central (Ill.),22.0
+Delaware State,21.7
+Kutztown,20.5
+Wofford,20.3
+Colorado State-Pueblo,20.1
+NC Central,20.0
+Cal Poly,19.8
+Albany-NY,19.7
+Weber State,19.6
+Idaho,19.5
+Campbell,19.4
+Chattanooga,19.0
+UL-Monroe,18.9
+UW-River Falls,18.6
+North Alabama,18.6
+NW Missouri State,18.2
+Norfolk State,18.0
+Central Arkansas,17.7
+Robert Morris,17.7
+Grand View (Iowa),17.3
+Brown,17.2
+Princeton,16.8
+Lindenwood,16.4
+UW-Whitewater,16.4
+Furman,16.4
+SE Missouri State,16.0
+Duquesne,16.0
+Towson,15.8
+Gardner-Webb,15.7
+Western Illinois,15.5
+Indiana (PA),15.5
+Northern Iowa,15.4
+Central Oklahoma,15.4
+Cornell,15.2
+Slippery Rock,14.4
+Wingate,14.3
+Alcorn State,14.3
+Keiser University,14.2
+Nicholls State,14.2
+Valdosta State,14.2
+Lafayette,14.1
+Central Washington,14.0
+Columbia,13.8
+Lenoir-Rhyne,13.4
+West Alabama,13.3
+New Hampshire,13.1
+Lindsey Wilson (Ky.),12.9
+Friends (Kan.),12.8
+Western Colorado,12.7
+Sacred Heart,12.4
+Howard,12.4
+Indiana State,12.4
+Northwood,12.4
+Northern Colorado,12.2
+Florida A&M,12.1
+Central Connecticut,11.9
+College of Idaho,11.8
+Michigan Tech,11.8
+Butler,11.7
+Eastern Kentucky,11.7
+Henderson State,11.2
+West Georgia,11.1
+Montana Tech,11.1
+Indiana Wesleyan,11.1
+Charleston Southern,11.0
+California (PA),11.0
+Maine,10.8
+San Diego,10.8
+Portland State,10.8
+Minnesota-Duluth,10.7
+Newberry,10.6
+Wagner,10.5
+Eastern Illinois,10.4
+Davenport,10.3
+St. Thomas,10.3
+Morehead State,10.2
+Carson-Newman,10.2
+Mount Union,10.1
+Southern U.,10.0
+McPherson (Kan.),9.9
+Indianapolis,9.8
+East Stroudsburg,9.7
+Bryant,9.4
+Ouachita Baptist,9.4
+UW-Platteville,9.3
+Washington U.,9.3
+Findlay,9.3
+Ashland,9.2
+Benedict,8.9
+Texas Southern,8.9
+Virginia State,8.7
+Marist,8.7
+Berry,8.7
+Alabama A&M,8.7
+Valparaiso,8.3
+Long Island,8.3
+Saginaw Valley,8.2
+Holy Cross,8.2
+Tennessee State,8.1
+Stonehill,8.1
+Bucknell,8.0
+Western Oregon,7.8
+Virginia Union,7.4
+The Citadel,7.4
+Central Missouri,7.1
+Morgan State,7.1
+Johns Hopkins,7.1
+Houston Christian,6.9
+Tiffin,6.7
+Northern State,6.7
+Emory & Henry,6.5
+Fordham,6.5
+Wartburg,6.4
+Benedictine (Kan.),6.4
+St. John's,6.2
+New Haven,6.2
+Bethel (Tenn.),6.2
+Samford,6.1
+Sioux Falls,5.7
+Augustana (SD),5.6
+Marian (Ind.),5.5
+Fayetteville State,5.4
+Southwestern (Kan.),5.3
+Linfield,5.3
+St. Thomas (Fla.),5.2
+Johnson C. Smith,5.2
+Drake,5.2
+Dordt (Iowa),5.1
+Fort Hays State,4.9
+UAPB,4.9
+East Texas A&M,4.8
+Hampton,4.8
+Bloomsburg,4.8
+Concordia (Neb.),4.7
+Colorado Mines,4.6
+Louisiana Christian,4.6
+Evangel (Mo.),4.6
+Southern Arkansas,4.5
+Hardin-Simmons,4.5
+Trinity (Texas),4.4
+Wayne State (NE),4.3
+Wheaton (Ill.),4.3
+Emporia State,4.3
+Pittsburg State,4.1
+Brockport,3.8
+Coe,3.8
+Bemidji State,3.6
+Cortland,3.4
+Georgetown,3.4
+UNC Pembroke,3.3
+Midland (Neb.),3.2
+Murray State,2.9
+Hope,2.6
+Merrimack,2.6
+North Greenville,2.6
+Mary Hardin-Baylor,2.5
+John Carroll,2.4
+Truman State,2.3
+Shepherd,2.3
+Minnesota-Moorhead,2.0
+Campbellsville (Ky.),2.0
+Salisbury,1.9
+Hillsdale,1.8
+Mercyhurst,1.5
+Upper Iowa,1.4
+Northeastern State,1.3
+Texas-Permian Basin,1.3
+Bethel,1.2
+Bethune-Cookman,0.9
+Assumption,0.9
+Angelo State,0.8
+Missouri S&T,0.8
+Delta State,0.4
+Charleston (WV),0.4
+Morningside (Iowa),0.3
+Stetson,0.2
+UW-La Crosse,0.1
+Edinboro,0.0
+Catawba,-0.1
+Arkansas Tech,-0.1
+Kentucky State,-0.1
+Bentley,-0.2
+Christopher Newport,-0.6
+Utah Tech,-0.7
+Endicott,-0.9
+Clarion,-1.1
+Colorado Mesa,-1.2
+Nebraska-Kearney,-1.5
+Muhlenberg,-1.6
+Mars Hill,-1.7
+Frostburg State,-1.8
+Lake Forest,-2.0
+East Central (OK),-2.0
+Washburn,-2.0
+Springfield,-2.1
+Presbyterian,-2.3
+South Dakota Mines,-2.3
+Chadron State,-2.4
+DePauw,-2.6
+Susquehanna,-2.7
+Albany State,-2.9
+Tuskegee,-3.3
+Saint Francis-PA,-3.5
+Georgetown (Ky.),-3.5
+Franklin and Marshall,-3.9
+Utica,-4.1
+NC A&T,-4.2
+Southeastern (Fla.),-4.3
+Walsh,-4.7
+West Chester,-5.0
+Ottawa (Ariz.),-5.1
+SW Oklahoma State,-5.5
+Fairmont State,-5.5
+Edward Waters,-5.7
+RPI,-5.8
+Allen,-5.9
+Roosevelt,-6.3
+Trinity (Conn.),-6.3
+Ohio Dominican,-6.5
+VMI,-6.6
+Baker (Kan.),-6.8
+Texas A&M-Kingsville,-7.0
+Franklin Pierce,-7.0
+Glenville State,-7.2
+New Mexico Highlands,-7.3
+West Texas A&M,-7.4
+Gustavus Adolphus,-7.6
+Olivet Nazarene (Ill.),-7.6
+Kansas Wesleyan,-7.7
+Wheeling,-7.8
+SE Oklahoma State,-7.8
+Fort Valley State,-7.8
+Wabash,-7.8
+Black Hills State,-7.9
+West Virginia State,-7.9
+Southwest Baptist,-7.9
+Winona State,-8.0
+Northwestern State,-8.3
+Randolph-Macon,-8.6
+Missouri Southern,-8.6
+UW-Stout,-8.7
+Baldwin Wallace,-8.7
+Montana Western,-8.7
+Washington and Jefferson,-9.5
+Ithaca,-9.6
+Carroll (Mont.),-9.7
+Alma,-9.7
+Hanover,-9.9
+Mount St. Joseph,-9.9
+Anderson,-10.0
+Ottawa (Kan.),-10.0
+Concordia-Moorhead,-10.1
+St. Anselm,-10.1
+Seton Hill,-10.4
+Heidelberg,-10.6
+Merchant Marine,-10.7
+Midwestern State,-10.8
+Missouri Western,-10.9
+Ursinus,-11.0
+Tusculum,-11.0
+Lock Haven,-11.1
+Whitworth,-11.2
+Northwestern (Iowa),-11.2
+Davidson,-11.3
+MVSU,-11.4
+American International,-11.5
+Augustana,-11.5
+Lake Erie,-11.6
+Winston-Salem State,-11.8
+Adrian,-12.2
+Mount Marty,-12.2
+Chicago State,-12.4
+Delaware Valley,-12.4
+Shenandoah,-12.4
+Cumberlands (Ky.),-12.6
+Miles,-12.6
+Gannon,-12.8
+Shippensburg,-13.0
+Florida Memorial,-13.0
+Elizabeth City State,-13.2
+Carnegie Mellon,-13.3
+Carroll,-13.3
+William Penn (Iowa),-13.4
+Wesleyan,-13.5
+Eastern New Mexico,-13.5
+Shorter,-13.5
+Marietta,-13.7
+Quincy,-13.8
+Valley City State (N.D.),-14.1
+Grove City,-14.1
+Case Western Reserve,-14.2
+Pikeville (Ky.),-14.2
+Howard Payne,-14.3
+Dakota State (S.D.),-14.4
+East Texas Baptist,-14.6
+Hobart,-14.6
+UVA-Wise,-14.7
+Central,-14.9
+Bowie State,-15.0
+Concordia (Wis.),-15.1
+Westminster (Pa.),-15.1
+Minot State,-15.1
+Dickinson,-15.2
+Salve Regina,-15.3
+St. Xavier (Ill.),-15.3
+Pace,-15.3
+Graceland (Iowa),-15.4
+Taylor (Ind.),-15.6
+Oklahoma Baptist,-15.7
+William Jewell,-16.0
+MIT,-16.0
+Barton,-16.1
+Ohio Northern,-16.1
+Cumberland (Tenn.),-16.2
+Union,-16.2
+MidAmerica Nazarene (Kan.),-16.2
+Ohio Wesleyan,-16.2
+Stevenson,-16.3
+Washington and Lee,-16.4
+Concordia-St. Paul,-16.4
+Concord,-16.5
+Northern Michigan,-16.6
+Benedictine,-16.6
+Shaw,-16.8
+Illinois Wesleyan,-16.8
+Livingstone,-16.8
+Millersville,-16.9
+Trine,-17.1
+Southern Connecticut,-17.2
+West Liberty,-17.3
+McKendree,-17.4
+St. John Fisher,-17.4
+Clark Atlanta,-17.5
+Mary,-17.7
+Chapman,-17.8
+Arkansas-Monticello,-17.8
+UW-Oshkosh,-18.2
+St. Ambrose (Iowa),-18.5
+Aurora,-18.6
+Rowan,-18.8
+Thomas More,-18.9
+Hampden-Sydney,-19.0
+Coast Guard,-19.0
+Reinhardt (Ga.),-19.1
+Illinois College,-19.3
+Western New Mexico,-19.7
+St. Francis (Ind.),-19.8
+Fort Lewis,-19.8
+Western New England,-19.9
+Faulkner (Ala.),-20.2
+Wayland Baptist (Texas),-20.3
+Wilkes,-20.4
+Chowan,-20.7
+Alfred State,-20.9
+Dickinson State (N.D.),-21.1
+King's,-21.2
+Misericordia,-21.2
+Lane,-21.3
+Pomona-Pitzer,-21.4
+Central State (OH),-21.6
+Lackawanna,-21.6
+UW-Eau Claire,-21.7
+McMurry,-21.7
+Eastern,-21.9
+Lewis and Clark,-22.0
+Western Connecticut,-22.0
+Lycoming,-22.0
+Calvin,-22.0
+Williams,-22.1
+Denison,-22.2
+Wayne State (MI),-22.2
+Savannah State,-22.2
+Missouri Valley,-22.3
+Ferrum,-22.4
+Centre,-22.5
+Southern Nazarene,-22.6
+Claremont-Mudd-Scripps,-22.8
+Millsaps,-22.9
+Middlebury,-23.0
+George Fox,-23.0
+Bluefield State,-23.2
+Wittenberg,-23.3
+Bridgewater State,-23.4
+Post,-23.5
+Maryville (Tenn.),-23.6
+Sul Ross State,-23.8
+SW Minnesota State,-24.2
+Pacific Lutheran,-24.2
+Wisconsin Lutheran,-24.3
+Mass-Dartmouth,-24.4
+LaGrange,-24.5
+Monroe,-24.7
+TCNJ,-24.8
+Eastern Oregon,-25.0
+Dakota Wesleyan (S.D.),-25.1
+Webber International (Fla.),-25.3
+Chicago,-25.4
+Morehouse,-25.7
+Kentucky Wesleyan,-26.1
+Brevard,-26.4
+Hastings (Neb.),-26.7
+Lincoln (PA),-26.8
+Lincoln (MO),-26.8
+University of New England,-26.8
+Tufts,-27.4
+Framingham State,-27.4
+Texas Lutheran,-27.6
+Bridgewater,-28.1
+Mount Mercy,-28.1
+Jamestown,-28.2
+Lebanon Valley,-28.2
+Massachusetts Maritime,-28.2
+Roanoke,-28.3
+Loras,-28.9
+Geneva,-28.9
+Dubuque,-29.1
+Albion,-29.2
+Tabor (Kan.),-29.5
+Alfred,-29.5
+Madonna (Mich.),-29.5
+Simpson (Cal.),-29.6
+Plymouth State,-29.7
+Montclair State,-29.7
+Huntingdon,-29.7
+Albright,-29.8
+Belhaven,-29.8
+Carthage,-29.9
+Augsburg,-30.0
+SUNY-Maritime,-30.0
+WV Wesleyan,-30.2
+Missouri Baptist,-30.2
+Hendrix,-30.2
+UW-Stevens Point,-30.4
+Amherst,-30.9
+St. Vincent,-31.0
+Adams State,-31.1
+Cal Lutheran,-31.1
+Mayville State (N.D.),-31.1
+NW Oklahoma State,-31.2
+Erskine,-31.2
+Kentucky Christian,-31.4
+Culver-Stockton (Mo.),-31.6
+Olivet,-32.3
+Arizona Christian,-32.3
+Rocky Mountain (Mont.),-32.4
+St. Lawrence,-32.5
+Widener,-32.6
+Briar Cliff (Iowa),-32.7
+Capital,-32.8
+Colby,-32.8
+Curry,-32.8
+North Park,-33.1
+Rose-Hulman,-33.2
+Carleton,-33.3
+Southern Oregon,-33.5
+Ave Maria (Fla.),-33.7
+Apprentice,-33.7
+Peru State (Neb.),-34.0
+Bluefield (Va.),-34.1
+Franklin,-34.1
+Rochester,-34.1
+St. Olaf,-34.2
+Lakeland,-34.3
+Nelson (Texas),-34.5
+Simpson,-34.5
+N.C. Wesleyan,-34.6
+Husson,-34.6
+Redlands,-34.7
+Schreiner,-35.0
+Point (Ga.),-35.0
+Macalester,-35.1
+Central Methodist (Mo.),-35.2
+Southwestern,-35.4
+Defiance,-35.6
+Kenyon,-35.6
+Wooster,-35.7
+Gettysburg,-35.8
+St. Norbert,-35.9
+Allegheny,-36.7
+Montana State-Northern,-37.0
+Morrisville State,-37.0
+La Verne,-37.1
+Doane (Neb.),-37.1
+Wilmington,-37.2
+Northwestern (Minn.),-37.4
+Concordia-Chicago,-37.7
+Greensboro,-38.1
+Muskingum,-38.2
+Catholic,-38.8
+Lawrence Tech (Mich.),-39.0
+Kean,-39.0
+Texas Wesleyan,-39.2
+Langston (Okla.),-39.5
+Castleton,-39.9
+William Paterson,-40.1
+Hamline,-40.8
+Oklahoma Panhandle State,-41.2
+WPI,-41.5
+Moravian,-41.7
+Azusa Pacific,-41.7
+McDaniel,-42.2
+Keystone,-42.8
+Ripon,-42.8
+FDU-Florham,-42.9
+Sterling (Kan.),-43.1
+Hiram,-43.4
+Sewanee,-44.2
+Bates,-44.3
+Bowdoin,-45.0
+Union (Ky.),-45.3
+Bethel (Kan.),-45.7
+Martin Luther,-45.8
+Avila (Mo.),-45.9
+Worcester State,-46.0
+Millikin,-46.1
+Arkansas Baptist,-46.6
+Kalamazoo,-46.6
+Hamilton,-46.7
+Crown,-46.8
+Fitchburg State,-46.8
+Texas College,-47.1
+Knox,-47.2
+Waynesburg,-47.4
+St. Scholastica,-47.4
+Pacific,-47.5
+Saint Mary-of-the-Woods,-47.7
+Buena Vista,-48.2
+Nebraska Wesleyan,-48.4
+Austin,-48.7
+Averett,-49.0
+Elmhurst,-49.2
+Clarke (Iowa),-49.5
+Norwich,-49.7
+St. Mary (Kan.),-49.8
+St. Francis (Ill.),-50.2
+Andrew,-50.2
+Warner (Fla.),-50.9
+Hartwick,-51.4
+Luther,-51.4
+Greenville,-51.9
+Nichols,-52.0
+Southern Virginia,-52.9
+Westfield State,-52.9
+Alvernia,-53.1
+Methodist,-53.1
+Bethany,-53.3
+Puget Sound,-53.6
+Thomas University (Ga.),-53.6
+Fort Lauderdale,-53.7
+Westminster (Mo.),-54.6
+Rockford,-55.1
+Virginia-Lynchburg,-55.3
+Juniata,-55.5
+William Woods (Mo.),-55.6
+Minnesota-Morris,-56.1
+Bluffton,-56.4
+Grinnell,-56.5
+Willamette,-56.6
+Otterbein,-56.8
+Waldorf (Iowa),-57.7
+Rhodes,-58.3
+Manchester,-59.5
+Eureka,-59.6
+Guilford,-59.7
+Gallaudet,-60.3
+Centenary (La.),-60.7
+Beloit,-60.9
+Rio Grande,-61.3
+Whittier,-61.6
+Buffalo State,-62.8
+Bethany (Kan.),-62.9
+New England College,-62.9
+Dean,-65.6
+Lyon,-66.3
+Thiel,-67.1
+Westgate Christian,-67.8
+Lawrence,-70.1
+Oberlin,-70.2
+Hilbert,-72.9
+Judson (Ill.),-75.6
+Maine Maritime,-75.9

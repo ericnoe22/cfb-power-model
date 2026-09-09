@@ -21,7 +21,7 @@ cache/*
 !cache/lines_live.csv
 !cache/sp_plus_2026_week*.csv
 !cache/fcs_lookup.json
-!cache/extended_sp_plus_2026_raw.txt
+!cache/extended_sp_plus_2026.csv
 
 # Streamlit: keep config.toml (theme), exclude secrets
 .streamlit/secrets.toml
