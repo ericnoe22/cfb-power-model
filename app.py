@@ -389,14 +389,17 @@ div[data-baseweb="dialog"],
 .mc-badge-conf { background: #1a2742; color: #6b8aad; }
 .mc-teams {
     display: grid;
-    grid-template-columns: 1fr 36px 1fr;
+    grid-template-columns: minmax(0, 1fr) 36px minmax(0, 1fr);
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.85rem;
 }
-.mc-team { display: flex; flex-direction: column; }
+.mc-team { display: flex; flex-direction: column; min-width: 0; }
 .mc-team.home { align-items: flex-end; text-align: right; }
-.mc-team-name { font-size: 1.05rem; font-weight: 700; color: #ffffff; line-height: 1.2; }
+.mc-team-name {
+    font-size: 1.05rem; font-weight: 700; color: #ffffff; line-height: 1.2;
+    overflow-wrap: break-word; word-break: break-word; hyphens: auto;
+}
 .mc-team-name.fcs { color: #7a95b5; font-size: 0.9rem; }
 .mc-team-rtg { font-size: 0.75rem; color: #4d6a8a; font-weight: 500; margin-top: 2px; }
 .mc-vs {
@@ -2427,6 +2430,23 @@ elif page == "📅 Schedule & Predictions":
     max_week = int(schedule_df["week"].max()) if "week" in schedule_df.columns else 15
     week_options = ["All"] + list(range(1, max_week + 1))
 
+    # Default to the current week: the earliest week with an FBS game that
+    # hasn't kicked off yet. Uses game start times rather than the CSV's
+    # "completed" flag — that flag is never refreshed after the initial
+    # schedule build and stays False forever, which pinned this to Wk 1
+    # even once several weeks had actually been played. Restricted to FBS
+    # games since lower-division games' completion status is also unreliable.
+    if "startDate" in schedule_df.columns and "week" in schedule_df.columns:
+        fbs_mask = (schedule_df.get("homeClassification") == "fbs") | \
+                   (schedule_df.get("awayClassification") == "fbs")
+        starts = pd.to_datetime(schedule_df.loc[fbs_mask, "startDate"],
+                                 utc=True, errors="coerce", format="ISO8601")
+        now = pd.Timestamp.now(tz="UTC")
+        upcoming_weeks = schedule_df.loc[fbs_mask, "week"][starts > now].dropna()
+        current_week = int(upcoming_weeks.min()) if not upcoming_weeks.empty else max_week
+    else:
+        current_week = 1
+
     # Center the pills using columns
     _, center_col, _ = st.columns([1, 6, 1])
     with center_col:
@@ -2434,11 +2454,11 @@ elif page == "📅 Schedule & Predictions":
             "Select Week",
             options=week_options,
             format_func=lambda w: "All Weeks" if w == "All" else f"Wk {w}",
-            default=week_options[1],
+            default=current_week,
             key="sched_week_pills",
         )
     if page_week is None:
-        page_week = week_options[1]
+        page_week = current_week
 
     st.divider()
 
