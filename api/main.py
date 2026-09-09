@@ -197,7 +197,7 @@ def health():
 @app.get("/ratings")
 def ratings(
     conference: Optional[str] = Query(None, description="Filter by conference name"),
-    limit: int = Query(134, ge=1, le=134, description="Max teams to return"),
+    limit: int = Query(150, ge=1, le=150, description="Max teams to return"),
 ):
     """
     Power rankings for all FBS teams, sorted by composite rating.
