@@ -73,6 +73,8 @@ def build_composite_ratings(
     talent_df=None,
     epa_df=None,
     sagarin_df=None,
+    sp_rank_prev_df=None,
+    games_df=None,
     week=None,
     season=CURRENT_SEASON,
     apply_coaching=True,
@@ -96,7 +98,10 @@ def build_composite_ratings(
 
     # ── Start from SP+ as the backbone ──────────────────────────────────
     if sp_df is not None and not sp_df.empty:
-        base = sp_df[["team", "rating"]].rename(columns={"rating": "sp_plus"}).copy()
+        sp_cols = ["team", "rating"] + (["ranking"] if "ranking" in sp_df.columns else [])
+        base = sp_df[sp_cols].rename(
+            columns={"rating": "sp_plus", "ranking": "sp_plus_rank"}
+        ).copy()
     else:
         return pd.DataFrame()
 
@@ -232,6 +237,17 @@ def build_composite_ratings(
             od = sp_df[[sp_name_col] + off_def_cols].rename(columns={sp_name_col: "team"})
             base = base.merge(od, on="team", how="left")
 
+    # ── SP+ rank movement (week-over-week) ─────────────────────────────────
+    if "sp_plus_rank" not in base.columns:
+        base["sp_plus_rank"] = base["sp_plus"].rank(ascending=False, method="min").astype(int)
+    if sp_rank_prev_df is not None and not sp_rank_prev_df.empty and \
+            "sp_plus_rank_prev" in sp_rank_prev_df.columns:
+        base = base.merge(sp_rank_prev_df[["team", "sp_plus_rank_prev"]], on="team", how="left")
+        base["sp_plus_rank_delta"] = base["sp_plus_rank_prev"] - base["sp_plus_rank"]
+    else:
+        base["sp_plus_rank_prev"] = np.nan
+        base["sp_plus_rank_delta"] = np.nan
+
     # ── Apply coaching adjustments ────────────────────────────────────────
     if apply_coaching:
         try:
@@ -239,6 +255,18 @@ def build_composite_ratings(
             base = apply_coaching_adjustments(base, year=season, week=week)
         except Exception:
             base["coaching_flag"] = None
+
+    # ── Apply luck/regression adjustment (actual wins vs. win probability) ─
+    if games_df is not None and not games_df.empty:
+        try:
+            from model.luck_adjustment import apply_luck_adjustment
+            base = apply_luck_adjustment(base, games_df)
+        except Exception:
+            base["luck"] = 0.0
+            base["luck_flag"] = None
+    else:
+        base["luck"] = 0.0
+        base["luck_flag"] = None
 
     # ── Add rank ──────────────────────────────────────────────────────────
     base = base.sort_values("composite", ascending=False).reset_index(drop=True)

@@ -186,7 +186,10 @@ def predict_all_games(schedule_df, ratings_df, fcs_lookup=None, week=None):
     fcs_lookup: optional output of build_fcs_lookup() for FCS opponent games.
     Returns schedule_df with prediction columns appended.
     """
-    from model.fcs_adjustment import is_fcs_game, predict_fcs_game
+    from model.fcs_adjustment import (
+        is_fcs_game, predict_fcs_game,
+        load_extended_sp_plus, build_composite_calibration, project_composite,
+    )
 
     # Load FCS lookup if not provided
     if fcs_lookup is None:
@@ -206,6 +209,13 @@ def predict_all_games(schedule_df, ratings_df, fcs_lookup=None, week=None):
     ratings_norm = ratings_df.copy()
     ratings_norm["team"] = ratings_norm["team"].map(normalize)
 
+    # Opponent-specific FCS rating: project the extended (FBS-through-D3) SP+
+    # list onto our composite scale, calibrated off the FBS teams present in
+    # both. Falls back to the tier-average approach (below) when the specific
+    # opponent isn't in the extended list or the calibration can't be trusted.
+    ext_sp_df = load_extended_sp_plus()
+    fcs_calib = build_composite_calibration(ratings_norm, ext_sp_df)
+
     preds = []
     for _, row in schedule_df.iterrows():
         home = row["_home"]
@@ -217,7 +227,36 @@ def predict_all_games(schedule_df, ratings_df, fcs_lookup=None, week=None):
         if fcs and fcs_lookup:
             fbs_row = ratings_norm[ratings_norm["team"] == fbs_team]
             fbs_comp = float(fbs_row["composite"].values[0]) if not fbs_row.empty else 0.0
-            pred = predict_fcs_game(fbs_team, fbs_is_home, fbs_comp, fcs_lookup)
+            # Tier lookup was built on raw SP+ ratings (build_fcs_lookup / _assign_tiers),
+            # not the blended composite — the composite scale runs lower/more compressed,
+            # which was silently bumping elite programs (e.g. Miami sp_plus=24.7,
+            # composite=18.9) down a tier and understating blowout lines. Use sp_plus
+            # for tiering when available; only fall back to composite if it's missing.
+            if not fbs_row.empty and "sp_plus" in fbs_row.columns and pd.notna(fbs_row["sp_plus"].values[0]):
+                fbs_tier_rating = float(fbs_row["sp_plus"].values[0])
+            else:
+                fbs_tier_rating = fbs_comp
+            pred = predict_fcs_game(fbs_team, fbs_is_home, fbs_tier_rating, fcs_lookup)
+
+            # Opponent-adjusted override: if the specific FCS opponent has an
+            # extended-SP+ rating, use its projected composite directly instead
+            # of the tier average — a good FCS team (UC Davis) and a bottom-tier
+            # one (Mercyhurst) get very different predictions instead of being
+            # treated as interchangeable "generic FCS opponent."
+            proj_fcs_comp = project_composite(fcs_team, ext_sp_df, fcs_calib)
+            if proj_fcs_comp is not None:
+                neutral = bool(row.get("neutralSite", False))
+                hfa = 0.0 if neutral else HOME_FIELD_ADVANTAGE
+                if fbs_is_home:
+                    diff = fbs_comp - proj_fcs_comp + hfa
+                else:
+                    diff = proj_fcs_comp - fbs_comp + hfa
+                # Wider cap than FBS-vs-FBS games (MAX_FBS_SPREAD=45) — real
+                # buy-game lines for elite programs vs. weak FCS foes regularly
+                # exceed that (e.g. -55 to -60).
+                pred["predicted_spread"] = round(max(-65.0, min(65.0, -diff)), 1)
+                pred["fcs_note"] = (pred.get("fcs_note") or "") + " | opponent-adjusted (extended SP+)"
+
             pred["home_team"] = home
             pred["away_team"] = away
             pred["home_composite"] = fbs_comp if fbs_is_home else None

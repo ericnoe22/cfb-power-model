@@ -79,6 +79,9 @@ def fetch_sp_plus(year=CURRENT_SEASON, force_refresh=False):
     """Fetch SP+ ratings (offense, defense, overall)."""
     data = _get("/ratings/sp", {"year": year}, cache_key=f"sp_plus_{year}", force_refresh=force_refresh)
     df = pd.json_normalize(data)
+    # CFBD includes a "nationalAverages" summary pseudo-team — not a real team.
+    if not df.empty and "team" in df.columns:
+        df = df[df["team"] != "nationalAverages"].reset_index(drop=True)
     return df
 
 

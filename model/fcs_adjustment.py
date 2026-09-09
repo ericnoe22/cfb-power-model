@@ -31,6 +31,69 @@ from config import HOME_FIELD_ADVANTAGE
 
 DEFAULT_YEARS = [2020, 2021, 2022, 2023, 2024]
 
+# ── Extended SP+ (FBS through D3, unofficial fan-maintained extension) ──────
+# CFBD's SP+ only covers FBS. This lets us rate the specific FCS opponent
+# instead of falling back to a 5-bucket historical tier average — e.g.
+# "Miami vs Florida A&M" instead of "Elite-tier FBS home team vs. generic FCS".
+# Scale is NOT the same as CFBD SP+ (much wider range), so it's calibrated
+# against our own composite using the FBS teams present in both sources
+# before being used to project an FCS opponent's rating onto our scale.
+EXTENDED_SP_PATH = os.path.join(os.path.dirname(__file__), "..", "cache", "extended_sp_plus_2026_raw.txt")
+
+_EXTENDED_NAME_MAP = {
+    "Miami-FL":       "Miami",
+    "Miami-OH":       "Miami (OH)",
+    "UL-Lafayette":   "Louisiana",
+    "UL-Monroe":      "UL Monroe",
+    "Ole Miss":       "Mississippi",
+    "Southern U.":    "Southern",
+    "Sam Houston":    "Sam Houston",
+}
+
+
+def load_extended_sp_plus(path=EXTENDED_SP_PATH):
+    """Load the extended (FBS-through-D3) SP+ list. Returns DataFrame[team, ext_sp_plus]."""
+    if not os.path.exists(path):
+        return pd.DataFrame()
+    df = pd.read_csv(path, sep="\t")
+    if "Team" not in df.columns or "SP+" not in df.columns:
+        return pd.DataFrame()
+    df = df.rename(columns={"Team": "team", "SP+": "ext_sp_plus"})
+    df["team"] = df["team"].map(lambda t: _EXTENDED_NAME_MAP.get(t, t)).map(normalize)
+    return df[["team", "ext_sp_plus"]].drop_duplicates(subset="team")
+
+
+def build_composite_calibration(ratings_df, ext_df, min_matches=20):
+    """
+    Fit composite = a * ext_sp_plus + b using FBS teams present in both
+    ratings_df (our composite) and ext_df (extended SP+). Returns None if
+    too few teams overlap to trust the fit.
+    """
+    if ext_df is None or ext_df.empty or "composite" not in ratings_df.columns:
+        return None
+    merged = ratings_df[["team", "composite"]].merge(ext_df, on="team", how="inner")
+    if len(merged) < min_matches:
+        return None
+    a, b = np.polyfit(merged["ext_sp_plus"], merged["composite"], 1)
+    pred = a * merged["ext_sp_plus"] + b
+    ss_res = ((merged["composite"] - pred) ** 2).sum()
+    ss_tot = ((merged["composite"] - merged["composite"].mean()) ** 2).sum()
+    r2 = 1 - ss_res / ss_tot if ss_tot else 0.0
+    return {"a": float(a), "b": float(b), "n": len(merged), "r2": round(float(r2), 3)}
+
+
+def project_composite(team, ext_df, calib):
+    """Project a team's extended-SP+ rating onto our composite scale, or None if unmatched."""
+    if calib is None or ext_df is None or ext_df.empty:
+        return None
+    row = ext_df[ext_df["team"] == team]
+    if row.empty:
+        row = ext_df[ext_df["team"] == normalize(team)]
+    if row.empty:
+        return None
+    x = float(row["ext_sp_plus"].values[0])
+    return calib["a"] * x + calib["b"]
+
 TIERS = [
     ("Elite",   20,  999),
     ("Strong",  10,   20),

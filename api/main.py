@@ -29,6 +29,7 @@ from model.power_rankings import (
     _normalize_elo,
     _normalize_returning,
     _normalize_talent,
+    _normalize_sagarin,
     z_score,
 )
 from model.game_predictor import predict_all_games
@@ -92,13 +93,18 @@ def _compute_composite(df: pd.DataFrame) -> pd.DataFrame:
         _normalize_talent(df["talent"].fillna(df["talent"].mean()))
         if "talent" in df.columns and df["talent"].notna().any() else 0
     )
+    df["sagarin_norm"] = (
+        _normalize_sagarin(df["sagarin"].fillna(df["sagarin"].mean()))
+        if "sagarin" in df.columns and df["sagarin"].notna().any() else 0
+    )
 
     df["composite"] = (
-        w["sp_plus"]        * df["sp_plus_norm"]   +
-        w["fpi"]            * df["fpi_norm"]        +
-        w["elo"]            * df["elo_norm"]        +
-        w["returning_prod"] * df["returning_norm"]  +
-        w["talent"]         * df["talent_norm"]
+        w["sp_plus"]              * df["sp_plus_norm"]   +
+        w["fpi"]                  * df["fpi_norm"]        +
+        w.get("sagarin", 0)       * df["sagarin_norm"]    +
+        w["elo"]                  * df["elo_norm"]        +
+        w["returning_prod"]       * df["returning_norm"]  +
+        w["talent"]               * df["talent_norm"]
     )
 
     df = df.drop(columns=["rank"], errors="ignore")
@@ -211,7 +217,7 @@ def ratings(
 
     cols = [c for c in [
         "rank", "team", "composite", "conference",
-        "sp_plus", "fpi", "elo", "returning_prod", "talent",
+        "sp_plus", "fpi", "elo", "sagarin", "returning_prod", "talent",
         "offense.rating", "defense.rating",
     ] if c in df.columns]
 

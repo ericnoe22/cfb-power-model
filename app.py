@@ -1546,6 +1546,20 @@ if page == "📊 Power Rankings":
         ranked_df.index.name = "rank"
         ranked_df = ranked_df.reset_index()
 
+    # ── SP+ rank movement vs. last week (▲▼) ──────────────────────────────
+    def _fmt_rank_delta(v):
+        if pd.isna(v):
+            return ""
+        v = int(v)
+        if v > 0:
+            return f"▲{v}"
+        if v < 0:
+            return f"▼{abs(v)}"
+        return "–"
+
+    if "sp_plus_rank_delta" in ranked_df.columns:
+        ranked_df["sp_plus_trend"] = ranked_df["sp_plus_rank_delta"].apply(_fmt_rank_delta)
+
     # ── Default columns (public-facing) ──────────────────────────────────
     default_cols = {
         "rank": "Rank",
@@ -1553,6 +1567,7 @@ if page == "📊 Power Rankings":
         "composite": "⭐ Composite",
         "conference": "Conference",
         "sp_plus": "SP+",
+        "sp_plus_trend": "SP+ Trend",
         "fpi": "FPI",
         "elo": "Elo",
     }
@@ -1563,6 +1578,7 @@ if page == "📊 Power Rankings":
         "epa_net": "Net EPA",
         "returning_prod": "Ret. Prod.",
         "talent": "Talent",
+        "luck": "Luck (W vs xW)",
     }
 
     def _make_table(col_map):

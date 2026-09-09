@@ -148,6 +148,22 @@ def main():
         print(f"   ❌ Returning production fetch failed: {e}")
         returning_df = pd.DataFrame()
 
+    # ── 4a2. Load prior-week SP+ ranks (for rank-movement column) ──────────
+    # cache/sp_plus_{year}_week{N}.csv is captured BEFORE week N's games,
+    # so the file for the most recently completed week is the "last week"
+    # baseline to diff the current (post-game) SP+ ranks against.
+    current_week = None
+    sp_rank_prev_df = pd.DataFrame()
+    if not games_df.empty and "week" in games_df.columns:
+        current_week = int(games_df["week"].max())
+        prev_path = f"cache/sp_plus_{year}_week{current_week}.csv"
+        if os.path.exists(prev_path):
+            prev_df = pd.read_csv(prev_path)
+            if "ranking" in prev_df.columns:
+                sp_rank_prev_df = prev_df[["team", "ranking"]].rename(
+                    columns={"ranking": "sp_plus_rank_prev"})
+                print(f"   ✅ Loaded week {current_week} SP+ baseline for rank movement ({prev_path})")
+
     # ── 4b. Pull Sagarin ratings ──────────────────────────────────────────
     print(f"\n📥 Fetching Sagarin ratings ({year})...")
     sagarin_df = pd.DataFrame()
@@ -207,6 +223,8 @@ def main():
             returning_df=returning_df if not returning_df.empty else None,
             talent_df=talent_df if not talent_df.empty else None,
             epa_df=epa_df if not epa_df.empty else None,
+            sp_rank_prev_df=sp_rank_prev_df if not sp_rank_prev_df.empty else None,
+            games_df=games_df if not games_df.empty else None,
             week=args.week,
             season=year,
         )
@@ -219,6 +237,13 @@ def main():
             print(f"   ✅ Composite ratings saved → {out_path}")
             print(f"\n   Top 10:")
             print(composite[["rank","team","composite","sp_plus","elo"]].head(10).to_string(index=False))
+
+            # Snapshot current SP+ ranks as the "last week" baseline for the
+            # NEXT completed week's rank-movement column.
+            if current_week is not None and not sp_df.empty:
+                next_path = f"cache/sp_plus_{year}_week{current_week + 1}.csv"
+                sp_df.to_csv(next_path, index=False)
+                print(f"   ✅ Snapshotted current SP+ ranks → {next_path} (baseline for week {current_week + 1})")
         else:
             print("   ⚠️  Could not build composite — check input data")
     except Exception as e:
