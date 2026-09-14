@@ -213,15 +213,15 @@
         "rating": 0.94
       },
       {
-        "name": "Terrance Green",
-        "position": "DL",
-        "origin": "Oregon",
-        "rating": 0.93
-      },
-      {
         "name": "Noah Rogers",
         "position": "WR",
         "origin": "NC State",
+        "rating": 0.93
+      },
+      {
+        "name": "Terrance Green",
+        "position": "DL",
+        "origin": "Oregon",
         "rating": 0.93
       }
     ],
@@ -883,17 +883,17 @@
     "qb_room": [
       {
         "name": "Keldric Luster",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "6"
       },
       {
         "name": "Tyler Mizzell",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "9"
       },
       {
         "name": "Bodie Derrer",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "18"
       },
       {
@@ -904,6 +904,12 @@
     ],
     "key_transfers_in": [
       {
+        "name": "Tyler Mizzell",
+        "position": "QB",
+        "origin": "Concord",
+        "rating": 0.85
+      },
+      {
         "name": "Jabari Smith Jr.",
         "position": "WR",
         "origin": "Florida Atlantic",
@@ -912,12 +918,6 @@
       {
         "name": "Jacob Jeudy",
         "position": "IOL",
-        "origin": "Concord",
-        "rating": 0.85
-      },
-      {
-        "name": "Tyler Mizzell",
-        "position": "QB",
         "origin": "Concord",
         "rating": 0.85
       }
@@ -1317,15 +1317,15 @@
         "rating": 0.86
       },
       {
-        "name": "Joey Cheshire",
-        "position": "LB",
-        "origin": "Cornell",
-        "rating": 0.84
-      },
-      {
         "name": "Stantavious Smith",
         "position": "DL",
         "origin": "Florida A&M",
+        "rating": 0.84
+      },
+      {
+        "name": "Joey Cheshire",
+        "position": "LB",
+        "origin": "Cornell",
         "rating": 0.84
       }
     ],
@@ -1711,15 +1711,15 @@
         "rating": 0.87
       },
       {
-        "name": "Chris Johnson Jr.",
-        "position": "RB",
-        "origin": "SMU",
-        "rating": 0.87
-      },
-      {
         "name": "London Merritt",
         "position": "EDGE",
         "origin": "Colorado",
+        "rating": 0.87
+      },
+      {
+        "name": "Chris Johnson Jr.",
+        "position": "RB",
+        "origin": "SMU",
         "rating": 0.87
       }
     ],
@@ -1954,15 +1954,15 @@
         "rating": 0.87
       },
       {
-        "name": "Pearce Spurlin III",
-        "position": "TE",
-        "origin": "Georgia",
-        "rating": 0.86
-      },
-      {
         "name": "Caleb Presley",
         "position": "CB",
         "origin": "San Jos\u00e9 State",
+        "rating": 0.86
+      },
+      {
+        "name": "Hauss Hejny",
+        "position": "QB",
+        "origin": "Oklahoma State",
         "rating": 0.86
       }
     ],
@@ -2538,13 +2538,13 @@
       "pass_yds": 2760,
       "pass_td": 15,
       "pass_int": 9,
-      "departed_to": "not on 2026 roster"
+      "departed_to": "Texas Tech"
     },
     "top_rb": {
       "name": "Thomas Castellanos",
       "rush_yds": 557,
       "rush_td": 9,
-      "departed_to": "not on 2026 roster"
+      "departed_to": "Texas Tech"
     },
     "top_wr": {
       "name": "Duce Robinson",
@@ -3090,15 +3090,15 @@
         "rating": 0.86
       },
       {
-        "name": "Ozzy Pollard",
-        "position": "DL",
-        "origin": "Marian",
+        "name": "Carson Brown",
+        "position": "WR",
+        "origin": "Iowa State",
         "rating": 0.85
       },
       {
-        "name": "Khalil Walker",
-        "position": "IOL",
-        "origin": "South Florida",
+        "name": "Tre' Griffiths",
+        "position": "WR",
+        "origin": "Oklahoma State",
         "rating": 0.85
       }
     ],
@@ -3492,15 +3492,15 @@
         "rating": 0.87
       },
       {
-        "name": "Maasai King",
-        "position": "OT",
-        "origin": "Akron",
+        "name": "Jaheim Singletary",
+        "position": "CB",
+        "origin": "Arkansas",
         "rating": 0.86
       },
       {
-        "name": "Caden Maas",
-        "position": "IOL",
-        "origin": "Sioux Falls",
+        "name": "Maasai King",
+        "position": "OT",
+        "origin": "Akron",
         "rating": 0.86
       }
     ],
@@ -3624,17 +3624,17 @@
     "qb_room": [
       {
         "name": "Camden Coleman",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "7"
       },
       {
         "name": "JC Evans",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "1"
       },
       {
         "name": "Arrington Maiden",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "5"
       },
       {
@@ -3651,15 +3651,15 @@
         "rating": 0.87
       },
       {
-        "name": "Corey Scott",
-        "position": "WR",
-        "origin": "West Florida",
+        "name": "Ernest Willor Jr.",
+        "position": "EDGE",
+        "origin": "Wisconsin",
         "rating": 0.86
       },
       {
-        "name": "Micah Matthews",
-        "position": "WR",
-        "origin": "Virginia Tech",
+        "name": "Jayon Harvey",
+        "position": "CB",
+        "origin": "Findlay",
         "rating": 0.86
       }
     ],
@@ -3820,9 +3820,9 @@
         "rating": 0.88
       },
       {
-        "name": "Joshua Manning",
-        "position": "WR",
-        "origin": "Missouri",
+        "name": "Kaleb Patterson",
+        "position": "CB",
+        "origin": "Illinois",
         "rating": 0.87
       }
     ],
@@ -4214,11 +4214,6 @@
         "jersey": "5"
       },
       {
-        "name": "Ethan Houck",
-        "class": "Freshman",
-        "jersey": "14"
-      },
-      {
         "name": "Jachin Davis",
         "class": "Freshman",
         "jersey": "18"
@@ -4238,9 +4233,9 @@
         "rating": 0.86
       },
       {
-        "name": "Refeno Vangates",
-        "position": "WR",
-        "origin": "North Carolina Central",
+        "name": "Ashton McShane",
+        "position": "CB",
+        "origin": "Boston College",
         "rating": 0.85
       }
     ],
@@ -4309,15 +4304,15 @@
         "rating": 0.84
       },
       {
-        "name": "Tito Chikere",
-        "position": "EDGE",
-        "origin": "East Texas A&M",
-        "rating": 0.84
-      },
-      {
         "name": "Brodrick Stewart",
         "position": "DL",
         "origin": "Tarleton State",
+        "rating": 0.84
+      },
+      {
+        "name": "Tito Chikere",
+        "position": "EDGE",
+        "origin": "East Texas A&M",
         "rating": 0.84
       }
     ],
@@ -4390,9 +4385,9 @@
         "rating": 0.86
       },
       {
-        "name": "Ty Jones",
-        "position": "S",
-        "origin": "Norfolk State",
+        "name": "Demario Bookhart",
+        "position": "CB",
+        "origin": "South Carolina State",
         "rating": 0.85
       }
     ],
@@ -4493,8 +4488,7 @@
       "name": "Demarcus Lacey",
       "rec_yds": 769,
       "rec_td": 5,
-      "rec": 65,
-      "departed_to": "not on 2026 roster"
+      "rec": 65
     },
     "top_defender": {
       "name": "Braydin Ward",
@@ -5482,12 +5476,12 @@
       },
       {
         "name": "Eian Finkley",
-        "class": "Junior",
+        "class": "Senior",
         "jersey": "15"
       },
       {
         "name": "Elijah Leonard",
-        "class": "Sophomore",
+        "class": "Junior",
         "jersey": "7"
       },
       {
@@ -6184,18 +6178,13 @@
         "name": "Chris Jimerson Jr.",
         "class": "Sophomore",
         "jersey": "12"
-      },
-      {
-        "name": "Ziondre Williams",
-        "class": "Freshman",
-        "jersey": "10"
       }
     ],
     "key_transfers_in": [
       {
-        "name": "Jahiem White",
-        "position": "RB",
-        "origin": "West Virginia",
+        "name": "Drew Clemens",
+        "position": "TE",
+        "origin": "Utah",
         "rating": 0.86
       },
       {
@@ -6205,9 +6194,9 @@
         "rating": 0.86
       },
       {
-        "name": "Tayven Jackson",
-        "position": "QB",
-        "origin": "UCF",
+        "name": "Brendon Haygood",
+        "position": "RB",
+        "origin": "Missouri",
         "rating": 0.86
       }
     ],
@@ -6831,7 +6820,7 @@
         "jersey": "9"
       },
       {
-        "name": "Landen Abernathy",
+        "name": "Landen Abernethy",
         "class": "Freshman",
         "jersey": "18"
       }
@@ -7437,9 +7426,9 @@
         "rating": 0.85
       },
       {
-        "name": "Koa Akui",
-        "position": "S",
-        "origin": "Sacramento State",
+        "name": "Austin Harnetiaux",
+        "position": "LB",
+        "origin": "Nevada",
         "rating": 0.85
       },
       {
@@ -7646,7 +7635,7 @@
         "jersey": "17"
       },
       {
-        "name": "Brian Salazar",
+        "name": "Brian Salazar Jr.",
         "class": "Sophomore",
         "jersey": "6"
       },
@@ -7663,15 +7652,15 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Garrison Blank",
-        "position": "OT",
-        "origin": "UCLA",
-        "rating": 0.86
-      },
-      {
         "name": "Noah King",
         "position": "CB",
         "origin": "Colorado",
+        "rating": 0.86
+      },
+      {
+        "name": "Garrison Blank",
+        "position": "OT",
+        "origin": "UCLA",
         "rating": 0.86
       },
       {
@@ -7831,9 +7820,9 @@
         "rating": 0.86
       },
       {
-        "name": "Mike Lindsay",
-        "position": "CB",
-        "origin": "Idaho State",
+        "name": "Djibril Rahman",
+        "position": "EDGE",
+        "origin": "Rutgers",
         "rating": 0.85
       }
     ],
@@ -8139,9 +8128,9 @@
         "rating": 0.88
       },
       {
-        "name": "Za'Quan Bryan",
-        "position": "CB",
-        "origin": "Minnesota",
+        "name": "Luke Kromenhoek",
+        "position": "QB",
+        "origin": "Mississippi State",
         "rating": 0.87
       },
       {
@@ -8872,15 +8861,15 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Davian Jackson",
-        "position": "WR",
-        "origin": "Mississippi State",
-        "rating": 0.86
-      },
-      {
         "name": "Michael Patterson",
         "position": "CB",
         "origin": "Stephen F. Austin",
+        "rating": 0.86
+      },
+      {
+        "name": "Davian Jackson",
+        "position": "WR",
+        "origin": "Mississippi State",
         "rating": 0.86
       },
       {
@@ -9037,21 +9026,21 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Rico Bond",
-        "position": "WR",
-        "origin": "Lindenwood",
-        "rating": 0.86
-      },
-      {
         "name": "Khamoni Robinson",
         "position": "QB",
         "origin": "Lenoir-Rhyne",
         "rating": 0.86
       },
       {
-        "name": "Tucker Kelleher",
-        "position": "TE",
-        "origin": "BYU",
+        "name": "Rico Bond",
+        "position": "WR",
+        "origin": "Lindenwood",
+        "rating": 0.86
+      },
+      {
+        "name": "Donovan Watkins",
+        "position": "CB",
+        "origin": "Mercer",
         "rating": 0.85
       }
     ],
@@ -9343,9 +9332,9 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Shaun Myers",
-        "position": "LB",
-        "origin": "Colorado",
+        "name": "Diezel Wilkinson",
+        "position": "S",
+        "origin": "Montana",
         "rating": 0.86
       },
       {
@@ -9596,15 +9585,15 @@
         "rating": 0.86
       },
       {
-        "name": "Jake Merklinger",
-        "position": "QB",
-        "origin": "Tennessee",
-        "rating": 0.86
-      },
-      {
         "name": "Emanuel Ross",
         "position": "WR",
         "origin": "Syracuse",
+        "rating": 0.86
+      },
+      {
+        "name": "Moussa Kane",
+        "position": "CB",
+        "origin": "Duke",
         "rating": 0.86
       }
     ],
@@ -9672,9 +9661,9 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Austin Carlisle",
-        "position": "QB",
-        "origin": "Houston",
+        "name": "Bryce Anderson",
+        "position": "TE",
+        "origin": "Memphis",
         "rating": 0.86
       },
       {
@@ -9684,9 +9673,9 @@
         "rating": 0.86
       },
       {
-        "name": "Bryce Anderson",
-        "position": "TE",
-        "origin": "Memphis",
+        "name": "Austin Carlisle",
+        "position": "QB",
+        "origin": "Houston",
         "rating": 0.86
       }
     ],
@@ -9914,9 +9903,9 @@
         "rating": 0.86
       },
       {
-        "name": "Preston Hickey",
-        "position": "DL",
-        "origin": "Northwestern State",
+        "name": "Donavan Howard",
+        "position": "S",
+        "origin": "Virginia State",
         "rating": 0.85
       }
     ],
@@ -11053,22 +11042,6 @@
     ],
     "returning_prod_pct": 23.0,
     "talent_score": 528.3,
-    "oc_name": "",
-    "dc_name": "",
-    "user_notes": ""
-  },
-  "nationalAverages": {
-    "head_coach": "Unknown",
-    "coaching_change": false,
-    "coaching_note": "",
-    "top_qb": null,
-    "top_rb": null,
-    "top_wr": null,
-    "top_defender": null,
-    "qb_room": [],
-    "key_transfers_in": [],
-    "returning_prod_pct": NaN,
-    "talent_score": NaN,
     "oc_name": "",
     "dc_name": "",
     "user_notes": ""
