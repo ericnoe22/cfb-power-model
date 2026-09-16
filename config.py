@@ -47,9 +47,10 @@ RATING_WEIGHTS = {
     "elo":                0.10,
     "returning_prod":     0.05,
     "talent":             0.02,
-    # Opponent-adjusted EPA/PPA (CFBD Patreon). 0% through Week 1 — only 16/138
-    # teams have data. Ramp: ~3% Week 3, ~6% Week 5, ~10% Week 8+ (shift from elo).
-    "epa_adj":            0.00,
+    # Opponent-adjusted EPA/PPA (CFBD Patreon). Ramp: ~3% Week 3, ~6% Week 5,
+    # ~10% Week 8+ (shift from elo). Coverage hit 138/138 teams entering
+    # Week 3 (was 16/138 at Week 1) — on schedule for the first step.
+    "epa_adj":            0.03,
 }
 
 # Minimum edge (in points) to flag a game as a betting opportunity
