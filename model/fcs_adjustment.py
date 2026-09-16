@@ -64,11 +64,29 @@ def load_extended_sp_plus():
     return df[["team", "ext_sp_plus"]].drop_duplicates(subset="team")
 
 
+
+# Below the fitted range, extrapolate steeper than the fitted slope.
+# Rationale (2026 Week 1-2 backtest, n=101 blowout/FCS-type games): our
+# predicted margins vs. actual results regressed to slope=1.22 (Vegas: 1.00,
+# essentially perfectly calibrated) — we're consistently LESS extreme than
+# reality on these games, i.e. under-predicting how bad the weak side
+# actually is. The fitted line above is only validated across the ~130
+# FBS teams that overlap both scales (roughly ext_sp_plus 0-82); every FCS
+# opponent we project falls well below that (down to -70), so we're
+# extrapolating a relationship with no guarantee it stays linear that far
+# out. Widening the slope below the fitted floor is a direct, structural
+# response to that — not a fit to this same small sample, since the
+# multiplier is a deliberately moderate round number, not a fitted
+# parameter. Revisit as more weeks of games accumulate.
+TAIL_WIDEN_FACTOR = 1.3
+
+
 def build_composite_calibration(ratings_df, ext_df, min_matches=20):
     """
     Fit composite = a * ext_sp_plus + b using FBS teams present in both
     ratings_df (our composite) and ext_df (extended SP+). Returns None if
-    too few teams overlap to trust the fit.
+    too few teams overlap to trust the fit. Also records the fitted range's
+    floor (x_min) so project_composite() knows where it's extrapolating.
     """
     if ext_df is None or ext_df.empty or "composite" not in ratings_df.columns:
         return None
@@ -80,11 +98,20 @@ def build_composite_calibration(ratings_df, ext_df, min_matches=20):
     ss_res = ((merged["composite"] - pred) ** 2).sum()
     ss_tot = ((merged["composite"] - merged["composite"].mean()) ** 2).sum()
     r2 = 1 - ss_res / ss_tot if ss_tot else 0.0
-    return {"a": float(a), "b": float(b), "n": len(merged), "r2": round(float(r2), 3)}
+    return {
+        "a": float(a), "b": float(b), "n": len(merged), "r2": round(float(r2), 3),
+        "x_min": float(merged["ext_sp_plus"].min()),
+    }
 
 
 def project_composite(team, ext_df, calib):
-    """Project a team's extended-SP+ rating onto our composite scale, or None if unmatched."""
+    """
+    Project a team's extended-SP+ rating onto our composite scale, or None
+    if unmatched. Below calib["x_min"] (outside the range the fit was
+    validated on — i.e. FCS/D2/D3 opponents), extrapolates with a steeper
+    slope (TAIL_WIDEN_FACTOR) anchored continuously at x_min, instead of
+    extending the fitted line as-is.
+    """
     if calib is None or ext_df is None or ext_df.empty:
         return None
     row = ext_df[ext_df["team"] == team]
@@ -93,6 +120,10 @@ def project_composite(team, ext_df, calib):
     if row.empty:
         return None
     x = float(row["ext_sp_plus"].values[0])
+    x_min = calib.get("x_min")
+    if x_min is not None and x < x_min:
+        boundary = calib["a"] * x_min + calib["b"]
+        return boundary + calib["a"] * TAIL_WIDEN_FACTOR * (x - x_min)
     return calib["a"] * x + calib["b"]
 
 TIERS = [
