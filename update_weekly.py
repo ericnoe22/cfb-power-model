@@ -165,6 +165,15 @@ def main():
                     columns={"ranking": "sp_plus_rank_prev"})
                 print(f"   ✅ Loaded week {current_week} SP+ baseline for rank movement ({prev_path})")
 
+    # ── 4a3. Load preseason composite baseline (season-long movement column) ─
+    # Fixed one-time snapshot (scripts/build_preseason_baseline.py) — not
+    # regenerated weekly, it's the anchor everything else moves against.
+    preseason_composite_df = pd.DataFrame()
+    preseason_path = f"cache/composite_preseason_{year}.csv"
+    if os.path.exists(preseason_path):
+        preseason_composite_df = pd.read_csv(preseason_path)
+        print(f"   ✅ Loaded preseason composite baseline for season-movement column ({preseason_path})")
+
     # ── 4b. Pull Sagarin ratings ──────────────────────────────────────────
     print(f"\n📥 Fetching Sagarin ratings ({year})...")
     sagarin_df = pd.DataFrame()
@@ -234,6 +243,7 @@ def main():
             epa_df=epa_df if not epa_df.empty else None,
             sp_rank_prev_df=sp_rank_prev_df if not sp_rank_prev_df.empty else None,
             games_df=games_df if not games_df.empty else None,
+            preseason_composite_df=preseason_composite_df if not preseason_composite_df.empty else None,
             week=args.week,
             season=year,
         )

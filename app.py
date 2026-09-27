@@ -1563,11 +1563,25 @@ if page == "📊 Power Rankings":
     if "sp_plus_rank_delta" in ranked_df.columns:
         ranked_df["sp_plus_trend"] = ranked_df["sp_plus_rank_delta"].apply(_fmt_rank_delta)
 
+    # ── Composite movement since preseason (season-long, not week-over-week) ─
+    def _fmt_season_delta(v):
+        if pd.isna(v):
+            return ""
+        if v > 0.05:
+            return f"▲{v:.1f}"
+        if v < -0.05:
+            return f"▼{abs(v):.1f}"
+        return "–"
+
+    if "season_delta" in ranked_df.columns:
+        ranked_df["season_delta_fmt"] = ranked_df["season_delta"].apply(_fmt_season_delta)
+
     # ── Default columns (public-facing) ──────────────────────────────────
     default_cols = {
         "rank": "Rank",
         "team": "Team",
         "composite": "⭐ Composite",
+        "season_delta_fmt": "Season Δ",
         "conference": "Conference",
         "sp_plus": "SP+",
         "sp_plus_trend": "SP+ Trend",

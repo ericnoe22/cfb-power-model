@@ -75,6 +75,7 @@ def build_composite_ratings(
     sagarin_df=None,
     sp_rank_prev_df=None,
     games_df=None,
+    preseason_composite_df=None,
     week=None,
     season=CURRENT_SEASON,
     apply_coaching=True,
@@ -267,6 +268,21 @@ def build_composite_ratings(
     else:
         base["luck"] = 0.0
         base["luck_flag"] = None
+
+    # ── Season-long composite movement (vs. preseason baseline) ───────────
+    # preseason_composite_df is a fixed, one-time snapshot (see
+    # scripts/build_preseason_baseline.py) — NOT regenerated weekly, since
+    # it's the anchor everything else moves against. Built with today's
+    # formula fed genuinely pre-Week-1 inputs, so the delta reflects real
+    # rating movement, not composite-formula changes made mid-season.
+    if preseason_composite_df is not None and not preseason_composite_df.empty and \
+            "preseason_composite" in preseason_composite_df.columns:
+        base = base.merge(preseason_composite_df[["team", "preseason_composite"]],
+                           on="team", how="left")
+        base["season_delta"] = base["composite"] - base["preseason_composite"]
+    else:
+        base["preseason_composite"] = np.nan
+        base["season_delta"] = np.nan
 
     # ── Add rank ──────────────────────────────────────────────────────────
     base = base.sort_values("composite", ascending=False).reset_index(drop=True)
