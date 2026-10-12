@@ -382,7 +382,7 @@
         "rating": 0.89
       },
       {
-        "name": "Antwan Roberts",
+        "name": "Antwan Roberts Jr.",
         "position": "RB",
         "origin": "Marshall",
         "rating": 0.87
@@ -1239,9 +1239,9 @@
         "rating": 0.86
       },
       {
-        "name": "John Baker IV",
-        "position": "EDGE",
-        "origin": "Toledo",
+        "name": "Ke'Marion Baldwin",
+        "position": "RB",
+        "origin": "Charleston Southern",
         "rating": 0.85
       },
       {
@@ -1317,15 +1317,15 @@
         "rating": 0.86
       },
       {
-        "name": "Stantavious Smith",
-        "position": "DL",
-        "origin": "Florida A&M",
-        "rating": 0.84
-      },
-      {
         "name": "Joey Cheshire",
         "position": "LB",
         "origin": "Cornell",
+        "rating": 0.84
+      },
+      {
+        "name": "Stantavious Smith",
+        "position": "DL",
+        "origin": "Florida A&M",
         "rating": 0.84
       }
     ],
@@ -1794,15 +1794,15 @@
         "rating": 0.86
       },
       {
-        "name": "Tristian Gardner",
-        "position": "WR",
-        "origin": "Missouri State",
-        "rating": 0.86
-      },
-      {
         "name": "Trever Jackson",
         "position": "QB",
         "origin": "Arkansas",
+        "rating": 0.86
+      },
+      {
+        "name": "Tristian Gardner",
+        "position": "WR",
+        "origin": "Missouri State",
         "rating": 0.86
       }
     ],
@@ -2930,15 +2930,15 @@
         "rating": 0.86
       },
       {
-        "name": "Connor Jones",
-        "position": "OT",
-        "origin": "Michigan",
-        "rating": 0.85
-      },
-      {
         "name": "Darius Johnson Jr.",
         "position": "CB",
         "origin": "Gardner-Webb",
+        "rating": 0.85
+      },
+      {
+        "name": "Marcus Mascoll",
+        "position": "IOL",
+        "origin": "Florida",
         "rating": 0.85
       }
     ],
@@ -3498,9 +3498,9 @@
         "rating": 0.86
       },
       {
-        "name": "Jaheim Singletary",
-        "position": "CB",
-        "origin": "Arkansas",
+        "name": "Maasai King",
+        "position": "OT",
+        "origin": "Akron",
         "rating": 0.86
       }
     ],
@@ -4304,15 +4304,15 @@
         "rating": 0.84
       },
       {
-        "name": "Tito Chikere",
-        "position": "EDGE",
-        "origin": "East Texas A&M",
-        "rating": 0.84
-      },
-      {
         "name": "Brodrick Stewart",
         "position": "DL",
         "origin": "Tarleton State",
+        "rating": 0.84
+      },
+      {
+        "name": "Tito Chikere",
+        "position": "EDGE",
+        "origin": "East Texas A&M",
         "rating": 0.84
       }
     ],
@@ -4525,9 +4525,9 @@
         "rating": 0.86
       },
       {
-        "name": "Terry Nwabuisi-Ezeala",
-        "position": "DL",
-        "origin": "Vanderbilt",
+        "name": "Brayden Hall",
+        "position": "CB",
+        "origin": "Central Connecticut",
         "rating": 0.85
       },
       {
@@ -4684,15 +4684,15 @@
         "rating": 0.85
       },
       {
-        "name": "Aubrey Melvin",
-        "position": "DL",
-        "origin": "UConn",
+        "name": "Aitor Urionabarrenechea",
+        "position": "IOL",
+        "origin": "Colorado State",
         "rating": 0.85
       },
       {
-        "name": "Zachary Betts",
-        "position": "EDGE",
-        "origin": "Saint Francis (PA)",
+        "name": "Aubrey Melvin",
+        "position": "DL",
+        "origin": "UConn",
         "rating": 0.85
       }
     ],
@@ -5172,15 +5172,15 @@
         "rating": 0.85
       },
       {
-        "name": "James Johnson",
-        "position": "CB",
-        "origin": "USC",
-        "rating": 0.85
-      },
-      {
         "name": "Ashton Taylor",
         "position": "LB",
         "origin": "Jackson State",
+        "rating": 0.85
+      },
+      {
+        "name": "James Johnson",
+        "position": "CB",
+        "origin": "USC",
         "rating": 0.85
       }
     ],
@@ -6177,9 +6177,9 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Jahiem White",
-        "position": "RB",
-        "origin": "West Virginia",
+        "name": "Tayven Jackson",
+        "position": "QB",
+        "origin": "UCF",
         "rating": 0.86
       },
       {
@@ -6189,9 +6189,9 @@
         "rating": 0.86
       },
       {
-        "name": "Brendon Haygood",
+        "name": "Jahiem White",
         "position": "RB",
-        "origin": "Missouri",
+        "origin": "West Virginia",
         "rating": 0.86
       }
     ],
@@ -9739,15 +9739,15 @@
         "rating": 0.87
       },
       {
-        "name": "Kyron Chambers",
-        "position": "CB",
-        "origin": "SMU",
-        "rating": 0.86
-      },
-      {
         "name": "Jackson Arnold",
         "position": "QB",
         "origin": "Auburn",
+        "rating": 0.86
+      },
+      {
+        "name": "Kyron Chambers",
+        "position": "CB",
+        "origin": "SMU",
         "rating": 0.86
       }
     ],
@@ -10763,11 +10763,6 @@
         "name": "Brock Glenn",
         "class": "Junior",
         "jersey": "11"
-      },
-      {
-        "name": "Rodney Tisdale Jr.",
-        "class": "Sophomore",
-        "jersey": "5"
       },
       {
         "name": "Cam O'Hara",
