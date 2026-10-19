@@ -1,45 +1,60 @@
 homeTeam,awayTeam,homeTeam_raw,awayTeam_raw,commence_time,spread,overUnder,spread_book,total_book,home_ml,away_ml,best_home_spread,best_away_spread,best_home_ml,best_away_ml,best_over_total,best_under_total,books_available,commence_dt
-Delaware,Missouri State,Delaware Blue Hens,Missouri State Bears,2026-10-20T23:00:00.000Z,-3.0,52.5,DraftKings,DraftKings,-142.0,120.0,-3.0,-2.5,-138.0,127.0,52.5,51.5,4,2026-10-20 23:00:00+00:00
-Florida International,Middle Tennessee,FIU Panthers,Middle Tennessee Blue Raiders,2026-10-20T23:00:00.000Z,-10.5,45.5,DraftKings,DraftKings,-440.0,340.0,-10.5,-9.5,-376.0,355.0,45.5,45.5,4,2026-10-20 23:00:00+00:00
-Marshall,South Alabama,Marshall Thundering Herd,South Alabama Jaguars,2026-10-20T23:30:00.000Z,3.5,62.5,DraftKings,DraftKings,136.0,-162.0,2.5,4.5,141.0,-144.0,62.5,61.5,4,2026-10-20 23:30:00+00:00
-Sam Houston,New Mexico State,Sam Houston Bearkats,New Mexico State Aggies,2026-10-22T00:00:00.000Z,2.5,46.5,DraftKings,DraftKings,110.0,-130.0,2.5,2.5,125.0,-127.0,46.5,45.5,4,2026-10-22 00:00:00+00:00
-Appalachian State,James Madison,Appalachian State Mountaineers,James Madison Dukes,2026-10-22T23:00:00.000Z,10.5,57.5,DraftKings,DraftKings,330.0,-425.0,8.5,10.5,335.0,-330.0,58.5,57.5,4,2026-10-22 23:00:00+00:00
-Kennesaw State,Liberty,Kennesaw State Owls,Liberty Flames,2026-10-22T23:00:00.000Z,9.5,47.5,DraftKings,DraftKings,275.0,-345.0,9.5,11.5,342.0,-345.0,49.5,47.5,4,2026-10-22 23:00:00+00:00
-Memphis,East Carolina,Memphis Tigers,East Carolina Pirates,2026-10-22T23:30:00.000Z,-9.5,53.5,DraftKings,DraftKings,-395.0,310.0,-9.5,-9.5,-350.0,335.0,53.5,52.5,4,2026-10-22 23:30:00+00:00
-Virginia,Duke,Virginia Cavaliers,Duke Blue Devils,2026-10-23T23:00:00.000Z,-2.5,48.5,DraftKings,DraftKings,-130.0,110.0,-2.5,-2.5,-120.0,113.0,48.5,45.5,4,2026-10-23 23:00:00+00:00
-UConn,UMass,UConn Huskies,UMass Minutemen,2026-10-23T23:00:00.000Z,-16.5,47.5,DraftKings,DraftKings,-800.0,550.0,-16.5,-16.5,-525.0,550.0,47.5,47.5,4,2026-10-23 23:00:00+00:00
-Tulsa,Army,Tulsa Golden Hurricane,Army Black Knights,2026-10-24T00:30:00.000Z,-1.5,52.5,DraftKings,DraftKings,-105.0,-115.0,-1.5,1.5,115.0,-112.0,52.5,52.5,4,2026-10-24 00:30:00+00:00
-Wyoming,Air Force,Wyoming Cowboys,Air Force Falcons,2026-10-24T01:00:00.000Z,7.5,43.5,DraftKings,DraftKings,245.0,-305.0,7.5,7.5,245.0,-245.0,44.5,43.5,4,2026-10-24 01:00:00+00:00
-Stanford,NC State,Stanford Cardinal,NC State Wolfpack,2026-10-24T02:30:00.000Z,7.5,55.5,DraftKings,DraftKings,225.0,-278.0,7.5,8.5,277.0,-278.0,56.5,55.5,4,2026-10-24 02:30:00+00:00
-Utah,Houston,Utah Utes,Houston Cougars,2026-10-24T04:00:00+00:00,-6.5,54.5,Novig,Novig,,,-6.5,-6.5,,,54.5,54.5,1,2026-10-24 04:00:00+00:00
-Minnesota,Iowa,Minnesota Golden Gophers,Iowa Hawkeyes,2026-10-24T04:00:00.000Z,5.5,40.5,FanDuel,FanDuel,188.0,-230.0,5.5,5.5,213.0,-230.0,41.5,40.5,2,2026-10-24 04:00:00+00:00
-Arizona,Iowa State,Arizona Wildcats,Iowa State Cyclones,2026-10-24T04:00:00+00:00,-10.5,50.5,Novig,Novig,-1900.0,102.0,-10.5,-10.5,-1900.0,102.0,50.5,50.5,1,2026-10-24 04:00:00+00:00
-SMU,California,SMU Mustangs,California Golden Bears,2026-10-24T16:00:00.000Z,-17.5,54.5,FanDuel,FanDuel,-950.0,610.0,-17.5,-17.5,-770.0,610.0,54.5,54.5,3,2026-10-24 16:00:00+00:00
-TCU,West Virginia,TCU Horned Frogs,West Virginia Mountaineers,2026-10-24T16:00:00.000Z,-6.5,58.5,FanDuel,FanDuel,-250.0,198.0,-6.5,-6.5,-203.0,198.0,58.5,58.5,2,2026-10-24 16:00:00+00:00
-Cincinnati,Texas Tech,Cincinnati Bearcats,Texas Tech Red Raiders,2026-10-24T16:00:00.000Z,11.5,56.5,DraftKings,DraftKings,330.0,-425.0,11.5,11.5,350.0,-425.0,56.5,56.5,2,2026-10-24 16:00:00+00:00
-Auburn,LSU,Auburn Tigers,LSU Tigers,2026-10-24T16:00:00.000Z,5.5,50.5,DraftKings,DraftKings,180.0,-218.0,5.5,6.5,186.0,-203.0,51.5,50.5,3,2026-10-24 16:00:00+00:00
-Miami,Pittsburgh,Miami Hurricanes,Pittsburgh Panthers,2026-10-24T16:00:00.000Z,-23.5,51.5,DraftKings,DraftKings,-2400.0,1200.0,-23.5,-22.5,-1329.0,1200.0,51.5,50.5,3,2026-10-24 16:00:00+00:00
-Michigan,Indiana,Michigan Wolverines,Indiana Hoosiers,2026-10-24T16:00:00.000Z,8.5,42.5,DraftKings,DraftKings,285.0,-360.0,7.5,8.5,285.0,-300.0,42.5,41.5,3,2026-10-24 16:00:00+00:00
-UCLA,Michigan State,UCLA Bruins,Michigan State Spartans,2026-10-24T16:00:00.0000000Z,-13.5,47.5,DraftKings,DraftKings,-535.0,400.0,-13.5,-12.5,-455.0,400.0,47.5,47.5,2,2026-10-24 16:00:00+00:00
-Northwestern,Rutgers,Northwestern Wildcats,Rutgers Scarlet Knights,2026-10-24T16:00:00.0000000Z,-16.5,58.5,DraftKings,DraftKings,-1000.0,650.0,-16.5,-16.5,-733.0,669.0,58.5,58.5,2,2026-10-24 16:00:00+00:00
-UCF,BYU,UCF Knights,BYU Cougars,2026-10-24T19:00:00.000Z,6.5,45.5,FanDuel,FanDuel,225.0,-280.0,6.5,6.5,225.0,-280.0,45.5,45.5,1,2026-10-24 19:00:00+00:00
-South Carolina,Tennessee,South Carolina Gamecocks,Tennessee Volunteers,2026-10-24T19:30:00.000Z,3.0,51.5,DraftKings,DraftKings,130.0,-155.0,2.5,3.0,130.0,-130.0,52.5,50.5,3,2026-10-24 19:30:00+00:00
-Alabama,Texas A&M,Alabama Crimson Tide,Texas A&M Aggies,2026-10-24T19:30:00.000Z,-15.5,50.5,FanDuel,FanDuel,-750.0,520.0,-15.5,-15.5,-590.0,520.0,50.5,50.5,2,2026-10-24 19:30:00+00:00
-Mississippi State,Oklahoma,Mississippi State Bulldogs,Oklahoma Sooners,2026-10-24T19:30:00.000Z,2.5,45.5,FanDuel,FanDuel,116.0,-138.0,2.5,2.5,133.0,-138.0,46.5,45.5,3,2026-10-24 19:30:00+00:00
-Georgia Tech,Boston College,Georgia Tech Yellow Jackets,Boston College Eagles,2026-10-24T19:30:00.000Z,-4.5,50.5,FanDuel,FanDuel,-200.0,164.0,-5.5,-4.5,-178.0,164.0,50.5,50.5,3,2026-10-24 19:30:00+00:00
-Illinois,Oregon,Illinois Fighting Illini,Oregon Ducks,2026-10-24T19:30:00.000Z,12.5,50.5,FanDuel,FanDuel,365.0,-480.0,12.5,12.5,365.0,-480.0,50.5,50.5,1,2026-10-24 19:30:00+00:00
-Kansas,Baylor,Kansas Jayhawks,Baylor Bears,2026-10-24T20:00:00.000Z,3.5,54.5,FanDuel,FanDuel,132.0,-160.0,3.5,3.5,132.0,-160.0,54.5,54.5,1,2026-10-24 20:00:00+00:00
-Washington State,Boise State,Washington State Cougars,Boise State Broncos,2026-10-24T22:00:00.000Z,15.5,50.5,FanDuel,FanDuel,550.0,-820.0,15.5,16.5,733.0,-809.0,50.5,50.5,2,2026-10-24 22:00:00+00:00
-Colorado State,San Diego State,Colorado State Rams,San Diego State Aztecs,2026-10-24T22:30:00.000Z,2.5,60.5,FanDuel,FanDuel,105.0,-126.0,2.5,2.5,105.0,-126.0,60.5,60.5,2,2026-10-24 22:30:00+00:00
-Clemson,Virginia Tech,Clemson Tigers,Virginia Tech Hokies,2026-10-24T23:30:00.000Z,-2.5,50.5,FanDuel,FanDuel,-125.0,104.0,-2.5,-2.5,-125.0,104.0,50.5,50.5,1,2026-10-24 23:30:00+00:00
-Texas State,Utah State,Texas State Bobcats,Utah State Aggies,2026-10-24T23:30:00.000Z,-8.5,59.5,FanDuel,FanDuel,-345.0,270.0,-8.5,-8.5,-345.0,271.0,60.5,59.5,2,2026-10-24 23:30:00+00:00
-Kentucky,Vanderbilt,Kentucky Wildcats,Vanderbilt Commodores,2026-10-24T23:30:00.000Z,-11.5,51.5,DraftKings,DraftKings,-470.0,360.0,-11.5,-9.5,-426.0,376.0,51.5,51.5,3,2026-10-24 23:30:00+00:00
-Wisconsin,USC,Wisconsin Badgers,USC Trojans,2026-10-24T23:30:00.000Z,2.5,50.5,DraftKings,DraftKings,110.0,-130.0,2.5,2.5,130.0,-130.0,50.5,49.5,3,2026-10-24 23:30:00+00:00
-North Carolina,Syracuse,North Carolina Tar Heels,Syracuse Orange,2026-10-24T23:30:00.000Z,-9.5,44.5,FanDuel,FanDuel,-350.0,275.0,-9.5,-8.5,-285.0,275.0,44.5,44.5,3,2026-10-24 23:30:00+00:00
-Texas,Ole Miss,Texas Longhorns,Ole Miss Rebels,2026-10-24T23:30:00.000Z,-3.5,55.5,FanDuel,FanDuel,-152.0,126.0,-3.5,-3.5,-135.0,127.0,55.5,55.5,2,2026-10-24 23:30:00+00:00
-Oklahoma State,Colorado,Oklahoma State Cowboys,Colorado Buffaloes,2026-10-25T00:00:00.000Z,-12.5,55.5,FanDuel,FanDuel,-550.0,400.0,-12.5,-12.5,-550.0,400.0,55.5,55.5,1,2026-10-25 00:00:00+00:00
-Arizona State,Kansas State,Arizona State Sun Devils,Kansas State Wildcats,2026-10-25T01:00:00.000Z,3.5,56.5,FanDuel,FanDuel,136.0,-164.0,3.5,3.5,136.0,-164.0,56.5,56.5,1,2026-10-25 01:00:00+00:00
-New Mexico,North Dakota State,New Mexico Lobos,North Dakota State Bison,2026-10-25T02:00:00+00:00,-3.5,47.5,Novig,Novig,-153.0,117.0,-3.5,-3.5,-153.0,117.0,47.5,47.5,1,2026-10-25 02:00:00+00:00
+Florida International,Middle Tennessee,FIU Panthers,Middle Tennessee Blue Raiders,2026-10-20T23:00:00Z,-10.5,45.5,DraftKings,DraftKings,-425.0,330.0,-11.0,-10.0,-376.0,355.0,46.5,45.5,11,2026-10-20 23:00:00+00:00
+Delaware,Missouri State,Delaware Blue Hens,Missouri State Bears,2026-10-20T23:00:00Z,-3.0,51.5,DraftKings,DraftKings,-155.0,130.0,-3.5,-2.5,-144.0,138.0,52.5,51.5,10,2026-10-20 23:00:00+00:00
+Marshall,South Alabama,Marshall Thundering Herd,South Alabama Jaguars,2026-10-20T23:30:00Z,2.5,64.5,DraftKings,DraftKings,120.0,-142.0,2.5,3.0,127.0,-133.0,64.5,64.0,11,2026-10-20 23:30:00+00:00
+Sam Houston,New Mexico State,Sam Houston Bearkats,New Mexico State Aggies,2026-10-22T00:00:00Z,3.0,45.5,DraftKings,DraftKings,124.0,-148.0,2.5,3.5,130.0,-133.0,45.5,44.0,11,2026-10-22 00:00:00+00:00
+Appalachian State,James Madison,Appalachian State Mountaineers,James Madison Dukes,2026-10-22T23:00:00Z,10.5,56.5,DraftKings,DraftKings,330.0,-425.0,10.5,11.5,365.0,-388.0,56.5,56.0,11,2026-10-22 23:00:00+00:00
+Kennesaw State,Liberty,Kennesaw State Owls,Liberty Flames,2026-10-22T23:00:00.000Z,10.5,49.5,FanDuel,DraftKings,350.0,-465.0,10.5,11.0,365.0,-376.0,50.5,49.5,7,2026-10-22 23:00:00+00:00
+Memphis,East Carolina,Memphis Tigers,East Carolina Pirates,2026-10-22T23:30:00Z,-10.5,54.5,DraftKings,DraftKings,-410.0,320.0,-10.5,-10.5,-376.0,355.0,55.0,54.0,11,2026-10-22 23:30:00+00:00
+Virginia,Duke,Virginia Cavaliers,Duke Blue Devils,2026-10-23T23:00:00Z,-1.5,47.5,DraftKings,DraftKings,-122.0,102.0,-2.5,-1.0,-113.0,109.0,47.5,46.5,11,2026-10-23 23:00:00+00:00
+UConn,UMass,UConn Huskies,UMass Minutemen,2026-10-23T23:30:00Z,-15.5,49.5,DraftKings,DraftKings,-750.0,525.0,-16.0,-14.5,-614.0,550.0,49.5,48.5,11,2026-10-23 23:30:00+00:00
+Tulsa,Army,Tulsa Golden Hurricane,Army Black Knights,2026-10-24T00:30:00Z,-1.5,53.5,DraftKings,DraftKings,-112.0,-108.0,-1.5,-1.0,-108.0,104.0,54.5,53.0,11,2026-10-24 00:30:00+00:00
+Wyoming,Air Force,Wyoming Cowboys,Air Force Falcons,2026-10-24T01:00:00Z,6.0,45.5,DraftKings,DraftKings,180.0,-218.0,5.5,6.0,186.0,-194.0,45.5,44.5,11,2026-10-24 01:00:00+00:00
+Stanford,NC State,Stanford Cardinal,NC State Wolfpack,2026-10-24T02:30:00Z,7.0,55.5,DraftKings,DraftKings,240.0,-298.0,7.0,7.5,257.0,-270.0,56.0,55.0,11,2026-10-24 02:30:00+00:00
+TCU,West Virginia,TCU Horned Frogs,West Virginia Mountaineers,2026-10-24T16:00:00Z,-8.5,56.5,DraftKings,DraftKings,-310.0,250.0,-8.5,-7.5,-292.0,270.0,57.0,56.5,11,2026-10-24 16:00:00+00:00
+Cincinnati,Texas Tech,Cincinnati Bearcats,Texas Tech Red Raiders,2026-10-24T16:00:00Z,10.5,56.5,DraftKings,DraftKings,340.0,-440.0,10.5,10.5,376.0,-388.0,57.0,56.5,11,2026-10-24 16:00:00+00:00
+Florida Atlantic,Rice,Florida Atlantic Owls,Rice Owls,2026-10-24T16:00:00Z,-10.0,55.5,DraftKings,DraftKings,-395.0,310.0,-10.5,-9.5,-355.0,317.0,56.0,55.0,11,2026-10-24 16:00:00+00:00
+Northwestern,Rutgers,Northwestern Wildcats,Rutgers Scarlet Knights,2026-10-24T16:00:00Z,-16.5,58.5,DraftKings,DraftKings,-850.0,575.0,-16.5,-15.5,-669.0,614.0,59.0,58.5,9,2026-10-24 16:00:00+00:00
+Michigan,Indiana,Michigan Wolverines,Indiana Hoosiers,2026-10-24T16:00:00Z,7.0,41.5,DraftKings,DraftKings,230.0,-285.0,7.0,7.5,257.0,-270.0,42.0,41.5,11,2026-10-24 16:00:00+00:00
+Kansas,Baylor,Kansas Jayhawks,Baylor Bears,2026-10-24T16:00:00Z,1.5,54.5,DraftKings,DraftKings,105.0,-125.0,1.0,2.5,125.0,-123.0,54.5,53.5,11,2026-10-24 16:00:00+00:00
+Miami,Pittsburgh,Miami Hurricanes,Pittsburgh Panthers,2026-10-24T16:00:00Z,-21.0,51.5,DraftKings,DraftKings,-1800.0,1000.0,-21.5,-20.5,-1150.0,1100.0,51.5,50.0,11,2026-10-24 16:00:00+00:00
+Toledo,Western Michigan,Toledo Rockets,Western Michigan Broncos,2026-10-24T16:00:00Z,-3.5,45.5,DraftKings,DraftKings,-175.0,145.0,-3.5,-3.5,-160.0,150.0,45.5,45.0,11,2026-10-24 16:00:00+00:00
+Auburn,LSU,Auburn Tigers,LSU Tigers,2026-10-24T16:00:00Z,8.5,50.5,DraftKings,DraftKings,260.0,-325.0,7.5,9.0,282.0,-277.0,50.5,49.0,11,2026-10-24 16:00:00+00:00
+SMU,California,SMU Mustangs,California Golden Bears,2026-10-24T16:00:00Z,-19.5,53.5,DraftKings,DraftKings,-1100.0,700.0,-19.5,-17.5,-809.0,742.0,53.5,53.5,10,2026-10-24 16:00:00+00:00
+Kent State,Akron,Kent State Golden Flashes,Akron Zips,2026-10-24T17:00:00Z,-3.0,46.5,DraftKings,DraftKings,-155.0,130.0,-3.5,-2.5,-138.0,133.0,46.5,45.0,11,2026-10-24 17:00:00+00:00
+Central Michigan,Miami (OH),Central Michigan Chippewas,Miami (OH) RedHawks,2026-10-24T17:00:00Z,2.5,43.5,BetMGM,BetMGM,105.0,-125.0,1.5,2.5,115.0,-117.0,43.5,43.0,9,2026-10-24 17:00:00+00:00
+Illinois,Oregon,Illinois Fighting Illini,Oregon Ducks,2026-10-24T19:00:00.000Z,9.5,51.5,FanDuel,DraftKings,260.0,-330.0,9.5,10.5,305.0,-308.0,51.5,50.5,7,2026-10-24 19:00:00+00:00
+South Carolina,Tennessee,South Carolina Gamecocks,Tennessee Volunteers,2026-10-24T19:30:00Z,-2.5,50.5,DraftKings,DraftKings,-122.0,102.0,-2.5,-1.0,-122.0,117.0,51.0,50.0,11,2026-10-24 19:30:00+00:00
+UCLA,Michigan State,UCLA Bruins,Michigan State Spartans,2026-10-24T19:30:00Z,-14.0,45.5,DraftKings,DraftKings,-650.0,470.0,-14.5,-14.0,-614.0,540.0,46.0,44.5,11,2026-10-24 19:30:00+00:00
+UCF,BYU,UCF Knights,BYU Cougars,2026-10-24T19:30:00Z,6.5,43.5,DraftKings,DraftKings,215.0,-265.0,6.5,6.5,233.0,-250.0,45.0,43.5,11,2026-10-24 19:30:00+00:00
+Northern Illinois,Hawai'i,Northern Illinois Huskies,Hawaii Rainbow Warriors,2026-10-24T19:30:00Z,4.0,46.5,DraftKings,DraftKings,164.0,-198.0,3.5,4.5,178.0,-186.0,46.5,46.0,11,2026-10-24 19:30:00+00:00
+Alabama,Texas A&M,Alabama Crimson Tide,Texas A&M Aggies,2026-10-24T19:30:00Z,-14.5,50.5,DraftKings,DraftKings,-675.0,490.0,-14.5,-14.0,-567.0,528.0,50.5,50.5,8,2026-10-24 19:30:00+00:00
+Navy,North Texas,Navy Midshipmen,North Texas Mean Green,2026-10-24T19:30:00Z,1.5,60.5,DraftKings,DraftKings,105.0,-125.0,1.5,2.5,108.0,-115.0,63.0,60.5,11,2026-10-24 19:30:00+00:00
+Ball State,Sacramento State,Ball State Cardinals,Sacramento State Hornets,2026-10-24T19:30:00Z,-11.5,51.5,DraftKings,DraftKings,-455.0,350.0,-12.5,-11.0,-400.0,376.0,51.5,50.5,11,2026-10-24 19:30:00+00:00
+Mississippi State,Oklahoma,Mississippi State Bulldogs,Oklahoma Sooners,2026-10-24T19:30:00Z,3.5,46.5,DraftKings,DraftKings,140.0,-166.0,3.0,3.5,156.0,-159.0,46.5,45.5,10,2026-10-24 19:30:00+00:00
+Minnesota,Iowa,Minnesota Golden Gophers,Iowa Hawkeyes,2026-10-24T19:30:00.000Z,7.0,41.5,DraftKings,DraftKings,210.0,-258.0,6.5,7.0,220.0,-223.0,41.5,41.0,7,2026-10-24 19:30:00+00:00
+Buffalo,Bowling Green,Buffalo Bulls,Bowling Green Falcons,2026-10-24T19:30:00Z,-4.5,44.5,DraftKings,DraftKings,-192.0,160.0,-4.5,-3.5,-178.0,170.0,44.5,44.0,11,2026-10-24 19:30:00+00:00
+Georgia Tech,Boston College,Georgia Tech Yellow Jackets,Boston College Eagles,2026-10-24T19:30:00Z,-5.5,49.5,DraftKings,DraftKings,-218.0,180.0,-6.0,-5.0,-194.0,186.0,49.5,49.0,11,2026-10-24 19:30:00+00:00
+Arizona State,Kansas State,Arizona State Sun Devils,Kansas State Wildcats,2026-10-24T19:45:00Z,3.5,56.5,DraftKings,DraftKings,140.0,-166.0,3.5,3.5,145.0,-156.0,57.5,56.5,11,2026-10-24 19:45:00+00:00
+Ohio,Eastern Michigan,Ohio Bobcats,Eastern Michigan Eagles,2026-10-24T20:00:00Z,-11.5,49.5,DraftKings,DraftKings,-440.0,340.0,-11.5,-10.5,-400.0,360.0,49.5,49.0,11,2026-10-24 20:00:00+00:00
+Troy,Louisiana-Monroe,Troy Trojans,Louisiana-Monroe Warhawks,2026-10-24T20:00:00Z,-16.5,51.5,DraftKings,DraftKings,-850.0,575.0,-17.5,-16.5,-669.0,614.0,51.5,50.5,11,2026-10-24 20:00:00+00:00
+Southern Miss,Louisiana,Southern Miss Golden Eagles,Louisiana Ragin Cajuns,2026-10-24T21:00:00Z,10.5,52.5,DraftKings,DraftKings,320.0,-410.0,10.0,11.0,365.0,-400.0,53.5,52.5,11,2026-10-24 21:00:00+00:00
+Nevada,San José State,Nevada Wolf Pack,San Jose State Spartans,2026-10-24T21:00:00Z,-5.5,45.5,DraftKings,DraftKings,-218.0,180.0,-6.0,-5.0,-194.0,186.0,46.5,45.0,11,2026-10-24 21:00:00+00:00
+Louisiana Tech,Old Dominion,Louisiana Tech Bulldogs,Old Dominion Monarchs,2026-10-24T21:00:00Z,-10.5,45.5,DraftKings,DraftKings,-425.0,330.0,-10.5,-10.5,-400.0,355.0,46.5,45.0,11,2026-10-24 21:00:00+00:00
+Washington State,Boise State,Washington State Cougars,Boise State Broncos,2026-10-24T22:00:00Z,12.5,51.5,DraftKings,DraftKings,380.0,-500.0,12.0,13.0,413.0,-426.0,51.5,51.0,11,2026-10-24 22:00:00+00:00
+Colorado State,San Diego State,Colorado State Rams,San Diego State Aztecs,2026-10-24T22:30:00Z,2.5,60.5,DraftKings,DraftKings,114.0,-135.0,2.5,2.5,122.0,-127.0,61.5,60.5,11,2026-10-24 22:30:00+00:00
+Arkansas State,Georgia State,Arkansas State Red Wolves,Georgia State Panthers,2026-10-24T23:00:00Z,2.5,58.5,DraftKings,DraftKings,105.0,-125.0,2.0,2.5,108.0,-120.0,58.5,57.0,11,2026-10-24 23:00:00+00:00
+Clemson,Virginia Tech,Clemson Tigers,Virginia Tech Hokies,2026-10-24T23:00:00.000Z,-2.5,49.5,DraftKings,FanDuel,-142.0,120.0,-3.0,-2.5,-133.0,130.0,49.5,48.5,7,2026-10-24 23:00:00+00:00
+Oklahoma State,Colorado,Oklahoma State Cowboys,Colorado Buffaloes,2026-10-24T23:00:00.000Z,-13.5,55.5,DraftKings,DraftKings,-550.0,410.0,-13.5,-13.5,-488.0,440.0,55.5,55.5,6,2026-10-24 23:00:00+00:00
+Arizona,Iowa State,Arizona Wildcats,Iowa State Cyclones,2026-10-24T23:30:00.000Z,-10.0,51.5,DraftKings,DraftKings,-305.0,245.0,-10.5,-10.0,-290.0,290.0,51.5,51.5,7,2026-10-24 23:30:00+00:00
+North Carolina,Syracuse,North Carolina Tar Heels,Syracuse Orange,2026-10-24T23:30:00Z,-8.5,46.5,DraftKings,DraftKings,-345.0,275.0,-9.5,-8.5,-285.0,280.0,47.0,45.5,10,2026-10-24 23:30:00+00:00
+Kentucky,Vanderbilt,Kentucky Wildcats,Vanderbilt Commodores,2026-10-24T23:30:00Z,-10.5,51.5,DraftKings,DraftKings,-440.0,340.0,-12.0,-10.5,-400.0,355.0,52.0,50.5,11,2026-10-24 23:30:00+00:00
+Texas State,Utah State,Texas State Bobcats,Utah State Aggies,2026-10-24T23:30:00Z,-12.5,59.5,DraftKings,DraftKings,-455.0,350.0,-13.0,-11.5,-426.0,375.0,59.5,58.5,11,2026-10-24 23:30:00+00:00
+Texas,Ole Miss,Texas Longhorns,Ole Miss Rebels,2026-10-24T23:30:00Z,-3.5,52.5,DraftKings,DraftKings,-162.0,136.0,-3.5,-3.5,-150.0,141.0,52.5,52.0,11,2026-10-24 23:30:00+00:00
+Wisconsin,USC,Wisconsin Badgers,USC Trojans,2026-10-24T23:30:00Z,3.0,49.5,DraftKings,DraftKings,130.0,-155.0,2.5,3.5,133.0,-138.0,49.5,48.5,11,2026-10-24 23:30:00+00:00
+Tulane,UT San Antonio,Tulane Green Wave,UTSA Roadrunners,2026-10-25T00:00:00Z,1.5,51.5,DraftKings,DraftKings,110.0,-130.0,1.5,2.5,113.0,-117.0,52.0,51.5,11,2026-10-25 00:00:00+00:00
+New Mexico,North Dakota State,New Mexico Lobos,North Dakota State Bison,2026-10-25T02:00:00Z,-4.5,42.5,DraftKings,DraftKings,-205.0,170.0,-5.5,-4.5,-182.0,175.0,42.5,41.5,8,2026-10-25 02:00:00+00:00
+Utah,Houston,Utah Utes,Houston Cougars,2026-10-25T02:15:00.000Z,-6.5,56.5,DraftKings,DraftKings,-238.0,195.0,-6.5,-6.5,-223.0,205.0,57.0,56.5,7,2026-10-25 02:15:00+00:00
 LSU,Alabama,LSU Tigers,Alabama Crimson Tide,2026-11-07T17:00:00Z,-4.0,,BetMGM,,,,-4.0,-4.0,,,,,1,2026-11-07 17:00:00+00:00
 Notre Dame,Miami,Notre Dame Fighting Irish,Miami Hurricanes,2026-11-08T00:30:00Z,-6.5,54.5,BetMGM,BetMGM,,,-6.5,-6.5,,,54.5,54.5,1,2026-11-08 00:30:00+00:00
 Oregon,Michigan,Oregon Ducks,Michigan Wolverines,2026-11-14T17:00:00Z,-13.5,,BetMGM,,,,-13.5,-13.5,,,,,1,2026-11-14 17:00:00+00:00
