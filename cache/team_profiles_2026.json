@@ -50,9 +50,9 @@
         "jersey": "5"
       },
       {
-        "name": "Cade Spradling",
-        "class": "Sophomore",
-        "jersey": "7"
+        "name": "Cam Reddick",
+        "class": "Freshman",
+        "jersey": "14"
       },
       {
         "name": "Howard Fisher IV",
@@ -904,21 +904,21 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Tyler Mizzell",
-        "position": "QB",
-        "origin": "Concord",
-        "rating": 0.85
-      },
-      {
-        "name": "Jacob Jeudy",
-        "position": "IOL",
-        "origin": "Concord",
+        "name": "Jared Badie",
+        "position": "EDGE",
+        "origin": "San Diego State",
         "rating": 0.85
       },
       {
         "name": "Jabari Smith Jr.",
         "position": "WR",
         "origin": "Florida Atlantic",
+        "rating": 0.85
+      },
+      {
+        "name": "Jacob Jeudy",
+        "position": "IOL",
+        "origin": "Concord",
         "rating": 0.85
       }
     ],
@@ -1323,9 +1323,9 @@
         "rating": 0.84
       },
       {
-        "name": "Stantavious Smith",
-        "position": "DL",
-        "origin": "Florida A&M",
+        "name": "Logan Goodwin",
+        "position": "EDGE",
+        "origin": "IU Pennsylvania",
         "rating": 0.84
       }
     ],
@@ -2047,9 +2047,9 @@
         "rating": 0.85
       },
       {
-        "name": "Sam Siafa",
-        "position": "DL",
-        "origin": "Penn State",
+        "name": "Mustafa Feika",
+        "position": "IOL",
+        "origin": "Tiffin University",
         "rating": 0.84
       }
     ],
@@ -2930,15 +2930,15 @@
         "rating": 0.86
       },
       {
-        "name": "Darius Johnson Jr.",
-        "position": "CB",
-        "origin": "Gardner-Webb",
+        "name": "Connor Jones",
+        "position": "OT",
+        "origin": "Michigan",
         "rating": 0.85
       },
       {
-        "name": "Marcus Mascoll",
-        "position": "IOL",
-        "origin": "Florida",
+        "name": "Darius Johnson Jr.",
+        "position": "CB",
+        "origin": "Gardner-Webb",
         "rating": 0.85
       }
     ],
@@ -3579,9 +3579,9 @@
         "rating": 0.86
       },
       {
-        "name": "Vernon Woodward III",
-        "position": "CB",
-        "origin": "Illinois",
+        "name": "Hadine Diaby",
+        "position": "IOL",
+        "origin": "Nevada",
         "rating": 0.85
       }
     ],
@@ -3651,9 +3651,9 @@
         "rating": 0.87
       },
       {
-        "name": "Corey Scott",
-        "position": "WR",
-        "origin": "West Florida",
+        "name": "Ernest Willor Jr.",
+        "position": "EDGE",
+        "origin": "Wisconsin",
         "rating": 0.86
       },
       {
@@ -3898,9 +3898,9 @@
         "rating": 0.86
       },
       {
-        "name": "Zion Booker",
-        "position": "WR",
-        "origin": "Tulsa",
+        "name": "Luke Duska",
+        "position": "IOL",
+        "origin": "Elon",
         "rating": 0.85
       }
     ],
@@ -3968,9 +3968,9 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Hayden Dawahare",
+        "name": "Nate Gregory",
         "position": "LB",
-        "origin": "Kentucky",
+        "origin": "Coastal Carolina",
         "rating": 0.84
       },
       {
@@ -3980,9 +3980,9 @@
         "rating": 0.84
       },
       {
-        "name": "Nate Gregory",
+        "name": "Hayden Dawahare",
         "position": "LB",
-        "origin": "Coastal Carolina",
+        "origin": "Kentucky",
         "rating": 0.84
       }
     ],
@@ -4800,7 +4800,8 @@
       "name": "Malachi Toney",
       "rec_yds": 970,
       "rec_td": 7,
-      "rec": 84
+      "rec": 84,
+      "departed_to": "not on 2026 roster"
     },
     "top_defender": {
       "name": "Akheem Mesidor",
@@ -5166,6 +5167,12 @@
     ],
     "key_transfers_in": [
       {
+        "name": "Ricky Lee III",
+        "position": "CB",
+        "origin": "Sacramento State",
+        "rating": 0.85
+      },
+      {
         "name": "Brennan Smith",
         "position": "IOL",
         "origin": "Mississippi State",
@@ -5175,12 +5182,6 @@
         "name": "Ashton Taylor",
         "position": "LB",
         "origin": "Jackson State",
-        "rating": 0.85
-      },
-      {
-        "name": "James Johnson",
-        "position": "CB",
-        "origin": "USC",
         "rating": 0.85
       }
     ],
@@ -5499,9 +5500,9 @@
         "rating": 0.85
       },
       {
-        "name": "Witt Edwards",
-        "position": "TE",
-        "origin": "Vanderbilt",
+        "name": "William Dixon III",
+        "position": "OT",
+        "origin": "VMI",
         "rating": 0.85
       }
     ],
@@ -6527,9 +6528,9 @@
         "rating": 0.85
       },
       {
-        "name": "Tyler Gillison",
-        "position": "EDGE",
-        "origin": "Michigan State",
+        "name": "Riley Palmeter",
+        "position": "TE",
+        "origin": "Marian",
         "rating": 0.84
       }
     ],
@@ -7077,21 +7078,21 @@
     ],
     "key_transfers_in": [
       {
-        "name": "Isaiah Houi",
-        "position": "CB",
-        "origin": "Eastern Illinois",
-        "rating": 0.86
-      },
-      {
         "name": "Kwan Johnson",
         "position": "OT",
         "origin": "Eastern Illinois",
         "rating": 0.86
       },
       {
-        "name": "Daniel Matagi",
-        "position": "DL",
-        "origin": "Portland State",
+        "name": "Isaiah Houi",
+        "position": "CB",
+        "origin": "Eastern Illinois",
+        "rating": 0.86
+      },
+      {
+        "name": "Broderick Shull",
+        "position": "OT",
+        "origin": "Auburn",
         "rating": 0.86
       }
     ],
@@ -9656,6 +9657,12 @@
     ],
     "key_transfers_in": [
       {
+        "name": "Taijh Overton",
+        "position": "S",
+        "origin": "Arkansas",
+        "rating": 0.86
+      },
+      {
         "name": "Bryce Anderson",
         "position": "TE",
         "origin": "Memphis",
@@ -9665,12 +9672,6 @@
         "name": "Austin Carlisle",
         "position": "QB",
         "origin": "Houston",
-        "rating": 0.86
-      },
-      {
-        "name": "Don Chaney Jr.",
-        "position": "RB",
-        "origin": "Charlotte",
         "rating": 0.86
       }
     ],
@@ -10613,15 +10614,15 @@
         "rating": 0.87
       },
       {
-        "name": "Jalil Tucker",
-        "position": "CB",
-        "origin": "Oregon State",
+        "name": "Tank Hawkins",
+        "position": "WR",
+        "origin": "Florida",
         "rating": 0.86
       },
       {
-        "name": "Jack Pedersen",
-        "position": "TE",
-        "origin": "UCLA",
+        "name": "Eduwa Okundaye",
+        "position": "EDGE",
+        "origin": "Arizona",
         "rating": 0.86
       }
     ],
