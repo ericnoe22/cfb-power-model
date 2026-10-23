@@ -23,14 +23,14 @@ def _get(key, fallback=""):
 # ── College Football Data API ──────────────────────────────────────────────
 # Free tier: most endpoints. $1/month Patreon tier adds opponent-adjusted metrics.
 # Get yours at: https://collegefootballdata.com/key
-CFBD_API_KEY = _get("CFBD_API_KEY", "PcO2OgTyV1A4TTwl6mveP6wV2B8TYdkjcMT5r8Tm5M5B6UPns120RXdlkK9INZ3q")
+CFBD_API_KEY = _get("CFBD_API_KEY")
 
 # ── Owls Insight API (live game lines) ────────────────────────────────────
-OWLS_INSIGHT_API_KEY = _get("OWLS_INSIGHT_API_KEY", "owlsinsight_9396243586a24df91d958db0556bc858c659c3eb5b54e8c11b5c755ec588209d")
+OWLS_INSIGHT_API_KEY = _get("OWLS_INSIGHT_API_KEY")
 
 # ── The Odds API (season win totals / futures) ─────────────────────────────
 # Free tier: 500 requests/month. https://the-odds-api.com
-ODDS_API_KEY = _get("ODDS_API_KEY", "456077611cb59a254b06042437814040")
+ODDS_API_KEY = _get("ODDS_API_KEY")
 
 # ── Model settings ─────────────────────────────────────────────────────────
 CURRENT_SEASON = 2026
