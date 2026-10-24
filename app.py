@@ -691,22 +691,24 @@ def load_live_lines():
     except Exception:
         cache_path = "cache/lines_live.csv"
         cfbd_path  = os.path.join(os.path.dirname(__file__), f"cache/lines_{CURRENT_SEASON}.csv")
-        if os.path.exists(cache_path):
-            import time
-            age_mins = (time.time() - os.path.getmtime(cache_path)) / 60
-            df = pd.read_csv(cache_path)
-            source = f"cached ({int(age_mins)}m ago)"
-        else:
-            # Try The Odds API as secondary live source
-            try:
-                from data.odds_api_fetcher import fetch_ncaaf_game_lines
-                odds_df = fetch_ncaaf_game_lines()
-                if not odds_df.empty:
-                    df = odds_df
-                    source = f"The Odds API / DraftKings ({len(df)} games)"
-                else:
-                    raise ValueError("empty")
-            except Exception:
+        # Try The Odds API as primary fallback (fresh data)
+        try:
+            from data.odds_api_fetcher import fetch_ncaaf_game_lines
+            odds_df = fetch_ncaaf_game_lines()
+            if not odds_df.empty:
+                df = odds_df
+                odds_df.to_csv(cache_path, index=False)
+                source = f"The Odds API / DraftKings ({len(df)} games)"
+            else:
+                raise ValueError("empty")
+        except Exception:
+            # Fall back to cached lines if Odds API fails
+            if os.path.exists(cache_path):
+                import time
+                age_mins = (time.time() - os.path.getmtime(cache_path)) / 60
+                df = pd.read_csv(cache_path)
+                source = f"cached ({int(age_mins)}m ago)"
+            else:
                 # Final fallback: CFBD lines cache
                 if os.path.exists(cfbd_path):
                     raw = pd.read_csv(cfbd_path)
