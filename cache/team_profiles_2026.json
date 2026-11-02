@@ -4993,11 +4993,6 @@
         "name": "Tommy Carr",
         "class": "Freshman",
         "jersey": "14"
-      },
-      {
-        "name": "Brady Smigiel",
-        "class": "Freshman",
-        "jersey": "17"
       }
     ],
     "key_transfers_in": [
@@ -8672,14 +8667,19 @@
     },
     "qb_room": [
       {
+        "name": "Arch Manning",
+        "class": "Senior",
+        "jersey": "16"
+      },
+      {
         "name": "MJ Morris",
         "class": "Senior",
         "jersey": "19"
       },
       {
-        "name": "Arch Manning",
-        "class": "Junior",
-        "jersey": "16"
+        "name": "KJ Lacey",
+        "class": "Sophomore",
+        "jersey": "9"
       },
       {
         "name": "Luke Dunham",
@@ -8690,11 +8690,6 @@
         "name": "Dia Bell",
         "class": "Freshman",
         "jersey": "6"
-      },
-      {
-        "name": "Karle Lacey Jr.",
-        "class": "Freshman",
-        "jersey": "9"
       }
     ],
     "key_transfers_in": [
